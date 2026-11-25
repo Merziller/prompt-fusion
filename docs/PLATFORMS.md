@@ -1,64 +1,90 @@
-# 平台适配与兼容性边界
+# 任意智能体的接入方式与验证状态
 
-核查日期：2026-11-26。**文档描述扩展机制、生成配置通过测试、宿主实际加载、真实业务端到端，是四种不同证据。** 本项目只按已完成的层级表述；最新版文档会变化，请以最终 [验证报告](VERIFICATION.md) 和所用宿主版本为准。
+核查日期：2026-11-26。**品牌名只是配置快捷方式，接入由宿主能力决定。** 本项目提供标准 Skills、MCP stdio、MCP Streamable HTTP、REST/OpenAPI 与 CLI，不设置厂商品牌白名单。新的宿主有其中一种可用接口，即可按对应方式适配；封闭产品仅能手工复制文本时，仍属于手工使用，原生安装状态待平台开放。
 
-## 适配机制
+“协议互通”“生成配置通过测试”“厂商应用加载”“真实业务端到端”分别记录。标准接口通过测试，不等于所有应用、版本和账号均已实测。
 
-| 平台 | 交付机制 | Skill 安装位置 | 原生运行状态 |
-|---|---|---|---|
-| DSH | 原生 bundle、输入框右侧单按钮、Host命令/工具/connection 路由 | 不需要Skill安装 | 本机实际安装及验证结果见验证报告；目标0.2.2-rc.5 |
-| Codex | Agent Skill、stdio MCP配置片段 | 项目/用户 `.agents/skills/prompt-fusion` | 本机未发现Codex CLI；生成器及可移植脚本已测，原生待测 |
-| Claude Code | 原生插件目录、Skill、stdio MCP | 独立安装 `.claude/skills/prompt-fusion`；插件目录自带 `skills/` | 本机Claude启动器存在，但其claude.exe报“不是此操作系统平台的有效应用程序”；宿主验证未执行成功 |
-| Antigravity | Skill、stdio MCP配置片段 | 项目 `.agents/skills/prompt-fusion`；用户 `.gemini/config/skills/prompt-fusion` | 文档核验、安装脚本测试；原生待测 |
-| OpenClaw | Skill | 项目 `skills/prompt-fusion`；用户 `.openclaw/skills/prompt-fusion` | 文档核验、安装脚本测试；原生待测；不生成未经核验的MCP配置 |
-| OpenCode | Skill、当前V2形式MCP片段 | 项目 `.opencode/skills/prompt-fusion`；用户 `.config/opencode/skills/prompt-fusion` | 当前文档为 `mcp.servers`；生成器已测，原生待测；不声称兼容旧V1配置 |
-| pi | Agent Skill | 项目/用户 `.agents/skills/prompt-fusion` | 官方说明还支持 `.pi/skills`；选择共享标准目录，安装脚本已测，原生待测 |
-| Hermes | Skill | 用户 `.hermes/skills/prompt-fusion` | 只生成用户范围安装；项目范围显式报错；原生待测 |
-| Zcode | 本版不纳入 | — | 用户已明确同意暂时移除，不宣称支持 |
-| 其他宿主 | CLI；具备标准MCP客户端时可手工接入stdio | 由宿主决定 | 未验证，不自动列作兼容 |
+## 先按接口选择
 
-Windows Node.js 24.19.0 是本次实际运行的基础环境。Node.js最低声明为22.19.0；Linux、macOS及其他Node版本未做本机实测，CI矩阵另行标记其实际运行结果。DSH语音API属于experimental，升级宿主后应重跑验证。
+| 宿主能力 | 本项目入口 | 前提和边界 |
+| --- | --- | --- |
+| 读取标准 `SKILL.md` 并运行 Node | 自包含便携 Skill；任意 `--skills-dir` | Node≥22.19.0；由宿主决定触发和脚本执行 |
+| 启动命令型 MCP | `node /absolute/prompt-fusion/bin/prompt-fusion.mjs mcp` | 换行 JSON-RPC stdio；安装位置是宿主实际运行命令的机器 |
+| MCP Streamable HTTP | `POST /mcp` | 无状态 JSON 响应，GET返回405；旧 HTTP+SSE-only 客户端需另外适配 |
+| HTTP 工具 / OpenAPI | `POST /v1/enhance`、`GET /openapi.json` | JSON请求；服务端工具调用方式；未交付浏览器跨域网页应用 |
+| Shell / 命令工具 | CLI，支持stdin、JSON和文件 | 不依赖原生插件机制 |
+| 只有聊天输入框 | 复制增强文本 | 不称为插件安装或自动集成 |
 
-## 安装命令
+共用同一核心。当前核心保留原文并添加规则，语义改写质量问题另见 [质量审计](QUALITY_AUDIT.md)；增加接入面不代表修复该问题。
 
-在克隆后的仓库根目录运行，无需 `npm install`：
+## 不在预设名单中的宿主
 
 ```sh
-node bin/prompt-fusion.mjs install --target codex --scope project --root /absolute/project --dry-run
-node bin/prompt-fusion.mjs install --target codex --scope project --root /absolute/project
-node bin/prompt-fusion.mjs install --target claude --scope user
-node bin/prompt-fusion.mjs install --target antigravity --scope project --root /absolute/project
-node bin/prompt-fusion.mjs install --target openclaw --scope project --root /absolute/project
-node bin/prompt-fusion.mjs install --target opencode --scope project --root /absolute/project
-node bin/prompt-fusion.mjs install --target pi --scope user
-node bin/prompt-fusion.mjs install --target hermes --scope user
+# target仅是回执里的标签；skills-dir是该宿主实际读取的标准Skills根目录。
+node bin/prompt-fusion.mjs install --target AnyAgent --skills-dir /absolute/agent-skills --dry-run
+node bin/prompt-fusion.mjs install --target AnyAgent --skills-dir /absolute/agent-skills
+node bin/prompt-fusion.mjs uninstall --skill-dir /absolute/agent-skills/prompt-fusion --dry-run
+node bin/prompt-fusion.mjs uninstall --skill-dir /absolute/agent-skills/prompt-fusion
+
+# 中立命令型连接信息，无需增加品牌代码。
+node bin/prompt-fusion.mjs config --target generic
+# 中立远程连接信息；不写入令牌。
+node bin/prompt-fusion.mjs config --target http --server-url https://YOUR_HOST/mcp
 ```
 
-安装器复制自包含的Skill、核心脚本、许可及SHA-256收据；不会改写已有宿主配置，不覆盖同名Skill。目标已存在会返回 `ALREADY_INSTALLED`，请先审阅旧目录再决定升级。不同平台可能共享 `.agents/skills`，同目录第二次安装会明确报已存在，避免重复版本。
+安装独占创建目录，不覆盖旧版、不编辑宿主配置。卸载仅处理带本项目回执、文件清单及SHA-256均匹配的目录；发现修改、额外文件、缺失文件或符号链接时保留目录。共享 `.agents/skills` 时不必为每个品牌重复安装。
 
-MCP配置采用**生成片段、审阅合并**：
+本机服务：
 
 ```sh
-node bin/prompt-fusion.mjs config --target codex --out codex-mcp.snippet.toml
-node bin/prompt-fusion.mjs config --target claude --out claude-mcp.snippet.json
-node bin/prompt-fusion.mjs config --target antigravity --out antigravity-mcp.snippet.json
-node bin/prompt-fusion.mjs config --target opencode --out opencode-mcp.snippet.json
+node bin/prompt-fusion.mjs serve --host 127.0.0.1 --port 8765
 ```
 
-片段使用当前Node与项目的真实绝对路径并正确转义；移动仓库后重新生成。生成器只写新文件，不覆盖已有配置。Codex合入用户 `~/.codex/config.toml`；Claude可合入项目 `.mcp.json`；Antigravity在MCP设置的原始配置中合并；OpenCode合入其配置文件的 `mcp.servers`。每个宿主自己的工具审批仍由该宿主控制。
+默认仅监听本机。跨机器时使用 `--host` 和 `--token-env` 显式配置至少24字符令牌；服务原生为HTTP，HTTPS由部署方网关提供。**没有自动部署公网、内置TLS、OAuth登录或旧SSE适配。** 远程平台的127.0.0.1指向平台自身；手机的127.0.0.1指向手机，不是桌面电脑。云端或手机需可达地址。详情见 [通用接入教程](UNIVERSAL_ACCESS.md)。
 
-Claude原生插件本地开发加载：`claude --plugin-dir /absolute/prompt-fusion`。仓库包含 `.claude-plugin/plugin.json`、`.mcp.json` 与 `skills/prompt-fusion`，MCP路径使用 `${CLAUDE_PLUGIN_ROOT}`。此命令的结构按官方机制制作，本机Claude二进制问题导致实际加载待测。
+## 平台核查矩阵（示例，非支持名单上限）
 
-## 官方依据
+| 平台 | 已核实机制 / 推荐入口 | 项目验证状态 |
+| --- | --- | --- |
+| DSH | 原生bundle、输入框单按钮、Host工具与官方connection | 0.2.2-rc.5历史真实安装/工具结果见验证报告；本轮通用接口不冒称新版GUI实测 |
+| Codex | `.agents/skills`；stdio MCP配置 | 安装器、可移植脚本、配置已测；厂商应用NOT_RUN |
+| Claude Code | `.claude/skills`；插件目录；MCP | 目录和配置已测；本机claude.exe平台错误，原生加载BLOCKED |
+| Antigravity | 项目`.agents/skills`，用户`~/.gemini/config/skills`；MCP | 机制与安装脚本已测；原生NOT_RUN |
+| OpenClaw | 项目`skills`、用户`~/.openclaw/skills` | 安装脚本已测；原生NOT_RUN |
+| OpenCode | `.opencode/skills`、`~/.config/opencode/skills`；当前V2 `mcp.servers` | 脚本与配置已测；原生NOT_RUN，不冒称旧V1配置兼容 |
+| pi | `.agents/skills`（也有`.pi/skills`） | 便携安装已测；原生NOT_RUN |
+| Hermes | 用户`~/.hermes/skills` | 用户范围安装已测；原生NOT_RUN |
+| Kimi Code CLI | 项目/用户`.agents/skills`或`.kimi-code/skills`；`.kimi-code/mcp.json` | 新增kimi快捷安装与命令型/HTTP配置已测；原生NOT_RUN；不使用旧`.kimi/skills`猜测路径 |
+| WorkBuddy | 官方连接器支持stdio、Streamable HTTP和SSE；JSON `mcpServers` | 新增stdio/HTTP配置已测；原生NOT_RUN；本服务不提供其旧SSE模式 |
+| Grok Bot | 自定义连接器 Remote HTTPS 或 Command | 官方机制已查；采用中立连接详情；Command运行在Bot云端机器，原生NOT_RUN |
+| Muse（Zer0Qing/Muse Android项目） | 用户手册14.3列明Streamable HTTP/SSE、Bearer等认证；手机无本地stdio | 推荐本项目HTTP入口；原生NOT_RUN。其`.skill.json`与标准`SKILL.md`不同，不混装；若指其他同名Muse需对应项目链接 |
+| 豆包工作 | 已找到官方“使用插件”帮助入口 | 返回的公开正文不足以核实自定义MCP/HTTP或配置格式，标为待核实；不把通用协议测试当成豆包工作原生支持 |
+| Zcode及未来宿主 | 按实际Skills/MCP/HTTP/CLI能力选择 | 不再以品牌为硬限制；未核实机制的产品保持待验证，无猜测配置 |
 
-- Codex：[Skills](https://developers.openai.com/codex/skills/)；[MCP](https://developers.openai.com/codex/mcp/)。Skills是跨CLI、IDE及App的机制；本项目未据此声称三个界面都已运行测试。
-- Claude Code：[插件](https://code.claude.com/docs/en/plugins)；[插件清单](https://code.claude.com/docs/en/plugins/manifest-reference)；[Skills](https://code.claude.com/docs/en/skills)；[MCP](https://code.claude.com/docs/en/mcp)。
-- Antigravity：[Skills](https://antigravity.google/docs/skills)，官方同时说明项目 `.agents/skills` 与全局 `~/.gemini/config/skills`，以及旧路径兼容；[MCP](https://antigravity.google/docs/mcp)。
-- OpenClaw：[Skills](https://docs.openclaw.ai/tools/skills)。项目与用户范围Skill有优先级，不要在多个位置无意安装不同版本。
-- OpenCode：[Skills](https://opencode.ai/docs/skills/)；[MCP](https://opencode.ai/docs/mcp-servers/)，核查时文档已说明从V1扁平 `mcp` 迁移到V2 `mcp.servers`。
-- pi：[官方仓库](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent) 与 [Skills说明](https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/skills.md)。
-- Hermes：[Skills](https://hermes-agent.nousresearch.com/docs/skills/)，用户存放于 `~/.hermes/skills/`。
-- MCP：[2025-06-18 stdio传输规范](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports)。本服务使用换行JSON-RPC，stdout只输出协议消息。
-- DSH：以本机0.2.2-rc.5的官方包README和类型为依据，包括 `dsh-client-ui-conversation`、`dsh-client-locale`、`dsh-tools`、`dsh-experimental-speech-to-text`；[官方仓库](https://github.com/deepseek-ai/deepseek-harness)。
+## 快捷配置
 
-没有使用通用“支持全部智能体”的宣传语。其他宿主自动执行Skill中的脚本仍受其运行环境、Node可用性和用户设置影响。
+```sh
+node bin/prompt-fusion.mjs install --target kimi --scope project --root /absolute/project
+node bin/prompt-fusion.mjs config --target kimi --out kimi-mcp.snippet.json
+node bin/prompt-fusion.mjs config --target workbuddy --out workbuddy-stdio.snippet.json
+node bin/prompt-fusion.mjs config --target workbuddy --server-url https://YOUR_HOST/mcp --out workbuddy-http.snippet.json
+```
+
+Kimi的项目配置可位于`.kimi-code/mcp.json`；WorkBuddy在MCP连接器中导入/合并片段。配置只写新文件，现有配置由使用者合并。令牌通过宿主秘密字段、环境变量或HTTP认证头输入，不嵌入发布文件。Grok Bot的原生Skill是应用内保存的工作流，本项目未找到其标准Skills文件路径；使用命令或远程MCP。Muse需将MCP服务绑定给目标助手。
+
+## 一手依据
+
+- Codex：[Skills](https://developers.openai.com/codex/skills/)、[MCP](https://developers.openai.com/codex/mcp/)。
+- Claude Code：[插件](https://code.claude.com/docs/en/plugins)、[清单](https://code.claude.com/docs/en/plugins/manifest-reference)、[Skills](https://code.claude.com/docs/en/skills)、[MCP](https://code.claude.com/docs/en/mcp)。
+- Antigravity：[Skills](https://antigravity.google/docs/skills)、[MCP](https://antigravity.google/docs/mcp)。
+- OpenClaw：[Skills](https://docs.openclaw.ai/tools/skills)。
+- OpenCode：[Skills](https://opencode.ai/docs/skills/)、[MCP](https://opencode.ai/docs/mcp-servers/)。
+- pi：[官方Skills说明](https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/skills.md)。
+- Hermes：[Skills](https://hermes-agent.nousresearch.com/docs/skills/)。
+- Kimi：[Skills](https://www.kimi.com/code/docs/kimi-code-cli/customization/skills.html)、[MCP](https://www.kimi.com/code/docs/kimi-code-cli/customization/mcp.html)。
+- WorkBuddy：[自建MCP连接器](https://open.workbuddy.cn/docs/connector)、[专家包规范](https://open.workbuddy.cn/docs/expert)。
+- Grok Bot：[Computer and apps](https://docs.x.ai/grok-bot/computer-and-apps.md)、[Skills](https://docs.x.ai/grok-bot/skills-routines-and-automations.md)。
+- Muse：[项目README](https://github.com/Zer0Qing/Muse)、[项目用户手册](https://github.com/Zer0Qing/Muse/blob/main/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.md)。仅作机制查证，没有复用该项目代码。
+- 豆包工作：[官方使用插件帮助页](https://www.doubao.com/work/docs/zh-cn/articles/705018132598-plugins)，本次返回的正文不足以作自定义传输兼容证明。
+- MCP：[2025-06-18传输规范](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports)。已用独立官方SDK 1.32.2互通；这是协议证明。
+- DSH：[官方仓库](https://github.com/deepseek-ai/deepseek-harness)，本机0.2.2-rc.5包README及类型。

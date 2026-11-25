@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-25T22:08:50.009Z",
+  "sdk": "@modelcontextprotocol/sdk",
+  "sdkVersion": "1.32.2",
+  "runtime": "v24.19.0",
+  "platform": "win32",
+  "status": "PASS",
+  "nativeVendorAppsTested": false,
+  "tests": [
+    {
+      "transport": "stdio",
+      "initialize": "PASS",
+      "list": "PASS",
+      "coreCall": "PASS",
+      "invalidToolInput": "PASS",
+      "version": "0.3.0"
+    },
+    {
+      "transport": "http",
+      "initialize": "PASS",
+      "list": "PASS",
+      "coreCall": "PASS",
+      "invalidToolInput": "PASS",
+      "version": "0.3.0"
+    },
+    {
+      "transport": "http-bearer",
+      "initialize": "PASS",
+      "list": "PASS",
+      "coreCall": "PASS",
+      "invalidToolInput": "PASS",
+      "version": "0.3.0"
+    }
+  ]
+}

@@ -1,35 +1,12 @@
 # Prompt Fusion
 
-**一个“增强”按钮，自动匹配场景、深度补充、整理结构。** 作者 **Merziller**，Apache-2.0 开源，零运行时依赖。增强过程只处理提示词，不执行其中的任务。
+**面向任意智能体的提示词规则增强核心与接入层。** Merziller 开发，Apache-2.0，零运行时依赖。提供 DSH 单按钮、标准 Skill、CLI、MCP stdio、MCP Streamable HTTP 和 REST/OpenAPI。品牌预设是快捷方式，不是允许名单。
 
-[English](README.en.md) · [平台适配](docs/PLATFORMS.md) · [来源审计](docs/SOURCE_AUDIT.md) · [验证结果](docs/VERIFICATION.md) · [发布与市场状态](docs/RELEASE.md) · [作者](AUTHORS.md)
+**质量说明：当前核心仍是“原文保留＋规则补充”，尚未实现真正的语义改写。** 四插件复核中，Prompt Fusion 0.2在本次主观文本质量评分约61/100，明显落后于另外三款。0.3主要扩展通用接入，未把这个质量缺陷包装成已修复。详见[质量审计](docs/QUALITY_AUDIT.md)。
 
-## DSH：只点一次
+[English](README.en.md) · [通用接入](docs/UNIVERSAL_ACCESS.md) · [平台与官方依据](docs/PLATFORMS.md) · [来源审计](docs/SOURCE_AUDIT.md) · [验证](docs/VERIFICATION.md) · [发布/市场状态](docs/RELEASE.md) · [作者](AUTHORS.md)
 
-在输入框写好需求，点击右侧 **增强**，增强稿直接写回输入框，发送仍由你决定。
-
-- 没有模式、场景、强度、上下文或语音设置面板，也没有重复的麦克风按钮；语音继续使用 DSH 自带入口。
-- 自动识别代码、设计、OPC/办公、协作、研究、写作等场景，默认深度增强。按输入涉及的插件、界面、接口、数据、方案等补充相关执行与核验要点。
-- 普通草稿自动编排为“任务需求 → 执行要求 → 交付与核验 → 保真与边界”。**原始需求逐字保留**，不擅自改技术栈、数字、语言和限制。
-- 同一个按钮在增强时变为 **停止**，完成后变为 **撤销增强**。你继续编辑或切换会话时，过期结果不会覆盖新草稿。
-- 遇到原生引用块时，改用原位追加并保留其位置。附件不由插件重新构造；不再要求光标必须位于末尾。
-- 不自动抓取历史会话、文件或工作区；上下文仅使用本次输入文字。没有隐式长期记忆。
-
-DSH 默认使用已选模型从审核规则中选择相关指引，失败或没有模型时离线回退。深度增强不会被模型降成轻量。模型不自由编造任务答案；任务相关补充来自公开、可检查的条件规则。**它不保证每一条提示词都是“最优”，也未声称完成任务质量 A/B 提升验证。** 当前支持中英文组织指引，其他语言保留原文。
-
-## 安装
-
-原生目标为 DSH 0.2.2-rc.5。公开发行包与市场申请的实际状态见[发布记录](docs/RELEASE.md)。市场维护者合并前，不将“已提交”写作“已上架”。
-
-```sh
-dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.2.0/prompt-fusion-0.2.0.tgz
-```
-
-其他 profile 请替换 desktop。本机已验证从项目目录安装与重新加载；**已有 Windows 本地链接切换为发行包时曾出现 EPERM 文件替换错误，远程替换安装未通过**，详见验证报告。不要手动覆盖 profile 内的插件目录。
-
-本会话的本地开发版已重新加载；浏览器若仍缓存旧面板，请刷新现有 DSH 页面。
-
-## CLI、MCP 和其他智能体
+## 接入任意具备接口的智能体
 
 需要 Node.js ≥22.19.0。克隆后无需安装运行依赖：
 
@@ -39,48 +16,66 @@ cd prompt-fusion
 node bin/prompt-fusion.mjs --help
 node bin/prompt-fusion.mjs enhance "整理现有工程的开发需求，保留原技术栈" --intensity deep --layout structured
 node bin/prompt-fusion.mjs enhance --json < request.json
-node bin/prompt-fusion.mjs mcp
 ```
+
+| 宿主能力 | 使用方式 |
+| --- | --- |
+| 标准 Agent Skills | 自包含 `SKILL.md`，`--skills-dir`接受任意目录和品牌标签 |
+| MCP命令型客户端 | `node /absolute/path/bin/prompt-fusion.mjs mcp` |
+| MCP Streamable HTTP | `serve`启动后连接`/mcp`，无状态JSON响应 |
+| HTTP / OpenAPI工具 | `POST /v1/enhance`、`GET /openapi.json` |
+| Shell工具 | CLI stdin / JSON / 文件 |
+| 仅普通聊天 | 手工复制输出，不称为原生插件安装 |
+
+```sh
+node bin/prompt-fusion.mjs install --target AnyAgent --skills-dir /absolute/skills --dry-run
+node bin/prompt-fusion.mjs install --target AnyAgent --skills-dir /absolute/skills
+node bin/prompt-fusion.mjs config --target generic
+node bin/prompt-fusion.mjs serve --host 127.0.0.1 --port 8765
+node bin/prompt-fusion.mjs config --target http --server-url https://YOUR_HOST/mcp
+```
+
+新增 Kimi快捷安装、WorkBuddy命令型与`streamableHttp`配置；Grok Bot、Muse等按官方接口选择中立方案。**协议互通不等于所有厂商原生实测。** Grok Bot命令在其云端机器运行；Muse手机的localhost指手机。豆包工作公开帮助页正文不足以确认自定义接入格式，仍为待核实。详细状态、同名Muse的限定和一手来源在[平台矩阵](docs/PLATFORMS.md)。
+
+远程监听显式要求令牌；HTTPS、可达网络与宿主秘密配置由部署方提供。本项目没有自动部署公网、TLS/OAuth服务或旧HTTP+SSE适配。安装/卸载检查回执与文件哈希，保留已有或修改过的用户文件。宿主配置只生成新片段，不覆盖原文件。
+
+## DSH：一个按钮
+
+输入区右侧只有 **增强**；运行时变 **停止**，完成后变 **撤销增强**。没有模式/场景/强度/上下文面板或额外语音按钮。沿用DSH原生语音；插件不自动发送消息。普通草稿直接应用；引用块采用原位追加；会话切换、继续编辑和草稿版本变化时阻止过期覆盖。
+
+```sh
+dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.3.0/prompt-fusion-0.3.0.tgz
+```
+
+目标DSH0.2.2-rc.5。已验证历史本地目录安装/工具调用；Windows现有开发链接替换远程包曾遇EPERM，未标为成功。已登录GUI点击、DesktopIPC和其他厂商应用端到端状态另见[验证报告](docs/VERIFICATION.md)。市场PR提交与正式上架分开记录。
+
+DSH默认`auto/smart/deep/structured`，只发送当前草稿给宿主已选模型做规则选择，失败离线回退；不读历史、文件或工作区。**模型服务可能收费，项目本身免费。** 当前深度结构会合并预设规则，模型没有自由改写任务正文的能力；这也是本次质量审计指出的主要问题。
+
+## 输入、结果与异常
 
 ```json
-{"input":"整理一人公司的客户回访工作，不要代发消息。","domain":"auto","mode":"smart","intensity":"deep","layout":"structured"}
+{"input":"整理一人公司的客户回访工作，不要代发消息。","domain":"auto","mode":"standard","intensity":"deep","layout":"structured"}
 ```
 
-CLI/MCP 仍保留高级参数，DSH 单按钮无需选择：`mode` 为 base/lite/standard/smart/publish，`intensity` 为 light/standard/deep。`layout:append` 是兼容旧版的默认 API 行为；`layout:structured` 整理外围章节但保留需求原文。publish 只整理发布条件，不发布。
+CLI/MCP/API保留高级参数；默认API为`layout:append`，`structured`只是外围章节组织。返回`original`、`enhanced`、领域/语言、规则ID、引擎、警告和变更元数据。`originalPreserved`指完整原文保留；`reorganized`仅表示结构化输出变化，**不代表完成语义改写或质量提升**。publish模式不执行发布。
 
-结果包含 `original`、`enhanced`、场景、语言、规则、引擎、警告与变更元数据。`changes.originalPreserved` 表示原文完整保留；`originalPrefixPreserved` 区分追加与结构化；`reorganized` 标记结构调整。重复增强不堆叠。错误通过 stderr/非零退出码或 MCP 工具错误返回。
+- 核心只处理文本，不执行其中的命令、写文件、发送消息或任务；模型没有执行工具。
+- 原文48KiB、输出80KiB、模型选择响应8KiB；显式上下文8KiB。空值、无效JSON/UTF-8、未知字段、超长、取消、超时和无效模型输出均有错误或警告。
+- MCP stdio为逐行JSON-RPC，stdout只输出协议。HTTP单请求128KiB、并发8个、有超时/断连释放；本机默认监听，非本机绑定需至少24字符令牌。
+- HTTP MCP是Streamable HTTP的无状态JSON响应形式；GET返回405，无旧SSE服务。REST/OpenAPI共用核心。未提供浏览器跨域前端。
+- 只明确提供的参考资料参与API；没有隐式长期记忆。凭证模式检查不等于完整脱敏。
+- 中文/英文规则可用；其他脚本保留原文。场景正则仍可能误分类，详见质量审计。
 
-Codex、Claude Code、Antigravity、OpenClaw、OpenCode、pi、Hermes 采用可复用核心、便携 Skill 和必要配置；**机制核查、脚本测试、原生加载分别记录**，见[平台矩阵](docs/PLATFORMS.md)。Zcode 经用户确认暂时排除。
-
-```sh
-node bin/prompt-fusion.mjs install --target codex --scope project --root /absolute/project --dry-run
-node bin/prompt-fusion.mjs install --target codex --scope project --root /absolute/project
-node bin/prompt-fusion.mjs config --target codex --out codex-mcp.snippet.toml
-```
-
-安装器不覆盖已有 Skill，不改写宿主配置。Skill 仅在明确要求增强/优化提示词时触发；不会把普通开发、写作请求变成增强任务。
-
-## 模型、隐私与费用
-
-离线核心、源码、构建与测试免费，无订阅、收费模块或强制外部服务。CLI 显式使用 `--model` 时读取 `FUSION_BASE_URL`、`FUSION_MODEL` 和按需 `FUSION_API_KEY`，支持 HTTPS 或本机 HTTP 的 OpenAI-compatible `/chat/completions`。
+CLI显式模型调用：
 
 ```sh
+# 仅此时读取FUSION_BASE_URL、FUSION_MODEL、可选FUSION_API_KEY。
 node bin/prompt-fusion.mjs enhance --file prompt.txt --mode smart --model --intensity deep --layout structured
 ```
 
-**DSH 单按钮默认 smart，会将当前输入发送给宿主当前选定模型，可能产生服务商费用**；本项目本身不收费。失败默认离线回退，不自动切换收费模型。纯离线调用可使用 CLI/MCP standard；没有提供商仍可使用完整离线组织功能。
+离线默认免费，无订阅、收费模块、遥测或强制云服务。显式调用的自选模型/云主机可能产生第三方费用。
 
-高级 API 的显式参考资料、上一稿、术语词典和语音清理能力保留，均不在 DSH 输入区展示。DSH 原生语音入口负责录音；本插件不会在后台开启麦克风。API 的 `voiceSuggestion` 单独返回，不自动改转写。上下文有8KiB预算且拒绝明显凭证模式，这不是完整脱敏工具。
-
-## 边界与异常
-
-- 原文最多48KiB UTF-8，输出最多80KiB；模型选择响应最多8KiB。空值、NUL、未知参数、无效JSON、超长数据、取消、超时和无效模型输出都有错误或警告。
-- 原文中的命令、发布、文件操作和联网要求均是数据。核心没有执行器，模型调用没有工具定义；增强不会自行完成这些动作。
-- 智能选择不能覆盖本次请求要求的深度；补充要点只在与原始目标一致且适用时采用，不虚构事实、业绩、评价、技术选型、预算或排期。
-- 正在编辑、消息发送中、会话切换或版本不匹配时，保留现有草稿。一次撤销只针对尚未被修改的增强稿。
-- 日语等保留模式不添加外语章节；不声称已验证各宿主原生兼容或实体语音。
-
-## 开发与验证
+## 开发、测试与卸载
 
 ```sh
 npm run build
@@ -88,16 +83,16 @@ npm test
 npm run check
 npm run test:report
 npm pack --dry-run
+# 可选：提供自己安装的官方SDK路径；不为项目引入运行依赖。
+node scripts/sdk-smoke.mjs --sdk-root /absolute/node_modules/@modelcontextprotocol/sdk
 ```
 
-核心：[core.mjs](src/core.mjs) · 结构编排：[structure.mjs](src/structure.mjs) · [提供商](src/providers.mjs) · [MCP](src/mcp.mjs) · [安装器](src/install.mjs)。DSH：[Host](adapters/dsh/index.mjs) 与 [Client 源码](adapters/dsh/client-source.js)，生成客户端不捆绑录音代码。
+本轮本机回归160项；官方SDK1.32.2对stdio、HTTP、HTTP Bearer分别初始化、发现、调用、无效输入测试通过。这是工程与协议证据，质量评分单独计算；厂商原生、CI和发行包复验详见[验证报告](docs/VERIFICATION.md)。
 
-最新本机回归138项通过；包括单按钮数量、无面板/语音控件、自动参数、直接应用、停止、撤销、编辑竞态、引用保护和结构保真。实际宿主/CI与未测项见[验证报告](docs/VERIFICATION.md)。
-
-移除：DSH 插件设置中停用或卸载；便携 Skill 仅移除安装回执指向的目录。手动合并过 MCP 片段时只删除自己添加的条目。未运行 CLI/MCP 时无常驻服务。
+DSH在插件设置停用/卸载；Skill使用`uninstall --skill-dir EXACT_DIRECTORY`并先dry-run；修改过的安装保留供人工审阅。MCP只删除自己合并的配置条目。`serve`是显式前台服务，停止进程后无常驻服务。
 
 ## 开源与致谢
 
-新代码 Apache-2.0，作者 Merziller。借鉴 [feiwell](https://github.com/feiwell/dsh-enhance-prompt)、[ChosenXu](https://github.com/ChosenXu/dsh-prompt-enhancer)、[Fishsb](https://github.com/Fishsb/dsh-voice-prompt-enhancer) 项目的功能思路，未直接复制运行时代码、提示词模板或图标。原作者列于来源与致谢，不虚构为本项目实际贡献者；原许可和 NOTICE 已保留，见[第三方声明](THIRD_PARTY_NOTICES.md)。
+新代码Apache-2.0。借鉴[feiwell](https://github.com/feiwell/dsh-enhance-prompt)、[ChosenXu](https://github.com/ChosenXu/dsh-prompt-enhancer)、[Fishsb](https://github.com/Fishsb/dsh-voice-prompt-enhancer)的功能思路，未直接复制运行时代码、提示词模板或图标。原许可证和NOTICE保留；原作者是来源致谢对象，不虚构为实际贡献者。见[第三方声明](THIRD_PARTY_NOTICES.md)。
 
 微信 **Merziller** · QQ **1411574209** · 邮箱 **k26789228@gmail.com**（本人明确确认用于公开项目）。

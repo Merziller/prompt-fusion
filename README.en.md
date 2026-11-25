@@ -1,56 +1,54 @@
 # Prompt Fusion
 
-**One Enhance button. Automatic domain, deep guidance and structured prompts.** By **Merziller**, Apache-2.0, zero runtime dependencies. Enhancement processes the prompt as data and never executes its embedded task.
+**An agent-neutral prompt-rule core and integration layer.** By Merziller, Apache-2.0, zero runtime dependencies. DSH one-button UI, portable Skills, CLI, MCP stdio, MCP Streamable HTTP and REST/OpenAPI share one core. Brand presets are convenience paths, not an allowlist.
 
-[中文](README.md) · [Platforms](docs/PLATFORMS.md) · [Sources](docs/SOURCE_AUDIT.md) · [Verification](docs/VERIFICATION.md) · [Release status](docs/RELEASE.md)
+**Quality disclosure:** the current core preserves the original request and adds reviewed rules. It is not a semantic rewriter. In the new subjective four-plugin review, released 0.2 scored about61/100, below the other three. Version0.3 expands access and does not claim to fix that defect. See [quality audit](docs/QUALITY_AUDIT.md).
 
-## One-click DSH workflow
+[中文](README.md) · [Universal access](docs/UNIVERSAL_ACCESS.md) · [Platform evidence](docs/PLATFORMS.md) · [Verification](docs/VERIFICATION.md) · [Release status](docs/RELEASE.md) · [Sources and licenses](THIRD_PARTY_NOTICES.md)
 
-Write your draft and click **Enhance** beside the input. The result is inserted directly, without sending the message. There are no mode/domain/depth selectors, settings panel or duplicate microphone button. Continue using DSH's own speech input.
+## Run and integrate
 
-The workflow uses automatic domain detection, deep guidance and ordered task/execution/verification/fidelity sections. The original request is retained exactly; task-specific reviewed guidance addresses relevant plugins, UI, APIs, data, plans, research and collaboration without inventing facts or hard requirements. Native reference chips use append-only insertion to retain their positions.
-
-The same button becomes **Stop** during enhancement and **Undo enhancement** afterwards. Typing, sending or switching sessions invalidates stale work. Subsequent edits are not overwritten. No automatic workspace/history access or persistent draft memory is used.
-
-DSH defaults to the selected host model for reviewed-rule selection, with offline fallback. **The model provider may charge for this call**; the project itself is free. Deep structure cannot be silently downgraded by model selection. This is a conservative organizer, not an unrestricted rewriting model or a demonstrated guarantee of improved downstream performance. Chinese and English guidance are supported; other detected scripts retain the original text.
-
-## Install and run
-
-DSH target: 0.2.2-rc.5. Actual release and catalog-review status are in the [release record](docs/RELEASE.md). A submitted PR is not a marketplace listing.
-
-```sh
-dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.2.0/prompt-fusion-0.2.0.tgz
-```
-
-Local directory installation/reloading was verified. Replacing an existing Windows development link with a remote tarball encountered EPERM; that native replacement path is not marked passed. Do not manually overwrite profile directories. Refresh the existing DSH page if the old panel remains cached.
-
-Node.js >=22.19.0. No runtime dependency installation is required:
+Node.js >=22.19.0. No runtime dependency installation:
 
 ```sh
 git clone https://github.com/Merziller/prompt-fusion.git
 cd prompt-fusion
-node bin/prompt-fusion.mjs enhance "Refactor existing code without changing its API" --intensity deep --layout structured
+node bin/prompt-fusion.mjs enhance "Clarify this existing brief without changing the stack" --intensity deep --layout structured
 node bin/prompt-fusion.mjs enhance --json < request.json
 node bin/prompt-fusion.mjs mcp
-node bin/prompt-fusion.mjs install --target codex --scope project --root /absolute/project --dry-run
-node bin/prompt-fusion.mjs config --target codex --out codex-mcp.snippet.toml
+node bin/prompt-fusion.mjs serve --host 127.0.0.1 --port 8765
+node bin/prompt-fusion.mjs install --target AnyAgent --skills-dir /absolute/skills --dry-run
+node bin/prompt-fusion.mjs config --target generic
+node bin/prompt-fusion.mjs config --target http --server-url https://YOUR_HOST/mcp
 ```
 
-JSON example: `{"input":"Improve this design brief without inventing testimonials.","domain":"auto","mode":"smart","intensity":"deep","layout":"structured"}`.
+Any host with a compatible Skill, MCP, HTTP or command interface can use the corresponding adapter. Apps exposing only chat input support manual copy, not automatic plugin installation. Future brand labels need no core change when installing standard Skills to an explicit directory.
 
-CLI/MCP retain advanced controls. Default API `layout:append` preserves the exact prefix; `layout:structured` preserves the exact request inside ordered sections. Results include original/enhanced text, rule IDs, engine, warnings and preservation/reorganization metadata. Repeated enhancement does not stack guidance. Errors use stderr/nonzero exit codes or MCP tool errors.
+Kimi and WorkBuddy presets are included. Grok Bot's command connector runs on its cloud computer. The researched Muse project is Zer0Qing/Muse for Android, using remote MCP; its native `.skill.json` is not standard `SKILL.md`. Doubao Work's public plugin help was located but its returned body did not establish a custom transport/config format. **Protocol tests are not native vendor-app tests.** See the matrix for primary sources and qualified statuses.
 
-Portable Skills and necessary configurations target Codex, Claude Code, Antigravity, OpenClaw, OpenCode, pi and Hermes. **Mechanism research, executable fixtures and native host loading are separate statuses.** See the [matrix](docs/PLATFORMS.md). Zcode was excluded with the requester's agreement. Installation does not overwrite Skills or rewrite host settings.
+The HTTP service uses stateless JSON responses at `POST /mcp`, not legacy SSE. REST is `POST /v1/enhance`; OpenAPI3.1 is `GET /openapi.json`. Default binding is loopback. External binding requires an explicit bearer token of at least24 characters; production HTTPS comes from the operator's gateway. No automatic public deployment, TLS server, OAuth implementation or browser CORS frontend is included. A phone/cloud machine's localhost is separate from the developer's desktop.
 
-## Models, privacy and limits
+## DSH
 
-Offline core, source, build and tests are free. CLI explicitly enables a configured model with `--model`, `FUSION_BASE_URL`, `FUSION_MODEL` and optional `FUSION_API_KEY`. HTTPS is required except loopback HTTP. Without providers, offline organization remains available.
+One Enhance button becomes Stop, then Undo enhancement. No mode/domain/depth/context selectors or microphone button; use DSH's own speech input. Results enter the draft without sending it. Native references use append-only insertion; draft revisions, later edits and session switches guard stale writes.
 
-Explicit context, prior-draft references, dictionaries and separate transcript-cleanup suggestions remain advanced API features, not DSH input controls. No microphone starts in the background. API reference data has an 8KiB budget and common credential-pattern checks, not comprehensive redaction.
+```sh
+dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.3.0/prompt-fusion-0.3.0.tgz
+```
 
-Limits: input48KiB UTF-8, output80KiB, model-selection response8KiB, default model timeout30s. Invalid inputs, unknown options, cancellation, timeouts, malformed model plans and stale drafts are handled explicitly. No execution tools are supplied to the model.
+Target DSH0.2.2-rc.5. Historical local installation/tool calls succeeded. Replacing an existing Windows development link with a remote tarball encountered EPERM and is not marked passed. Authenticated GUI/DesktopIPC and other native apps have separate untested statuses.
 
-## Develop
+DSH defaults to smart/auto/deep/structured. Its selected model only selects reviewed rules; offline fallback remains available. **The selected model provider may charge.** The project itself is free. No history/workspace/files are automatically collected.
+
+## Behavior and limits
+
+The exact original is retained. `layout:append` is the default API form; `structured` arranges surrounding sections. Preservation/reorganization metadata does not prove semantic rewriting or downstream improvement. Domain regexes can misclassify; the audit documents reproduced cases.
+
+The core never executes the embedded task. Input48KiB UTF-8, output80KiB, model-selection response8KiB, explicit context8KiB. Invalid fields/JSON/UTF-8, cancellation, timeout and malformed model plans have errors/warnings. Chinese/English rules are provided; other detected scripts retain the input. HTTP requests have128KiB and8-concurrent limits. Config generation never embeds tokens or overwrites host files. Receipt/hash-based uninstall retains edited or extra files for review.
+
+CLI model access is explicit through `--model` and `FUSION_BASE_URL`, `FUSION_MODEL`, optional `FUSION_API_KEY`. Offline source/build/tests require no subscription or paid module; self-selected model/hosting services can have external costs.
+
+## Verify
 
 ```sh
 npm run build
@@ -58,12 +56,13 @@ npm test
 npm run check
 npm run test:report
 npm pack --dry-run
+node scripts/sdk-smoke.mjs --sdk-root /absolute/node_modules/@modelcontextprotocol/sdk
 ```
 
-The latest local regression run passed 138 tests, including the single control, absent settings/voice widgets, automatic defaults, direct insertion, stop/undo, concurrent edits, reference preservation and structure fidelity. Native/CI evidence and untested environments are documented separately. No independent reviewer is claimed.
+This round has160 local regressions. Official SDK1.32.2 interoperated with stdio, HTTP and bearer HTTP for initialize/list/call/invalid-input. The optional SDK stays outside runtime dependencies. CI/package receipts and native limitations are recorded separately. No independent reviewer or fresh upstream-model/downstream quality trial is claimed.
 
-Disable/remove the DSH bundle in plugin settings; remove portable Skills only at the recorded installation directory. Remove only the MCP entries you manually added. The CLI is not a background service when stopped.
+Disable/remove DSH through its plugin settings. Use `uninstall --skill-dir EXACT_DIRECTORY` for an unmodified portable Skill; review dry-run first. Remove only MCP config entries you added. Stop the explicit `serve` process to stop the service.
 
-Inspired by feiwell, ChosenXu and Fishsb. Their runtime source, templates and icons were not copied; original authors are acknowledged rather than listed as actual project contributors. Pinned sources and retained licenses: [third-party notices](THIRD_PARTY_NOTICES.md).
+Inspired by feiwell, ChosenXu and Fishsb; upstream runtime code/templates/icons were not copied. Authors are acknowledged, not falsely listed as contributors. Original licenses/NOTICE are retained.
 
 WeChat **Merziller** · QQ **1411574209** · **k26789228@gmail.com**, explicitly confirmed for public project use. [Authors](AUTHORS.md).

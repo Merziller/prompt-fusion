@@ -1,6 +1,6 @@
 // Copyright 2026 Merziller. SPDX-License-Identifier: Apache-2.0
 import { structuredPrompt, isStructuredPrompt } from './structure.mjs';
-export const VERSION = '0.2.0';
+export const VERSION = '0.3.0';
 export const LIMITS = Object.freeze({ inputBytes: 49152, contextBytes: 8192, outputBytes: 81920, modelBytes: 8192, contexts: 4 });
 export const DOMAINS = Object.freeze(['auto', 'general', 'code', 'design', 'office', 'collaboration', 'research', 'writing']);
 export const MODES = Object.freeze(['base', 'lite', 'standard', 'smart', 'publish']);

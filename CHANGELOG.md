@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0 — 2026-11-26
+
+- 品牌预设改为便捷项：任意智能体标签配显式标准Skill目录，自包含安装、dry-run、回执/哈希卸载与已修改文件保留。
+- 增加无状态JSON响应MCP Streamable HTTP、REST/OpenAPI；保留stdio、CLI和DSH单按钮，共用核心。
+- HTTP默认本机；外部绑定显式Bearer令牌、所有接口认证、Host/Origin、预算/并发/取消/截止检查。未包含TLS/OAuth/旧SSE服务。
+- 补充Kimi正确路径、WorkBuddy stdio/streamableHttp配置，以及Grok Bot/Muse/豆包工作的官方依据和原生待测范围。
+- 增加通用安装/卸载、远程协议、异常、实际CLI测试及可复现官方SDK互通脚本；本轮160项工程回归。
+- 公开四插件文字质量复核，Prompt Fusion0.2约61/100。当前仍是规则封装核心，没有修复语义改写缺陷，也不借接口新增提升质量评分。
+
 ## 0.2.0 — 2026-11-26
 
 - 按用户反馈移除整个 composer 面板，改为输入框右侧唯一“增强”按钮。

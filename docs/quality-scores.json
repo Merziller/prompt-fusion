@@ -1,0 +1,738 @@
+{
+  "kind": "current-author-agent-review-not-independent-not-new-LLM-judge",
+  "weights": [
+    30,
+    25,
+    20,
+    15,
+    10
+  ],
+  "scores": [
+    {
+      "caseId": "dev-brief",
+      "group": "main",
+      "plugin": "feiwell",
+      "dimensions": [
+        25,
+        23,
+        16,
+        12,
+        10
+      ],
+      "total": 86,
+      "rationale": "把Windows用收紧为只在Windows；需求/问题/验收具体。"
+    },
+    {
+      "caseId": "dev-brief",
+      "group": "main",
+      "plugin": "chosenxu",
+      "dimensions": [
+        29,
+        24,
+        18,
+        13,
+        10
+      ],
+      "total": 94,
+      "rationale": "完整重组MVP、关键问题与验收，未执行。"
+    },
+    {
+      "caseId": "dev-brief",
+      "group": "main",
+      "plugin": "fishsb",
+      "dimensions": [
+        30,
+        20,
+        16,
+        15,
+        10
+      ],
+      "total": 91,
+      "rationale": "保守整理，约束保全，但细化有限。"
+    },
+    {
+      "caseId": "dev-brief",
+      "group": "main",
+      "plugin": "fusion",
+      "dimensions": [
+        25,
+        14,
+        8,
+        4,
+        10
+      ],
+      "total": 61,
+      "rationale": "原文未整理；未有工程、先不写代码却补定位文件/回归，且命中被否定的团队词。"
+    },
+    {
+      "caseId": "dev-fix",
+      "group": "main",
+      "plugin": "feiwell",
+      "dimensions": [
+        27,
+        24,
+        18,
+        13,
+        10
+      ],
+      "total": 92,
+      "rationale": "清晰描述解析和边界，但省略原始函数正文，只保留函数名及行为。"
+    },
+    {
+      "caseId": "dev-fix",
+      "group": "main",
+      "plugin": "chosenxu",
+      "dimensions": [
+        30,
+        25,
+        18,
+        13,
+        10
+      ],
+      "total": 96,
+      "rationale": "保留完整代码并逐条拆约束与JSON要求。"
+    },
+    {
+      "caseId": "dev-fix",
+      "group": "main",
+      "plugin": "fishsb",
+      "dimensions": [
+        30,
+        24,
+        18,
+        14,
+        10
+      ],
+      "total": 96,
+      "rationale": "保留完整代码，格式紧凑、边界完整。"
+    },
+    {
+      "caseId": "dev-fix",
+      "group": "main",
+      "plugin": "fusion",
+      "dimensions": [
+        30,
+        18,
+        7,
+        4,
+        10
+      ],
+      "total": 69,
+      "rationale": "原函数与要求保留；只加工程/数据检查模板，无函数任务特定改写。"
+    },
+    {
+      "caseId": "design-landing",
+      "group": "main",
+      "plugin": "feiwell",
+      "dimensions": [
+        29,
+        24,
+        18,
+        14,
+        10
+      ],
+      "total": 95,
+      "rationale": "保留颜色/尺寸/CTA/证据限制，视觉目标明确。"
+    },
+    {
+      "caseId": "design-landing",
+      "group": "main",
+      "plugin": "chosenxu",
+      "dimensions": [
+        30,
+        25,
+        19,
+        12,
+        10
+      ],
+      "total": 96,
+      "rationale": "整理字段含义与页面层次，略长但有针对性。"
+    },
+    {
+      "caseId": "design-landing",
+      "group": "main",
+      "plugin": "fishsb",
+      "dimensions": [
+        30,
+        24,
+        17,
+        14,
+        10
+      ],
+      "total": 95,
+      "rationale": "约束清楚，proofStrategy与无客户案例联系明确。"
+    },
+    {
+      "caseId": "design-landing",
+      "group": "main",
+      "plugin": "fusion",
+      "dimensions": [
+        24,
+        16,
+        6,
+        4,
+        10
+      ],
+      "total": 60,
+      "rationale": "不写代码中的代码触发code域，加入定位工程实现要求；没有整理原有JSON字段。"
+    },
+    {
+      "caseId": "design-repair",
+      "group": "main",
+      "plugin": "feiwell",
+      "dimensions": [
+        29,
+        23,
+        17,
+        14,
+        10
+      ],
+      "total": 93,
+      "rationale": "范围/字段/三条建议/验收清楚，轻微收紧卡片内容为仅含三字段。"
+    },
+    {
+      "caseId": "design-repair",
+      "group": "main",
+      "plugin": "chosenxu",
+      "dimensions": [
+        30,
+        25,
+        18,
+        13,
+        10
+      ],
+      "total": 96,
+      "rationale": "将范围、逐项结构和验收分开，便于下游执行。"
+    },
+    {
+      "caseId": "design-repair",
+      "group": "main",
+      "plugin": "fishsb",
+      "dimensions": [
+        30,
+        24,
+        17,
+        14,
+        10
+      ],
+      "total": 95,
+      "rationale": "保守且完整的分组改写。"
+    },
+    {
+      "caseId": "design-repair",
+      "group": "main",
+      "plugin": "fusion",
+      "dimensions": [
+        24,
+        15,
+        6,
+        4,
+        10
+      ],
+      "total": 59,
+      "rationale": "不要输出代码反触发code域，补文件/接口/依赖，实现语义偏移风险。"
+    },
+    {
+      "caseId": "office-cashflow",
+      "group": "main",
+      "plugin": "feiwell",
+      "dimensions": [
+        30,
+        23,
+        17,
+        14,
+        10
+      ],
+      "total": 94,
+      "rationale": "金额/口径/JSON完整，不代算任务。"
+    },
+    {
+      "caseId": "office-cashflow",
+      "group": "main",
+      "plugin": "chosenxu",
+      "dimensions": [
+        30,
+        24,
+        18,
+        13,
+        10
+      ],
+      "total": 95,
+      "rationale": "数据、口径、公式及字段组织明确。"
+    },
+    {
+      "caseId": "office-cashflow",
+      "group": "main",
+      "plugin": "fishsb",
+      "dimensions": [
+        29,
+        23,
+        17,
+        14,
+        10
+      ],
+      "total": 93,
+      "rationale": "金额保全，补metricName具体表达，保持核对任务。"
+    },
+    {
+      "caseId": "office-cashflow",
+      "group": "main",
+      "plugin": "fusion",
+      "dimensions": [
+        22,
+        16,
+        3,
+        3,
+        10
+      ],
+      "total": 54,
+      "rationale": "外包设计2000中的设计误判设计任务，加入视觉/交互/尺寸要求；钱数虽保留，意图未保真。"
+    },
+    {
+      "caseId": "office-followup",
+      "group": "main",
+      "plugin": "feiwell",
+      "dimensions": [
+        28,
+        23,
+        17,
+        14,
+        10
+      ],
+      "total": 92,
+      "rationale": "日期/事实保全；将字数解释成主题正文合计，略收紧歧义。"
+    },
+    {
+      "caseId": "office-followup",
+      "group": "main",
+      "plugin": "chosenxu",
+      "dimensions": [
+        29,
+        24,
+        18,
+        13,
+        10
+      ],
+      "total": 94,
+      "rationale": "主题、正文、语气、已知事实重组；仅按native轨评分，不掩盖off复测失败。"
+    },
+    {
+      "caseId": "office-followup",
+      "group": "main",
+      "plugin": "fishsb",
+      "dimensions": [
+        30,
+        24,
+        17,
+        14,
+        10
+      ],
+      "total": 95,
+      "rationale": "事实与要求分栏，保守完整。"
+    },
+    {
+      "caseId": "office-followup",
+      "group": "main",
+      "plugin": "fusion",
+      "dimensions": [
+        29,
+        17,
+        7,
+        5,
+        10
+      ],
+      "total": 68,
+      "rationale": "事实不丢，通用核验与缺失项补充有限，未优化原文表达。"
+    },
+    {
+      "caseId": "agents-delivery",
+      "group": "main",
+      "plugin": "feiwell",
+      "dimensions": [
+        30,
+        24,
+        18,
+        13,
+        10
+      ],
+      "total": 95,
+      "rationale": "角色/3天/owner/依赖/独立QA/批准门完整。"
+    },
+    {
+      "caseId": "agents-delivery",
+      "group": "main",
+      "plugin": "chosenxu",
+      "dimensions": [
+        30,
+        25,
+        20,
+        11,
+        10
+      ],
+      "total": 96,
+      "rationale": "字段/依赖/返工和批准门最具体，较长有用途。"
+    },
+    {
+      "caseId": "agents-delivery",
+      "group": "main",
+      "plugin": "fishsb",
+      "dimensions": [
+        30,
+        25,
+        19,
+        12,
+        10
+      ],
+      "total": 96,
+      "rationale": "按字段展开，范围与执行边界明确。"
+    },
+    {
+      "caseId": "agents-delivery",
+      "group": "main",
+      "plugin": "fusion",
+      "dimensions": [
+        28,
+        17,
+        11,
+        4,
+        10
+      ],
+      "total": 70,
+      "rationale": "协作指引相关但与原文大量重复，未重排任务字段，部分缺失项并非本题需要。"
+    },
+    {
+      "caseId": "agents-handoff",
+      "group": "main",
+      "plugin": "feiwell",
+      "dimensions": [
+        28,
+        24,
+        18,
+        12,
+        10
+      ],
+      "total": 92,
+      "rationale": "有针对性交接判定；新增每步边界和输入输出要求，略扩范围。"
+    },
+    {
+      "caseId": "agents-handoff",
+      "group": "main",
+      "plugin": "chosenxu",
+      "dimensions": [
+        30,
+        24,
+        17,
+        15,
+        10
+      ],
+      "total": 96,
+      "rationale": "保留8步/双Agent/写互斥/不执行，列表清楚。"
+    },
+    {
+      "caseId": "agents-handoff",
+      "group": "main",
+      "plugin": "fishsb",
+      "dimensions": [
+        30,
+        24,
+        17,
+        15,
+        10
+      ],
+      "total": 96,
+      "rationale": "紧凑完整分条，不额外加角色或执行。"
+    },
+    {
+      "caseId": "agents-handoff",
+      "group": "main",
+      "plugin": "fusion",
+      "dimensions": [
+        28,
+        16,
+        10,
+        4,
+        10
+      ],
+      "total": 68,
+      "rationale": "协作相关但重复，原文整段未整理，额外预算人力条件收益小。"
+    },
+    {
+      "caseId": "dev-vague",
+      "group": "vague",
+      "plugin": "feiwell",
+      "dimensions": [
+        29,
+        24,
+        19,
+        13,
+        10
+      ],
+      "total": 95,
+      "rationale": "需求展开为目标/功能/字段/输入输出/异常/验收，不硬定栈。"
+    },
+    {
+      "caseId": "dev-vague",
+      "group": "vague",
+      "plugin": "chosenxu",
+      "dimensions": [
+        28,
+        24,
+        19,
+        12,
+        10
+      ],
+      "total": 93,
+      "rationale": "有实际客户管理需求维度与待确认问题；CRUD等仅示例但扩展较多。"
+    },
+    {
+      "caseId": "dev-vague",
+      "group": "vague",
+      "plugin": "fishsb",
+      "dimensions": [
+        30,
+        10,
+        4,
+        15,
+        10
+      ],
+      "total": 69,
+      "rationale": "仅略改措辞，几乎没有补足模糊需求。"
+    },
+    {
+      "caseId": "dev-vague",
+      "group": "vague",
+      "plugin": "fusion",
+      "dimensions": [
+        29,
+        5,
+        5,
+        3,
+        10
+      ],
+      "total": 52,
+      "rationale": "匹配成办公，原文原样；通用模板代替客户管理具体需求维度。"
+    },
+    {
+      "caseId": "design-vague",
+      "group": "vague",
+      "plugin": "feiwell",
+      "dimensions": [
+        24,
+        24,
+        18,
+        12,
+        10
+      ],
+      "total": 88,
+      "rationale": "视觉与结构补充充分，但客户评价/合作方/数据等背书未提供，存在虚构诱导风险。"
+    },
+    {
+      "caseId": "design-vague",
+      "group": "vague",
+      "plugin": "chosenxu",
+      "dimensions": [
+        26,
+        24,
+        17,
+        13,
+        10
+      ],
+      "total": 90,
+      "rationale": "设计结构明确；把案例/资质/评价列例子，缺少可用性确认。"
+    },
+    {
+      "caseId": "design-vague",
+      "group": "vague",
+      "plugin": "fishsb",
+      "dimensions": [
+        30,
+        10,
+        3,
+        15,
+        10
+      ],
+      "total": 68,
+      "rationale": "只做轻量措辞，未补结构与信息维度。"
+    },
+    {
+      "caseId": "design-vague",
+      "group": "vague",
+      "plugin": "fusion",
+      "dimensions": [
+        28,
+        6,
+        10,
+        3,
+        10
+      ],
+      "total": 57,
+      "rationale": "有相关视觉维度，但保留原句并加通用项目流程，欠缺首页任务具体整理。"
+    },
+    {
+      "caseId": "office-vague",
+      "group": "vague",
+      "plugin": "feiwell",
+      "dimensions": [
+        27,
+        24,
+        19,
+        12,
+        10
+      ],
+      "total": 92,
+      "rationale": "事务类别/优先级/缓冲有用，但未知具体业务和作息，应更明确模板属性。"
+    },
+    {
+      "caseId": "office-vague",
+      "group": "vague",
+      "plugin": "chosenxu",
+      "dimensions": [
+        25,
+        23,
+        17,
+        13,
+        10
+      ],
+      "total": 88,
+      "rationale": "改写清楚，但硬要求周一到周日及休息类别，用户没有给7天安排条件。"
+    },
+    {
+      "caseId": "office-vague",
+      "group": "vague",
+      "plugin": "fishsb",
+      "dimensions": [
+        29,
+        18,
+        12,
+        15,
+        10
+      ],
+      "total": 84,
+      "rationale": "补优先级与每周节奏，简洁但分析维度少。"
+    },
+    {
+      "caseId": "office-vague",
+      "group": "vague",
+      "plugin": "fusion",
+      "dimensions": [
+        29,
+        4,
+        3,
+        3,
+        10
+      ],
+      "total": 49,
+      "rationale": "未识别业务任务，只有通用缺失/证据/核验模板，没有周安排维度。"
+    },
+    {
+      "caseId": "agents-vague",
+      "group": "vague",
+      "plugin": "feiwell",
+      "dimensions": [
+        25,
+        24,
+        18,
+        12,
+        10
+      ],
+      "total": 89,
+      "rationale": "角色/交接/同步/冲突补充具体，但篇幅约一页是新增硬限制。"
+    },
+    {
+      "caseId": "agents-vague",
+      "group": "vague",
+      "plugin": "chosenxu",
+      "dimensions": [
+        29,
+        24,
+        18,
+        14,
+        10
+      ],
+      "total": 95,
+      "rationale": "有明确职责/交接/冲突/同步/规则展开，未加长度限制。"
+    },
+    {
+      "caseId": "agents-vague",
+      "group": "vague",
+      "plugin": "fishsb",
+      "dimensions": [
+        30,
+        20,
+        13,
+        15,
+        10
+      ],
+      "total": 88,
+      "rationale": "把互相打架具体化为重叠/改动/结论冲突，扩展适中。"
+    },
+    {
+      "caseId": "agents-vague",
+      "group": "vague",
+      "plugin": "fusion",
+      "dimensions": [
+        29,
+        7,
+        13,
+        3,
+        10
+      ],
+      "total": 62,
+      "rationale": "协作指引相关，但原句不改，模板重复，字数与有效信息不相称。"
+    }
+  ],
+  "aggregates": [
+    {
+      "plugin": "feiwell",
+      "main8": 92.375,
+      "vague4": 91,
+      "equalCase12": 91.91666666666667,
+      "dimensions": [
+        27.583333333333332,
+        23.666666666666668,
+        17.75,
+        12.916666666666666,
+        10
+      ]
+    },
+    {
+      "plugin": "chosenxu",
+      "main8": 95.375,
+      "vague4": 91.5,
+      "equalCase12": 94.08333333333333,
+      "dimensions": [
+        28.833333333333332,
+        24.25,
+        18.083333333333332,
+        12.916666666666666,
+        10
+      ]
+    },
+    {
+      "plugin": "fishsb",
+      "main8": 94.625,
+      "vague4": 77.25,
+      "equalCase12": 88.83333333333333,
+      "dimensions": [
+        29.833333333333332,
+        20.5,
+        14.166666666666666,
+        14.333333333333334,
+        10
+      ]
+    },
+    {
+      "plugin": "fusion",
+      "main8": 63.625,
+      "vague4": 55,
+      "equalCase12": 60.75,
+      "dimensions": [
+        27.083333333333332,
+        12.583333333333334,
+        7.416666666666667,
+        3.6666666666666665,
+        10
+      ]
+    }
+  ]
+}

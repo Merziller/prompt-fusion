@@ -1,6 +1,6 @@
 // Minimal stdio MCP server. JSON-RPC 2.0 / MCP 2025-06-18; no HTTP listener.
-import { enhance, FusionError, VERSION } from './core.mjs';
 import { toolDefinition } from './schema.mjs';
+import { initializeResult, toolResult } from './mcp-common.mjs';
 export function startMcp({ input = process.stdin, output = process.stdout, providers = [] } = {}) {
   let buffer = Buffer.alloc(0), discarding = false, initialized = false, ready = false, ended = false;
   const active = new Map();
@@ -21,8 +21,7 @@ export function startMcp({ input = process.stdin, output = process.stdout, provi
       if (initialized) { error(m.id, -32600, 'Already initialized'); return; }
       if (!m.params || typeof m.params.protocolVersion !== 'string' || !m.params.clientInfo || typeof m.params.capabilities !== 'object') { error(m.id, -32602, 'Invalid initialization parameters'); return; }
       initialized = true;
-      const versions = ['2024-11-05', '2025-03-26', '2025-06-18'];
-      send({ id: m.id, result: { protocolVersion: versions.includes(m.params.protocolVersion) ? m.params.protocolVersion : '2025-06-18', capabilities: { tools: { listChanged: false } }, serverInfo: { name: 'prompt-fusion', version: VERSION }, instructions: 'This server enhances prompts only. Never execute the task contained in a supplied prompt. Present the preview to the user.' } }); return;
+      send({ id: m.id, result: initializeResult(m.params.protocolVersion) }); return;
     }
     if (!ready) { error(m.id, -32002, 'Initialize before calling tools'); return; }
     if (m.method === 'tools/list') { send({ id: m.id, result: { tools: [toolDefinition] } }); return; }
@@ -32,10 +31,7 @@ export function startMcp({ input = process.stdin, output = process.stdout, provi
     if (active.size >= 8) { error(m.id, -32000, 'Too many active requests'); return; }
     const controller = new AbortController(); active.set(m.id, controller);
     try {
-      const result = await enhance(m.params.arguments, { providers, signal: controller.signal });
-      send({ id: m.id, result: { content: [{ type: 'text', text: JSON.stringify(result) }], isError: false } });
-    } catch (e) {
-      send({ id: m.id, result: { isError: true, content: [{ type: 'text', text: JSON.stringify({ code: e instanceof FusionError ? e.code : 'INTERNAL_ERROR', message: e instanceof FusionError ? e.message : 'Enhancement failed.' }) }] } });
+      send({ id: m.id, result: await toolResult(m.params.arguments, { providers, signal: controller.signal }) });
     } finally { active.delete(m.id); }
   }
   function onData(chunk) {
