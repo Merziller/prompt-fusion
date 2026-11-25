@@ -14,7 +14,7 @@
 dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.2.0/prompt-fusion-0.2.0.tgz
 ```
 
-发行附件上传之后该地址才可用；具体上传回执在下方。其他profile需替换desktop。本机现有本地开发链接已加载0.2，但远程包替换该链接曾发生pnpm `ERR_PNPM_EPERM`，未标记远程替换成功，也未手工覆盖profile。新目录的npm发行包安装和现有DSH链接替换是两项不同验证。
+该附件已验证可匿名下载，上传回执在下方。其他profile需替换desktop。本机现有本地开发链接已加载0.2，但远程包替换该链接曾发生pnpm `ERR_PNPM_EPERM`，未标记远程替换成功，也未手工覆盖profile。新目录的npm发行包安装和现有DSH链接替换是两项不同验证。
 
 ## 测试
 
@@ -28,4 +28,14 @@ dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/rele
 
 ## 发布回执
 
-本记录在准备0.2发行时生成；实际commit、Release、CI和PR更新将在源码仓库本页记录。版本包内保留的是打包时记录；最新审核状态以链接目的页为准。
+2026-11-26 04:15（Asia/Shanghai）核对：
+
+- 完整0.2源码已推送，版本提交 [`0fdf97f78b58e46643bc856d3529e7cc144c8de4`](https://github.com/Merziller/prompt-fusion/commit/0fdf97f78b58e46643bc856d3529e7cc144c8de4)。
+- [Release v0.2.0](https://github.com/Merziller/prompt-fusion/releases/tag/v0.2.0) 已公开发布；[预构建包](https://github.com/Merziller/prompt-fusion/releases/download/v0.2.0/prompt-fusion-0.2.0.tgz) 70788字节，已匿名下载并与本地产物逐字节哈希核对。
+- SHA256：`31cf4939daead6f365b966deb3195490e2d8e6f294064d312a0f46a5d7757c5c`。
+- 最终发行包在全新隔离目录安装，重跑 **138/138 PASS**，构建一致性、导出、语法、清单和文档链接检查通过（2026-11-25 20:10:44 UTC）。
+- 当前本地DSH停用/启用该bundle均返回 `application:applied`；没有再次尝试失败的远程开发链接替换。
+- [新版源码CI](https://github.com/Merziller/prompt-fusion/actions/runs/45692452508)：Ubuntu与Windows的Node22.19.0/24，以及macOS的Node22.19.0，共 **5/6成功**；macOS Node24仍排队。另一个tag触发的同提交CI也有排队项，未声明整组通过。
+- [市场PR #18880](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/18880) 已实际更新描述与0.2.0附件；远端YAML和PR正文与交付内容一致。状态OPEN、未合并，[目录检查](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/actions/runs/45692560421/job/139481538487) 仍进行中；未声称已收录。
+
+源码仓库本页是最终回执；版本包内保留打包时记录。CI排队、市场审核和已登录GUI/其他智能体原生待测项不因发布而改成PASS。
