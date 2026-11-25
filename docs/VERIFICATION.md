@@ -1,10 +1,10 @@
-# 验证报告 — Prompt Fusion0.3.0
+# 验证报告 — Prompt Fusion0.3.1
 
 2026-11-26，Asia/Shanghai。实现者自测；没有虚构独立QA、团队签字或厂商应用测试。文字效果另见[质量审计](QUALITY_AUDIT.md)，工程测试数量不作为增强质量分数。
 
 ## 本轮工程回归
 
-Windows x64、Node24.19.0：构建、160项回归、元数据/导出/语法/本地链接/生成客户端检查。机器数据见[test-results.json](test-results.json)。发行包独立安装复验及本轮CI实际回执见[发布记录](RELEASE.md)。
+Windows x64、Node24.19.0：构建、161项回归、元数据/导出/语法/本地链接/生成客户端检查。机器数据见[test-results.json](test-results.json)。发行包独立安装复验及本轮CI实际回执见[发布记录](RELEASE.md)。
 
 | 范围 | 实际检查 | 证据层级 |
 | --- | --- | --- |
@@ -26,7 +26,7 @@ Windows x64、Node24.19.0：构建、160项回归、元数据/导出/语法/本�
 node scripts/sdk-smoke.mjs --sdk-root /absolute/node_modules/@modelcontextprotocol/sdk
 ```
 
-stdio、HTTP、HTTP+Bearer三种连接均完成initialize、listTools、callTool、错误输入。调用结果与共享核心一致，版本0.3.0。SDK最高协议与服务器协商至2025-06-18。回执见[sdk-verification.json](sdk-verification.json)。这是独立客户端协议互通，不是Grok Bot、Muse、WorkBuddy等应用原生通过。
+stdio、HTTP、HTTP+Bearer三种连接均完成initialize、listTools、callTool、错误输入。调用结果与共享核心一致，版本0.3.1。SDK最高协议与服务器协商至2025-06-18。回执见[sdk-verification.json](sdk-verification.json)。这是独立客户端协议互通，不是Grok Bot、Muse、WorkBuddy等应用原生通过。
 
 ## 历史真实DSH证据（版本不混用）
 
@@ -37,7 +37,7 @@ stdio、HTTP、HTTP+Bearer三种连接均完成initialize、listTools、callTool
 
 ## CI、质量与待测
 
-历史0.1的Ubuntu/macOS/Windows×Node22.19.0/24六组成功；0.2实际回执保留在发布记录。0.3结果以对应提交的运行链接为准，不借旧版结论冒充新版。
+历史0.1/0.2的六组OS/Node CI已成功。0.3.0源码CI中Windows/Linux四组成功、macOS两组失败：安装器误拦系统/var别名。0.3.1限定放行Darwin根级/var、/tmp、/etc指向各自/private标准目标，仍拦任意普通链接；增加严格映射回归。本修订CI以对应提交链接为准，不借旧版成功替代；失败运行保留，详见发布记录。
 
 本次质量复核为历史36份真实模型输出＋本地已发布0.2运行12份，共48份逐条审阅。新增真实LLM调用0；主试验/探索设置分开；作者主观评分而非独立盲评。当前核心约61/100。没有完成新语义改写器或新的下游提升试验。
 
@@ -52,4 +52,4 @@ stdio、HTTP、HTTP+Bearer三种连接均完成initialize、listTools、callTool
 | 豆包工作自定义传输 | 官方帮助页已找到，返回正文证据不足，待核实 |
 | 任意“同名Muse” | 仅查Zer0Qing/Muse；其他项目需精确来源 |
 
-已知质量缺陷不因160项工程回归消失，公开记录于[质量审计](QUALITY_AUDIT.md)。项目免费，自选模型与托管服务费用另计。
+已知质量缺陷不因161项工程回归消失，公开记录于[质量审计](QUALITY_AUDIT.md)。项目免费，自选模型与托管服务费用另计。

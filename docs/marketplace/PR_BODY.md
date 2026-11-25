@@ -1,6 +1,6 @@
 ## Add Merziller/prompt-fusion
 
-One entry only: `data/plugins/Merziller__prompt-fusion.yml`, category UI. Public repository https://github.com/Merziller/prompt-fusion ; Apache-2.0, zero runtime dependencies, complete source and prebuilt v0.3.0 Release tarball. `dsh.bundle`, patch, exact client module ID and `dsh-plugin` topic are present.
+One entry only: `data/plugins/Merziller__prompt-fusion.yml`, category UI. Public repository https://github.com/Merziller/prompt-fusion ; Apache-2.0, zero runtime dependencies, complete source and prebuilt v0.3.1 Release tarball. `dsh.bundle`, patch, exact client module ID and `dsh-plugin` topic are present.
 
 DSH retains one small inline Enhance/Stop/Undo button. It does not send or execute the embedded task, collect history/workspace automatically, or add another microphone/settings panel. Native draft revisions/reference chips have contract tests. Selected-model assistance chooses rule IDs and can fall back offline; external model services may charge.
 
@@ -8,7 +8,9 @@ Version0.3 adds brand-neutral standard-Skill installation with explicit paths, h
 
 **Quality disclosure:** a new author-agent review scored the released0.2 core about61/100. It retains original task text and adds reviewed guidance; it is not the semantic rewriter the user expected. The audit and failure mechanisms are public in docs/QUALITY_AUDIT.md. Version0.3 improves access only and does not claim to repair that quality defect. No inflated quality claim is based on engineering test counts.
 
-Validation:160 local regressions; official @modelcontextprotocol/sdk1.32.2 initialize/list/actual-call/invalid-input interoperability for stdio, HTTP and bearer HTTP. Fresh-package/CI receipts are separately recorded in docs/RELEASE.md. Historical DSH0.2.2-rc.5 local bundle reload and real0.2 tool calls succeeded. Authenticated GUI/DesktopIPC and other vendor apps' native loading remain NOT_RUN/BLOCKED. Prior Windows development-link replacement by remote tarball encountered pnpm EPERM; no manual profile overwrite or claim of remote replacement success.
+The0.3.0 CI exposed a macOS installer issue (root /var system alias rejected);0.3.1 accepts only exact Darwin root aliases with verified standard /private targets and retains ordinary symlink/junction checks. The failed run and original release remain public.
+
+Validation:161 local regressions; official @modelcontextprotocol/sdk1.32.2 initialize/list/actual-call/invalid-input interoperability for stdio, HTTP and bearer HTTP. Fresh-package/CI receipts are separately recorded in docs/RELEASE.md. Historical DSH0.2.2-rc.5 local bundle reload and real0.2 tool calls succeeded. Authenticated GUI/DesktopIPC and other vendor apps' native loading remain NOT_RUN/BLOCKED. Prior Windows development-link replacement by remote tarball encountered pnpm EPERM; no manual profile overwrite or claim of remote replacement success.
 
 Independent implementation inspired by feiwell, ChosenXu and Fishsb, with retained license/NOTICE texts. Upstream authors are acknowledged, not represented as contributors.
 

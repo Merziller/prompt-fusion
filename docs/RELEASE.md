@@ -2,11 +2,13 @@
 
 公开仓库：[Merziller/prompt-fusion](https://github.com/Merziller/prompt-fusion)，Apache-2.0，作者Merziller。仓库创建于2026-11-25 19:18:43UTC（2026-11-26 03:18:43Asia/Shanghai）。npm尚未发布，不把包名当成已上架。
 
-## 0.3.0 本轮构建状态
+## 0.3系列本轮记录
 
-2026-11-26 06:08Asia/Shanghai：通用Skill目录和回执卸载、MCP stdio/Streamable HTTP、REST/OpenAPI、CLI与平台证据文档已完成。本机Node24.19.0/win32回归**160/160PASS**、构建和元数据/语法/链接检查PASS。官方SDK1.32.2三种连接互通PASS，见[验证报告](VERIFICATION.md)和[SDK回执](sdk-verification.json)。
+通用Skill目录和回执卸载、MCP stdio/Streamable HTTP、REST/OpenAPI、CLI与平台证据文档已完成。已发布的[0.3.0](https://github.com/Merziller/prompt-fusion/releases/tag/v0.3.0)提交`23661cc3b113c3d6959c91c6a67ea815d03dc954`，附件91011字节、SHA256`78db19db6dc2f654bfa011cb063ffee4e00e83221c0e067d02136b976aae35b2`，已匿名下载比对。隔离包160项及SDK三连接通过，但[CI](https://github.com/Merziller/prompt-fusion/actions/runs/45711121386)只有Windows/Linux四组成功、macOS两组失败：安装器误拦系统/var别名。保留原标签/附件和失败运行，不覆盖历史。
 
-0.3.0源码推送、独立发行包与公开附件、对应CI和市场条目更新在本轮发布操作后补记真实回执；此处尚不声称已发布。质量审计已完成，旧0.2约61/100；0.3仅改接入，未修复语义改写缺陷。
+0.3.1修订限定放行Darwin根级/var、/tmp、/etc到各自/private标准目标，普通链接继续拒绝。2026-11-26 06:19Asia/Shanghai，本机Node24.19.0/win32回归**161/161PASS**、构建与检查通过，官方SDK1.32.2三种连接互通通过。对应新CI、隔离包和发布回执尚待本轮操作后补录，不借旧结论代替。
+
+[质量审计](QUALITY_AUDIT.md)已完成，旧0.2约61/100；0.3系列仅改接入，未修复语义改写缺陷。见[验证报告](VERIFICATION.md)及[SDK回执](sdk-verification.json)。
 
 ## 市场申请与安装边界
 

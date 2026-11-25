@@ -44,7 +44,7 @@ node bin/prompt-fusion.mjs config --target http --server-url https://YOUR_HOST/m
 输入区右侧只有 **增强**；运行时变 **停止**，完成后变 **撤销增强**。没有模式/场景/强度/上下文面板或额外语音按钮。沿用DSH原生语音；插件不自动发送消息。普通草稿直接应用；引用块采用原位追加；会话切换、继续编辑和草稿版本变化时阻止过期覆盖。
 
 ```sh
-dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.3.0/prompt-fusion-0.3.0.tgz
+dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.3.1/prompt-fusion-0.3.1.tgz
 ```
 
 目标DSH0.2.2-rc.5。已验证历史本地目录安装/工具调用；Windows现有开发链接替换远程包曾遇EPERM，未标为成功。已登录GUI点击、DesktopIPC和其他厂商应用端到端状态另见[验证报告](docs/VERIFICATION.md)。市场PR提交与正式上架分开记录。
@@ -87,7 +87,7 @@ npm pack --dry-run
 node scripts/sdk-smoke.mjs --sdk-root /absolute/node_modules/@modelcontextprotocol/sdk
 ```
 
-本轮本机回归160项；官方SDK1.32.2对stdio、HTTP、HTTP Bearer分别初始化、发现、调用、无效输入测试通过。这是工程与协议证据，质量评分单独计算；厂商原生、CI和发行包复验详见[验证报告](docs/VERIFICATION.md)。
+本轮本机回归161项；官方SDK1.32.2对stdio、HTTP、HTTP Bearer分别初始化、发现、调用、无效输入测试通过。这是工程与协议证据，质量评分单独计算；厂商原生、CI和发行包复验详见[验证报告](docs/VERIFICATION.md)。
 
 DSH在插件设置停用/卸载；Skill使用`uninstall --skill-dir EXACT_DIRECTORY`并先dry-run；修改过的安装保留供人工审阅。MCP只删除自己合并的配置条目。`serve`是显式前台服务，停止进程后无常驻服务。
 

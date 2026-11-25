@@ -1,6 +1,6 @@
 {
   "name": "prompt-fusion",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Meaning-preserving prompt enhancement with an offline core, reviewable previews and MCP tools. Never executes the supplied task.",
   "author": { "name": "Merziller", "email": "k26789228@gmail.com", "url": "https://github.com/Merziller" },
   "homepage": "https://github.com/Merziller/prompt-fusion",

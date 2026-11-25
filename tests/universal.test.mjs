@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { request as httpRequest } from 'node:http';
-import { installSkill, uninstallSkill, makeConfig } from '../src/install.mjs';
+import { installSkill, uninstallSkill, makeConfig, isSystemPathAlias } from '../src/install.mjs';
 import { startHttp, openApiDocument } from '../src/http.mjs';
 import { enhance } from '../src/core.mjs';
 const accept = 'application/json, text/event-stream';
@@ -47,6 +47,15 @@ test('uninstall retains edited, extra, incomplete and unowned files', async () =
     await rm(path.join(r.destination, 'SKILL.md'));
     await assert.rejects(() => uninstallSkill({ skillDir: r.destination }), e => e.code === 'MODIFIED_INSTALL');
   } finally { await rm(temp, { recursive: true, force: true }); }
+});
+test('only exact macOS root system aliases with verified targets are permitted', () => {
+  for (const [alias, target] of Object.entries({ '/var': '/private/var', '/tmp': '/private/tmp', '/etc': '/private/etc' })) {
+    assert.equal(isSystemPathAlias('darwin', alias, target), true);
+    assert.equal(isSystemPathAlias('linux', alias, target), false);
+    assert.equal(isSystemPathAlias('darwin', alias, '/arbitrary/user/path'), false);
+    assert.equal(isSystemPathAlias('darwin', alias + '/custom-link', target), false);
+  }
+  assert.equal(isSystemPathAlias('darwin', '/user/link', '/private/var'), false);
 });
 test('installer rejects a symlink or junction in a custom destination', async () => {
   const temp = await mkdtemp(path.join(os.tmpdir(), 'pf-link-'));

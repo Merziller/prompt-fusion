@@ -33,7 +33,7 @@ The HTTP service uses stateless JSON responses at `POST /mcp`, not legacy SSE. R
 One Enhance button becomes Stop, then Undo enhancement. No mode/domain/depth/context selectors or microphone button; use DSH's own speech input. Results enter the draft without sending it. Native references use append-only insertion; draft revisions, later edits and session switches guard stale writes.
 
 ```sh
-dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.3.0/prompt-fusion-0.3.0.tgz
+dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.3.1/prompt-fusion-0.3.1.tgz
 ```
 
 Target DSH0.2.2-rc.5. Historical local installation/tool calls succeeded. Replacing an existing Windows development link with a remote tarball encountered EPERM and is not marked passed. Authenticated GUI/DesktopIPC and other native apps have separate untested statuses.
@@ -59,7 +59,7 @@ npm pack --dry-run
 node scripts/sdk-smoke.mjs --sdk-root /absolute/node_modules/@modelcontextprotocol/sdk
 ```
 
-This round has160 local regressions. Official SDK1.32.2 interoperated with stdio, HTTP and bearer HTTP for initialize/list/call/invalid-input. The optional SDK stays outside runtime dependencies. CI/package receipts and native limitations are recorded separately. No independent reviewer or fresh upstream-model/downstream quality trial is claimed.
+This round has161 local regressions. Official SDK1.32.2 interoperated with stdio, HTTP and bearer HTTP for initialize/list/call/invalid-input. The optional SDK stays outside runtime dependencies. CI/package receipts and native limitations are recorded separately. No independent reviewer or fresh upstream-model/downstream quality trial is claimed.
 
 Disable/remove DSH through its plugin settings. Use `uninstall --skill-dir EXACT_DIRECTORY` for an unmodified portable Skill; review dry-run first. Remove only MCP config entries you added. Stop the explicit `serve` process to stop the service.
 

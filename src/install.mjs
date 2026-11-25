@@ -20,13 +20,21 @@ export const TARGETS = Object.freeze({
 const digest = (s) => createHash('sha256').update(s).digest('hex');
 const ownedFiles = ['SKILL.md', 'scripts/core.mjs', 'scripts/structure.mjs', 'scripts/enhance.mjs', 'LICENSE'];
 async function existing(p) { try { return await lstat(p); } catch (e) { if (e.code === 'ENOENT') return null; throw e; } }
+// macOS exposes these root-level OS aliases; only their canonical targets are allowed.
+const macRootAliases = Object.freeze({ '/var': '/private/var', '/tmp': '/private/tmp', '/etc': '/private/etc' });
+export function isSystemPathAlias(platform, alias, target) {
+  return platform === 'darwin' && Object.hasOwn(macRootAliases, alias) && macRootAliases[alias] === target;
+}
 async function checkPath(p) {
   const absolute = path.resolve(p), parts = absolute.slice(path.parse(absolute).root.length).split(path.sep).filter(Boolean);
   let cursor = path.parse(absolute).root;
   for (const piece of parts) {
     cursor = path.join(cursor, piece);
     const item = await existing(cursor);
-    if (item?.isSymbolicLink()) throw new FusionError('UNSAFE_PATH', 'Path contains a symlink or junction.');
+    if (item?.isSymbolicLink()) {
+      if (isSystemPathAlias(process.platform, cursor, await realpath(cursor))) continue;
+      throw new FusionError('UNSAFE_PATH', 'Path contains a symlink or junction.');
+    }
     if (item && !item.isDirectory()) throw new FusionError('INVALID_PATH', 'A directory path contains a file.');
   }
   return absolute;
