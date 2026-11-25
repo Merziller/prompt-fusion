@@ -1,0 +1,4 @@
+- insert:
+    - id: merziller-prompt-fusion
+      name: '@merziller/prompt-fusion'
+      config: {}

@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-25T19:25:44.375Z",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "architecture": "x64",
+  "status": "PASS",
+  "tests": 123,
+  "pass": 123,
+  "fail": 0,
+  "cancelled": 0,
+  "skipped": 0,
+  "scope": "automated core/protocol/adapter tests; not a claim of native host or physical microphone execution"
+}

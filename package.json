@@ -1,0 +1,35 @@
+{
+  "name": "@merziller/prompt-fusion",
+  "version": "0.1.0",
+  "description": "Prompt Fusion：保留原意的离线/模型辅助提示词增强，支持 DSH、CLI、MCP 和 Agent Skills。",
+  "type": "module",
+  "main": "./adapters/dsh/index.mjs",
+  "bin": { "prompt-fusion": "./bin/prompt-fusion.mjs" },
+  "exports": {
+    ".": "./adapters/dsh/index.mjs",
+    "./core": "./src/core.mjs",
+    "./client": "./adapters/dsh/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./assets/icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": ["src", "bin", "adapters", "skills", "locale", "docs", "scripts", "tests", "evals", ".claude-plugin", "third-party", "assets", ".mcp.json", "cordis.patch.yml", "README.md", "README.en.md", "LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md", "AUTHORS.md", "CHANGELOG.md"],
+  "scripts": {
+    "build": "node scripts/build-client.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "test:report": "node scripts/test-report.mjs",
+    "mcp": "node bin/prompt-fusion.mjs mcp",
+    "start": "node bin/prompt-fusion.mjs"
+  },
+  "author": { "name": "Merziller", "email": "k26789228@gmail.com", "url": "https://github.com/Merziller" },
+  "license": "Apache-2.0",
+  "repository": { "type": "git", "url": "git+https://github.com/Merziller/prompt-fusion.git" },
+  "homepage": "https://github.com/Merziller/prompt-fusion#readme",
+  "bugs": { "url": "https://github.com/Merziller/prompt-fusion/issues" },
+  "keywords": ["dsh", "dsh-plugin", "prompt-enhancer", "mcp", "agent-skills", "codex", "claude", "openclaw"],
+  "engines": { "node": ">=22.19.0", "dsh": ">=0.2.2-rc.5 <0.3.0-0" },
+  "icon": "./assets/icon.svg",
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" }, "client": { "platform": "web", "inject": [] } },
+  "publishConfig": { "access": "public" }
+}

@@ -1,0 +1,6 @@
+{
+  "prompt-fusion": {
+    "command": "node",
+    "args": ["${CLAUDE_PLUGIN_ROOT}/bin/prompt-fusion.mjs", "mcp"]
+  }
+}

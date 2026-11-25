@@ -1,0 +1,14 @@
+Prompt Fusion
+Copyright 2026 Merziller
+Licensed under the Apache License, Version 2.0.
+
+Prompt Fusion is an independently implemented integration inspired by:
+- feiwell / dsh-enhance-prompt (MIT)
+- ChosenXu / dsh-prompt-enhancer (MIT)
+- Fishsb / dsh-voice-prompt-enhancer (Apache-2.0)
+
+No upstream runtime source, prompt templates, artwork or bundled dependencies
+are copied into this implementation. Upstream license texts and Fishsb's
+original NOTICE are retained under third-party/licenses for provenance.
+These acknowledgements do not identify the original authors as contributors
+to, maintainers of, or endorsers of Prompt Fusion.
