@@ -1,6 +1,15 @@
 {
-  "meta": { "title": "Prompt Fusion · 提示词增强", "description": "保留原意的离线提示词增强、预览确认、语音转写与跨智能体工具。", "detail": "README.md" },
+  "meta": { "title": "Prompt Fusion · 一键增强", "description": "一个按钮，自动场景与深度增强，保真编排并可撤销。", "detail": "README.md" },
   "ui": {
-    "title": "Prompt Fusion 提示词增强", "mode": "模式", "domain": "场景", "intensity": "强度", "base": "保真", "lite": "轻量", "standard": "标准", "smart": "模型辅助", "publish": "发布准备", "auto": "自动", "general": "通用", "code": "代码开发", "design": "设计创意", "office": "OPC 办公", "collaboration": "多智能体协作", "research": "研究调研", "writing": "内容写作", "light": "轻", "deep": "深", "preview": "增强预览", "voice": "语音输入", "stopVoice": "结束录音", "cancel": "取消", "undo": "撤销增强", "options": "上下文与语音选项", "context": "附加参考资料", "memory": "记住本次会话上一稿", "voiceCleanup": "生成语音清理建议", "hotkeys": "启用快捷键", "contextHint": "仅粘贴本次需要的参考资料（8 KiB预算），不要填密钥。不会扫描文件或历史会话。", "memoryHint": "记忆默认关闭，仅在组件内保留一稿；发送、清空、会话切换或关闭插件后清除。模型辅助模式会将原文和明确勾选的资料发给当前模型，可能产生服务商费用。", "silence": "静音自动结束", "dictionary": "术语词典（JSON 对象，最多24对；仅供清理建议）", "dictionaryInvalid": "词典须为有效 JSON 对象。", "hotkeyHint": "启用后 Alt+Shift+P 增强预览；Alt+Shift+V 录音/停止。若与系统冲突请关闭。录音最长120秒，无语音12秒结束。", "privacy": "默认离线增强，仅生成预览；确认后加入草稿，再由你发送。", "speechProvider": "当前识别服务", "speechSetup": "语音识别服务需在DSH设置中配置。", "enhancing": "正在生成增强预览…", "recording": "正在录音；可点击结束或取消。", "transcribing": "正在转写…", "cancelled": "操作已取消，草稿保留。", "stale": "草稿已变化，请重新预览或重新录入；已有编辑保留。", "caretEnd": "请把输入框光标移至原文末尾，再点确认。原生引用和附件会保留。", "unchanged": "原文已保留，当前没有可追加内容。", "applied": "增强指引已加入草稿，尚未发送。", "restored": "已撤销本次增强。", "transcriptReview": "转写已完成，请核对后插入草稿。", "transcriptInserted": "转写已插入；可继续选择增强预览。", "transcript": "转写预览", "insertTranscript": "确认插入转写", "discard": "丢弃预览", "previewTitle": "增强结果预览", "previewHint": "原文逐字保留，后附的建议以上文为准。请检查后确认；本插件不会执行原文任务。", "apply": "确认加入草稿", "copy": "复制", "copied": "已复制。", "copyManual": "请在预览框中选择并复制文本。", "voiceSuggestion": "语音清理建议（另列，原文未改）", "hostUnsupported": "当前输入框接口未就绪，请更新DSH至兼容版本并重试。"
+    "enhance": "增强", "undo": "撤销增强", "cancel": "停止",
+    "hint": "自动匹配场景并深度增强；保留原文，整理结构后写入草稿。使用当前模型选择指引，失败时离线增强；不发送消息。",
+    "busyHint": "正在增强，点击停止；你继续编辑时不会覆盖新草稿。",
+    "undoHint": "已增强，点击撤销本次修改。消息尚未发送。",
+    "cancelled": "已停止增强，草稿保留。",
+    "stale": "草稿已变化，已保留你的新编辑。再次点击可增强当前草稿。",
+    "unchanged": "当前内容已经增强，无需重复添加。",
+    "applied": "已完成自动场景匹配、深度增强与结构整理。点击同一按钮可撤销。",
+    "restored": "已恢复增强前的原文。",
+    "failed": "增强未完成，原文保留。"
   }
 }

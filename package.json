@@ -1,6 +1,6 @@
 {
   "name": "@merziller/prompt-fusion",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Prompt Fusion：保留原意的离线/模型辅助提示词增强，支持 DSH、CLI、MCP 和 Agent Skills。",
   "type": "module",
   "main": "./adapters/dsh/index.mjs",

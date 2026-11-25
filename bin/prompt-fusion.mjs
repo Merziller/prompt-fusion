@@ -13,7 +13,7 @@ export async function readStdin(stream = process.stdin, maxBytes = LIMITS.inputB
 }
 function flags(args) {
   const out = { _: [] }; const toggles = ['json', 'model', 'voice', 'dry-run', 'help', 'version'];
-  const valued = ['domain', 'mode', 'intensity', 'language', 'target', 'scope', 'root', 'out', 'file'];
+  const valued = ['domain', 'mode', 'intensity', 'language', 'layout', 'target', 'scope', 'root', 'out', 'file'];
   for (let i = 0; i < args.length; i++) {
     const a = args[i]; if (a === '--') { out._.push(...args.slice(i + 1)); break; }
     if (!a.startsWith('--')) { out._.push(a); continue; }
@@ -42,7 +42,7 @@ export async function main(args = process.argv.slice(2)) {
   if (f.json) { try { request = JSON.parse(input); } catch { throw new FusionError('INVALID_JSON', 'Input must be one JSON request object.'); } }
   else request = { input };
   if (!request || typeof request !== 'object' || Array.isArray(request)) throw new FusionError('INVALID_INPUT', 'Request must be a JSON object.');
-  for (const key of ['domain', 'mode', 'intensity', 'language']) if (f[key]) request[key] = f[key];
+  for (const key of ['domain', 'mode', 'intensity', 'language', 'layout']) if (f[key]) request[key] = f[key];
   if (f.voice) request.voice = true;
   const providers = [];
   if (f.model) { providers.push(createHttpProvider({ baseUrl: process.env.FUSION_BASE_URL, model: process.env.FUSION_MODEL, apiKey: process.env.FUSION_API_KEY })); if (request.mode === undefined) request.mode = 'smart'; }

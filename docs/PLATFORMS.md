@@ -6,7 +6,7 @@
 
 | 平台 | 交付机制 | Skill 安装位置 | 原生运行状态 |
 |---|---|---|---|
-| DSH | 原生 bundle、composer dock、Host命令/工具/HTTP、可选官方STT | 不需要Skill安装 | 本机实际安装及验证结果见验证报告；目标0.2.2-rc.5 |
+| DSH | 原生 bundle、输入框右侧单按钮、Host命令/工具/connection 路由 | 不需要Skill安装 | 本机实际安装及验证结果见验证报告；目标0.2.2-rc.5 |
 | Codex | Agent Skill、stdio MCP配置片段 | 项目/用户 `.agents/skills/prompt-fusion` | 本机未发现Codex CLI；生成器及可移植脚本已测，原生待测 |
 | Claude Code | 原生插件目录、Skill、stdio MCP | 独立安装 `.claude/skills/prompt-fusion`；插件目录自带 `skills/` | 本机Claude启动器存在，但其claude.exe报“不是此操作系统平台的有效应用程序”；宿主验证未执行成功 |
 | Antigravity | Skill、stdio MCP配置片段 | 项目 `.agents/skills/prompt-fusion`；用户 `.gemini/config/skills/prompt-fusion` | 文档核验、安装脚本测试；原生待测 |

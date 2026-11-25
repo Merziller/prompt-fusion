@@ -1,29 +1,31 @@
 # 发布与市场状态
 
-项目：[Merziller/prompt-fusion](https://github.com/Merziller/prompt-fusion)，公开仓库，Apache-2.0。创建时间为 2026-11-25 19:18:43 UTC，即北京时间 **2026-11-26 03:18:43**。
+公开仓库：[Merziller/prompt-fusion](https://github.com/Merziller/prompt-fusion)，Apache-2.0。仓库创建于2026-11-25 19:18:43 UTC，即2026-11-26 03:18:43（Asia/Shanghai）。
 
-本地交付包含完整源码、生成的 DSH 客户端、零依赖构建、CLI、MCP、七类平台 Skill 安装器、配置生成器、双语说明、测试、来源审计、作者与第三方许可。无需 npm 认证即可从 GitHub 克隆运行。
+## 版本与分发
 
-## 分发
+0.2.0重做为输入框右侧单一增强按钮：场景自动、deep、smart选择审核规则并离线回退，自动编排、直接写回、停止与撤销。不提供第二套语音入口或设置面板。源码、生成Client、CLI/MCP、自包含Skill、安装器、双语文档与来源许可齐全。没有prepare/postinstall钩子；npm尚未发布，不将包名当作已上架。
 
-首版目标 tag：`v0.1.0`。预构建发行附件：`prompt-fusion-0.1.0.tgz`。实际发布结果以 GitHub Releases 页面及下方发布回执为准。无 prepare/postinstall 构建钩子。尚未发布 npm（本次无 npm 认证），也不将 npm 包名写作已上架。
+当前发行请查看 [GitHub Releases](https://github.com/Merziller/prompt-fusion/releases)。0.1.0的[真实发行](https://github.com/Merziller/prompt-fusion/releases/tag/v0.1.0)和72117字节附件已发布；初版提交为 `74c2331e77cd283915d48c2109d010b5b783dbae`。
 
-DSH 安装命令：
+0.2.0发行安装地址：
 
 ```sh
-dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.1.0/prompt-fusion-0.1.0.tgz
+dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.2.0/prompt-fusion-0.2.0.tgz
 ```
 
-该命令需在发行附件实际上传后使用；本机已验证从项目目录安装，远程发行安装另见回执。其他 profile 请替换 desktop。
+发行附件上传之后该地址才可用；具体上传回执在下方。其他profile需替换desktop。本机现有本地开发链接已加载0.2，但远程包替换该链接曾发生pnpm `ERR_PNPM_EPERM`，未标记远程替换成功，也未手工覆盖profile。新目录的npm发行包安装和现有DSH链接替换是两项不同验证。
 
-## DSH 市场
+## 测试
 
-收录目标是 [awesome-dsh-plugin/awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)，不是 dsh-market 应用本身。按其 [贡献说明](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/blob/main/contributing.md)，只增加 `data/plugins/Merziller__prompt-fusion.yml` 一条，附双语功能描述与 GitHub 发行包地址。
+本机0.2回归138/138通过，真实宿主工具已返回0.2.0的深度结构化结果。首版公开CI六组Ubuntu/Windows/macOS×Node22.19.0/24全通过。0.2的CI与独立发行包复验以最终回执为准，未用旧版结果替代新版。
 
-已发现明确门槛：**仓库创建满 1 天**。本仓库最早满足时间为 **2026-11-27 03:18:43（Asia/Shanghai）**。提交申请不等于收录；还需通过目录检查并由维护者审阅合并。新仓库的年龄检查可能暂时失败，目录说明表示会刷新过期结论，无需伪造提交日期或空提交。
+## DSH市场申请
 
-合并后 dsh-market 会随目录更新展示条目。官方 Discover 的 npm 格式索引与 dsh-market 不完全相同；只在 GitHub 发布的本版不能被描述为已进入 npm Discover 索引。
+已实际创建 [PR #18880](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/18880)，只新增 `data/plugins/Merziller__prompt-fusion.yml`，包含双语描述及预构建包。申请仓库为 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)，非市场应用仓库本身。
+
+按[贡献说明](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/blob/main/contributing.md)，仓库需创建满一天：最早为 **2026-11-27 03:18:43（Asia/Shanghai）**。当前申请不等于已收录，仍需目录检查与维护者合并；不承诺合并时点。dsh-market目录和npm Discover索引不同，本项目没有宣称进入npm索引。
 
 ## 发布回执
 
-实现完成后在此补充实际 GitHub commit、Release、市场 PR 链接与状态。发布尚在进行的文档不是成功回执。
+本记录在准备0.2发行时生成；实际commit、Release、CI和PR更新将在源码仓库本页记录。版本包内保留的是打包时记录；最新审核状态以链接目的页为准。

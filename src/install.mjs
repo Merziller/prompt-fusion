@@ -31,6 +31,7 @@ export async function installSkill({ target, scope = 'project', destinationRoot,
   const files = {
     'SKILL.md': await readFile(path.join(root, 'skills/prompt-fusion/SKILL.md'), 'utf8'),
     'scripts/core.mjs': await readFile(path.join(root, 'src/core.mjs'), 'utf8'),
+    'scripts/structure.mjs': await readFile(path.join(root, 'src/structure.mjs'), 'utf8'),
     'scripts/enhance.mjs': (await readFile(path.join(root, 'skills/prompt-fusion/scripts/enhance.mjs'), 'utf8')).replace('../../../src/core.mjs', './core.mjs'),
     'LICENSE': await readFile(path.join(root, 'LICENSE'), 'utf8')
   };
