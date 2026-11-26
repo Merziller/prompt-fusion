@@ -9,9 +9,14 @@
 - 版本身份：`@merziller/prompt-fusion@0.5.1`，运行代码相对已验证0.5.1-dev只变更版本字面量；[发行清单](../evals/releases/0.5.1/manifest.json)保留对应字节身份。
 - 源码构建、完整回归和检查：384/384 PASS；[机器回执](test-results.json)。
 - 官方MCP SDK六组合及React/Lexical撤销复现：PASS；[SDK回执](sdk-semantic-verification.json)、[撤销回执](releases/0.5.1-undo-verification.json)。均不冒充已登录GUI测试。
-- 最终独立归档、公开提交/下载、六组CI和目录申请的实际结果将在本节完成后补录；此时不宣称已上线。
+- 正式源码已推送：[发行提交 `276f801784a66b79f3b229f64a633aaedcafae71`](https://github.com/Merziller/prompt-fusion/commit/276f801784a66b79f3b229f64a633aaedcafae71)。补充了Git属性，确保历史源码和上游许可证按原始字节检出，不改变运行代码。
+- [Release v0.5.1](https://github.com/Merziller/prompt-fusion/releases/tag/v0.5.1)已于2026-11-27 00:21:03 Asia/Shanghai公开。正式附件4,121,146字节，匿名下载与本地归档SHA256一致：`a05e6b20ae49f00c2dfc3c23568d254d3e7e4fa723e8c0d146d177dc9dedabd9`；另有[校验文件](https://github.com/Merziller/prompt-fusion/releases/download/v0.5.1/SHA256SUMS.txt)。首次公开下载检查返回404，后续匿名下载已成功验证，原记录保留。
+- 正式tgz在全新离线目录安装，275个文件逐字节一致；安装后的384/384测试、源码检查、官方SDK六组合及React/Lexical撤销复现均PASS。公开仓库全新克隆也完成构建、384项测试、检查和发行身份验证。
+- [发行提交CI](https://github.com/Merziller/prompt-fusion/actions/runs/45857920987)与[源码提交CI](https://github.com/Merziller/prompt-fusion/actions/runs/45857286572)均已核实：Ubuntu、Windows、macOS × Node 22.19.0/24，六组全部成功。
+- [市场PR #18880](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/18880)已更新至0.5.1固定附件，仅变更`data/plugins/Merziller__prompt-fusion.yml`；远端条目和申请正文与本地匹配。截至2026-11-27 00:26 Asia/Shanghai，申请OPEN、未合并，目录检查仍进行中；不宣称已被市场收录或所有客户端已同步。仓库满一天的最早时刻为2026-11-27 03:18:43 Asia/Shanghai，最终收录由维护者决定。
+- [机器发布回执](releases/0.5.1-publication.json)分别记录附件身份、六组CI和申请状态。此页后续文档提交不移动发行标签、不改写已发布附件。
 
-安装目标：
+安装命令：
 
 ```sh
 dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.5.1/prompt-fusion-0.5.1.tgz

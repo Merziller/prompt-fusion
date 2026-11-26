@@ -1,0 +1,163 @@
+{
+  "schema": "prompt-fusion-publication-receipt-v1",
+  "at": "2026-11-26T16:25:31.855Z",
+  "version": "0.5.1",
+  "repository": "https://github.com/Merziller/prompt-fusion",
+  "sourceCommit": "276f801784a66b79f3b229f64a633aaedcafae71",
+  "release": {
+    "url": "https://github.com/Merziller/prompt-fusion/releases/tag/v0.5.1",
+    "publishedAt": "2026-11-26T16:21:03Z",
+    "tag": "v0.5.1",
+    "draft": false,
+    "bytes": 4121146,
+    "sha256": "a05e6b20ae49f00c2dfc3c23568d254d3e7e4fa723e8c0d146d177dc9dedabd9",
+    "download": "https://github.com/Merziller/prompt-fusion/releases/download/v0.5.1/prompt-fusion-0.5.1.tgz",
+    "checksum": "https://github.com/Merziller/prompt-fusion/releases/download/v0.5.1/SHA256SUMS.txt",
+    "anonymousDownload": "PASS"
+  },
+  "ci": [
+    {
+      "url": "https://github.com/Merziller/prompt-fusion/actions/runs/45857920987",
+      "id": 45857920987,
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "verify (macos-latest, 22.19.0)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/Merziller/prompt-fusion/actions/runs/45857920987/job/140041059769"
+        },
+        {
+          "name": "verify (macos-latest, 24)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/Merziller/prompt-fusion/actions/runs/45857920987/job/140041060082"
+        },
+        {
+          "name": "verify (ubuntu-latest, 22.19.0)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/Merziller/prompt-fusion/actions/runs/45857920987/job/140041060120"
+        },
+        {
+          "name": "verify (ubuntu-latest, 24)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/Merziller/prompt-fusion/actions/runs/45857920987/job/140041060184"
+        },
+        {
+          "name": "verify (windows-latest, 24)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/Merziller/prompt-fusion/actions/runs/45857920987/job/140041060187"
+        },
+        {
+          "name": "verify (windows-latest, 22.19.0)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/Merziller/prompt-fusion/actions/runs/45857920987/job/140041060209"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/Merziller/prompt-fusion/actions/runs/45857286572",
+      "id": 45857286572,
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "verify (ubuntu-latest, 24)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/Merziller/prompt-fusion/actions/runs/45857286572/job/140038879338"
+        },
+        {
+          "name": "verify (windows-latest, 22.19.0)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/Merziller/prompt-fusion/actions/runs/45857286572/job/140038879736"
+        },
+        {
+          "name": "verify (macos-latest, 22.19.0)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/Merziller/prompt-fusion/actions/runs/45857286572/job/140038879807"
+        },
+        {
+          "name": "verify (windows-latest, 24)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/Merziller/prompt-fusion/actions/runs/45857286572/job/140038879848"
+        },
+        {
+          "name": "verify (ubuntu-latest, 22.19.0)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/Merziller/prompt-fusion/actions/runs/45857286572/job/140038879950"
+        },
+        {
+          "name": "verify (macos-latest, 24)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/Merziller/prompt-fusion/actions/runs/45857286572/job/140038880091"
+        }
+      ]
+    }
+  ],
+  "distribution": {
+    "status": "PASS",
+    "archive": {
+      "name": "merziller-prompt-fusion-0.5.1.tgz",
+      "bytes": 4121146,
+      "sha256": "a05e6b20ae49f00c2dfc3c23568d254d3e7e4fa723e8c0d146d177dc9dedabd9"
+    },
+    "files": 275,
+    "tests": {
+      "at": "2026-11-26T16:12:18.955Z",
+      "node": "v24.19.0",
+      "platform": "win32",
+      "architecture": "x64",
+      "status": "PASS",
+      "tests": 384,
+      "pass": 384,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "scope": "automated core/protocol/adapter tests; not a claim of native host or physical microphone execution"
+    },
+    "sdk": {
+      "status": "PASS"
+    },
+    "undo": {
+      "status": "PASS"
+    },
+    "authenticatedGui": "NOT_RUN"
+  },
+  "marketplace": {
+    "url": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/18880",
+    "state": "open",
+    "merged": false,
+    "head": "2c9e3aea7edf51dcb374948715d6c2e3173fe2da",
+    "changedFiles": [
+      "data/plugins/Merziller__prompt-fusion.yml"
+    ],
+    "checks": [
+      {
+        "name": "check",
+        "status": "in_progress",
+        "conclusion": null,
+        "url": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/actions/runs/45858072974/job/140041582772",
+        "detailsUrl": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/actions/runs/45858072974/job/140041582772",
+        "summary": null,
+        "text": null
+      }
+    ],
+    "entryContent": "MATCH",
+    "bodyContent": "MATCH",
+    "listing": "AWAITING_MAINTAINER"
+  },
+  "npmPublished": false
+}
