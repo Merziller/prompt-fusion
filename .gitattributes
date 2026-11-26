@@ -2,3 +2,7 @@
 *.svg text eol=lf
 *.png binary
 *.tgz binary
+
+# Preserve the exact upstream and historical bytes used by integrity checks.
+evals/ui-history/v0.2.0-client-source.js -text whitespace=cr-at-eol
+third-party/licenses/*.txt -text whitespace=cr-at-eol
