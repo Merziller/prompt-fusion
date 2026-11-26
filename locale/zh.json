@@ -1,5 +1,5 @@
 {
-  "meta": { "title": "Prompt Fusion · 一键增强", "description": "一个按钮，自动场景与深度增强，保真编排并可撤销。", "detail": "README.md" },
+  "meta": { "title": "Prompt Fusion", "description": "一个按钮，自动场景与深度增强，保真编排并可撤销。 禾杨智绘工作室（绍兴市柯桥区禾杨智绘软件开发工作室）出品 · Merziller（子墨）开发。", "detail": "README.md" },
   "ui": {
     "enhance": "增强", "undo": "撤销增强", "cancel": "停止",
     "hint": "自动匹配场景并深度增强；保留原文，整理结构后写入草稿。使用当前模型选择指引，失败时离线增强；不发送消息。",

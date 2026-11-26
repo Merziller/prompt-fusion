@@ -1,5 +1,5 @@
 {
-  "meta": { "title": "Prompt Fusion · One-click enhancement", "description": "One button, automatic domain and depth, faithful structured prompts with undo.", "detail": "README.en.md" },
+  "meta": { "title": "Prompt Fusion", "description": "One button, automatic domain and depth, faithful structured prompts with undo. Produced by 禾杨智绘工作室（绍兴市柯桥区禾杨智绘软件开发工作室）; developed by Merziller (子墨).", "detail": "README.en.md" },
   "ui": {
     "enhance": "Enhance", "undo": "Undo enhancement", "cancel": "Stop",
     "hint": "Automatically select the domain, deeply enhance and structure your draft while retaining the original. Uses the selected model for guidance selection with offline fallback. Does not send.",

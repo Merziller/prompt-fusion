@@ -1,6 +1,6 @@
 # Prompt Fusion
 
-**面向任意智能体的提示词规则增强核心与接入层。** Merziller 开发，Apache-2.0，零运行时依赖。提供 DSH 单按钮、标准 Skill、CLI、MCP stdio、MCP Streamable HTTP 和 REST/OpenAPI。品牌预设是快捷方式，不是允许名单。
+**面向任意智能体的提示词规则增强核心与接入层。** 禾杨智绘工作室出品，Merziller 开发，Apache-2.0，零运行时依赖。提供 DSH 单按钮、标准 Skill、CLI、MCP stdio、MCP Streamable HTTP 和 REST/OpenAPI。品牌预设是快捷方式，不是允许名单。
 
 **质量说明：当前核心仍是“原文保留＋规则补充”，尚未实现真正的语义改写。** 四插件复核中，Prompt Fusion 0.2在本次主观文本质量评分约61/100，明显落后于另外三款。0.3主要扩展通用接入，未把这个质量缺陷包装成已修复。详见[质量审计](docs/QUALITY_AUDIT.md)。
 
@@ -94,5 +94,15 @@ DSH在插件设置停用/卸载；Skill使用`uninstall --skill-dir EXACT_DIRECT
 ## 开源与致谢
 
 新代码Apache-2.0。借鉴[feiwell](https://github.com/feiwell/dsh-enhance-prompt)、[ChosenXu](https://github.com/ChosenXu/dsh-prompt-enhancer)、[Fishsb](https://github.com/Fishsb/dsh-voice-prompt-enhancer)的功能思路，未直接复制运行时代码、提示词模板或图标。原许可证和NOTICE保留；原作者是来源致谢对象，不虚构为实际贡献者。见[第三方声明](THIRD_PARTY_NOTICES.md)。
+
+### 出品与署名
+
+产品名称保持 **Prompt Fusion**；纯中文简称为 **禾杨灵词**。
+
+**禾杨智绘工作室（绍兴市柯桥区禾杨智绘软件开发工作室）出品 · Merziller 开发**。开发者署名：Merziller（子墨）。
+
+Copyright 2026 绍兴市柯桥区禾杨智绘软件开发工作室 (禾杨智绘) & Merziller (子墨)
+
+新增出品与版权署名不改变 Apache-2.0 许可及上游权利；完整信息见[作者与公开联系方式](AUTHORS.md)、[NOTICE](NOTICE)和[许可证](LICENSE)。
 
 微信 **Merziller** · QQ **1411574209** · 邮箱 **k26789228@gmail.com**（本人明确确认用于公开项目）。

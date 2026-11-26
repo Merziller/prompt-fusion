@@ -1,6 +1,6 @@
 # Prompt Fusion
 
-**An agent-neutral prompt-rule core and integration layer.** By Merziller, Apache-2.0, zero runtime dependencies. DSH one-button UI, portable Skills, CLI, MCP stdio, MCP Streamable HTTP and REST/OpenAPI share one core. Brand presets are convenience paths, not an allowlist.
+**An agent-neutral prompt-rule core and integration layer.** Produced by 禾杨智绘工作室, developed by Merziller. Apache-2.0, zero runtime dependencies. DSH one-button UI, portable Skills, CLI, MCP stdio, MCP Streamable HTTP and REST/OpenAPI share one core. Brand presets are convenience paths, not an allowlist.
 
 **Quality disclosure:** the current core preserves the original request and adds reviewed rules. It is not a semantic rewriter. In the new subjective four-plugin review, released 0.2 scored about61/100, below the other three. Version0.3 expands access and does not claim to fix that defect. See [quality audit](docs/QUALITY_AUDIT.md).
 
@@ -64,5 +64,15 @@ This round has161 local regressions. Official SDK1.32.2 interoperated with stdio
 Disable/remove DSH through its plugin settings. Use `uninstall --skill-dir EXACT_DIRECTORY` for an unmodified portable Skill; review dry-run first. Remove only MCP config entries you added. Stop the explicit `serve` process to stop the service.
 
 Inspired by feiwell, ChosenXu and Fishsb; upstream runtime code/templates/icons were not copied. Authors are acknowledged, not falsely listed as contributors. Original licenses/NOTICE are retained.
+
+## Production and attribution
+
+The product name remains **Prompt Fusion**; its optional short Chinese name is **禾杨灵词**.
+
+**禾杨智绘工作室（绍兴市柯桥区禾杨智绘软件开发工作室）出品 · Merziller 开发**. Produced by 禾杨智绘工作室 (绍兴市柯桥区禾杨智绘软件开发工作室), developed and maintained by Merziller (子墨).
+
+Copyright 2026 绍兴市柯桥区禾杨智绘软件开发工作室 (禾杨智绘) & Merziller (子墨)
+
+This attribution does not change Apache-2.0 terms or upstream rights. See [AUTHORS](AUTHORS.md), [NOTICE](NOTICE) and [LICENSE](LICENSE).
 
 WeChat **Merziller** · QQ **1411574209** · **k26789228@gmail.com**, explicitly confirmed for public project use. [Authors](AUTHORS.md).

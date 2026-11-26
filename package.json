@@ -1,7 +1,7 @@
 {
   "name": "@merziller/prompt-fusion",
   "version": "0.3.1",
-  "description": "Prompt Fusion：保留原意的离线/模型辅助提示词增强，支持 DSH、CLI、MCP 和 Agent Skills。",
+  "description": "Prompt Fusion：保留原意的离线/模型辅助提示词增强，支持 DSH、CLI、MCP 和 Agent Skills。 禾杨智绘工作室（绍兴市柯桥区禾杨智绘软件开发工作室）出品 · Merziller（子墨）开发。",
   "type": "module",
   "main": "./adapters/dsh/index.mjs",
   "bin": { "prompt-fusion": "./bin/prompt-fusion.mjs" },
@@ -23,6 +23,8 @@
     "start": "node bin/prompt-fusion.mjs"
   },
   "author": { "name": "Merziller", "email": "k26789228@gmail.com", "url": "https://github.com/Merziller" },
+  "producer": {"name":"绍兴市柯桥区禾杨智绘软件开发工作室","alias":"禾杨智绘","displayName":"禾杨智绘工作室"},
+  "copyright": "Copyright 2026 绍兴市柯桥区禾杨智绘软件开发工作室 (禾杨智绘) & Merziller (子墨)",
   "license": "Apache-2.0",
   "repository": { "type": "git", "url": "git+https://github.com/Merziller/prompt-fusion.git" },
   "homepage": "https://github.com/Merziller/prompt-fusion#readme",
