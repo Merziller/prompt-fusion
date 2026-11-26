@@ -9,8 +9,8 @@ for (const input of [
   '研究最新 AI 产品并列出来源，最多 3 页。',
   'Coordinate multi-agent API work; do not change public interfaces or use new dependencies.',
   'Write an article using these facts, under 500 words, without invented quotes.'
-]) test('structured task retains exact request: ' + input.slice(0, 25), async () => {
-  const result = await enhance({ input, layout:'structured', intensity:'deep', mode:'smart' });
+]) test('legacy offline structure retains exact request: ' + input.slice(0, 25), async () => {
+  const result = await enhance({ input, layout:'structured', intensity:'deep', mode:'standard' });
   assert.ok(result.enhanced.includes(input));
   assert.equal(result.changes.originalPreserved, true);
   assert.equal(result.changes.reorganized, true);
@@ -20,11 +20,11 @@ for (const input of [
   const again = await enhance({ input:result.enhanced, layout:'structured', intensity:'deep' });
   assert.equal(again.enhanced, result.enhanced);
 });
-test('model cannot silently reduce deep structured output to scope only', async () => {
+test('obsolete rule selection is not misrepresented as a successful rewrite', async () => {
   const result = await enhance({ input:'请开发插件接口', layout:'structured', intensity:'deep', mode:'smart' }, { providers:[async () => '{"ruleIds":["scope"]}'] });
-  assert.equal(result.engine, 'model-assisted');
-  assert.ok(result.ruleIds.includes('code'));
-  assert.ok(result.ruleIds.includes('evidence'));
+  assert.equal(result.engine, 'unchanged');
+  assert.equal(result.enhanced, result.original);
+  assert.ok(result.warnings.some(x=>x.code==='ORIGINAL_RETAINED'));
 });
 test('task refinements are relevant, bounded and do not choose unsupported frameworks', () => {
   const result = taskRefinements('插件 API 网站界面 研究报表 一人公司 团队文章', 'zh');

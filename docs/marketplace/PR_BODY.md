@@ -1,19 +1,25 @@
-## Add Merziller/prompt-fusion
+## Update Merziller/prompt-fusion to 0.5.1
 
-One entry only: `data/plugins/Merziller__prompt-fusion.yml`, category UI. Public repository https://github.com/Merziller/prompt-fusion ; Apache-2.0, zero runtime dependencies, complete source and prebuilt v0.3.1 Release tarball. `dsh.bundle`, patch, exact client module ID and `dsh-plugin` topic are present.
+One catalog entry only: `data/plugins/Merziller__prompt-fusion.yml`, category `ui`. Public project: https://github.com/Merziller/prompt-fusion . Product name remains **Prompt Fusion** (Chinese short name: 禾杨灵词). Produced by 禾杨智绘工作室（绍兴市柯桥区禾杨智绘软件开发工作室）, developed by Merziller (子墨).
 
-DSH retains one small inline Enhance/Stop/Undo button. It does not send or execute the embedded task, collect history/workspace automatically, or add another microphone/settings panel. Native draft revisions/reference chips have contract tests. Selected-model assistance chooses rule IDs and can fall back offline; external model services may charge.
+Copyright 2026 绍兴市柯桥区禾杨智绘软件开发工作室 (禾杨智绘) & Merziller (子墨)
 
-Version0.3 adds brand-neutral standard-Skill installation with explicit paths, hash/receipt uninstall, MCP stdio, stateless JSON-response Streamable HTTP, REST/OpenAPI and CLI. Kimi and WorkBuddy configs are conveniences, not a brand allowlist. Default loopback; external binding requires explicit bearer authentication; TLS/OAuth/legacy SSE are not included.
+Apache-2.0, zero runtime dependencies, prebuilt pinned release: https://github.com/Merziller/prompt-fusion/releases/download/v0.5.1/prompt-fusion-0.5.1.tgz . Exact package/client identity `@merziller/prompt-fusion`, a `dsh.bundle` patch, localized metadata, original icon and `dsh-plugin` topic are retained.
 
-**Quality disclosure:** a new author-agent review scored the released0.2 core about61/100. It retains original task text and adds reviewed guidance; it is not the semantic rewriter the user expected. The audit and failure mechanisms are public in docs/QUALITY_AUDIT.md. Version0.3 improves access only and does not claim to repair that quality defect. No inflated quality claim is based on engineering test counts.
+### What changed
 
-The0.3.0 CI exposed a macOS installer issue (root /var system alias rejected);0.3.1 accepts only exact Darwin root aliases with verified standard /private targets and retains ordinary symlink/junction checks. The failed run and original release remain public.
+Semantic prompt rewriting with fidelity review and conditional verification, a conservative one-call surface-edit path, explicit network/timeout/provider errors, and the Undo transaction fix. It protects explicit goals and avoids adding unrequested output-format restrictions. DSH has the same single Enhance / Stop / Undo enhancement button; there is no extra brand prefix, settings panel or recording button and no auto-send.
 
-Validation:161 local regressions; official @modelcontextprotocol/sdk1.32.2 initialize/list/actual-call/invalid-input interoperability for stdio, HTTP and bearer HTTP. Fresh-package/CI receipts are separately recorded in docs/RELEASE.md. Historical DSH0.2.2-rc.5 local bundle reload and real0.2 tool calls succeeded. Authenticated GUI/DesktopIPC and other vendor apps' native loading remain NOT_RUN/BLOCKED. Prior Windows development-link replacement by remote tarball encountered pnpm EPERM; no manual profile overwrite or claim of remote replacement success.
+CLI, portable Skills, MCP stdio/stateless Streamable HTTP and REST/OpenAPI share the core. Outside DSH, model access requires explicit `--model` and user-provided environment variables. No host login is borrowed. Project code is free; selected model providers may charge.
 
-Independent implementation inspired by feiwell, ChosenXu and Fishsb, with retained license/NOTICE texts. Upstream authors are acknowledged, not represented as contributors.
+### Verification and honest boundaries
 
-Repository created2026-11-25 19:18:43UTC. The documented one-day condition is first satisfied2026-11-26 19:18:43UTC (=2026-11-27 03:18:43Asia/Shanghai). No history/date backdating. Submission does not claim acceptance; await checks and maintainer merge. No generated README or existing entry is changed.
+`npm run build`, `npm test`, `npm run check` and `node scripts/verify-distribution.mjs` validate the release. A fresh offline archive install repeats the source checks and tests; independent MCP SDK and React 18.2 / Lexical 0.49 fixtures exercise transports and Undo. Retained actual host-tool results are distinct from an authenticated GUI test, which remains NOT_RUN. See `docs/releases/0.5.1.md` and `docs/RELEASE.md` for exact final receipts and CI links.
+
+Earlier four-/five-way evaluation outputs, errors, input and source snapshots remain as historical evidence. Their headline scores are **not** attributed to 0.5.1. Native vendor applications and historical Windows development-link replacement limitations remain disclosed. No universal quality or compatibility guarantee is claimed.
+
+Upstream feiwell, ChosenXu and Fishsb are acknowledged sources, not invented contributors. Their license and NOTICE texts are preserved. Runtime implementation and separately attributed evaluation prompt reuse are distinguished.
+
+Repository creation: 2026-11-25 19:18:43 UTC; the one-day condition is met after 2026-11-26 19:18:43 UTC. This request does not edit generated READMEs or other entries. Submission, maintainer merge and actual client catalog synchronization are separate statuses.
 
 [![](https://img.shields.io/badge/powered_by-dsh-4D6BFE?style=flat-square&logo=deepseek&logoColor=white)](https://github.com/deepseek-ai/deepseek-harness)

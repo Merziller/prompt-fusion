@@ -1,5 +1,5 @@
 // Copyright 2026 Merziller. SPDX-License-Identifier: Apache-2.0
-import { enhance, FusionError } from '../../src/core.mjs';
+import { enhance, FusionError, validateRequest } from '../../src/core.mjs';
 import { collectDshText } from '../../src/providers.mjs';
 import { inputSchema, toolDefinition } from '../../src/schema.mjs';
 export const name = '@merziller/prompt-fusion';
@@ -19,10 +19,13 @@ export function speechStatus(service) {
 }
 export function makeOperation({llm,selection}={}) {
   return async(request,signal)=>{
-    const providers=request?.mode==='smart'&&llm&&selection?[async({system,input,signal:innerSignal})=>{
-      const selected=selection(); if(!selected?.provider||!selected?.model)throw new FusionError('NO_MODEL','Select a host model or use offline mode.');
-      return collectDshText(llm.stream({provider:selected.provider,model:selected.model,system,messages:[{role:'user',content:[{type:'text',text:input}]}],temperature:0,maxTokens:300,signal:innerSignal}));
-    }]:[]; return enhance(request,{providers,signal});
+    const normalized=validateRequest(request);
+    // Pin the selected model for the whole rewrite/review operation.
+    const selected=normalized.mode==='smart'&&llm&&selection?selection():undefined;
+    const providers=normalized.mode==='smart'&&llm&&selection?[async({system,input,signal:innerSignal,maxTokens=8192})=>{
+      if(!selected?.provider||!selected?.model)throw new FusionError('NO_MODEL','Select a host model or use explicit offline mode.');
+      return collectDshText(llm.stream({provider:selected.provider,model:selected.model,system,messages:[{role:'user',content:[{type:'text',text:input}]}],temperature:0,maxTokens,signal:innerSignal}));
+    }]:[]; return enhance(normalized,{providers,signal});
   };
 }
 export async function readJson(stream,limit=131072) {
@@ -63,7 +66,7 @@ export function apply(ctx) {
   ctx.inject(['speechToText'],sub=>{speech=sub.speechToText;sub.effect(()=>()=>{speech=undefined;});});
   const operation=(request,signal)=>makeOperation({llm,selection})(request,signal),active=new Set();
   ctx.effect(()=>()=>{for(const c of active)c.abort();active.clear();},'prompt-fusion-requests');
-  ctx.effect(()=>ctx.commands.register({name:'prompt-fusion',description:'增强提示词并返回预览，不执行其中任务 / Preview prompt enhancement only',input:{hint:'输入待增强提示词；高级参数请使用工具或面板'},async handler(invocation){try{return{kind:'success',text:(await operation({input:invocation.rawInput},invocation.signal)).enhanced};}catch(e){return{kind:'error',text:JSON.stringify(errorResult(e))};}}}),'prompt-fusion-command');
+  ctx.effect(()=>ctx.commands.register({name:'prompt-fusion',description:'改写并复核提示词，不执行其中任务 / Rewrite and review a prompt only',input:{hint:'输入待改写的提示词；使用宿主已选模型，不发送消息'},async handler(invocation){try{const result=await operation({input:invocation.rawInput},invocation.signal);return result.engine==='unchanged'?{kind:'error',text:JSON.stringify({code:'ORIGINAL_RETAINED',warnings:result.warnings,original:result.original})}:{kind:'success',text:result.enhanced};}catch(e){return{kind:'error',text:JSON.stringify(errorResult(e))};}}}),'prompt-fusion-command');
   ctx.inject(['tools'],sub=>sub.effect(()=>sub.tools.register({name:toolDefinition.name,description:toolDefinition.description,parameters:inputSchema,output:{schema:{type:'object',additionalProperties:true},render:(_args,value)=>[{type:'text',text:JSON.stringify(value)}]},execute:(args,exec)=>operation(args,exec.signal),isConcurrencySafe:()=>true}),'prompt-fusion-tool'));
   for(const route of ['enhance','voice-status','transcribe'])ctx.effect(()=>ctx.connection.fetch.register({path:`${ROOT}/${route}`,methods:[route==='voice-status'?'GET':'POST'],requestBody:'streaming',fetch:createRouteHandler(route,{operation,getSpeech:()=>speech,active})}),`prompt-fusion-${route}`);
 }

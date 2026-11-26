@@ -1,0 +1,72 @@
+{
+  "at": "2026-11-26T08:26:21.378Z",
+  "sdk": "@modelcontextprotocol/sdk",
+  "sdkVersion": "1.32.2",
+  "runtime": "v24.19.0",
+  "platform": "win32",
+  "status": "PASS",
+  "nativeVendorAppsTested": false,
+  "realModelQualityTested": false,
+  "tests": [
+    {
+      "transport": "stdio",
+      "semanticFixture": false,
+      "initialize": "PASS",
+      "list": "PASS",
+      "coreCall": "PASS",
+      "invalidToolInput": "PASS",
+      "version": "0.4.0",
+      "modelCalls": 0
+    },
+    {
+      "transport": "http",
+      "semanticFixture": false,
+      "initialize": "PASS",
+      "list": "PASS",
+      "coreCall": "PASS",
+      "invalidToolInput": "PASS",
+      "version": "0.4.0",
+      "modelCalls": 0
+    },
+    {
+      "transport": "http-bearer",
+      "semanticFixture": false,
+      "initialize": "PASS",
+      "list": "PASS",
+      "coreCall": "PASS",
+      "invalidToolInput": "PASS",
+      "version": "0.4.0",
+      "modelCalls": 0
+    },
+    {
+      "transport": "stdio",
+      "semanticFixture": true,
+      "initialize": "PASS",
+      "list": "PASS",
+      "coreCall": "PASS",
+      "invalidToolInput": "PASS",
+      "version": "0.4.0",
+      "modelCalls": 2
+    },
+    {
+      "transport": "http",
+      "semanticFixture": true,
+      "initialize": "PASS",
+      "list": "PASS",
+      "coreCall": "PASS",
+      "invalidToolInput": "PASS",
+      "version": "0.4.0",
+      "modelCalls": 2
+    },
+    {
+      "transport": "http-bearer",
+      "semanticFixture": true,
+      "initialize": "PASS",
+      "list": "PASS",
+      "coreCall": "PASS",
+      "invalidToolInput": "PASS",
+      "version": "0.4.0",
+      "modelCalls": 2
+    }
+  ]
+}

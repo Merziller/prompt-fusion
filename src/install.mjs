@@ -18,7 +18,10 @@ export const TARGETS = Object.freeze({
   kimi: { project: '.agents/skills', user: '.agents/skills' }
 });
 const digest = (s) => createHash('sha256').update(s).digest('hex');
-const ownedFiles = ['SKILL.md', 'scripts/core.mjs', 'scripts/structure.mjs', 'scripts/enhance.mjs', 'LICENSE'];
+const legacyFiles = ['SKILL.md', 'scripts/core.mjs', 'scripts/structure.mjs', 'scripts/rewrite.mjs', 'scripts/providers.mjs', 'scripts/enhance.mjs', 'LICENSE'];
+const adaptiveFiles = [...legacyFiles.slice(0, 5), 'scripts/adaptive.mjs', 'scripts/failures.mjs', ...legacyFiles.slice(5)];
+const ownedFiles = [...adaptiveFiles.slice(0, 7), 'scripts/intent-guards.mjs', ...adaptiveFiles.slice(7)];
+const previousOwnedManifests = [adaptiveFiles, legacyFiles, legacyFiles.filter(name => name !== 'scripts/providers.mjs'), legacyFiles.filter(name => !['scripts/rewrite.mjs', 'scripts/providers.mjs'].includes(name))];
 async function existing(p) { try { return await lstat(p); } catch (e) { if (e.code === 'ENOENT') return null; throw e; } }
 // macOS exposes these root-level OS aliases; only their canonical targets are allowed.
 const macRootAliases = Object.freeze({ '/var': '/private/var', '/tmp': '/private/tmp', '/etc': '/private/etc' });
@@ -60,7 +63,12 @@ export async function installSkill({ target = 'generic', scope = 'project', dest
     'SKILL.md': await readFile(path.join(root, 'skills/prompt-fusion/SKILL.md'), 'utf8'),
     'scripts/core.mjs': await readFile(path.join(root, 'src/core.mjs'), 'utf8'),
     'scripts/structure.mjs': await readFile(path.join(root, 'src/structure.mjs'), 'utf8'),
-    'scripts/enhance.mjs': (await readFile(path.join(root, 'skills/prompt-fusion/scripts/enhance.mjs'), 'utf8')).replace('../../../src/core.mjs', './core.mjs'),
+    'scripts/rewrite.mjs': await readFile(path.join(root, 'src/rewrite.mjs'), 'utf8'),
+    'scripts/providers.mjs': await readFile(path.join(root, 'src/providers.mjs'), 'utf8'),
+    'scripts/adaptive.mjs': await readFile(path.join(root, 'src/adaptive.mjs'), 'utf8'),
+    'scripts/failures.mjs': await readFile(path.join(root, 'src/failures.mjs'), 'utf8'),
+    'scripts/intent-guards.mjs': await readFile(path.join(root, 'src/intent-guards.mjs'), 'utf8'),
+    'scripts/enhance.mjs': (await readFile(path.join(root, 'skills/prompt-fusion/scripts/enhance.mjs'), 'utf8')).replace('../../../src/core.mjs', './core.mjs').replace('../../../src/providers.mjs', './providers.mjs'),
     'LICENSE': await readFile(path.join(root, 'LICENSE'), 'utf8')
   };
   await mkdir(parent, { recursive: true });
@@ -78,8 +86,9 @@ export async function uninstallSkill({ skillDir, dryRun = false } = {}) {
   let receipt;
   try { receipt = JSON.parse(await readFile(path.join(destination, '.prompt-fusion-install.json'), 'utf8')); }
   catch { throw new FusionError('NOT_OWNED', 'A valid Prompt Fusion installation receipt is required.'); }
-  if (receipt.owner !== '@merziller/prompt-fusion' || JSON.stringify(Object.keys(receipt.files ?? {}).sort()) !== JSON.stringify([...ownedFiles].sort())) throw new FusionError('NOT_OWNED', 'Receipt does not describe this installation.');
-  const expected = new Set([...ownedFiles, '.prompt-fusion-install.json']);
+  const installedFiles = [ownedFiles, ...previousOwnedManifests].find(files => JSON.stringify(Object.keys(receipt.files ?? {}).sort()) === JSON.stringify([...files].sort()));
+  if (receipt.owner !== '@merziller/prompt-fusion' || !installedFiles) throw new FusionError('NOT_OWNED', 'Receipt does not describe this installation.');
+  const expected = new Set([...installedFiles, '.prompt-fusion-install.json']);
   async function inspect(dir, prefix = '') {
     for (const entry of await readdir(dir, { withFileTypes: true })) {
       const rel = prefix + entry.name;
@@ -89,14 +98,15 @@ export async function uninstallSkill({ skillDir, dryRun = false } = {}) {
     }
   }
   await inspect(destination);
-  for (const name of ownedFiles) {
+  for (const name of installedFiles) {
     let content; try { content = await readFile(path.join(destination, name)); } catch { throw new FusionError('MODIFIED_INSTALL', 'Installation is incomplete; no files removed.'); }
     if (digest(content) !== receipt.files[name]) throw new FusionError('MODIFIED_INSTALL', 'A file was edited; no files removed.');
   }
   if (!dryRun) await rm(destination, { recursive: true });
   return { destination, changed: !dryRun };
 }
-export function makeConfig(target, { nodePath = process.execPath, cliPath = path.join(root, 'bin/prompt-fusion.mjs'), serverUrl } = {}) {
+export function makeConfig(target, { nodePath = process.execPath, cliPath = path.join(root, 'bin/prompt-fusion.mjs'), serverUrl, model = false } = {}) {
+  if (typeof model !== 'boolean') throw new FusionError('INVALID_OPTION', 'model must be boolean.');
   if (serverUrl !== undefined || target === 'http') {
     let url;
     try { url = new URL(serverUrl ?? 'http://127.0.0.1:8765/mcp'); } catch { throw new FusionError('INVALID_SERVER_URL', 'Provide a complete MCP HTTP endpoint URL.'); }
@@ -106,7 +116,7 @@ export function makeConfig(target, { nodePath = process.execPath, cliPath = path
     if (['claude', 'kimi', 'workbuddy'].includes(target)) return { mcpServers: { prompt_fusion: entry } };
     throw new FusionError('UNSUPPORTED_CONFIG', 'Use config --target http for neutral remote connection details; consult the host format.');
   }
-  const entry = { command: nodePath, args: [cliPath, 'mcp'] };
+  const entry = { command: nodePath, args: [cliPath, 'mcp', ...(model ? ['--model'] : [])] };
   if (target === 'codex') return `[mcp_servers.prompt_fusion]\ncommand = ${JSON.stringify(nodePath)}\nargs = ${JSON.stringify(entry.args)}\n`;
   if (target === 'opencode') return { $schema: 'https://opencode.ai/config.json', mcp: { servers: { prompt_fusion: { type: 'local', command: [nodePath, ...entry.args] } } } };
   if (['claude', 'antigravity', 'kimi', 'workbuddy'].includes(target)) return { mcpServers: { prompt_fusion: entry } };

@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-26T02:15:39.370Z",
+  "round": "semantic-round-01",
+  "core": "3bea7f2f24c242c7058db68250d89a35e4ddb4bdc48c96407b371802d241f23d",
+  "rewrite": "86b76b0405b60ce37de6be668d355d11141f0833d13f6ca6cae68d35eb804570",
+  "protocol": "bbd57559e59364aafac29628e2663fcc38f33fe363b323db483cdab11e80ae51",
+  "css": "979fe6eae46aacc0ed780c12cbe46ec4debc76645867cb71260ce5cc72dfa1c6",
+  "controls": "Exact saved requests for fixed set; same dev-brief native request template with only input substituted for transfer set; transport temperature 0.2, reasoning off, maxTokens 4096. No upstream UI execution.",
+  "items": 96
+}

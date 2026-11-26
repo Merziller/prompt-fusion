@@ -1,0 +1,8 @@
+{
+  "sourceCommit": "f2133b0a1e185a90afe9f67e6a64e19fcd8f046b",
+  "description": "Frozen already-approved single-button appearance, not semantic behavior.",
+  "cssSha256": "979fe6eae46aacc0ed780c12cbe46ec4debc76645867cb71260ce5cc72dfa1c6",
+  "iconSha256": "ceabdbcbd904de4a46868550d5ad7a7f1bda53622d4332363c614156c6a6bf2a",
+  "slot": "conversation.input.right",
+  "visibleControls": 1
+}

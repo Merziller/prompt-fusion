@@ -2,7 +2,32 @@
 
 公开仓库：[Merziller/prompt-fusion](https://github.com/Merziller/prompt-fusion)，Apache-2.0，作者Merziller。仓库创建于2026-11-25 19:18:43UTC（2026-11-26 03:18:43Asia/Shanghai）。npm尚未发布，不把包名当成已上架。
 
-## 0.3系列本轮记录
+## 0.5.1 当前发行
+
+用户已授权推送正式源码、GitHub Release与更新已有DSH目录申请。出品方为禾杨智绘工作室（绍兴市柯桥区禾杨智绘软件开发工作室），开发者Merziller（子墨）；继续使用Apache-2.0和原有公共标识。
+
+- 版本身份：`@merziller/prompt-fusion@0.5.1`，运行代码相对已验证0.5.1-dev只变更版本字面量；[发行清单](../evals/releases/0.5.1/manifest.json)保留对应字节身份。
+- 源码构建、完整回归和检查：384/384 PASS；[机器回执](test-results.json)。
+- 官方MCP SDK六组合及React/Lexical撤销复现：PASS；[SDK回执](sdk-semantic-verification.json)、[撤销回执](releases/0.5.1-undo-verification.json)。均不冒充已登录GUI测试。
+- 最终独立归档、公开提交/下载、六组CI和目录申请的实际结果将在本节完成后补录；此时不宣称已上线。
+
+安装目标：
+
+```sh
+dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.5.1/prompt-fusion-0.5.1.tgz
+```
+
+[0.5.1范围与复现命令](releases/0.5.1.md)。当前版本没有新四方/五方质量评分，下文均为历史身份。
+
+## 0.4.0 历史本地发行准备（当时未发布）
+
+第十轮冻结质量验收已通过：固定集99.79、迁移集99.13、总体99.46、最低单例95，关键错误0。交付运行时与该轮十个源模块逐字一致，只有核心版本字面量从开发版改为0.4.0；按钮CSS、图标与位置的冻结摘要不变。
+
+本机308/308工程回归及官方SDK1.32.2六种协议/模型替身组合通过。实际预构建包、全新隔离安装、对应源码CI、公开下载哈希和市场申请更新将各自记录结果，尚未执行的步骤不以准备文件冒充成功。
+
+当时0.4.0完成了本地归档与验证，后续按用户要求先进行WorkBuddy文档对照和修复，未推送该发行。不要把当时计划中的v0.4.0下载地址当成已公开附件。十轮原始证据包含历史失败与上游服务错误，见[汇总](evaluation/RESULTS.md)。
+
+## 0.3系列历史记录
 
 通用Skill目录和回执卸载、MCP stdio/Streamable HTTP、REST/OpenAPI、CLI与平台证据文档已完成。已发布的[0.3.0](https://github.com/Merziller/prompt-fusion/releases/tag/v0.3.0)提交`23661cc3b113c3d6959c91c6a67ea815d03dc954`，附件91011字节、SHA256`78db19db6dc2f654bfa011cb063ffee4e00e83221c0e067d02136b976aae35b2`，已匿名下载比对。隔离包160项及SDK三连接通过，但[CI](https://github.com/Merziller/prompt-fusion/actions/runs/45711121386)只有Windows/Linux四组成功、macOS两组失败：安装器误拦系统/var别名。保留原标签/附件和失败运行，不覆盖历史。
 

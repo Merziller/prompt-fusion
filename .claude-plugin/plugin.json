@@ -1,10 +1,10 @@
 {
   "name": "prompt-fusion",
-  "version": "0.3.1",
-  "description": "Meaning-preserving prompt enhancement with an offline core, reviewable previews and MCP tools. Never executes the supplied task. Produced by 禾杨智绘工作室（绍兴市柯桥区禾杨智绘软件开发工作室）; developed by Merziller (子墨).",
+  "version": "0.5.1",
+  "description": "Semantic prompt rewriting with fidelity review; explicit model configuration, no task execution. Produced by 禾杨智绘工作室（绍兴市柯桥区禾杨智绘软件开发工作室）; developed by Merziller (子墨).",
   "author": { "name": "Merziller", "email": "k26789228@gmail.com", "url": "https://github.com/Merziller" },
   "homepage": "https://github.com/Merziller/prompt-fusion",
   "repository": "https://github.com/Merziller/prompt-fusion",
   "license": "Apache-2.0",
-  "keywords": ["prompt", "enhancement", "offline", "mcp"]
+  "keywords": ["prompt", "enhancement", "semantic-rewrite", "mcp"]
 }

@@ -9,13 +9,13 @@
 | 宿主能力 | 本项目入口 | 前提和边界 |
 | --- | --- | --- |
 | 读取标准 `SKILL.md` 并运行 Node | 自包含便携 Skill；任意 `--skills-dir` | Node≥22.19.0；由宿主决定触发和脚本执行 |
-| 启动命令型 MCP | `node /absolute/prompt-fusion/bin/prompt-fusion.mjs mcp` | 换行 JSON-RPC stdio；安装位置是宿主实际运行命令的机器 |
+| 启动命令型 MCP | `node /absolute/prompt-fusion/bin/prompt-fusion.mjs mcp --model` | 换行 JSON-RPC stdio；安装位置是宿主实际运行命令的机器；模型端点由该进程环境提供 |
 | MCP Streamable HTTP | `POST /mcp` | 无状态 JSON 响应，GET返回405；旧 HTTP+SSE-only 客户端需另外适配 |
 | HTTP 工具 / OpenAPI | `POST /v1/enhance`、`GET /openapi.json` | JSON请求；服务端工具调用方式；未交付浏览器跨域网页应用 |
 | Shell / 命令工具 | CLI，支持stdin、JSON和文件 | 不依赖原生插件机制 |
 | 只有聊天输入框 | 复制增强文本 | 不称为插件安装或自动集成 |
 
-共用同一核心。当前核心保留原文并添加规则，语义改写质量问题另见 [质量审计](QUALITY_AUDIT.md)；增加接入面不代表修复该问题。
+0.5.1共用真实语义改写、对照审查和必要时复核核心，不再默认使用原文加规则。非DSH接口须明确`--model`并配置`FUSION_BASE_URL`、`FUSION_MODEL`及可选`FUSION_API_KEY`；没有启用模型时原稿保留并返回警告。旧版问题保留在[历史质量审计](QUALITY_AUDIT.md)；新版本的实际评测、工程验证及未测项见[验证记录](VERIFICATION.md)，不把接口覆盖数当成质量证明。
 
 ## 不在预设名单中的宿主
 
@@ -27,7 +27,7 @@ node bin/prompt-fusion.mjs uninstall --skill-dir /absolute/agent-skills/prompt-f
 node bin/prompt-fusion.mjs uninstall --skill-dir /absolute/agent-skills/prompt-fusion
 
 # 中立命令型连接信息，无需增加品牌代码。
-node bin/prompt-fusion.mjs config --target generic
+node bin/prompt-fusion.mjs config --target generic --model
 # 中立远程连接信息；不写入令牌。
 node bin/prompt-fusion.mjs config --target http --server-url https://YOUR_HOST/mcp
 ```
@@ -37,7 +37,7 @@ node bin/prompt-fusion.mjs config --target http --server-url https://YOUR_HOST/m
 本机服务：
 
 ```sh
-node bin/prompt-fusion.mjs serve --host 127.0.0.1 --port 8765
+node bin/prompt-fusion.mjs serve --host 127.0.0.1 --port 8765 --model
 ```
 
 默认仅监听本机。跨机器时使用 `--host` 和 `--token-env` 显式配置至少24字符令牌；服务原生为HTTP，HTTPS由部署方网关提供。**没有自动部署公网、内置TLS、OAuth登录或旧SSE适配。** 远程平台的127.0.0.1指向平台自身；手机的127.0.0.1指向手机，不是桌面电脑。云端或手机需可达地址。详情见 [通用接入教程](UNIVERSAL_ACCESS.md)。
@@ -46,7 +46,7 @@ node bin/prompt-fusion.mjs serve --host 127.0.0.1 --port 8765
 
 | 平台 | 已核实机制 / 推荐入口 | 项目验证状态 |
 | --- | --- | --- |
-| DSH | 原生bundle、输入框单按钮、Host工具与官方connection | 0.2.2-rc.5历史真实安装/工具结果见验证报告；本轮通用接口不冒称新版GUI实测 |
+| DSH | 原生bundle、输入框单按钮、Host工具与官方connection | 0.2.2-rc.5真实宿主调用、0.5.1-dev八条保留响应、正式版字节延续和React/Lexical按钮契约分别验证；已登录GUI未作为实测 |
 | Codex | `.agents/skills`；stdio MCP配置 | 安装器、可移植脚本、配置已测；厂商应用NOT_RUN |
 | Claude Code | `.claude/skills`；插件目录；MCP | 目录和配置已测；本机claude.exe平台错误，原生加载BLOCKED |
 | Antigravity | 项目`.agents/skills`，用户`~/.gemini/config/skills`；MCP | 机制与安装脚本已测；原生NOT_RUN |
@@ -65,8 +65,8 @@ node bin/prompt-fusion.mjs serve --host 127.0.0.1 --port 8765
 
 ```sh
 node bin/prompt-fusion.mjs install --target kimi --scope project --root /absolute/project
-node bin/prompt-fusion.mjs config --target kimi --out kimi-mcp.snippet.json
-node bin/prompt-fusion.mjs config --target workbuddy --out workbuddy-stdio.snippet.json
+node bin/prompt-fusion.mjs config --target kimi --model --out kimi-mcp.snippet.json
+node bin/prompt-fusion.mjs config --target workbuddy --model --out workbuddy-stdio.snippet.json
 node bin/prompt-fusion.mjs config --target workbuddy --server-url https://YOUR_HOST/mcp --out workbuddy-http.snippet.json
 ```
 

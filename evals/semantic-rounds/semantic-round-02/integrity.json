@@ -1,0 +1,67 @@
+{
+  "round": "semantic-round-02",
+  "artifacts": {
+    "evaluation.json": {
+      "bytes": 745401,
+      "sha256": "39e9c9c9949b305ccb8f484d6be57421ee0ce5953b231b6dc573862908dad637"
+    },
+    "generation-request.json": {
+      "bytes": 499277,
+      "sha256": "edee2e17bac5e9b8ea53428874f17708b32211a3cc8f88d12ecfafce18626975"
+    },
+    "calls.jsonl": {
+      "bytes": 1151926,
+      "sha256": "7e2da966b32ec3f95f9313f2f559a8b5cfb9eb97305d1533a2d667bac31b4783"
+    },
+    "scores.json": {
+      "bytes": 207808,
+      "sha256": "93ec778f199cf19b7bdabbb244352ea10c7802d71f63b170054ab33ac20ba7ed"
+    },
+    "runtime-manifest.json": {
+      "bytes": 626,
+      "sha256": "a3c96bbf6649cd7cd1856d4b30b01ebd1ddfd9557d26b3038af1969b6912dd87"
+    },
+    "runtime/browser-voice.mjs": {
+      "bytes": 4554,
+      "sha256": "32146e92876f2e4db64324b7948ce7cf0d1b5adfd53abc6f523195f2695ba479"
+    },
+    "runtime/core.mjs": {
+      "bytes": 15062,
+      "sha256": "b082374fe15ed78b38c0035c7c8449a1a36383c4024c618171ee7859192e83a0"
+    },
+    "runtime/http.mjs": {
+      "bytes": 10275,
+      "sha256": "d2ec5fadec9307b288fd3dfb7de774d119696a239494cf3a49195afdc616e315"
+    },
+    "runtime/install.mjs": {
+      "bytes": 8945,
+      "sha256": "f0fc58befda445b2afdb9348de7979f50c80598f0f43f53ff6e681bc38c524c7"
+    },
+    "runtime/mcp-common.mjs": {
+      "bytes": 1193,
+      "sha256": "3cdf3abb7eb39a9200c6b09f2b04fbd20e08e272e0fcfad52aa99da8e698211e"
+    },
+    "runtime/mcp.mjs": {
+      "bytes": 3624,
+      "sha256": "c30221eb519b235b46aa0bda5cbbf94fbff639aed416f19fa5e315d3480c7a4b"
+    },
+    "runtime/providers.mjs": {
+      "bytes": 3674,
+      "sha256": "56ac08ec420458f9b7e051d808ed613d0841374cd8f006dfff8c785f954a3389"
+    },
+    "runtime/rewrite.mjs": {
+      "bytes": 13962,
+      "sha256": "cb23049c8e1dec032b202f6301e13dd74cb175b0c085ffabb52d2005c808178d"
+    },
+    "runtime/schema.mjs": {
+      "bytes": 1671,
+      "sha256": "164318dd8a6eef4fd589ea27ae8e357f596cc201118729504f4c6d46d2815881"
+    },
+    "runtime/structure.mjs": {
+      "bytes": 4959,
+      "sha256": "81ffdd26de49b249fbb78183c6e01e6542351aeed854dba65410fdcff7db9268"
+    }
+  },
+  "redaction": "No credential fields, session transcript, real account profile or filesystem inventory included. All 24 case texts are the retained benchmark fixtures.",
+  "provenance": "Model outputs and errors are recorded results, not reconstructed or hand-edited. Calls preserve the exact upstream benchmark prompts in generation requests; see THIRD_PARTY_NOTICES.md."
+}

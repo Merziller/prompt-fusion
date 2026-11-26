@@ -10,10 +10,10 @@ const isLoopback = host => ['127.0.0.1', '::1', 'localhost', '[::1]'].includes(h
 const rpcError = (id, code, message) => ({ jsonrpc: '2.0', id, error: { code, message } });
 export function openApiDocument({ authentication = true } = {}) {
   return {
-    openapi: '3.1.0', info: { title: 'Prompt Fusion', version: VERSION, description: 'Prompt text only. Rule-guidance engine, not semantic rewriting. No embedded task execution.' },
+    openapi: '3.1.0', info: { title: 'Prompt Fusion', version: VERSION, description: 'Prompt text only. Model-assisted semantic rewriting with a separate fidelity review; no embedded task execution. Missing-model and validation failures retain the original with explicit warnings.' },
     servers: [{ url: '/' }],
     ...(authentication ? { security: [{ bearerAuth: [] }], components: { securitySchemes: { bearerAuth: { type: 'http', scheme: 'bearer' } } } } : {}),
-    paths: { '/v1/enhance': { post: { operationId: 'prompt_fusion_enhance', summary: 'Add reviewed guidance to a prompt', requestBody: { required: true, content: { 'application/json': { schema: inputSchema } } }, responses: { '200': { description: 'Original text, enhanced preview, warnings and metadata', content: { 'application/json': { schema: { type: 'object', required: ['original', 'enhanced'], properties: { original: { type: 'string' }, enhanced: { type: 'string' } }, additionalProperties: true } } } }, '400': { description: 'Invalid request' }, '401': { description: 'Bearer token required' }, '413': { description: 'Request over 128 KiB' }, '429': { description: 'Concurrent request limit' } } } } }
+    paths: { '/v1/enhance': { post: { operationId: 'prompt_fusion_enhance', summary: 'Rewrite and review a prompt without executing it', requestBody: { required: true, content: { 'application/json': { schema: inputSchema } } }, responses: { '200': { description: 'Original text, enhanced preview, warnings and metadata', content: { 'application/json': { schema: { type: 'object', required: ['original', 'enhanced'], properties: { original: { type: 'string' }, enhanced: { type: 'string' } }, additionalProperties: true } } } }, '400': { description: 'Invalid request' }, '401': { description: 'Bearer token required' }, '413': { description: 'Request over 128 KiB' }, '429': { description: 'Concurrent request limit' } } } } }
   };
 }
 function readJson(request) {

@@ -1,0 +1,44 @@
+{
+  "schema": "prompt-fusion-retained-host-observations-v1",
+  "version": "0.5.1-dev",
+  "provenance": "Transcribed exact tool-visible responses retained in this conversation, not a newly executed batch or raw provider traffic capture.",
+  "selection": "Eight distinct prepared regression inputs with complete visible responses. Earlier additional calls are not counted as a complete repeated benchmark.",
+  "provider": null,
+  "perCallTimestamp": null,
+  "authenticatedGuiTested": false,
+  "newQualityScore": null,
+  "observations": [
+    {
+      "caseId": "original-booking-goal",
+      "result": {"version":"0.5.1-dev","original":"想把预约页面改得清楚些，可能偏暖色，但别现在定颜色；目前有两个按钮「了解详情」「预约体验」，这轮先比较保留两个还是只留一个的利弊。不要画稿。","enhanced":"想让预约页面更清楚。目前有两个按钮「了解详情」「预约体验」，这轮先比较保留两个按钮与只留一个按钮的利弊，重点看用户能否理解操作目的、两个入口是否造成选择负担，以及对预约路径的影响；只留一个时，分别考虑保留哪个按钮。视觉上可能偏暖色，但别现在定颜色。不要画稿。","domain":"auto","mode":"smart","intensity":"deep","language":"zh","engine":"model-rewrite","ruleIds":[],"warnings":[],"layout":"structured","audit":{"stages":2,"modelCalls":2,"route":"full-review","presentation":"concise","verdict":"pass","verification":"not-required","issues":[],"literalChecks":"pass"},"changes":{"originalPreserved":false,"originalPrefixPreserved":false,"reorganized":true,"appendedCharacters":59}}
+    },
+    {
+      "caseId": "original-quoted-uncertainty",
+      "result": {"version":"0.5.1-dev","original":"Please polish the sentence “We might deliver next week” while keeping the uncertainty.","enhanced":"Polish the sentence “We might deliver next week” while preserving its uncertainty about delivery next week.","domain":"auto","mode":"smart","intensity":"deep","language":"en","engine":"model-rewrite","ruleIds":[],"warnings":[],"layout":"structured","audit":{"stages":2,"modelCalls":2,"route":"full-review","presentation":"concise","verdict":"pass","verification":"not-required","issues":[],"literalChecks":"pass"},"changes":{"originalPreserved":false,"originalPrefixPreserved":false,"reorganized":true,"appendedCharacters":21}}
+    },
+    {
+      "caseId": "chinese-clearer-subject",
+      "result": {"version":"0.5.1-dev","original":"请让付款页更易懂。先比较信息排序，不要改文案。","enhanced":"请以让付款页更易懂为目标，先比较不同的信息排序。不要改文案。","domain":"auto","mode":"smart","intensity":"deep","language":"zh","engine":"model-rewrite","ruleIds":[],"warnings":[],"layout":"structured","audit":{"stages":3,"modelCalls":3,"route":"full-review","presentation":"concise","verdict":"revised","verification":"pass","issues":[{"kind":"invention","detail":"删除新增的“完成付款”评估目标，以及必须提出排序建议并说明理由的后续步骤，保留先比较信息排序的要求。"}],"literalChecks":"pass"},"changes":{"originalPreserved":false,"originalPrefixPreserved":false,"reorganized":true,"appendedCharacters":7}}
+    },
+    {
+      "caseId": "english-clearer-subject",
+      "result": {"version":"0.5.1-dev","original":"Make the booking page clearer. Compare the two navigation options first; do not implement either option yet.","enhanced":"Make the booking page clearer by first comparing the two navigation options. Assess how each helps users understand where they are, find the next step, and complete a booking, highlighting clarity trade-offs and potential confusion. If the page or options are not provided, ask for them. do not implement either option yet.","domain":"auto","mode":"smart","intensity":"deep","language":"en","engine":"model-rewrite","ruleIds":[],"warnings":[],"layout":"structured","audit":{"stages":2,"modelCalls":2,"route":"full-review","presentation":"balanced","verdict":"pass","verification":"not-required","issues":[],"literalChecks":"pass"},"changes":{"originalPreserved":false,"originalPrefixPreserved":false,"reorganized":true,"appendedCharacters":215}}
+    },
+    {
+      "caseId": "explicit-paragraph-is-required",
+      "result": {"version":"0.5.1-dev","original":"Please polish the sentence “We might deliver next week” while keeping the uncertainty. Return one concise paragraph.","enhanced":"Polish the sentence “We might deliver next week” while preserving its uncertainty. Return one concise paragraph.","domain":"auto","mode":"smart","intensity":"deep","language":"en","engine":"model-rewrite","ruleIds":[],"warnings":[],"layout":"structured","audit":{"stages":2,"modelCalls":2,"route":"full-review","presentation":"concise","verdict":"pass","verification":"not-required","issues":[],"literalChecks":"pass"},"changes":{"originalPreserved":false,"originalPrefixPreserved":false,"reorganized":true,"appendedCharacters":-4}}
+    },
+    {
+      "caseId": "no-implied-table",
+      "result": {"version":"0.5.1-dev","original":"帮我整理这次客户回访要问的重点，别编造客户回复。","enhanced":"帮我整理这次客户回访要问的重点，可从客户体验、遇到的问题、需求变化和后续跟进事项等方面梳理，形成便于直接提问的问题。别编造客户回复。","domain":"auto","mode":"smart","intensity":"deep","language":"zh","engine":"model-rewrite","ruleIds":[],"warnings":[],"layout":"structured","audit":{"stages":3,"modelCalls":3,"route":"full-review","presentation":"concise","verdict":"revised","verification":"pass","issues":[{"kind":"invention","detail":"原文未提供背景，也未要求另列待确认事项；删除这些附加要求，并将回访维度改为可选参考。"}],"literalChecks":"pass"},"changes":{"originalPreserved":false,"originalPrefixPreserved":false,"reorganized":true,"appendedCharacters":42}}
+    },
+    {
+      "caseId": "clearer-document",
+      "result": {"version":"0.5.1-dev","original":"把文档改得易读。章节内容都要保留，先给调整顺序的思路，不要直接重写正文。","enhanced":"请以提升文档可读性为目标，在保留所有章节内容的前提下，先提出章节及内容顺序的调整思路，并说明调整如何改善逻辑衔接和阅读体验。不要直接重写正文。","domain":"auto","mode":"smart","intensity":"deep","language":"zh","engine":"model-rewrite","ruleIds":[],"warnings":[],"layout":"structured","audit":{"stages":2,"modelCalls":2,"route":"full-review","presentation":"concise","verdict":"pass","verification":"not-required","issues":[],"literalChecks":"pass"},"changes":{"originalPreserved":false,"originalPrefixPreserved":false,"reorganized":true,"appendedCharacters":35}}
+    },
+    {
+      "caseId": "fast-path-unchanged",
+      "result": {"version":"0.5.1-dev","original":"请概括这篇文章。","enhanced":"请概括这篇文章。","domain":"auto","mode":"smart","intensity":"deep","language":"zh","engine":"model-rewrite","ruleIds":[],"warnings":[],"layout":"structured","audit":{"stages":1,"modelCalls":1,"route":"fast-surface","presentation":"concise","verdict":"surface-equivalent","verification":"deterministic-surface","issues":[],"literalChecks":"pass"},"changes":{"originalPreserved":true,"originalPrefixPreserved":true,"reorganized":false,"appendedCharacters":0}}
+    }
+  ]
+}

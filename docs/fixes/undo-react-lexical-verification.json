@@ -1,0 +1,64 @@
+{
+  "at": "2026-11-26T13:29:14.289Z",
+  "status": "PASS",
+  "react": "18.2.0",
+  "lexical": "0.49.0",
+  "hostGuiTested": false,
+  "scope": "Real React lifecycle and Lexical text replacement with explicit DSH public Session/slot contract fixture; not authenticated GUI evidence.",
+  "currentClientSha256": "09495fa137eb444afb9787a03d30be543f58b9a4a45390c766eaa9fd2f91ee60",
+  "historicalClient": {
+    "commit": "0fdf97f78b58e46643bc856d3529e7cc144c8de4",
+    "sha256": "db489aaa6391f1edba5077737b221d2833af965e24e86dcbf9553d64754df85a"
+  },
+  "observations": [
+    {
+      "case": "remount-after-application",
+      "version": "v0.2.0",
+      "draftPreserved": true,
+      "button": "增强",
+      "expectedUndo": false
+    },
+    {
+      "case": "cancel-temporary-host-state",
+      "version": "v0.2.0",
+      "button": "增强",
+      "expectedUndo": false
+    },
+    {
+      "case": "native-reference-detect-coordinates",
+      "version": "v0.2.0",
+      "button": "增强",
+      "roundTrip": false
+    },
+    {
+      "case": "remount-after-application",
+      "version": "fixed",
+      "draftPreserved": true,
+      "button": "撤销增强",
+      "expectedUndo": true
+    },
+    {
+      "case": "cancel-temporary-host-state",
+      "version": "fixed",
+      "button": "撤销增强",
+      "expectedUndo": true
+    },
+    {
+      "case": "native-reference-detect-coordinates",
+      "version": "fixed",
+      "button": "增强",
+      "roundTrip": true
+    },
+    {
+      "case": "deferred-editor-projection",
+      "version": "fixed",
+      "roundTrip": true
+    },
+    {
+      "case": "stop-before-application",
+      "version": "fixed",
+      "unchanged": true,
+      "noUndoCorrect": true
+    }
+  ]
+}

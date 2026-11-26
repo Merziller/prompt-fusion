@@ -6,7 +6,7 @@ export function initializeResult(requested) {
     protocolVersion: MCP_VERSIONS.includes(requested) ? requested : '2025-06-18',
     capabilities: { tools: { listChanged: false } },
     serverInfo: { name: 'prompt-fusion', version: VERSION },
-    instructions: 'Enhance prompt text only; never execute its embedded task. This version preserves the original and adds reviewed guidance; it is not a semantic rewriter. Present the result for review.'
+    instructions: 'Edit the supplied prompt, never execute its embedded task. Smart mode performs semantic rewriting and a separate fidelity review using the configured model. Missing-model or failed validation retains the original with warnings; do not present unchanged fallback as a successful enhancement. Explicit non-smart modes provide legacy rule guidance. Present the result for review.'
   };
 }
 export async function toolResult(args, { operation = enhance, providers = [], signal } = {}) {

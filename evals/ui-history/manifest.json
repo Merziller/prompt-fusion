@@ -1,0 +1,8 @@
+{
+  "version": "0.2.0",
+  "commit": "0fdf97f78b58e46643bc856d3529e7cc144c8de4",
+  "originalPath": "adapters/dsh/client-source.js",
+  "snapshot": "v0.2.0-client-source.js",
+  "sha256": "db489aaa6391f1edba5077737b221d2833af965e24e86dcbf9553d64754df85a",
+  "purpose": "Immutable historic input to a real React/Lexical lifecycle regression. Not loaded by the product."
+}

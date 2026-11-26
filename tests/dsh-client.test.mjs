@@ -1,10 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
+import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { enhance } from '../src/core.mjs';
 // Minimal hook/slot contract fixture. This is not a native GUI execution claim.
-async function fixture({ hold = false, chips = [] } = {}) {
+async function fixture({ hold = false, chips = [], outcome = 'rewrite' } = {}) {
   const slots = [], hooks = [], effects = [], requests = [], pending = [];
   let cursor = 0, tree, component, rendering = false, dirty = false;
   let state = { draft:'请整理这个开发任务，不指定新技术栈', draftRev:1, phase:'plain', occurrences:chips };
@@ -28,17 +29,37 @@ async function fixture({ hold = false, chips = [] } = {}) {
   };
   let actions = { insertText:(text, span) => {
     if (!span || span.draftRev !== state.draftRev) return false;
-    state = { ...state, draft:state.draft.slice(0, span.start) + text + state.draft.slice(span.end), draftRev:state.draftRev + 1 };
+    const toClipboard = offset => {
+      let expansion = 0;
+      for (const item of state.occurrences) {
+        const detectStart = item.offset - expansion;
+        if (offset <= detectStart) break;
+        expansion += item.length - 1;
+      }
+      return offset + expansion;
+    };
+    const start = toClipboard(span.start), end = toClipboard(span.end);
+    state = { ...state, draft:state.draft.slice(0, start) + text + state.draft.slice(end), draftRev:state.draftRev + 1 };
     render(); return true;
   } };
   let plugin; const dictionaries = {};
   const sandbox = {
     window:{ __ModuleLoader__:{ load:({ id, factory }) => { assert.equal(id, '@merziller/prompt-fusion'); plugin = factory(name => { assert.equal(name, 'react'); return React; }); } } },
-    AbortController, console,
+    AbortController, console, setTimeout, clearTimeout,
     fetch:async (url, options) => {
       requests.push({ url, request:JSON.parse(options.body) });
       if (hold) await new Promise(resolve => pending.push(resolve));
-      return { ok:true, json:() => enhance(JSON.parse(options.body)) };
+      const body = JSON.parse(options.body);
+      if (outcome === 'transport') throw new TypeError('PRIVATE https://secret.test/?token=must-not-display');
+      if (outcome === 'host-auth') return {ok:false,status:401,json:async()=>({error:{code:'HOST_AUTH'}})};
+      if (outcome === 'provider-auth') return {ok:false,status:401,json:async()=>({error:{code:'PROVIDER_AUTH'}})};
+      if (outcome === 'service') return {ok:false,status:502,json:async()=>({error:{code:'NETWORK_SERVICE_ERROR'}})};
+      if (outcome === 'plain-service') return {ok:false,status:502,json:async()=>{throw new SyntaxError('PRIVATE upstream page');}};
+      if (outcome === 'network-result') return {ok:true,json:async()=>({original:body.input,enhanced:body.input,engine:'unchanged',failure:{category:'connection',retryable:true,status:502},warnings:[{code:'NETWORK_SERVICE_ERROR'}]})};
+      if (outcome === 'timeout') return {ok:false,status:504,json:async()=>({error:{code:'TIMEOUT'}})};
+      if (outcome === 'rate') return {ok:false,status:429,json:async()=>({error:{code:'PROVIDER_RATE_LIMIT'}})};
+      const providers = outcome === 'no-model' ? [] : [async({stage,input})=>{if(outcome==='invalid')return '{}';const p=JSON.parse(input);const prompt=outcome==='original'?p.draft:p.layout==='append'?p.draft+'\n明确目标与待确认问题。':'请梳理现有开发任务，明确目标和待确认问题，不指定新技术栈。';return JSON.stringify(stage==='rewrite'?{prompt}:{verdict:'pass',prompt:null,issues:[]});}];
+      return { ok:true, json:() => enhance(body,{providers}) };
     }
   };
   vm.runInNewContext(await readFile(new URL('../adapters/dsh/client.js', import.meta.url), 'utf8'), sandbox);
@@ -66,7 +87,7 @@ test('DSH exposes exactly one inline button and no settings or voice UI', async 
 });
 test('single click automatically applies deep structured enhancement and same button undoes', async () => {
   const f = await fixture();
-  try { const before = f.state.draft; await f.click('增强'); assert.ok(f.state.draft.startsWith('## 任务需求\n')); assert.ok(f.state.draft.includes(before)); assert.deepEqual(f.requests[0].request, { input:before, mode:'smart', domain:'auto', intensity:'deep', layout:'structured', useContext:false, useMemory:false, fallback:true }); assert.equal(f.nodes().filter(n => n.type === 'button').length, 1); await f.click('撤销增强'); assert.equal(f.state.draft, before); }
+  try { const before = f.state.draft; await f.click('增强'); assert.equal(f.state.draft,'请梳理现有开发任务，明确目标和待确认问题，不指定新技术栈。'); assert.ok(!f.state.draft.includes(before)); assert.deepEqual(f.requests[0].request, { input:before, mode:'smart', domain:'auto', intensity:'deep', layout:'structured', useContext:false, useMemory:false, fallback:true }); assert.equal(f.nodes().filter(n => n.type === 'button').length, 1); await f.click('撤销增强'); assert.equal(f.state.draft, before); }
   finally { f.dispose(); }
 });
 test('typing during enhancement retains new edits', async () => {
@@ -80,7 +101,7 @@ test('stop button cancels application even when provider ignores abort', async (
   finally { f.dispose(); }
 });
 test('atomic reference chips use append and undo leaves occurrences intact', async () => {
-  const chips = [{ id:'reference-1', start:0, end:2 }], f = await fixture({ chips });
+  const chips = [{ occurrenceId:'reference-1', offset:0, length:2, clipboardText:'请整' }], f = await fixture({ chips });
   try { const before = f.state.draft; await f.click('增强'); assert.equal(f.requests[0].request.layout, 'append'); assert.ok(f.state.draft.startsWith(before)); assert.equal(f.state.occurrences, chips); await f.click('撤销增强'); assert.equal(f.state.draft, before); assert.equal(f.state.occurrences, chips); }
   finally { f.dispose(); }
 });
@@ -93,4 +114,16 @@ test('manual edit after enhancement resets undo rather than erasing edits', asyn
   const f = await fixture();
   try { await f.click('增强'); f.edit(f.state.draft + '\n新要求'); assert.ok(f.button('增强')); assert.equal(f.nodes().filter(n => n.type === 'button').length, 1); }
   finally { f.dispose(); }
+});
+test('approved single-button CSS, icon and slot remain byte-identical',async()=>{
+ const source=await readFile(new URL('../adapters/dsh/client-source.js',import.meta.url),'utf8');
+ const baseline=JSON.parse(await readFile(new URL('../evals/ui-contract.json',import.meta.url),'utf8'));
+ const hash=text=>createHash('sha256').update(text).digest('hex');
+ assert.equal(hash(source.match(/  const css = ([\s\S]+?);\n/)[1]),baseline.cssSha256);
+ assert.equal(hash(source.match(/  const icon = ([\s\S]+?);\n/)[1]),baseline.iconSha256);
+ const f=await fixture();try{assert.equal(f.slots[0].name,baseline.slot);assert.equal(f.nodes().filter(n=>n.type==='button').length,baseline.visibleControls);}finally{f.dispose();}
+});
+const uiMessages = JSON.parse(await readFile(new URL('../locale/zh.json', import.meta.url), 'utf8')).ui;
+for (const [outcome, message] of [['no-model','needsModel'],['invalid','retained'],['original','unchanged'],['transport','networkRetained'],['service','networkRetained'],['plain-service','networkRetained'],['network-result','networkRetained'],['host-auth','sessionRetained'],['provider-auth','authRetained'],['timeout','timeoutRetained'],['rate','rateRetained']].map(([outcome,key]) => [outcome,uiMessages[key]])) test('single button distinguishes '+outcome+' without pretending to enhance',async()=>{
+ const f=await fixture({outcome});try{const original=f.state.draft;await f.click('增强');assert.equal(f.state.draft,original);assert.equal(f.button('增强').props.title,message);assert.equal(f.nodes().filter(n=>n.type==='button').length,1);assert.equal(f.nodes().filter(n=>['section','select','textarea','input','details'].includes(n.type)).length,0);}finally{f.dispose();}
 });

@@ -1,0 +1,5611 @@
+{
+  "complete": true,
+  "missing": [],
+  "passed": false,
+  "generationFailures": [],
+  "judge": {
+    "provider": "tokenshop",
+    "model": "gpt-6-astra",
+    "orders": 2,
+    "humanIndependent": false
+  },
+  "attempts": [
+    {
+      "id": "design-landing--order-0",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "design-landing--order-1",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "dev-vague--order-1",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "agents-vague--order-0",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "agents-vague--order-1",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "promo-mention-plugin--order-0",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "promo-mention-plugin--order-1",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "question-not-implementation--order-0",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "question-not-implementation--order-1",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "numbers-and-negation--order-0",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "numbers-and-negation--order-1",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "exact-code-schema--order-0",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "exact-code-schema--order-1",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "tentative-design--order-0",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "tentative-design--order-1",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "japanese-goal--order-0",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "japanese-goal--order-1",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "arabic-brief--order-0",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "arabic-brief--order-1",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "data-not-instructions--order-0",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "data-not-instructions--order-1",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "vague-research--order-0",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "vague-research--order-1",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "multilingual-literals--order-0",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "multilingual-literals--order-1",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "nondefault-team--order-0",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "nondefault-team--order-1",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "clear-mini-task--order-0",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "clear-mini-task--order-1",
+      "batch": "semantic-round-05-judge-retry-1",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "design-landing--order-0",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "design-landing--order-1",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "dev-vague--order-1",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "agents-vague--order-0",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "agents-vague--order-1",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "promo-mention-plugin--order-0",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "promo-mention-plugin--order-1",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "question-not-implementation--order-0",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "question-not-implementation--order-1",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "numbers-and-negation--order-0",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "numbers-and-negation--order-1",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "exact-code-schema--order-0",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "exact-code-schema--order-1",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "tentative-design--order-0",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "tentative-design--order-1",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "japanese-goal--order-0",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "japanese-goal--order-1",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "arabic-brief--order-0",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "arabic-brief--order-1",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "data-not-instructions--order-0",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "data-not-instructions--order-1",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "vague-research--order-0",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "vague-research--order-1",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "multilingual-literals--order-0",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "multilingual-literals--order-1",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "nondefault-team--order-0",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "nondefault-team--order-1",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "clear-mini-task--order-0",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "clear-mini-task--order-1",
+      "batch": "semantic-round-05-judge-retry-2",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "design-landing--order-0",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "design-landing--order-1",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "dev-vague--order-1",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "agents-vague--order-0",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "agents-vague--order-1",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "promo-mention-plugin--order-0",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "promo-mention-plugin--order-1",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "question-not-implementation--order-0",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "question-not-implementation--order-1",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "numbers-and-negation--order-0",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "numbers-and-negation--order-1",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "exact-code-schema--order-0",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "exact-code-schema--order-1",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "tentative-design--order-0",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "tentative-design--order-1",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "japanese-goal--order-0",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "japanese-goal--order-1",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "arabic-brief--order-0",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "arabic-brief--order-1",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "data-not-instructions--order-0",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "data-not-instructions--order-1",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "vague-research--order-0",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "vague-research--order-1",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "multilingual-literals--order-0",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "multilingual-literals--order-1",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "nondefault-team--order-0",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "nondefault-team--order-1",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "clear-mini-task--order-0",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "clear-mini-task--order-1",
+      "batch": "semantic-round-05-judge-retry-3",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "design-landing--order-0",
+      "batch": "semantic-round-05-judge-retry-4",
+      "valid": true
+    },
+    {
+      "id": "design-landing--order-1",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "dev-vague--order-1",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "agents-vague--order-0",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "agents-vague--order-1",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "promo-mention-plugin--order-0",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "promo-mention-plugin--order-1",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "question-not-implementation--order-0",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "question-not-implementation--order-1",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "numbers-and-negation--order-0",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "numbers-and-negation--order-1",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "exact-code-schema--order-0",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "exact-code-schema--order-1",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "tentative-design--order-0",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "tentative-design--order-1",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "japanese-goal--order-0",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "japanese-goal--order-1",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "arabic-brief--order-0",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "arabic-brief--order-1",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "data-not-instructions--order-0",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "data-not-instructions--order-1",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "vague-research--order-0",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "vague-research--order-1",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "multilingual-literals--order-0",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "multilingual-literals--order-1",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "nondefault-team--order-0",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "nondefault-team--order-1",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "clear-mini-task--order-0",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "clear-mini-task--order-1",
+      "batch": "semantic-round-05-judge-retry-5",
+      "valid": true
+    },
+    {
+      "id": "dev-brief--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "dev-brief--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "dev-fix--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "dev-fix--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "design-landing--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "design-landing--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "design-repair--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "design-repair--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "office-cashflow--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "office-followup--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "office-cashflow--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "agents-delivery--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "office-followup--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "agents-delivery--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "agents-handoff--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "agents-handoff--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "dev-vague--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "dev-vague--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "design-vague--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "design-vague--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "office-vague--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    },
+    {
+      "id": "agents-vague--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "agents-vague--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "promo-mention-plugin--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "promo-mention-plugin--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "question-not-implementation--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "question-not-implementation--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "numbers-and-negation--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "numbers-and-negation--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "exact-code-schema--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "exact-code-schema--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "tentative-design--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "tentative-design--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "japanese-goal--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "japanese-goal--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "arabic-brief--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "arabic-brief--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "data-not-instructions--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "data-not-instructions--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "vague-research--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "vague-research--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "multilingual-literals--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "multilingual-literals--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "nondefault-team--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "nondefault-team--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "clear-mini-task--order-0",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "clear-mini-task--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": false,
+      "error": "Judge transport failed"
+    },
+    {
+      "id": "office-vague--order-1",
+      "batch": "semantic-round-05-judge",
+      "valid": true
+    }
+  ],
+  "aggregate": [
+    {
+      "product": "feiwell",
+      "set": "fixed",
+      "n": 12,
+      "mean": 94.58,
+      "minimum": 85,
+      "criticalCases": [
+        "dev-brief",
+        "design-repair",
+        "agents-handoff",
+        "design-vague",
+        "office-vague",
+        "agents-vague"
+      ]
+    },
+    {
+      "product": "feiwell",
+      "set": "transfer",
+      "n": 12,
+      "mean": 94.71,
+      "minimum": 89,
+      "criticalCases": [
+        "question-not-implementation",
+        "numbers-and-negation",
+        "exact-code-schema",
+        "tentative-design",
+        "data-not-instructions",
+        "vague-research",
+        "multilingual-literals",
+        "nondefault-team",
+        "clear-mini-task"
+      ]
+    },
+    {
+      "product": "feiwell",
+      "set": "all",
+      "n": 24,
+      "mean": 94.65,
+      "minimum": 85,
+      "criticalCases": [
+        "dev-brief",
+        "design-repair",
+        "agents-handoff",
+        "design-vague",
+        "office-vague",
+        "agents-vague",
+        "question-not-implementation",
+        "numbers-and-negation",
+        "exact-code-schema",
+        "tentative-design",
+        "data-not-instructions",
+        "vague-research",
+        "multilingual-literals",
+        "nondefault-team",
+        "clear-mini-task"
+      ]
+    },
+    {
+      "product": "chosenxu",
+      "set": "fixed",
+      "n": 12,
+      "mean": 95.04,
+      "minimum": 62,
+      "criticalCases": [
+        "dev-brief",
+        "design-landing",
+        "office-followup",
+        "office-vague"
+      ]
+    },
+    {
+      "product": "chosenxu",
+      "set": "transfer",
+      "n": 12,
+      "mean": 92.88,
+      "minimum": 28,
+      "criticalCases": [
+        "numbers-and-negation",
+        "multilingual-literals",
+        "clear-mini-task"
+      ]
+    },
+    {
+      "product": "chosenxu",
+      "set": "all",
+      "n": 24,
+      "mean": 93.96,
+      "minimum": 28,
+      "criticalCases": [
+        "dev-brief",
+        "design-landing",
+        "office-followup",
+        "office-vague",
+        "numbers-and-negation",
+        "multilingual-literals",
+        "clear-mini-task"
+      ]
+    },
+    {
+      "product": "fishsb",
+      "set": "fixed",
+      "n": 12,
+      "mean": 97.13,
+      "minimum": 87,
+      "criticalCases": [
+        "office-vague"
+      ]
+    },
+    {
+      "product": "fishsb",
+      "set": "transfer",
+      "n": 12,
+      "mean": 98.25,
+      "minimum": 87.5,
+      "criticalCases": [
+        "arabic-brief"
+      ]
+    },
+    {
+      "product": "fishsb",
+      "set": "all",
+      "n": 24,
+      "mean": 97.69,
+      "minimum": 87,
+      "criticalCases": [
+        "office-vague",
+        "arabic-brief"
+      ]
+    },
+    {
+      "product": "fusion",
+      "set": "fixed",
+      "n": 12,
+      "mean": 99.5,
+      "minimum": 94.5,
+      "criticalCases": [
+        "office-vague"
+      ]
+    },
+    {
+      "product": "fusion",
+      "set": "transfer",
+      "n": 12,
+      "mean": 98.71,
+      "minimum": 96,
+      "criticalCases": []
+    },
+    {
+      "product": "fusion",
+      "set": "all",
+      "n": 24,
+      "mean": 99.1,
+      "minimum": 94.5,
+      "criticalCases": [
+        "office-vague"
+      ]
+    }
+  ],
+  "perCase": [
+    {
+      "caseId": "dev-brief",
+      "set": "fixed",
+      "product": "feiwell",
+      "total": 94,
+      "criticalIssues": [
+        "将“Windows用”收窄为“仅在Windows本地运行”，新增平台排他性要求。",
+        "将“客户资料别上传云端”扩大为“数据仅存本地”，新增对全部数据存储位置的硬性限制。",
+        "将“Windows用”收紧为“仅在 Windows 本地运行”，新增排他性的运行环境限制。",
+        "将“客户资料别上传云端”扩大为“数据仅存本地”，对数据类别和存储位置增加了原文未明确要求的限制。"
+      ],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 24,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将“Windows用”收窄为“仅在Windows本地运行”，新增平台排他性要求。",
+            "将“客户资料别上传云端”扩大为“数据仅存本地”，新增对全部数据存储位置的硬性限制。"
+          ],
+          "reason": "保留单人经营背景、三项规划交付、暂不编码和不定技术栈，以及明确排除的功能。输入输出、使用边界、问题优先级、影响说明及异常处理验收均与任务相关；结构化清单便于确认，表达紧凑，未执行任务。但把Windows使用要求升级为排他限制，保真度扣3分；把客户资料不上云扩大为全部数据只能存本地，再扣3分。",
+          "caseId": "dev-brief",
+          "set": "fixed",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 94,
+          "total": 94,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 24,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将“Windows用”收紧为“仅在 Windows 本地运行”，新增排他性的运行环境限制。",
+            "将“客户资料别上传云端”扩大为“数据仅存本地”，对数据类别和存储位置增加了原文未明确要求的限制。"
+          ],
+          "reason": "三部分交付清楚，输入输出、问题优先级、主要场景和异常处理都是有用的需求与验收维度；结构化清单也便于确认。保真度扣6分：Windows 使用要求被收紧为排他限制，客户资料不上云被扩大为所有数据仅存本地，各扣3分。其余约束和规划阶段得到保留，没有执行任务或冗余流程。",
+          "caseId": "dev-brief",
+          "set": "fixed",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 94,
+          "total": 94,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "dev-brief",
+      "set": "fixed",
+      "product": "chosenxu",
+      "total": 98,
+      "criticalIssues": [
+        "将“我一个人做公司”改成“我想一个人先做工具”，遗漏公司由一人运营的明确背景，把经营者语境改成了开发者语境。"
+      ],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 28,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将“我一个人做公司”改成“我想一个人先做工具”，遗漏公司由一人运营的明确背景，把经营者语境改成了开发者语境。"
+          ],
+          "reason": "三项交付内容组织清楚，补充核心功能、必要字段、主要流程及可检验标准，均直接服务于最小可用范围梳理，篇幅适当。平台、数据限制、阶段限制和排除项均保留，也未执行嵌入任务。但独自制作工具不等于独自经营公司，使用者背景有所丢失，保真度扣2分。",
+          "caseId": "dev-brief",
+          "set": "fixed",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 98,
+          "total": 98,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 28,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留主要目标、运行环境、数据约束、阶段限制和全部禁止项；必要数据字段、主要操作流程及可检验完成标准是适度且相关的补充。保真度扣2分：“一个人做公司”改成“一个人先做”工具，使单人经营公司的背景不再明确，并将单人这一限定转向制作过程；属于背景表达偏移，未改变主要任务。",
+          "caseId": "dev-brief",
+          "set": "fixed",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 98,
+          "total": 98,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "dev-brief",
+      "set": "fixed",
+      "product": "fishsb",
+      "total": 98.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留单人经营公司、Windows 使用、本地工具、客户资料不上云，以及当前阶段不写代码、不定技术栈和三项功能排除。用“三件事”明确交付内容，轻量整理符合原文已经清楚的情况；没有必须补充才能执行的缺口，也没有擅加要求。仍是给未来助手的规划提示词，无实质扣分。",
+          "caseId": "dev-brief",
+          "set": "fixed",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 17,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原文事实、目标、阶段和禁止项，语言清楚简洁，轻量修改符合原文已经较明确的情况。相关补全扣3分：三项交付仍基本停留在名称层面，未补充影响最小范围的使用流程或数据需求等决策维度，也未明确验收标准应当可检验。没有新增假设或越界执行。",
+          "caseId": "dev-brief",
+          "set": "fixed",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 97,
+          "total": 97,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "dev-brief",
+      "set": "fixed",
+      "product": "fusion",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "准确保留所有背景、目标和禁止事项。把最小范围展开为功能、客户跟进场景和明确排除项，把待确认问题关联到范围与验收，并要求说明选择的影响，均是当前规划阶段有用的补充。验收要求明确可检验，三部分顺序清楚，没有预设功能数量、技术方案或额外流程；仍是提示词且篇幅适当，无实质扣分。",
+          "caseId": "dev-brief",
+          "set": "fixed",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留单人经营背景、Windows 使用要求、客户资料不上云、当前阶段及全部禁止项。将三项交付分别展开，补充使用场景、范围排除、关键选择的影响和可检验验收要求，均直接服务于需求梳理，未提前决定功能或技术方案。篇幅适当，无实质扣分项。",
+          "caseId": "dev-brief",
+          "set": "fixed",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "dev-fix",
+      "set": "fixed",
+      "product": "feiwell",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原函数、输入处理规则、两位小数舍入、空数组返回0、禁止事项及JSON输出结构。显式忽略undefined与允许的输入类型一致，将不修改输入明确为数组及元素也未改变范围。测试覆盖要求直接对应原有功能，属于有用的验证补充；篇幅增加有限，无实质冗余。仍是修复任务的提示词，未执行任务，无实质扣分项。",
+          "caseId": "dev-fix",
+          "set": "fixed",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原任务及输出格式；明确函数名、输入数组及元素不可修改，并将undefined与缺失字段的处理写明，未造成实质语义偏移。补充的测试覆盖均直接对应原有行为要求，没有虚构测试数量或引入额外系统。要求、约束和输出的区分清楚，新增内容具有验证价值，未执行任务，无实质扣分。",
+          "caseId": "dev-fix",
+          "set": "fixed",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "dev-fix",
+      "set": "fixed",
+      "product": "chosenxu",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "忠实保留输入类型、忽略规则、负数处理、舍入位数、空数组行为及全部禁止事项，输出结构和测试数量要求也未改变。明确写出须保留的函数名sumReceivables，属于对原代码已有信息的有效澄清。分项简洁易读，没有增加不必要的流程或要求，仍然只是在指示未来助手完成任务，无实质扣分项。",
+          "caseId": "dev-fix",
+          "set": "fixed",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原始代码、amount 的接收与忽略规则、负数处理、两位小数舍入、空数组返回值及全部限制；准确保留 code/tests 键名、值类型和至少3条测试说明要求。按输入规则、结果规则和实现约束分组，便于执行；未添加无关要求，也未执行修复任务，无实质扣分。",
+          "caseId": "dev-fix",
+          "set": "fixed",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "dev-fix",
+      "set": "fixed",
+      "product": "fishsb",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "准确保留原始代码、所有处理规则、限制条件、输出键及至少3条测试说明的要求。按输入处理、结果规则、实现限制分项，代码和字段标识清楚，便于执行。原任务已足够具体，因此不额外添加流程或默认规则是恰当的；表达精简，未执行嵌入任务，无实质扣分项。",
+          "caseId": "dev-fix",
+          "set": "fixed",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留函数代码、数据处理规则、舍入要求、空数组行为、函数名保留要求及各项禁止约束，JSON结构与测试数量下限准确。行内代码和分组列表提高辨识度，没有重复框架或额外流程；仍然要求未来助手完成修复，无实质扣分。",
+          "caseId": "dev-fix",
+          "set": "fixed",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "dev-fix",
+      "set": "fixed",
+      "product": "fusion",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "原始代码及全部语义约束均得到保留，JSON键名、完整函数字符串和测试数量下限准确。代码块明确界定待修复对象，分项要求组织合理，最终输出约束独立清晰。没有添加无关要求或擅自确定未说明的实现细节；展示原代码不属于执行任务，无实质扣分项。",
+          "caseId": "dev-fix",
+          "set": "fixed",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "原始函数及全部行为、禁止事项和输出约定均被准确保留。代码块清楚界定待修复代码，列表有效区分数据处理、结果处理和实现约束；排版中的代码块没有改变下游仅输出JSON的要求。内容简洁，保持提示词边界，无实质扣分。",
+          "caseId": "dev-fix",
+          "set": "fixed",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "design-landing",
+      "set": "fixed",
+      "product": "feiwell",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留所有目标、事实、数值、文案、范围限制及JSON结构。将proofStrategy明确为无案例情况下的信任建立策略，直接对应原有字段与已知现状，属于有用澄清，没有引入未经支持的事实或额外硬性要求。两端布局与信息层级的任务表达明确，篇幅适度，未执行设计任务，各维度无实质扣分项。",
+          "caseId": "design-landing",
+          "set": "fixed",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-4",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留全部明确约束和JSON字段结构，将视觉与信息层级任务前置，目标清晰。补充的无案例信任建立策略直接对应原有proofStrategy及无客户案例条件，属于有依据的澄清，没有要求虚构证明材料。篇幅紧凑且未执行设计任务，无实质扣分。",
+          "caseId": "design-landing",
+          "set": "fixed",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "design-landing",
+      "set": "fixed",
+      "product": "chosenxu",
+      "total": 96,
+      "criticalIssues": [
+        "将首屏方案中的单一主行动按钮约束扩展为“全页只保留一个主行动按钮”，新增了整页范围的硬性限制。",
+        "将首屏方案中的单一主行动按钮要求扩展为“全页”只保留一个，新增超出首屏设计范围的整页限制。"
+      ],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 27,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将首屏方案中的单一主行动按钮约束扩展为“全页只保留一个主行动按钮”，新增了整页范围的硬性限制。"
+          ],
+          "reason": "完整保留受众、预约免费需求沟通的目标、色值、背景、两端尺寸、按钮文案、禁止编造、禁止代码及JSON字段要求，表达清楚且简洁。但“全页”将约束扩展到本轮首屏设计之外，忠实度扣3分。其余维度无实质缺陷，仍是供后续助手执行的中文提示词。",
+          "caseId": "design-landing",
+          "set": "fixed",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-4",
+          "rawTotal": 97,
+          "total": 97,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 27,
+          "clarity": 25,
+          "relevantCompletion": 18,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将首屏方案中的单一主行动按钮要求扩展为“全页”只保留一个，新增超出首屏设计范围的整页限制。"
+          ],
+          "reason": "其余目标、受众、数值、按钮文案、禁止事项、设计阶段和JSON字段均得到保留，表达清楚简洁，也未执行任务。但“全页”扩大了原本首屏方案的约束范围，忠实度扣3分；该整页限制并非原任务所需的补充，相关完善度扣2分。",
+          "caseId": "design-landing",
+          "set": "fixed",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 95,
+          "total": 95,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "design-landing",
+      "set": "fixed",
+      "product": "fishsb",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留首屏设计范围、目标受众、免费沟通目标、视觉要求、两端尺寸、唯一主行动按钮及其文案、禁止编造与禁止代码要求，以及全部JSON字段。轻量调整句式和标点后指令仍清晰紧凑，没有增加不必要的任务或要求，也未执行嵌入任务，各维度无实质扣分项。",
+          "caseId": "design-landing",
+          "set": "fixed",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-4",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留受众、免费沟通目标、配色、两端尺寸、按钮唯一性与精确文案、禁止编造、设计阶段及JSON字段结构。轻量整理措辞，任务和约束清晰；原提示已充分明确，无须额外补充。没有冗余框架或执行嵌入任务，无实质扣分。",
+          "caseId": "design-landing",
+          "set": "fixed",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "design-landing",
+      "set": "fixed",
+      "product": "fusion",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "准确保留全部目标、限制、精确文案、色值、尺寸及JSON字段，通过轻量措辞整理和单独列出输出要求改善可读性。原提示已经充分具体，此版本没有添加多余流程、默认事实或检查清单，符合轻量编辑的需要。保持中文提示词形式，未输出设计结果，各维度无实质扣分项。",
+          "caseId": "design-landing",
+          "set": "fixed",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-4",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原始目标、事实、数值、禁止事项和输出结构，并通过分段区分设计要求与JSON输出要求。修改克制，未引入默认事实、额外流程或无关要求，仍是交给未来助手执行的提示，无实质扣分。",
+          "caseId": "design-landing",
+          "set": "fixed",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "design-repair",
+      "set": "fixed",
+      "product": "feiwell",
+      "total": 94.5,
+      "criticalIssues": [
+        "将卡片包含三个字段改为“仅含”三个字段，新增原文未明确的排他性限定。",
+        "将“信息层级不清”写成确定的现状，原文只明确手机端拥挤，并未确认这一诊断。",
+        "将原文列举卡片字段强化为“仅含”这三个字段，新增未经明确支持的排他性事实。"
+      ],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 25,
+          "clarity": 25,
+          "relevantCompletion": 18,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将卡片包含三个字段改为“仅含”三个字段，新增原文未明确的排他性限定。",
+            "将“信息层级不清”写成确定的现状，原文只明确手机端拥挤，并未确认这一诊断。"
+          ],
+          "reason": "保留了主要目标、3条建议及优先级、每条的三个组成部分和禁止新增模块、禁止代码等要求，表达清楚且简洁，仍是提示而非任务答案。忠实度扣5分：其中“仅含”强化字段范围扣3分，新增确定的问题诊断扣2分。相关补全扣2分：把未经确认的诊断补成事实，可能提前限制后续分析；其余维度无实质扣分项。",
+          "caseId": "design-repair",
+          "set": "fixed",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 93,
+          "total": 93,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 26,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将原文列举卡片字段强化为“仅含”这三个字段，新增未经明确支持的排他性事实。"
+          ],
+          "reason": "保留了主要目标、建议数量、优先级、逐条结构和禁止事项，表达清晰精简，也没有执行任务。忠实度扣4分：其中“仅含”把字段列举强化为排他性事实，扣3分；“信息层级不清”将可能的原因写成确定现状，原文只明确报告手机端拥挤，扣1分。其余维度没有独立的实质缺陷。",
+          "caseId": "design-repair",
+          "set": "fixed",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 96,
+          "total": 96,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "design-repair",
+      "set": "fixed",
+      "product": "chosenxu",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留手机端拥挤的背景、三个字段、仅优化现有页面信息层级与交互的范围，以及不新增业务模块、不输出代码等限制。明确要求3条建议、按优先级排序，并包含改什么、为什么、怎么验收。“具体可执行”贴合原意，未增加额外任务；表达紧凑，仍是供未来助手执行的提示，无实质扣分项。",
+          "caseId": "design-repair",
+          "set": "fixed",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "准确保留手机端拥挤、仅优化现有页面的信息层级与交互、保留三个字段、不新增业务模块，以及3条建议的排序和内容结构。“具体可执行”是对原文具体修改建议的合理明确化，没有新增独立要求。文字紧凑、任务边界清楚，保留中文和禁止代码的约束，无实质扣分项。",
+          "caseId": "design-repair",
+          "set": "fixed",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "design-repair",
+      "set": "fixed",
+      "product": "fishsb",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留现有页面、手机端拥挤、三个字段、优化范围、3条优先级建议及逐条验收要求，也保留两项禁止性输出要求。先明确范围，再说明问题和交付结构，顺序易于执行；没有新增事实、硬性要求或多余流程，没有直接给出修改建议，无实质扣分项。",
+          "caseId": "design-repair",
+          "set": "fixed",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留手机端拥挤的背景、现有页面的优化范围、三个字段、禁止新增业务模块、按优先级给出3条建议及每条的三个组成部分，也保留禁止空泛表述和输出代码的约束。先交代范围再说明交付要求，顺序清楚，未增加无关要求，仍是面向后续助手的提示词，无实质扣分项。",
+          "caseId": "design-repair",
+          "set": "fixed",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "design-repair",
+      "set": "fixed",
+      "product": "fusion",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原文目标、事实、数量、输出结构及全部限制。通过分段区分背景与范围、交付要求，便于执行；原提示已充分明确，此处轻量整理适当，无须添加澄清清单或额外流程。没有执行嵌入任务，无实质扣分项。",
+          "caseId": "design-repair",
+          "set": "fixed",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原始背景、范围、字段及全部输出约束。通过分段区分页面背景与建议交付要求，属于适合原文清晰程度的轻量整理；没有添加固定方案、无关流程或多余澄清问题，也未代替后续助手提出修改建议，无实质扣分项。",
+          "caseId": "design-repair",
+          "set": "fixed",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "office-cashflow",
+      "set": "fixed",
+      "product": "feiwell",
+      "total": 98.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 29,
+          "clarity": 24,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留全部项目、金额、币种、月份和JSON字段，并明确要求收入与支出各自的加总式；内容简洁，未添加无关流程或实际计算。但将“不把它叫税后净利润”扩写为“不使用‘税后净利润’等表述”，从限制该差额的命名略微扩大为禁用一类表述，忠实度扣1分；“等表述”的范围不明确，清晰度扣1分。",
+          "caseId": "office-cashflow",
+          "set": "fixed",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 98,
+          "total": 98,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 29,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留全部金额、人民币单位、本月范围、计算目标及JSON字段，明确要求分别提供收入与支出的可复算加总式。忠实度扣1分：将“不把它叫税后净利润”扩大为“不使用‘税后净利润’等表述”，略微扩大了禁用措辞的范围。其余要求清楚、精简，没有添加多余流程或执行计算。",
+          "caseId": "office-cashflow",
+          "set": "fixed",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 99,
+          "total": 99,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "office-cashflow",
+      "set": "fixed",
+      "product": "chosenxu",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原始金额、币种、月份范围、禁止事项、可复算公式及缺失资料提示要求，JSON字段和数组类型均未改变。先明确计算边界，再提供数据和输出要求，逻辑清楚；原任务已充分明确，无需额外补充流程。保持为指令，未执行计算，无实质扣分项。",
+          "caseId": "office-cashflow",
+          "set": "fixed",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留所有金额、人民币单位、本月计算范围、税额与指标命名限制、可复算加总式、缺失资料提示及精确JSON字段。先明确计算边界，再提供数据和输出要求，表达紧凑清楚。原任务已经充分明确，此版本未作不必要扩展，也未直接计算结果，无实质扣分项。",
+          "caseId": "office-cashflow",
+          "set": "fixed",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "office-cashflow",
+      "set": "fixed",
+      "product": "fishsb",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "全部事实、金额、限制和JSON结构均忠实保留。收入与支出分列，计算边界及输出格式分别成段，有助于核对和执行；没有添加默认值、额外步骤或无关内容，也未输出计算结果，无实质扣分项。",
+          "caseId": "office-cashflow",
+          "set": "fixed",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原始数字、币种、期间、经营收支差额口径、两项禁止要求及全部JSON字段和数组类型。用列表区分收支，并将计算要求与输出约束分段，便于核对；保留缺失资料提示且未添加无关要求，始终是给未来助手的指令，无实质扣分项。",
+          "caseId": "office-cashflow",
+          "set": "fixed",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "office-cashflow",
+      "set": "fixed",
+      "product": "fusion",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留一人公司、本月、人民币、全部项目与数字，以及计算范围、税额禁推断和名称限制；七个字段及missingInfo数组类型准确保留。将输出要求单独成段，便于执行，改写简洁，未增加无关要求或代为计算，无实质扣分项。",
+          "caseId": "office-cashflow",
+          "set": "fixed",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "准确保留一人公司背景、全部金额与单位、期间和计算口径，以及不推断税额、不称为税后净利润的限制。单独列出JSON输出约束，字段名称与missingInfo数组要求均未改变；同时保留可复算公式和缺失资料提示。修改适度，无额外硬性要求或任务执行，无实质扣分项。",
+          "caseId": "office-cashflow",
+          "set": "fixed",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "office-followup",
+      "set": "fixed",
+      "product": "feiwell",
+      "total": 99.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "准确保留全部事实、日期时间、对象、语气和禁止事项。“全文150字以内”清楚表达邮件整体的长度要求，“只输出主题和正文”明确交付范围。没有添加无关流程、虚构信息或额外硬性要求，仍是写作提示词；整体紧凑，无实质扣分项。",
+          "caseId": "office-followup",
+          "set": "fixed",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原始目标、事实、期限和禁止事项；“全文150字以内”明确了邮件整体的字数限制，与原意一致。指令清晰，未执行邮件撰写任务。经济性扣1分：开头的“主题和正文都要”与末尾的“只输出主题和正文”存在可省略的重复。",
+          "caseId": "office-followup",
+          "set": "fixed",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 99,
+          "total": 99,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "office-followup",
+      "set": "fixed",
+      "product": "chosenxu",
+      "total": 62,
+      "criticalIssues": [
+        "直接写出了邮件成稿，执行原任务，而非提供改写后的提示词。",
+        "未保留150字以内、不得虚构指定事项及不得发送邮件等明确指令。",
+        "直接撰写了最终邮件，执行了嵌入任务，没有提供改写后的提示词。",
+        "未保留“150字以内”、禁止虚构指定事项及禁止代发等面向后续助手的明确指令约束。"
+      ],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 20,
+          "clarity": 20,
+          "relevantCompletion": 14,
+          "economy": 13,
+          "boundary": 0,
+          "criticalIssues": [
+            "直接写出了邮件成稿，执行原任务，而非提供改写后的提示词。",
+            "未保留150字以内、不得虚构指定事项及不得发送邮件等明确指令。"
+          ],
+          "reason": "邮件内容保留了林经理、发送日期、原反馈期限和期望回复时间，语气也基本符合要求。但作为提示词改写，缺少面向后续助手的任务指令和关键限制，保真度与指令清晰度扣分。额外加入“我们会积极配合”的发件方承诺，未经原文授权，相关补全扣分；感谢语叠加“此致／敬礼”略显冗余，经济性扣分。直接交付邮件属于明确的任务执行，边界得0分。",
+          "caseId": "office-followup",
+          "set": "fixed",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 67,
+          "total": 67,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 20,
+          "clarity": 16,
+          "relevantCompletion": 10,
+          "economy": 11,
+          "boundary": 0,
+          "criticalIssues": [
+            "直接撰写了最终邮件，执行了嵌入任务，没有提供改写后的提示词。",
+            "未保留“150字以内”、禁止虚构指定事项及禁止代发等面向后续助手的明确指令约束。"
+          ],
+          "reason": "保留了林经理这一收件人、初稿发送日期、原反馈期限和希望回复的具体时点，邮件本身也较易读。忠实度扣10分：原有字数、禁止虚构及禁止代发等约束未作为指令保留。清晰度扣9分：内容虽清楚，却缺少供后续助手执行的任务说明。相关补全扣10分：没有完成提示词层面的有效整理，并自行加入需要更多时间时的处理选项及“我们会积极配合”的表态。经济性扣4分：额外配合表态、感谢及礼仪落款增加了篇幅。边界得0分：交付的是邮件成稿。",
+          "caseId": "office-followup",
+          "set": "fixed",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 57,
+          "total": 57,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "office-followup",
+      "set": "fixed",
+      "product": "fishsb",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原任务的事实、数字、时间、语气、字数限制和全部负面约束。将事实与要求分别列出，方便逐项遵循；日期中的空格没有改变含义。没有添加原任务不需要的补充要求，也未执行邮件写作或发送，篇幅适当，无实质扣分项。",
+          "caseId": "office-followup",
+          "set": "fixed",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留收件人、150字上限、语气、全部日期和时间、禁止虚构事项及仅提供主题和正文的限制。将事实和要求分组列出，便于核对；没有增加默认事实、额外流程或不必要要求，仍是指导后续助手的提示词，无实质扣分项。",
+          "caseId": "office-followup",
+          "set": "fixed",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "office-followup",
+      "set": "fixed",
+      "product": "fusion",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留收件人、150字上限、语气、全部日期和时间、已确认事实及禁止事项。通过分段区分任务、事实和限制，便于执行；原任务已充分明确，无须额外补充。改动克制，仍是面向后续助手的提示词，无实质扣分项。",
+          "caseId": "office-followup",
+          "set": "fixed",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留所有目标、事实、日期时间、字数要求、语气和负面约束，并保持仅输出主题及正文的下游格式。通过分段区分任务、事实和限制，已足够清晰；原提示词本就完整，轻量整理恰当，无须额外补充问题或流程。仍是提示词，无实质扣分项。",
+          "caseId": "office-followup",
+          "set": "fixed",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "agents-delivery",
+      "set": "fixed",
+      "product": "feiwell",
+      "total": 99.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 24,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留四个AI角色、3天期限、一人公司与本地原型范围、执行禁令、最终确认门槛，以及全部JSON字段和任务字段。交接标准、阻塞及返工的处理表述属于原要求的合理澄清，没有新增硬性要求。清晰度扣1分：阶段限制、任务规则和输出结构仍挤在同一段中，独立约束不够便于逐项核对。内容简洁，保持为面向后续助手的指令，没有执行任务；其余维度无实质扣分。",
+          "caseId": "agents-delivery",
+          "set": "fixed",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 99,
+          "total": 99,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "准确保留3天交付目标、四角色、一人公司与本地原型范围，以及计划先行、禁止执行工具联网部署和最终确认门槛。交接标准、回传路径与处理方式是对原有协作要求的直接澄清，没有引入额外硬性安排。JSON字段完整，表述紧凑，仍是面向未来助手的指令，各维度无实质扣分项。",
+          "caseId": "agents-delivery",
+          "set": "fixed",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "agents-delivery",
+      "set": "fixed",
+      "product": "chosenxu",
+      "total": 99.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 24,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "几乎逐字保留原文，所有目标、数字、角色、禁止事项、协作约束、审批条件及JSON结构均准确保留。原提示已经充分具体，无须为了改写而增加任务或澄清问题。清晰度扣1分：仅增加礼貌性措辞，原有多项规则和输出结构集中在同一段的问题没有改善，逐项核对稍费力。没有冗余扩充或越界执行；其余维度无实质扣分。",
+          "caseId": "agents-delivery",
+          "set": "fixed",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 99,
+          "total": 99,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "基本保留原文，仅增加礼貌表达，没有实质性组织改进；但原提示本身已明确且完整，不因改动少扣分。所有事实、字段、禁止事项、唯一owner要求、验收隔离、文件修改限制及回传要求均保留，没有冗余扩展或越界执行，各维度无实质扣分项。",
+          "caseId": "agents-delivery",
+          "set": "fixed",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "agents-delivery",
+      "set": "fixed",
+      "product": "fishsb",
+      "total": 99.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 24,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留全部目标、期限、角色、执行边界、质量约束、最终确认条件及精确JSON字段。将输入和输出统一写为inputs和outputs，与指定任务结构一致，没有改变含义或补入未经授权的默认值。清晰度扣1分：主要调整术语和空格，多个独立约束与输出结构仍集中在同一段，核对便利性有限。篇幅紧凑且没有执行嵌入任务；其余维度无实质扣分。",
+          "caseId": "agents-delivery",
+          "set": "fixed",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 99,
+          "total": 99,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留全部目标、期限、角色、协作约束、执行门槛和JSON结构，将输入输出统一表述为对应字段inputs和outputs，指代明确。文字紧凑，顺序合理，没有擅自补充技术方案或流程要求，也未执行嵌入任务。原提示已足够完整，无须额外扩写，各维度无实质扣分项。",
+          "caseId": "agents-delivery",
+          "set": "fixed",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "agents-delivery",
+      "set": "fixed",
+      "product": "fusion",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原文的目标、四个角色、3天期限、本地原型范围、禁止事项、任务字段、协作约束、审批门槛和JSON输出要求。将当前规划阶段及执行门槛放在前面，再把可独立核对的协作要求分条列出，最后明确输出结构，组织调整具有实际作用。没有增加架构、日程细节、固定任务数量或其他未经要求的流程；篇幅适度，始终是提示词而非协作计划成品，各维度均无实质缺陷。",
+          "caseId": "agents-delivery",
+          "set": "fixed",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留四个AI角色、3天期限、一人公司、本地原型目标、三项禁止事项及最终确认门槛；全部JSON字段和任务属性均准确保留。将阶段限制、协作要求和输出结构分开，便于核对。没有新增范围、固定安排或执行行为，篇幅增长用于组织必要约束，各维度无实质扣分项。",
+          "caseId": "agents-delivery",
+          "set": "fixed",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "agents-handoff",
+      "set": "fixed",
+      "product": "feiwell",
+      "total": 85,
+      "criticalIssues": [
+        "将“不自动commit、不push、不部署”改为“不得自动commit、push或部署”，使“自动”修饰三项操作，弱化了原文对push和部署的无条件禁止。",
+        "将“不自动commit、不push、不部署”改成“不得自动commit、push或部署”，使“自动”同时修饰三项操作，弱化了对push和部署的全面禁止。",
+        "强制每一步说明输入、输出、边界条件和异常处理，新增原文未要求的统一流程规格。"
+      ],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 24,
+          "clarity": 23,
+          "relevantCompletion": 17,
+          "economy": 12,
+          "boundary": 10,
+          "criticalIssues": [
+            "将“不自动commit、不push、不部署”改为“不得自动commit、push或部署”，使“自动”修饰三项操作，弱化了原文对push和部署的无条件禁止。"
+          ],
+          "reason": "保留了主要目标和多数约束，补充检查结果、文件与记录不一致时的处理及完成条件，具有任务相关性。但将push和部署的禁止范围缩小到自动执行，忠实度扣6分。整段密集串联约束与输出要求，且“自动”的作用范围容易造成误读，清晰度扣2分。要求每一步均交代输入、输出、边界条件和异常处理，超出此处所需的适度补全，相关补全扣3分，并增加重复说明负担，简洁性扣3分。仍是中文流程设计提示词，没有执行嵌入任务。",
+          "caseId": "agents-handoff",
+          "set": "fixed",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 86,
+          "total": 86,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 24,
+          "clarity": 23,
+          "relevantCompletion": 15,
+          "economy": 12,
+          "boundary": 10,
+          "criticalIssues": [
+            "将“不自动commit、不push、不部署”改成“不得自动commit、push或部署”，使“自动”同时修饰三项操作，弱化了对push和部署的全面禁止。",
+            "强制每一步说明输入、输出、边界条件和异常处理，新增原文未要求的统一流程规格。"
+          ],
+          "reason": "保留了主要交接目标，补充检查结果及文件与记录不一致时的处理方式具有直接价值。忠实度扣6分：弱化push和部署禁令，并新增逐步套用完整流程规格的硬性要求。清晰度扣2分：大量约束集中在一个长段落中，层次不够清楚。相关补全扣5分：要求每一步都覆盖边界条件和异常处理，超出原文所需的简洁交接流程。经济性扣3分：统一模板清单增加了不必要的展开负担。仍然只要求未来助手设计方案，没有执行任务。",
+          "caseId": "agents-handoff",
+          "set": "fixed",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 84,
+          "total": 84,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "agents-handoff",
+      "set": "fixed",
+      "product": "chosenxu",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原文的工作阶段、互斥规则、记录内容、核对要求、各项禁止、确认机制和8步上限。编号清楚地组织了要求；明确交接顺序及需求变更不得自行实施，均是对已有约束的直接澄清，没有新增参与角色或无关硬性规定。篇幅适度，保持中文提示词形式且未执行任务，无实质扣分项。",
+          "caseId": "agents-handoff",
+          "set": "fixed",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留仅设计流程、不启动工具、共用工作区且单方写入、逐轮记录、接手前核对、操作禁令、需求变更确认、8步上限及不新增第三个编码Agent。将要求拆分清楚，明确交接互斥与顺序属于直接相关的细化，没有引入额外流程负担。仍是面向未来助手的提示词，无实质扣分项。",
+          "caseId": "agents-handoff",
+          "set": "fixed",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "agents-handoff",
+      "set": "fixed",
+      "product": "fishsb",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "准确保留全部目标、限制和数字要求，并用“再开始改动”明确核对先于修改的顺序。原文已经具体，采用简短任务说明和逐项约束即可有效提高可读性，无须增加澄清清单或额外流程。保留中文及流程输出要求，没有代写流程或启动工具，无实质扣分项。",
+          "caseId": "agents-handoff",
+          "set": "fixed",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "以简洁的任务句和约束列表保留全部原始要求，并通过“再开始改动”明确先核对后操作的顺序。原文已较完整，这种轻量整理足以提升可执行性，无须额外添加模板或检查清单。没有执行嵌入任务，也没有改变语言、范围或输出限制，无实质扣分项。",
+          "caseId": "agents-handoff",
+          "set": "fixed",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "agents-handoff",
+      "set": "fixed",
+      "product": "fusion",
+      "total": 99.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留仅设计流程、不启动工具、共用工作区且修改互斥、每轮三项记录、接手前核对、提交与发布限制、需求变更确认、8步上限及不得新增第三个编码Agent。分列约束并明确按步骤输出，补充执行者、动作和记录产出直接服务于交接流程，未引入额外架构或无关流程。保持中文提示词边界，无实质扣分项。",
+          "caseId": "agents-handoff",
+          "set": "fixed",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留所有目标、限制和禁止事项，并明确采用步骤形式输出。要求说明执行者、动作及记录产出，与双方交接和责任划分直接相关，没有指定额外角色、架构或执行操作。经济性扣1分：末句再次列举文件互斥、记录核对和变更确认，与前面的要求重复，可精简。其余维度无实质缺陷。",
+          "caseId": "agents-handoff",
+          "set": "fixed",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 99,
+          "total": 99,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "dev-vague",
+      "set": "fixed",
+      "product": "feiwell",
+      "total": 96,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 24,
+          "relevantCompletion": 17,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留了需求梳理目标，字段、操作及异常情形均作为示例提出；暂不涉及具体技术选型符合先明确需求的阶段。清晰度扣1分：“判断需求完成的标准”可能指需求说明完成，也可能指功能验收，含义不够明确。相关补全扣3分：虽然补充了有用的异常场景和验证维度，却未要求确认缺失信息或区分功能优先级，对原始信息极少的任务而言仍缺少关键的澄清安排。各项内容基本相关，没有明显冗余，也没有代替后续助手执行任务。",
+          "caseId": "dev-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 96,
+          "total": 96,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 24,
+          "relevantCompletion": 17,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "忠实保留需求梳理阶段，补充了目标、场景、字段、操作、异常及验收标准；所列功能明确作为示例，没有擅自认定为用户需求。暂不涉及技术选型也符合当前阶段。清晰度扣1分：多个要求集中在一个较长段落，层级不够直观。相关补全扣3分：没有要求识别并确认缺失信息，也未明确功能范围与优先级，容易在用户背景尚不清楚时直接生成需求说明。内容虽较多，但基本都与任务有关，无明显冗余或任务执行越界。",
+          "caseId": "dev-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 96,
+          "total": 96,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "dev-vague",
+      "set": "fixed",
+      "product": "chosenxu",
+      "total": 94.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 24,
+          "relevantCompletion": 17,
+          "economy": 13,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留了帮助本人管理客户的小工具及先明确需求的目标，功能示例没有被写成既定事实，并要求列出待确认问题。清晰度扣1分：多个不同层次的要求集中在一个长段落中，阅读层次稍弱。相关补全扣3分：初步梳理即要求覆盖界面交互、存储方式、权限及后续扩展，未根据实际使用场景决定展开程度，范围偏满。经济性扣2分：这些次级维度增加了当前阶段的输出负担。仍是供后续助手执行的中文提示词。",
+          "caseId": "dev-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 94,
+          "total": 94,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 24,
+          "relevantCompletion": 17,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留了先明确需求的目标，功能示例没有被强制确认为实际需求；优先级划分及待确认问题有助于收敛范围，权限与隐私也具有任务相关性。清晰度扣1分：核心需求、实现相关事项及后续扩展并列罗列，梳理顺序不够突出。相关补全扣3分：要求首次需求说明同时覆盖界面交互、数据存储方式和后续扩展，部分内容宜根据实际场景再决定是否展开。经济性扣1分：这些外围要求增加了初步梳理的负担。仍然是需求梳理提示词，没有实际执行任务或引入具体技术事实。",
+          "caseId": "dev-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 95,
+          "total": 95,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "dev-vague",
+      "set": "fixed",
+      "product": "fishsb",
+      "total": 88,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 22,
+          "relevantCompletion": 12,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "准确保留了客户管理小工具的需求梳理目标，并将交付物明确为需求说明，语言简洁，没有添加事实或越界执行。清晰度扣3分：主要是同义改写，未进一步组织需求澄清的范围和步骤。相关补全扣8分：面对信息较少的原始请求，没有补充使用场景、核心功能、范围优先级或待确认问题等必要的梳理维度，指导后续助手开展需求澄清的作用有限。",
+          "caseId": "dev-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 89,
+          "total": 89,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 23,
+          "relevantCompletion": 9,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留了客户管理小工具及先明确需求的目标，没有添加事实或实施要求，表达简洁，仍是给未来助手的指令。清晰度扣2分：主要是同义改写，未说明如何开展需求梳理。相关补全扣11分：原始需求较模糊，却未补充使用场景、功能范围、优先级及待确认问题等必要维度。",
+          "caseId": "dev-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 87,
+          "total": 87,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "dev-vague",
+      "set": "fixed",
+      "product": "fusion",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留客户管理小工具及先梳理需求的目标，以清楚的条目组织目标、场景、字段、功能、流程和优先级。补充内容直接服务于需求澄清，并明确将缺失信息标注为待确认，避免把未知细节写成确定要求。篇幅适度，没有提前指定技术方案或执行开发任务，未发现实质性扣分项。",
+          "caseId": "dev-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留个人客户管理小工具及先梳理需求的目标，条目清楚，覆盖场景、字段、功能、流程、范围和优先级。明确将缺失信息标为待确认，避免把未知细节写成既定需求。补充内容直接服务于原始模糊诉求，篇幅适度，没有预设技术方案、固定功能或执行实际开发任务，各维度未发现实质缺陷。",
+          "caseId": "dev-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "design-vague",
+      "set": "fixed",
+      "product": "feiwell",
+      "total": 90,
+      "criticalIssues": [
+        "将代表案例、信任背书设为首页必含模块，但原文未提出这些硬要求，也未确认存在相应素材。",
+        "将代表案例、信任背书等模块设为必含项，新增了原文没有的硬性要求，且未以工作室实际拥有相应素材为条件。"
+      ],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 26,
+          "clarity": 25,
+          "relevantCompletion": 15,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将代表案例、信任背书设为首页必含模块，但原文未提出这些硬要求，也未确认存在相应素材。"
+          ],
+          "reason": "保留原任务与风格目标，定位、受众、首屏信息层级、配色字体及设计检查都与首页方案相关，表达清楚，未越界执行任务。忠实度扣4分：把开放的方案构思收窄为必须包含指定模块的方案。相关补全扣5分：代表案例和信任背书依赖尚未确认的素材，应作为有真实素材时可选的建议，否则可能迫使后续助手填充无依据内容。其余细节具有明确用途，不因篇幅较长另扣经济性分。",
+          "caseId": "design-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 91,
+          "total": 91,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 25,
+          "clarity": 25,
+          "relevantCompletion": 16,
+          "economy": 13,
+          "boundary": 10,
+          "criticalIssues": [
+            "将代表案例、信任背书等模块设为必含项，新增了原文没有的硬性要求，且未以工作室实际拥有相应素材为条件。"
+          ],
+          "reason": "保留原任务，定位、受众、信息层级及配色字体等补充与首页设计直接相关，表达也清楚。保真扣5分：将开放式方案收紧为必须包含一组指定模块，尤其案例和信任背书缺少素材可用性条件。相关补全扣4分：未区分可直接规划的设计维度与需真实资料支持的内容，也未提供缺少案例或背书时的处理空间。经济性扣2分：模块清单、视觉细项及逐区块说明层层展开，部分要求重复，超过这一简短需求所需的展开程度。没有直接编造评价或执行设计任务，边界完整。",
+          "caseId": "design-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 89,
+          "total": 89,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "design-vague",
+      "set": "fixed",
+      "product": "chosenxu",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留原任务范围和简洁可信的核心目标，“专业”与该定位相容，未造成实质改向。通过模块建议、展示重点和设计要点使交付内容更明确；首屏、案例、关于我等以示例形式提出，没有强制要求存在案例或其他背书素材。文字紧凑、指令清楚，未直接产出设计方案，无实质扣分项。",
+          "caseId": "design-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留一人AI工作室、官网首页及简洁可信的要求；补充“专业”与原意相容。将交付明确为页面结构、模块建议、展示重点和设计要点，且用“如”标明模块仅为示例，没有强制假定案例等素材存在。补充具体适度，无实质扣分项，仍是面向未来助手的中文提示词。",
+          "caseId": "design-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "design-vague",
+      "set": "fixed",
+      "product": "fishsb",
+      "total": 99.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "准确保留对象、页面范围、设计方案这一交付阶段及简洁可信的要求。用简短括注明确页面结构、区块内容和视觉风格，提供了足够且相关的输出维度，没有增加未经支持的事实或硬性模块。原任务本就简短清楚，这种轻量编辑充分有效，不因未扩展更多要求扣分；仍是提示词，无实质扣分项。",
+          "caseId": "design-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 19,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "准确保留任务与风格要求，明确页面结构、区块内容和视觉风格三类交付，简短且容易执行。相关补全扣1分：对核心要求“可信”仍仅作形容词复述，未进一步要求说明可信感的内容依据或设计处理。其余无实质缺陷，未执行设计任务。",
+          "caseId": "design-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 99,
+          "total": 99,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "design-vague",
+      "set": "fixed",
+      "product": "fusion",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留一人AI工作室、官网首页设计方案以及简洁可信的目标。补充页面结构、区块内容与作用、视觉风格，并要求解释设计如何体现目标，均直接服务于原任务；没有预设业务事实或强制增加特定模块。表达清晰、篇幅适当，仍是交给未来助手执行的提示词，无实质扣分项。",
+          "caseId": "design-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原任务与简洁可信的风格要求。将交付具体化为页面结构、区块内容与作用、视觉风格和关键元素，并要求简要解释设计选择如何满足核心目标，形成直接相关的检验依据。没有固定模块、虚构素材或增加额外流程，篇幅适度，仍为中文提示词，无实质扣分项。",
+          "caseId": "design-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "office-vague",
+      "set": "fixed",
+      "product": "feiwell",
+      "total": 89,
+      "criticalIssues": [
+        "新增必须输出办公文档且控制在一页以内的格式与篇幅硬性要求。",
+        "擅自要求输出为办公文档且控制在一页以内，新增原文没有的交付格式和硬性篇幅限制。"
+      ],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 24,
+          "clarity": 25,
+          "relevantCompletion": 16,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [
+            "新增必须输出办公文档且控制在一页以内的格式与篇幅硬性要求。"
+          ],
+          "reason": "保留一人经营、杂事繁多和每周工作安排的目标，先梳理事务类别再安排时间，顺序清楚；类别使用可能和举例表述，没有冒充用户的实际业务事实。忠实度扣6分：擅自限定办公文档形式及一页篇幅。相关补全扣4分：没有确认实际任务、可用工时和固定安排，典型类别不足以支撑具体日程，一页限制也并非完成原任务所需。经济性扣1分：新增文档包装与篇幅要求带来不必要约束。仍是中文提示词，没有生成最终安排。",
+          "caseId": "office-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 89,
+          "total": 89,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 25,
+          "clarity": 25,
+          "relevantCompletion": 16,
+          "economy": 13,
+          "boundary": 10,
+          "criticalIssues": [
+            "擅自要求输出为办公文档且控制在一页以内，新增原文没有的交付格式和硬性篇幅限制。"
+          ],
+          "reason": "保留了一人经营、杂事繁多和安排每周工作的目标，事项分类、时间安排、优先级与干扰管理的顺序清楚。忠实度扣在新增办公文档及一页限制；相关补全虽有实用维度，但没有要求确认实际事务、可用工时和核心业务目标，容易生成通用日程，且一页限制可能压缩必要细节；经济性扣在额外的文档包装及格式要求。仍是中文提示词，没有执行任务。",
+          "caseId": "office-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 89,
+          "total": 89,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "office-vague",
+      "set": "fixed",
+      "product": "chosenxu",
+      "total": 93,
+      "criticalIssues": [
+        "强制要求按周一到周日逐日安排，新增了原文未确定的七天覆盖要求。",
+        "将未指定覆盖日期的每周安排，硬性规定为周一到周日逐日列出事项及时间段。"
+      ],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 25,
+          "clarity": 25,
+          "relevantCompletion": 17,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "强制要求按周一到周日逐日安排，新增了原文未确定的七天覆盖要求。"
+          ],
+          "reason": "保留一人公司与每周安排的核心诉求，补充优先级、集中处理杂事和避免复杂化，条目清晰且紧凑。忠实度扣5分：将安排固定为周一至周日逐日展开，并把原文的杂事过多扩写为已经确定的时间不够用；前者不等于要求七天都工作。相关补全扣3分：缺少实际业务事项、可用时间和固定安排等关键输入，却直接要求每日时间段，容易生成缺乏针对性的日程。保持中文提示词形式，没有执行任务。",
+          "caseId": "office-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 92,
+          "total": 92,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 27,
+          "clarity": 25,
+          "relevantCompletion": 17,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将未指定覆盖日期的每周安排，硬性规定为周一到周日逐日列出事项及时间段。"
+          ],
+          "reason": "完整保留核心目标，编号要求清楚，重要紧急判断、集中处理杂事及控制复杂度都与一人公司的需求相关，表达没有明显冗余。忠实度扣在未经确认便固定周一至周日的逐日安排；这不等于要求七天都工作，但确实新增了日程覆盖要求。相关补全扣在没有了解实际任务、每周可用时间和休息安排，就要求给出固定时间分配，个性化依据不足。没有越界执行任务。",
+          "caseId": "office-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 94,
+          "total": 94,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "office-vague",
+      "set": "fixed",
+      "product": "fishsb",
+      "total": 93,
+      "criticalIssues": [
+        "擅自将未说明的每周安排范围设定为默认按7天排布。",
+        "在原文未说明日程覆盖范围时，新增默认按一周七天排布的规则。"
+      ],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 26,
+          "clarity": 25,
+          "relevantCompletion": 17,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "擅自将未说明的每周安排范围设定为默认按7天排布。"
+          ],
+          "reason": "保留了一人经营、杂事过多和安排每周工作的目标，增加事项梳理、优先级与时间分配，指令清楚且简洁。忠实度扣4分：原文未确定工作日范围，新增7天排布默认值限制了安排方式；这不等于要求连续工作7天。相关补全扣3分：未引导提供实际事项清单、每周可用时间或已有固定安排，计划仍可能缺少依据。保持中文提示词形式，没有执行任务。",
+          "caseId": "office-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 93,
+          "total": 93,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 27,
+          "clarity": 25,
+          "relevantCompletion": 16,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "在原文未说明日程覆盖范围时，新增默认按一周七天排布的规则。"
+          ],
+          "reason": "简洁保留一人经营、杂事较多及每周计划的目标，增加事项梳理、优先级和时间分配，指令直接易懂。忠实度扣在擅自设定七天排布默认值；该表述并未要求连续工作七天，但仍替用户确定了未提供的安排规则。相关补全扣在缺少实际事务、可用工时及核心目标的确认或假设处理，也没有进一步明确如何减少杂事对主要工作的干扰。措辞精练，没有冗余或任务执行越界。",
+          "caseId": "office-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 93,
+          "total": 93,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "office-vague",
+      "set": "fixed",
+      "product": "fusion",
+      "total": 94.5,
+      "criticalIssues": [
+        "将每周复盘指定在周末，新增了原文没有的固定时间要求。",
+        "硬性要求在周末进行复盘与调整，原文没有指定复盘时间或周末可用性。"
+      ],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 27,
+          "clarity": 25,
+          "relevantCompletion": 18,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将每周复盘指定在周末，新增了原文没有的固定时间要求。"
+          ],
+          "reason": "保留核心目标，并把时间安排、杂事处理、优先级和调整机制分开说明，组织清楚；批量处理与外包也切合一人经营的情境。忠实度扣3分：未经依据将复盘限定在周末。相关补全扣2分：虽然要求标注假设和待确认事项，但未明确优先确认实际任务清单、可用工时和固定承诺，仍可能先生成不适配的安排。篇幅较长但各部分有明确用途，不因长度扣分。保持中文提示词边界，没有代做计划。",
+          "caseId": "office-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 95,
+          "total": 95,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 28,
+          "clarity": 25,
+          "relevantCompletion": 18,
+          "economy": 13,
+          "boundary": 10,
+          "criticalIssues": [
+            "硬性要求在周末进行复盘与调整，原文没有指定复盘时间或周末可用性。"
+          ],
+          "reason": "保留原始目标，清楚补充核心业务保护、杂事批处理、取舍及反馈调整，并要求标明假设和待确认事项，能妥善保留信息不足带来的不确定性。忠实度扣在固定周末复盘；相关补全扣在将委派或外包列为必含内容，却未说明应以可用资源为条件，也未优先点明工时和休息日等直接影响排程的输入。经济性扣在时间框架中的复盘规划与单独复盘条目有所重复，以及偏长的必含流程。保持中文提示词边界，没有代做安排。",
+          "caseId": "office-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge",
+          "rawTotal": 94,
+          "total": 94,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "agents-vague",
+      "set": "fixed",
+      "product": "feiwell",
+      "total": 89,
+      "criticalIssues": [
+        "新增必须适合“日常办公使用”的场景要求，原文未规定项目类型或使用场景。",
+        "擅自将原本未限定类型的项目协作流程限定为适合日常办公使用，加入了原文没有的硬性适用场景。"
+      ],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 24,
+          "clarity": 25,
+          "relevantCompletion": 15,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "新增必须适合“日常办公使用”的场景要求，原文未规定项目类型或使用场景。"
+          ],
+          "reason": "保留多AI项目协作与减少冲突的主要目标，分工、交接、决策、同步及文档组织要求清晰，篇幅紧凑，也没有代为执行任务。忠实度扣6分：擅自加入日常办公适用性要求，可能使流程偏离用户实际项目。相关完善度扣5分：未覆盖共享上下文与产物版本管理这一直接影响协作冲突的维度，也未要求识别项目类型、AI能力和人工介入等关键未知条件。",
+          "caseId": "agents-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 89,
+          "total": 89,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 24,
+          "clarity": 25,
+          "relevantCompletion": 16,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [
+            "擅自将原本未限定类型的项目协作流程限定为适合日常办公使用，加入了原文没有的硬性适用场景。"
+          ],
+          "reason": "保留了多个AI协作及减少冲突的核心目标，角色、交接、决策和同步要求清楚，仍是面向未来助手的中文提示词。忠实度扣6分：擅自加入日常办公场景，可能使流程偏离实际项目。相关补全扣4分：未处理项目类型、AI能力及共享信息版本等影响流程设计的因素，却增加了办公流程文档的包装要求。经济性扣1分：在已经要求协作流程及具体机制后，追加流程说明文档、操作步骤和注意事项，存在轻微重复。",
+          "caseId": "agents-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 89,
+          "total": 89,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "agents-vague",
+      "set": "fixed",
+      "product": "chosenxu",
+      "total": 97.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 17,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "忠实保留原始目标，以紧凑且清晰的要求覆盖职责边界、任务分配、共享信息、冲突机制及同步验收，补充具体步骤和规则也符合流程设计需求。相关完善度扣3分：未要求识别项目类型、AI数量与能力差异、人工决策权限等影响方案的关键未知条件，也未说明信息不足时如何处理假设。其余维度无实质性缺陷，未执行嵌入任务。",
+          "caseId": "agents-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 97,
+          "total": 97,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 18,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "准确保留多个AI共同做项目、降低协作冲突的目标。将需求组织为角色边界、任务分配、共享信息、冲突机制及同步验收，均直接服务于流程设计；表达紧凑，没有擅定AI数量、项目类型或组织架构，也没有执行任务。相关补全扣2分：未要求识别项目类型、AI能力差异及人工决策权限等关键未知条件，或说明信息不足时如何标注假设，流程的适配依据仍不充分。",
+          "caseId": "agents-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 98,
+          "total": 98,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "agents-vague",
+      "set": "fixed",
+      "product": "fishsb",
+      "total": 87,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 21,
+          "relevantCompletion": 10,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "准确保留原文目标、范围和中文表达，简短且仍是交给未来助手的指令。清晰度扣4分：主要将“互相打架”改述为“互相冲突”，未进一步界定冲突表现或组织流程设计要求，澄清价值有限。相关完善度扣10分：没有补充分工边界、共享上下文、任务交接、冲突裁决等直接相关的设计维度，也未处理项目背景未知的问题。",
+          "caseId": "agents-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 86,
+          "total": 86,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 23,
+          "relevantCompletion": 10,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原始目标、范围及中文语言，没有虚构前提，也没有执行嵌入任务，表达简短。清晰度扣2分：主要把“互相打架”换成“互相冲突”，再用括号重复原词，没有实质澄清冲突的含义或组织设计要求。相关补全扣10分：原文是开放的流程设计任务，本候选未补充职责边界、交接、共享上下文或冲突裁决等直接相关的设计维度，也未提示如何处理关键未知条件。",
+          "caseId": "agents-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 88,
+          "total": 88,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "agents-vague",
+      "set": "fixed",
+      "product": "fusion",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留多个AI共同做项目、减少协作冲突的目标。按分工、交接、冲突处理、共享状态和质量检查组织要求，补充内容均直接服务于协作流程设计。明确要求识别项目类型、AI数量与能力等未知因素，并将默认做法标注为可调整假设，没有擅自确定事实或架构。篇幅与有效信息相称，保持中文提示词形式，未发现实质性扣分项。",
+          "caseId": "agents-vague",
+          "set": "fixed",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "忠实保留原始目标，以可调整的初始框架回应开放需求。角色、交接、分歧收敛、版本一致性和质量检查均与减少多AI协作冲突直接相关，并具体说明了需要考虑的问题。明确要求识别项目类型、AI数量与能力、人工介入等未知因素；默认做法须标注为假设，没有将缺失信息编造成事实。各维度采用开放措辞，未强加固定架构或数量。篇幅虽较长，但内容各有用途，没有实质冗余，且始终保持中文提示词边界，无需扣分。",
+          "caseId": "agents-vague",
+          "set": "fixed",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "promo-mention-plugin",
+      "set": "transfer",
+      "product": "feiwell",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原任务的目标、事实、可能收费的限定及两项禁止要求。补充简洁自然、适合朋友圈阅读的风格要求，与原有发布场景直接相关，未引入固定字数、开发流程或其他额外任务。单段指令清楚且篇幅适当，仍处于提示词边界内。未见实质性扣分项。",
+          "caseId": "promo-mention-plugin",
+          "set": "transfer",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留朋友圈文案目标、输入框只有一个增强按钮、插件开源免费与模型调用可能收费、市场审核未通过及两项禁止要求。补充简洁自然的语气要求与发布场景直接相关，未引入额外流程。仍是创作提示词，没有代写成品；无实质扣分项。",
+          "caseId": "promo-mention-plugin",
+          "set": "transfer",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "promo-mention-plugin",
+      "set": "transfer",
+      "product": "chosenxu",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "准确保留单一增强按钮、插件开源免费、模型调用可能收费及市场审核状态，明确禁止已上架表述和开发方案。要求逐项列出，末尾提供插件介绍输入位置，便于直接补充原文；没有执行文案创作，也没有增加无关要求。未见实质性扣分项。",
+          "caseId": "promo-mention-plugin",
+          "set": "transfer",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "将原有要求拆成清晰的检查项，完整保留收费的不确定性、审核状态及禁止表述，没有改变任务范围。末尾的“插件介绍：”明确了原文输入位置，属于必要且克制的补全。未执行文案创作，也未添加开发流程；无实质扣分项。",
+          "caseId": "promo-mention-plugin",
+          "set": "transfer",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "promo-mention-plugin",
+      "set": "transfer",
+      "product": "fishsb",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留朋友圈文案目标、单一增强按钮、插件开源免费与模型调用可能收费的区别，以及审核未通过、不得声称已上架和不写开发方案的限制。原提示已较清楚，此处轻量整理足够，单段表达简洁易懂；未添加多余流程，仍是创作提示词。未见实质性扣分项。",
+          "caseId": "promo-mention-plugin",
+          "set": "transfer",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "采用轻量整理，完整保留原任务、关键事实、可能收费的限定以及不得宣称已上架、不得写开发方案的约束。原提示已经清楚，无须扩展流程或附加检查清单；当前表达简洁且可执行，仍明确指向后续文案创作。无实质扣分项。",
+          "caseId": "promo-mention-plugin",
+          "set": "transfer",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "promo-mention-plugin",
+      "set": "transfer",
+      "product": "fusion",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "所有事实、收费的不确定性及禁止事项均得到保留。分项组织使要求便于核对，插件介绍占位符直接补足原文输入位置，没有虚构介绍内容或加入开发流程。结构与篇幅适当，输出仍是供后续助手使用的提示词。未见实质性扣分项。",
+          "caseId": "promo-mention-plugin",
+          "set": "transfer",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "全部关键事实与限制均准确保留，尤其明确区分插件免费与模型调用可能收费。要点列表便于执行，原文占位符清楚标明缺失输入，未捏造插件信息或增加硬性要求。篇幅适当，输出仍是提示词；无实质扣分项。",
+          "caseId": "promo-mention-plugin",
+          "set": "transfer",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "question-not-implementation",
+      "set": "transfer",
+      "product": "feiwell",
+      "total": 97,
+      "criticalIssues": [
+        "将原文对账户的排除缩窄为禁止账户设置，可能允许推荐需要账户的方案。",
+        "将原文禁止涉及账户的“No ... accounts”收窄为禁止“account setup”，可能允许推荐依赖已有账户的方案。"
+      ],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 27,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将原文对账户的排除缩窄为禁止账户设置，可能允许推荐需要账户的方案。"
+          ],
+          "reason": "保留了先比较再推荐的顺序，并通过适用条件保留判断的不确定性。数据规模、多人使用、维护和成本等维度直接服务于选型，篇幅适当，仍是给后续助手的指令。忠实度扣3分：account setup比原文accounts的限制范围窄；其余维度无实质扣分。",
+          "caseId": "question-not-implementation",
+          "set": "transfer",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 97,
+          "total": 97,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 27,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将原文禁止涉及账户的“No ... accounts”收窄为禁止“account setup”，可能允许推荐依赖已有账户的方案。"
+          ],
+          "reason": "比较维度清晰且与小型志愿者图书馆相关，要求说明适用条件，有助于保留选型判断的条件性；先分析再推荐的结构、英语和不实施及不涉及付费服务的要求均得到保留。忠实度扣3分：仅禁止账户设置，未完整保留原文对账户的限制。其余内容简洁，仍是提示词，没有执行嵌入任务。",
+          "caseId": "question-not-implementation",
+          "set": "transfer",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 97,
+          "total": 97,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "question-not-implementation",
+      "set": "transfer",
+      "product": "chosenxu",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "明确要求先展示权衡再推荐，并保留不实施、不涉及账户或付费服务的限制。志愿者使用难度、并发编辑、数据完整性及借还追踪等补充与图书馆场景直接相关；such as使这些因素保持为指导维度，没有新增固定架构或流程。英语表达清楚，内容紧凑，未预设哪种方案胜出，也未执行任务，无实质扣分。",
+          "caseId": "question-not-implementation",
+          "set": "transfer",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留电子表格与应用之间的比较、比较后再建议的顺序，以及不提供实施步骤、不涉及用户账户或付费服务的边界。补充的志愿者易用性、协作编辑、数据完整性、借还跟踪和维护等维度直接服务于选型判断，没有预设获胜方案或虚构事实。要求简洁且面向决策，篇幅增加有实际用途；保持英语提示词形式，未执行任务。",
+          "caseId": "question-not-implementation",
+          "set": "transfer",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "question-not-implementation",
+      "set": "transfer",
+      "product": "fishsb",
+      "total": 97.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 17,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "轻量改写完整保留了原问题的不确定性、比较优先的顺序、三项排除条件和英语，表达清楚且简洁，没有越界作答。相关补全扣3分：未提供影响判断的具体比较维度，例如借还追踪需求、多人同时操作或维护负担，后续分析范围仍较开放。",
+          "caseId": "question-not-implementation",
+          "set": "transfer",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 97,
+          "total": 97,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 18,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "轻微改写保持了原文的目标、不确定性、比较优先顺序和全部限制，英语自然，未执行任务。相关补全扣2分：与原文一样，未补充借还跟踪、志愿者协作等具体判断维度。措辞调整没有带来实质增益，但也没有造成信息损失或冗余。",
+          "caseId": "question-not-implementation",
+          "set": "transfer",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 98,
+          "total": 98,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "question-not-implementation",
+      "set": "transfer",
+      "product": "fusion",
+      "total": 97.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 17,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原文，目标、比较顺序、不确定性、限制和语言均无损失。原文本身清楚简洁，不因未改写而额外扣分，也未执行嵌入任务。相关补全扣3分：没有补充借还追踪需求、多人同时操作或维护负担等直接影响选择的比较维度，未改善原提示在分析范围上的开放性。",
+          "caseId": "question-not-implementation",
+          "set": "transfer",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 97,
+          "total": 97,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 18,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原文的开放性问题、先比较再建议的顺序，以及不实施、不涉及账户或付费服务的限制；英语表达清楚简洁，仍是给未来助手的提示词。相关补全扣2分：未点明借还跟踪、志愿者协作等具体比较维度，对如何判断电子表格是否足够的引导有限。原文本身已清楚，不因未改写而额外扣分。",
+          "caseId": "question-not-implementation",
+          "set": "transfer",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 98,
+          "total": 98,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "numbers-and-negation",
+      "set": "transfer",
+      "product": "feiwell",
+      "total": 91.5,
+      "criticalIssues": [
+        "新增硬性命名限制：差额只能称为“差额”或“预算结余/超支”，而原文仅禁止称为“利润”。",
+        "新增差额“只能”使用指定名称的硬性限制；原文仅禁止称为“利润”。"
+      ],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 27,
+          "clarity": 25,
+          "relevantCompletion": 17,
+          "economy": 12,
+          "boundary": 10,
+          "criticalIssues": [
+            "新增硬性命名限制：差额只能称为“差额”或“预算结余/超支”，而原文仅禁止称为“利润”。"
+          ],
+          "reason": "保留全部数字、负号和原有禁止事项，任务与输出要求清楚，仍由下游执行计算。合计及差额正负含义的说明与任务相关。但限定差额只能使用指定名称，缩窄原文允许的表达范围，忠实度扣3分；要求逐项列计算式并额外规定结论，对这一简单核对任务增加了不必要的交付要求，相关补全扣3分；前文已要求计算式、合计和差额，末尾再次列举，且多处重复限制与范围，简洁性扣3分。",
+          "caseId": "numbers-and-negation",
+          "set": "transfer",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 91,
+          "total": 91,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 27,
+          "clarity": 25,
+          "relevantCompletion": 18,
+          "economy": 12,
+          "boundary": 10,
+          "criticalIssues": [
+            "新增差额“只能”使用指定名称的硬性限制；原文仅禁止称为“利润”。"
+          ],
+          "reason": "完整保留金额、单位、负号和数值核对目标，仍指示下游计算，也没有声称付款。说明差额正负含义与任务相关，指令明确。但将单一禁用词扩展为名称白名单，忠实度扣3分；逐项列计算式及额外要求结论，对这项简单核算增加了非必要输出要求，相关补全扣2分；重复预算金额，并在末尾再次列举前文已要求的输出内容，经济性扣3分。",
+          "caseId": "numbers-and-negation",
+          "set": "transfer",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 92,
+          "total": 92,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "numbers-and-negation",
+      "set": "transfer",
+      "product": "chosenxu",
+      "total": 97,
+      "criticalIssues": [
+        "将原文未明确属于实际发生支出的预算项目称为“实际支出”，引入未经原文确认的支出性质。",
+        "将原文未注明发生状态的金额定性为“实际支出”，增加了未经提供的事实前提。"
+      ],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 27,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将原文未明确属于实际发生支出的预算项目称为“实际支出”，引入未经原文确认的支出性质。"
+          ],
+          "reason": "保留全部数字、负号、单位、计算要求与两项禁止事项，增加合计作为差额计算的中间量合理，表达清楚简洁，也没有计算结果或确认付款。但“实际支出合计”将预算核对中的项目确定为实际发生的支出，超出原文提供的信息，忠实度扣3分；这一措辞不等同于确认付款，因此不另扣任务边界分。",
+          "caseId": "numbers-and-negation",
+          "set": "transfer",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 97,
+          "total": 97,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 27,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将原文未注明发生状态的金额定性为“实际支出”，增加了未经提供的事实前提。"
+          ],
+          "reason": "保留全部数字、单位、退款负号及两项禁止要求，明确要求下游计算合计与预算差额，没有执行计算或确认付款。表达清楚简洁，补充合计属于必要计算步骤。但“实际支出”擅自限定了这些金额的性质，原文并未说明其为实际发生的支出，忠实度扣3分。",
+          "caseId": "numbers-and-negation",
+          "set": "transfer",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 97,
+          "total": 97,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "numbers-and-negation",
+      "set": "transfer",
+      "product": "fishsb",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留数字、负号、单位、任务范围及两项禁止事项，用分号清楚连接任务与约束。措辞简洁，没有添加不必要的要求；保持中文提示词形式，未执行计算或声称付款，无实质扣分。",
+          "caseId": "numbers-and-negation",
+          "set": "transfer",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留全部事实、数字、单位、负号、计算要求及两项禁止要求，没有增加事实或硬性限制，也未执行下游任务。原文已经清楚，轻微调整措辞和标点即可形成简洁、完整、易执行的提示，无实质缺陷。",
+          "caseId": "numbers-and-negation",
+          "set": "transfer",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "numbers-and-negation",
+      "set": "transfer",
+      "product": "fusion",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留四个金额、退款负号、人民币单位、计算式与差额要求及两项禁止事项。通过分句清楚区分计算任务和约束，修改适度；原任务信息充分，无需增加澄清或流程。仍要求下游计算，没有给出结果或确认付款，无实质扣分。",
+          "caseId": "numbers-and-negation",
+          "set": "transfer",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留金额、单位、退款负号、计算式与差额要求，以及不得称为利润、不得代为确认付款的限制。通过分句区分计算要求和禁止事项，表达清晰且没有多余流程。仍是交给未来助手执行的提示，没有计算结果或付款声明，无实质缺陷。",
+          "caseId": "numbers-and-negation",
+          "set": "transfer",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "exact-code-schema",
+      "set": "transfer",
+      "product": "feiwell",
+      "total": 93,
+      "criticalIssues": [
+        "代码未逐字保留：删除了原函数声明中的function关键字，将完整声明改成了chooseCount(n) { return n || 10; }。",
+        "代码遗漏原始函数声明中的 `function` 关键字，未逐字保留代码。"
+      ],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 24,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [
+            "代码未逐字保留：删除了原函数声明中的function关键字，将完整声明改成了chooseCount(n) { return n || 10; }。"
+          ],
+          "reason": "保留了零值问题的分析目标、不修改函数的限制以及仅输出cause和tests两个键的JSON要求；为测试补充输入值及预期与实际结果，属于相关且有用的澄清。忠实度扣6分：删除function关键字，改变了待审查代码的字面内容和声明语法。简洁性扣1分：分析零值问题、解释根因和cause字段说明之间有轻微重复。仍然是在编写任务指令，没有给出最终原因答案或实现修改。",
+          "caseId": "exact-code-schema",
+          "set": "transfer",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 93,
+          "total": 93,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 24,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [
+            "代码遗漏原始函数声明中的 `function` 关键字，未逐字保留代码。"
+          ],
+          "reason": "保留了分析零输入、暂不修改函数及仅返回 cause/tests 两键 JSON 的要求；要求测试包含输入、预期与实际结果，是相关且有用的细化。忠实度扣6分：代码遗漏 function 关键字，改变了需审查的代码文本。精简度扣1分：首句解释根因的要求与 cause 字段说明重复。没有给出原因答案或执行修改。",
+          "caseId": "exact-code-schema",
+          "set": "transfer",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 93,
+          "total": 93,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "exact-code-schema",
+      "set": "transfer",
+      "product": "chosenxu",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "代码逐字保留，诊断目标、当前不修改函数及仅输出指定两个JSON键的要求均保留。明确cause用于说明根因、tests用于列出暴露问题的测试用例，是直接服务原任务的有效澄清，未引入无关要求。没有提前给出根因答案，篇幅增加具有明确用途，无实质扣分项。",
+          "caseId": "exact-code-schema",
+          "set": "transfer",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "代码逐字保留，保持本轮只审查、不修改函数的范围，并准确保留仅输出 cause/tests 两键 JSON 的限制。简短说明两个字段的用途，有助于明确输出内容，未引入无关要求或预设答案；无实质扣分项。",
+          "caseId": "exact-code-schema",
+          "set": "transfer",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "exact-code-schema",
+      "set": "transfer",
+      "product": "fishsb",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留诊断目标、暂不修改函数的阶段限制、仅返回JSON及两个准确键名，代码逐字保留。原提示已清楚，增加代码块前的空行属于适度排版，无需额外扩展。没有给出原因答案或执行任务，无实质扣分项。",
+          "caseId": "exact-code-schema",
+          "set": "transfer",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原提示的代码、目标、暂不修改函数的要求和仅输出 cause/tests 两键 JSON 的约束。仅增加代码块前的空行，不改变内容或范围；原提示已足够明确，无需额外补充，也没有执行嵌入任务，无实质扣分项。",
+          "caseId": "exact-code-schema",
+          "set": "transfer",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "exact-code-schema",
+      "set": "transfer",
+      "product": "fusion",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "逐字保留原提示，目标、代码、禁止当前修改函数的限制及下游JSON格式均准确。原提示已经简洁明确，不因未作措辞改动而扣分，也无须添加额外流程。仍是给未来助手的指令，没有回答实际问题，无实质扣分项。",
+          "caseId": "exact-code-schema",
+          "set": "transfer",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原提示的代码、审查目标、暂不修改的阶段限制及精确 JSON 键。原提示已经清楚、简洁且足以执行，原样保留无需因缺少改写而扣分；没有添加多余流程或给出最终原因答案。",
+          "caseId": "exact-code-schema",
+          "set": "transfer",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "tentative-design",
+      "set": "transfer",
+      "product": "feiwell",
+      "total": 94.5,
+      "criticalIssues": [
+        "新增“也不要写实现代码”的硬性禁令，原文没有这项禁止要求。"
+      ],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 24,
+          "relevantCompletion": 19,
+          "economy": 13,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留准确按钮标签、暖色的不确定性、不定颜色及不画稿要求，并明确本轮只比较两个方案。用户理解、转化路径、简洁度和适用场景均与比较任务相关。清晰度扣1分：开头要求梳理信息层级与操作路径，随后又收窄到只比较按钮，范围表达略有摇摆。相关补全扣1分：新增禁写实现代码并非任务所需。经济性扣2分：设计稿与视觉稿的并列禁令有所重复，禁写代码又增加了无必要的限制文字。仍是提示词，没有实际开展设计或比较。",
+          "caseId": "tentative-design",
+          "set": "transfer",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 96,
+          "total": 96,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 28,
+          "clarity": 24,
+          "relevantCompletion": 18,
+          "economy": 13,
+          "boundary": 10,
+          "criticalIssues": [
+            "新增“也不要写实现代码”的硬性禁令，原文没有这项禁止要求。"
+          ],
+          "reason": "保留了按钮标签、暖色的可能性、暂不定色、两种方案比较及不画稿要求；用户理解、转化路径和页面简洁度是相关且有用的比较维度。忠实度扣2分：额外增加禁止写代码的硬性约束。清晰度扣1分：开头要求梳理全页信息层级与操作路径，后文又限定本轮只比较按钮方案，范围表述不够一致。相关补全扣2分：全页梳理和代码禁令超出本轮比较所需。经济性扣2分：这些附加要求增加了不必要的指令负担。仍是中文任务提示，没有执行设计或比较任务。",
+          "caseId": "tentative-design",
+          "set": "transfer",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 93,
+          "total": 93,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "tentative-design",
+      "set": "transfer",
+      "product": "chosenxu",
+      "total": 99,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "先明确本轮边界，再提出按钮比较，任务顺序清楚；保留两个准确标签、暖色的可能性及所有原有限制。“给出建议”是比较利弊的适度延伸，并未预先决定保留几个按钮。经济性扣1分：开头“不定颜色”与结尾“颜色本轮不决定”重复。没有执行嵌入任务。",
+          "caseId": "tentative-design",
+          "set": "transfer",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 99,
+          "total": 99,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留页面清晰度目标、暖色的不确定性、暂不定色、两个按钮的原标签、两种方案待比较以及不画稿的限制；先明确本轮范围，指令清楚。补充建议与方案比较直接相关，没有强行决定方案。经济性扣1分：开头“不定颜色”和结尾“颜色本轮不决定”重复。",
+          "caseId": "tentative-design",
+          "set": "transfer",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 99,
+          "total": 99,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "tentative-design",
+      "set": "transfer",
+      "product": "fishsb",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留页面更清楚的目标、暖色的可能性、本轮不定颜色、两个按钮的准确标签、待比较的两种方案及不画稿的限制。分句使背景、比较任务和限制更易辨认；原文已足够明确，轻量整理恰当，无须额外补充。仍是交给后续助手执行的提示词，无实质扣分。",
+          "caseId": "tentative-design",
+          "set": "transfer",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "采用适度编辑，将目标、颜色的不确定性、现有按钮和本轮比较任务依次说明；准确保留「了解详情」「预约体验」、两个与一个的待比较关系，以及暂不定色和不画稿的限制。原任务已足够明确，无需增加固定分析框架或澄清清单；表达简洁、自足，没有新增要求或执行任务，无实质扣分项。",
+          "caseId": "tentative-design",
+          "set": "transfer",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "tentative-design",
+      "set": "transfer",
+      "product": "fusion",
+      "total": 99,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原意和全部明确约束，两个方案仍待比较，暖色没有被改成确定要求。结构化分析结论直接服务于后续判断，补充适度。经济性扣1分：“不要画稿”与“不要产出视觉稿或设计稿”重复表达同一限制。未执行嵌入任务。",
+          "caseId": "tentative-design",
+          "set": "transfer",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 99,
+          "total": 99,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留全部目标、标签、待比较选项和限制，明确暖色只是可能方向；分项说明本轮内容，结构化分析结论也直接服务于用户判断下一步。经济性扣1分：“不要画稿”与“不要产出视觉稿或设计稿”重复表达同一限制。没有预先选定方案，也没有执行嵌入任务。",
+          "caseId": "tentative-design",
+          "set": "transfer",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 99,
+          "total": 99,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "japanese-goal",
+      "set": "transfer",
+      "product": "feiwell",
+      "total": 98.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 19,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留日语、料理初心者受众、需求整理阶段，以及费用和举办日期不得推测且须待确认的约束。补充教室概要、学习内容、参加方式等维度与任务直接相关，按项目组织也便于执行。但强制每个项目都说明目的，对本次需求梳理并非必要，增加了收益有限的解释性工作，相关补全扣1分、精简性扣1分。没有虚构事实或直接撰写案内文，无关键缺陷。",
+          "caseId": "japanese-goal",
+          "set": "transfer",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 98,
+          "total": 98,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保持日语，完整保留仅整理案内文写作需求、面向初心者、费用与举办日期未定且不得推测的要求。补充教室概要、学习内容、参加方式等直接相关的需求维度，并要求分项呈现，有助于执行；仍是交给后续助手的提示词，没有代写案内文。经济性扣1分：要求每个项目都说明目的并非必要，增加少量输出负担。",
+          "caseId": "japanese-goal",
+          "set": "transfer",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 99,
+          "total": 99,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "japanese-goal",
+      "set": "transfer",
+      "product": "chosenxu",
+      "total": 99,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原始目标、受众、语言及不确定性约束。“確認事項として明記”明确了待确认信息的呈现方式，没有要求填入费用或日期。表达简洁、自足，仍是指示未来助手整理需求的提示词，无实质扣分项。",
+          "caseId": "japanese-goal",
+          "set": "transfer",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 18,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保持日语和全部原始约束，将未定费用与日期作为确认事项明确标出，表达简洁且任务边界准确。措辞调整没有实质改变任务，也不据此额外加分。相关补全扣2分：未提示课程内容、报名方式等需要收集或确认的写作输入，对需求整理的具体维度补充不足。",
+          "caseId": "japanese-goal",
+          "set": "transfer",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 98,
+          "total": 98,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "japanese-goal",
+      "set": "transfer",
+      "product": "fishsb",
+      "total": 99,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留日语、初心者受众、仅整理案内文写作需求的任务阶段，以及费用和举办日期未定、不得推测、须列为确认事项的全部约束。轻微措辞调整自然明确；原文已足够清楚，无须额外扩写。没有新增事实、无关流程或任务执行内容，无实质扣分项。",
+          "caseId": "japanese-goal",
+          "set": "transfer",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 18,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保持日语，准确保留初心者受众、仅整理写作需求以及费用日期未定且不得推测补全的要求。语言清楚精练，仍是指示后续助手工作的提示词；同义措辞替换本身不构成额外改进。相关补全扣2分：未补充课程内容、报名方式等直接相关的需求维度或待确认输入，执行引导仍较概括。",
+          "caseId": "japanese-goal",
+          "set": "transfer",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 98,
+          "total": 98,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "japanese-goal",
+      "set": "transfer",
+      "product": "fusion",
+      "total": 99,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "与原文一致，完整保留所有目标与限制。原文已经清楚说明任务、受众和待确认事项，因此不因未改写而扣分，也不将原样保留视为额外改进。内容简洁，没有虚构信息、越过需求整理阶段或执行嵌入任务，无实质扣分项。",
+          "caseId": "japanese-goal",
+          "set": "transfer",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 18,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原文，日语、目标受众、需求整理阶段及费用日期不得推测的限制均准确。原文已经简洁清楚，不因未改写而扣清晰度分，也没有执行嵌入任务。相关补全扣2分：未补充课程内容、报名方式等与案内文需求整理直接相关的待确认维度，对后续整理工作的引导仍较有限。",
+          "caseId": "japanese-goal",
+          "set": "transfer",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 98,
+          "total": 98,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "arabic-brief",
+      "set": "transfer",
+      "product": "feiwell",
+      "total": 97,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 24,
+          "relevantCompletion": 19,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留阿拉伯语、小型图书馆网站需求整理目标、先提关键问题及暂不选技术和加入电子支付的限制。范围、核心功能、受众和内容等提问维度切题。清晰度扣1分：未明确后续需求清单应在获得回答后整理。相关补全扣1分：要求说明“整理何时算完成”较笼统，对当前需求澄清的帮助有限；经济性扣1分：这一附加要求增加了可省略的流程负担。仍是面向未来助手的提示词，没有执行任务。",
+          "caseId": "arabic-brief",
+          "set": "transfer",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 97,
+          "total": 97,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 29,
+          "clarity": 25,
+          "relevantCompletion": 19,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留阿拉伯语、先提关键问题的顺序，以及本阶段不选技术、不加入电子支付的限制；范围、核心功能、受众和内容等提问方向具有实际帮助，分类及范围划分也贴合需求整理。忠实性小幅扣分，因为会员管理作为提问示例被直接带入，未说明仅在适用时讨论，轻微预设了原文没有确认的业务范围。相关完善度和经济性小幅扣分，因为额外要求说明整理何时算完成，但表述抽象，增加了一项必要性较弱的交付要求。",
+          "caseId": "arabic-brief",
+          "set": "transfer",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 97,
+          "total": 97,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "arabic-brief",
+      "set": "transfer",
+      "product": "chosenxu",
+      "total": 99.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原文语言、目标、阶段和两项禁止事项，并明确先提问、收集用户回答后再整理需求，消除了提问与输出之间的衔接歧义。以清晰要点呈现需求是适度且直接相关的补充，没有预设功能、技术或支付方案。表达简洁，保持提示词边界，各维度无实质缺陷。",
+          "caseId": "arabic-brief",
+          "set": "transfer",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 19,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留原始语言、目标和限制，明确先提问、收集回答后再整理需求，使交互顺序更清楚；按清晰要点呈现的补充适度且简洁。相关完善度小幅扣分，因为仍未提供范围、受众或核心功能等任务相关的提问方向。",
+          "caseId": "arabic-brief",
+          "set": "transfer",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 99,
+          "total": 99,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "arabic-brief",
+      "set": "transfer",
+      "product": "fishsb",
+      "total": 87.5,
+      "criticalIssues": [
+        "将阿拉伯语提示词整体改为中文，违反保留原始语言的要求。",
+        "将原始阿拉伯语提示改成中文，未保留原始语言。"
+      ],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 23,
+          "relevantCompletion": 18,
+          "economy": 15,
+          "boundary": 2,
+          "criticalIssues": [
+            "将阿拉伯语提示词整体改为中文，违反保留原始语言的要求。"
+          ],
+          "reason": "语义上保留小型图书馆网站需求整理、先提出关键问题，以及暂不选择技术和加入电子支付的限制，因此保真维度不另因语言重复扣分。清晰度扣2分：基本只是翻译，未进一步组织提问与后续整理的关系。相关补全扣2分：没有增加具体且有用的需求澄清维度或后续处理说明。表达简洁，也仍是提示词而非任务答案；但整体改用中文，严重违反边界维度中的原始语言要求，边界扣8分。",
+          "caseId": "arabic-brief",
+          "set": "transfer",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 88,
+          "total": 88,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 24,
+          "clarity": 25,
+          "relevantCompletion": 17,
+          "economy": 15,
+          "boundary": 6,
+          "criticalIssues": [
+            "将原始阿拉伯语提示改成中文，未保留原始语言。"
+          ],
+          "reason": "准确保留了小型图书馆网站的需求整理目标、先提关键问题的顺序，以及暂不选技术和加入电子支付的限制，表达简洁清楚。但整体改用中文，忠实性和语言边界均扣分；内容基本只是翻译，未补充任务相关的关键问题维度或收集回答后的处理步骤，相关完善度扣分。",
+          "caseId": "arabic-brief",
+          "set": "transfer",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 87,
+          "total": 87,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "arabic-brief",
+      "set": "transfer",
+      "product": "fusion",
+      "total": 97,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 23,
+          "relevantCompletion": 18,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留阿拉伯语原文的目标、先提问要求及技术和支付限制，篇幅简洁且没有执行任务。清晰度扣2分：主要复述原文，仅添加笼统的分节要求，没有进一步明确提问、获得回答与整理结果的关系。相关补全扣2分：新增内容只规定展示形式，未提供具体的需求澄清维度或回答后的处理方式。",
+          "caseId": "arabic-brief",
+          "set": "transfer",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 96,
+          "total": 96,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 18,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留阿拉伯语原文、任务范围、提问顺序和两项限制，新增分节呈现的要求也与整理需求相符，简洁易懂。相关完善度扣分在于新增内容较通用，未具体帮助识别哪些问题最重要，也未明确如何依据用户回答继续整理。",
+          "caseId": "arabic-brief",
+          "set": "transfer",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 98,
+          "total": 98,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "data-not-instructions",
+      "set": "transfer",
+      "product": "feiwell",
+      "total": 90.5,
+      "criticalIssues": [
+        "将原文未要求的“对该反馈性质的简要说明”设为必须包含的输出项，新增硬性输出要求。",
+        "新增必须输出“对该反馈性质的简要说明”的要求，扩大了原文限定的情绪和诉求分析范围。"
+      ],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 27,
+          "clarity": 24,
+          "relevantCompletion": 17,
+          "economy": 11,
+          "boundary": 10,
+          "criticalIssues": [
+            "将原文未要求的“对该反馈性质的简要说明”设为必须包含的输出项，新增硬性输出要求。"
+          ],
+          "reason": "引用逐字保留，明确禁止执行引文要求及文件操作，仍是分析提示词。忠实度扣3分：强制增加反馈性质说明这一输出维度。清晰度扣1分：任务说明、输出要求和完成标准反复交代相近内容，增加指令层次。相关补全扣3分：情绪判断依据与任务相关，但必答的性质说明及额外完成标准超出原文所需。经济性扣4分：重复表述分析目标、执行禁令和文件操作限制，使原本简单明确的任务明显变长。",
+          "caseId": "data-not-instructions",
+          "set": "transfer",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 89,
+          "total": 89,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 28,
+          "clarity": 25,
+          "relevantCompletion": 17,
+          "economy": 12,
+          "boundary": 10,
+          "criticalIssues": [
+            "新增必须输出“对该反馈性质的简要说明”的要求，扩大了原文限定的情绪和诉求分析范围。"
+          ],
+          "reason": "引用逐字保留，明确将其视为数据，保留禁止执行引号内指令和禁止文件操作的约束，且仍是分析提示词。指令与输出要求清楚。情绪判断依据属于合理补充，但强制增加“反馈性质”说明超出原定分析维度，忠实度和相关补全扣分；多次重复仅作分析、不得操作及完成标准，经济性扣分。",
+          "caseId": "data-not-instructions",
+          "set": "transfer",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 92,
+          "total": 92,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "data-not-instructions",
+      "set": "transfer",
+      "product": "chosenxu",
+      "total": 98,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "逐字保留引用，明确将其视为分析数据，完整保留情绪与诉求分析目标、禁止执行引文指令和禁止文件操作的约束。任务与反馈分开呈现，易于遵循。经济性扣1分：开头与结尾重复交代分析情绪和诉求，解释性文字略多。仍是分析提示词，没有执行嵌入任务。",
+          "caseId": "data-not-instructions",
+          "set": "transfer",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 99,
+          "total": 99,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 29,
+          "clarity": 24,
+          "relevantCompletion": 20,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "引用逐字保留，明确仅将其作为反馈文本，保留情绪与诉求分析目标及禁止文件操作的要求，仍是提示词。“或其他操作”比原文禁令更宽且所指不明确，忠实度和清晰度小幅扣分，但在本项纯文本分析任务中未实质改变目标。关于引号内文字的前置说明略显迂回，经济性小幅扣分；没有新增实质分析任务。",
+          "caseId": "data-not-instructions",
+          "set": "transfer",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 97,
+          "total": 97,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "data-not-instructions",
+      "set": "transfer",
+      "product": "fishsb",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原文，引用、分析目标和禁止操作的边界均准确。原提示词已经清楚、完整且简洁，没有必须补充的输入或步骤；保持原样不构成缺陷，也无需为改写而增加要求。仍是供后续助手使用的分析提示词。",
+          "caseId": "data-not-instructions",
+          "set": "transfer",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原提示词。原文已经清楚说明分析目标、引用内容、指令隔离和禁止文件操作的边界，简洁且可直接使用。没有必须补充的输入或流程，不因未改写而扣分；各维度无实质缺陷。",
+          "caseId": "data-not-instructions",
+          "set": "transfer",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "data-not-instructions",
+      "set": "transfer",
+      "product": "fusion",
+      "total": 99.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "逐字保留引用，清楚区分反馈数据与可执行指令，完整保留情绪和诉求分析以及禁止文件操作的要求。没有引入新的任务或事实。经济性扣1分：首句与末句重复说明分析情绪和诉求，可适当合并。没有执行引文中的指令，提示词边界完整。",
+          "caseId": "data-not-instructions",
+          "set": "transfer",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 99,
+          "total": 99,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "逐字保留引用及全部任务目标和禁止事项，明确区分待分析数据与可执行指令。组织顺畅，输出范围仍限定为情绪与诉求，没有新增任务、执行行为或多余流程；各维度无实质缺陷。",
+          "caseId": "data-not-instructions",
+          "set": "transfer",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "vague-research",
+      "set": "transfer",
+      "product": "feiwell",
+      "total": 94,
+      "criticalIssues": [
+        "将物流时效等列为必须覆盖的研究维度，但原文未说明小店涉及配送，新增了未经确认适用性的硬性研究范围。",
+        "将产品质量、服务体验、物流时效、商品与预期不符、沟通响应、复购触发缺失六类假设设为必须覆盖的内容，新增原文没有的硬性研究范围。"
+      ],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 27,
+          "clarity": 25,
+          "relevantCompletion": 18,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [
+            "将物流时效等列为必须覆盖的研究维度，但原文未说明小店涉及配送，新增了未经确认适用性的硬性研究范围。"
+          ],
+          "reason": "保留了研究目标、有限材料和不预设价格根因的约束；研究问题、假设、资料整理、交叉印证及补充方向的顺序清楚，明确补足了数据缺口识别。忠实度扣3分：把候选解释写成必须覆盖的范围。相关补足扣2分：未引导明确复购的统计口径与观察期，难以判断所谓偏低是否受零散订单影响。精简度扣1分：服务体验与沟通响应等列举有所重叠。仍是研究指令，没有编造数据或执行研究。",
+          "caseId": "vague-research",
+          "set": "transfer",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 94,
+          "total": 94,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 26,
+          "clarity": 25,
+          "relevantCompletion": 18,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将产品质量、服务体验、物流时效、商品与预期不符、沟通响应、复购触发缺失六类假设设为必须覆盖的内容，新增原文没有的硬性研究范围。"
+          ],
+          "reason": "研究问题、可验证假设、资料整理、假设与证据对应、交叉印证及数据不足时的补充方向形成了清楚的研究顺序，明确覆盖数据缺口，也保留了不预设价格根因的约束。忠实度扣4分：把六类具体原因规定为必须涵盖的假设，超出原文授权的开放研究范围。相关补全扣2分：这些维度未按业务场景设置适用条件，例如尚不清楚小店是否涉及物流，强制纳入可能增加无关研究。其余细节均服务于研究设计，长度本身不扣分；没有虚构数据、给出研究结论或执行嵌入任务。",
+          "caseId": "vague-research",
+          "set": "transfer",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 94,
+          "total": 94,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "vague-research",
+      "set": "transfer",
+      "product": "chosenxu",
+      "total": 95,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 16,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "轻量整理了原文，研究问题与信息收集两个任务明确，保留有限资料和不预设价格根因的要求，语言简洁。相关补足扣4分：对开放式研究任务的补充有限，未明确要求梳理数据缺口及相应的补充收集方向。保持了提示词边界，没有捏造订单数据或研究结论。",
+          "caseId": "vague-research",
+          "set": "transfer",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 96,
+          "total": 96,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 23,
+          "relevantCompletion": 16,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "忠实保留原文的目标、资料现状和不预设价格原因的限制，语言自然，没有执行研究或虚构结论。清晰度扣2分：基本是同义改写，未进一步组织研究问题与收集步骤之间的关系。相关补全扣4分：没有明确提出数据缺口识别，也没有要求说明各研究问题需要哪些信息、如何获取。篇幅适当，没有不必要的扩展。",
+          "caseId": "vague-research",
+          "set": "transfer",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 94,
+          "total": 94,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "vague-research",
+      "set": "transfer",
+      "product": "fishsb",
+      "total": 95,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 16,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "以简洁指令保留研究目标、材料范围及不得预设价格根因的约束，任务容易理解，没有实质改变原意。相关补足扣4分：仅重述梳理研究问题与收集步骤，未明确要求识别零散资料造成的数据缺口，并将缺口转化为补充收集安排。没有新增事实、执行研究或输出结论。",
+          "caseId": "vague-research",
+          "set": "transfer",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 96,
+          "total": 96,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 23,
+          "relevantCompletion": 16,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留研究目标、现有材料限制和不得预设价格根因的约束，未编造数据或结论，仍是给未来助手的指令。清晰度扣2分：主要是压缩重述，没有进一步理顺研究问题与信息收集步骤的组织关系。相关补全扣4分：未明确要求识别数据缺口，也未要求将研究问题对应到所需信息及收集方法。文字简洁，无冗余。",
+          "caseId": "vague-research",
+          "set": "transfer",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 94,
+          "total": 94,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "vague-research",
+      "set": "transfer",
+      "product": "fusion",
+      "total": 96,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 16,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留研究目标、现有资料的不完整性及不预设价格问题的要求，增加结构化研究方案的交付形式，表达清楚且简洁。相关补足扣4分：虽提出研究结构，但没有明确要求识别现有材料的数据缺口，以及据此安排补充信息收集。没有新增未经支持的事实或硬性研究范围，也没有代为得出结论。",
+          "caseId": "vague-research",
+          "set": "transfer",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 96,
+          "total": 96,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 24,
+          "relevantCompletion": 17,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留全部原始目标与限制，新增结构化研究方案作为输出要求，符合梳理研究问题和收集步骤的意图；未捏造订单数据或研究结论，也未越界执行任务。清晰度扣1分：虽然指定结构化输出，但研究问题与收集步骤的具体组织关系仍较笼统。相关补全扣3分：未明确要求列出数据缺口，以及如何针对缺口补充信息。表达简洁，新增要求与任务相关。",
+          "caseId": "vague-research",
+          "set": "transfer",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 96,
+          "total": 96,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "multilingual-literals",
+      "set": "transfer",
+      "product": "feiwell",
+      "total": 89,
+      "criticalIssues": [
+        "新增“输出为结构化排障清单”的硬性格式要求，使原本要求整理排障提示词的交付形式发生偏移。",
+        "将“不重启”缩窄为“不重启服务”，未完整保留对其他重启操作的禁止。"
+      ],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 26,
+          "clarity": 23,
+          "relevantCompletion": 15,
+          "economy": 13,
+          "boundary": 10,
+          "criticalIssues": [
+            "新增“输出为结构化排障清单”的硬性格式要求，使原本要求整理排障提示词的交付形式发生偏移。"
+          ],
+          "reason": "保留两个路径、错误原文、三个禁止操作和技术术语保持英文的要求，也没有实际执行排障。原因假设、验证方法、预期证据及区分确认状态有助于落实可验证性。但强制输出排障清单改变了原有交付形式，加入完成条件又将重点从先分析原因延伸到排障完成，扣 fidelity 和 relevantCompletion；“提示词”与“排障清单”并列使最终应交付什么不够清楚，扣 clarity。验证方法与验证步骤、预期证据与判定标准存在一定重复，额外的范围和完成条件要求也增加篇幅，扣 economy。",
+          "caseId": "multilingual-literals",
+          "set": "transfer",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 87,
+          "total": 87,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 27,
+          "clarity": 23,
+          "relevantCompletion": 17,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [
+            "将“不重启”缩窄为“不重启服务”，未完整保留对其他重启操作的禁止。"
+          ],
+          "reason": "保留路径、错误原文和英文术语要求；原因假设、验证方法与预期证据是与可验证性直接相关的补充。保真度扣3分：缩窄重启禁令，并额外要求完成条件，扩展了原本先分析原因的阶段范围。清晰度扣2分：开头要求整理提示词，结尾却要求输出排障清单，未明确清单是提示词的组织形式还是下游输出。相关补全扣3分：完成条件及额外范围界定增加了原任务未要求的流程。简洁性扣1分：验证方法、预期证据与后文验证步骤、判定标准存在重复。文本仍是指令，未实际执行排障，边界项不扣分。",
+          "caseId": "multilingual-literals",
+          "set": "transfer",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 91,
+          "total": 91,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "multilingual-literals",
+      "set": "transfer",
+      "product": "chosenxu",
+      "total": 99,
+      "criticalIssues": [
+        "将“不重启”缩窄为“不重启服务”，未完整保留对其他重启操作的禁止。"
+      ],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留全部路径、错误原文、操作限制和语言要求；结合服务排障语境，使用“不重启服务”清楚表达原有约束。背景与要求分列，顺序清晰。增加“给出验证方法”直接落实“可验证”的要求，属于有用且适度的补充，没有扩展为实际排障或引入无关流程。",
+          "caseId": "multilingual-literals",
+          "set": "transfer",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 28,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将“不重启”缩窄为“不重启服务”，未完整保留对其他重启操作的禁止。"
+          ],
+          "reason": "准确保留路径、错误原文、先分析原因的顺序，以及不删除文件、不修改配置和技术术语保持英文的要求。背景与要求分开呈现，结构清楚；补充验证方法直接服务于可验证原因，且篇幅克制。保真度扣2分：原文无范围限定的“不重启”被收窄为“不重启服务”。仍要求整理提示词，没有执行排障，其余维度无实质扣分项。",
+          "caseId": "multilingual-literals",
+          "set": "transfer",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 98,
+          "total": 98,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "multilingual-literals",
+      "set": "transfer",
+      "product": "fishsb",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留路径、错误原文、分析顺序、三个禁止操作及英文技术术语要求。将短任务中的事实与约束逐项列出，便于核对，没有引入多余流程或假设。原始信息足以支持整理提示词，轻量编辑符合任务需要；仍是面向未来助手的提示词整理指令，没有执行排障。",
+          "caseId": "multilingual-literals",
+          "set": "transfer",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留两个路径、错误原文 \"ECONNRESET\"、先分析可验证原因的顺序、三个不操作边界及技术术语保持英文的要求。分项列出信息与约束，便于核对；原任务已足够明确，无须额外补充流程。仍要求整理提示词，没有执行排障，无实质扣分项。",
+          "caseId": "multilingual-literals",
+          "set": "transfer",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "multilingual-literals",
+      "set": "transfer",
+      "product": "fusion",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留两个路径、错误原文 \"ECONNRESET\"、先分析可验证原因的阶段要求、三个禁止操作及技术术语保持英文的约束。将背景事实与提示词要求分开，便于理解；原始任务已明确，无需额外补充。内容简洁，仍要求整理提示词，没有执行排障。",
+          "caseId": "multilingual-literals",
+          "set": "transfer",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留路径、错误原文、分析顺序、三个不操作边界和技术术语语言要求。将事实背景分项列出，并用“提示词应要求”明确下游指令的归属，清楚保留整理提示词这一任务层级。没有添加无依据的流程或要求，篇幅简洁，也没有执行排障，无实质扣分项。",
+          "caseId": "multilingual-literals",
+          "set": "transfer",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "nondefault-team",
+      "set": "transfer",
+      "product": "feiwell",
+      "total": 96,
+      "criticalIssues": [
+        "新增“不得……写入任何文件”的硬性禁止，将原文“不直接改文件”扩大为禁止任何文件写入，可能连另存审阅意见也一并禁止。",
+        "将“不直接改文件”扩展为“不得直接修改或写入任何文件”，新增禁止任何文件写入的硬性限制。"
+      ],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 28,
+          "clarity": 25,
+          "relevantCompletion": 19,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [
+            "新增“不得……写入任何文件”的硬性禁止，将原文“不直接改文件”扩大为禁止任何文件写入，可能连另存审阅意见也一并禁止。"
+          ],
+          "reason": "两个助手的分工、并行审阅对象、不新增角色及用户最终决定均清楚保留；问题描述、所在位置和理由是有助于使用审阅意见的相关补充。但禁止写入任何文件扩大了原始限制，忠实度扣2分；要求专门明确用户选择意见的流程，超出了原文仅需保留最终选择权的必要内容，相关补全扣1分，也使表达稍显繁复，精炼度扣1分。仍然是在编写提示词，没有执行审阅或代替用户决策。",
+          "caseId": "nondefault-team",
+          "set": "transfer",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 96,
+          "total": 96,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 27,
+          "clarity": 25,
+          "relevantCompletion": 19,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [
+            "将“不直接改文件”扩展为“不得直接修改或写入任何文件”，新增禁止任何文件写入的硬性限制。"
+          ],
+          "reason": "两个助手的分工、并行审阅同一方案、不增角色及用户最终决策均清楚保留；意见格式使用示例而非固定字段，能帮助意见落地。忠实度扣3分、相关补全扣1分：禁止写入任何文件扩大了原本禁止直接修改文件的边界，连将审阅意见写入新文件也一并禁止，属于未经要求新增的限制。其余表达紧凑，未实际执行任务。",
+          "caseId": "nondefault-team",
+          "set": "transfer",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 96,
+          "total": 96,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "nondefault-team",
+      "set": "transfer",
+      "product": "chosenxu",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "以简洁编号明确两个助手的职责、并行审阅同一方案、不增加角色、只输出意见不改文件，以及用户自行决定采纳哪些意见。A、B只是现有助手的标识，没有新增角色；职责限定符合原文分工。组织清楚且没有额外流程负担，保持提示词边界，无实质扣分项。",
+          "caseId": "nondefault-team",
+          "set": "transfer",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留两个助手并行审阅同一方案、分别找遗漏和矛盾、只提意见不改文件、用户最终选择及不增角色的要求。编号条目清楚区分职责、行为边界和决策权，没有添加额外流程或执行审阅任务，篇幅适当。",
+          "caseId": "nondefault-team",
+          "set": "transfer",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "nondefault-team",
+      "set": "transfer",
+      "product": "fishsb",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留恰好两个助手、并行审阅同一方案、分别找遗漏与矛盾、只提意见不改文件，以及用户最终选择采纳意见的要求。原文已经清楚，这种轻量整理足够，不需要额外补充流程或角色；表达简洁，仍是要求后续助手编写规则的提示词，无实质扣分项。",
+          "caseId": "nondefault-team",
+          "set": "transfer",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "以轻量编辑完整保留原意，依次交代两个助手的并行分工、只提意见不改文件、用户选择采纳及不增角色，指令清楚且紧凑。原任务已经具备必要信息，无须额外补入格式或流程；候选保持为请求编写协作规则的提示，没有越界执行。",
+          "caseId": "nondefault-team",
+          "set": "transfer",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "nondefault-team",
+      "set": "transfer",
+      "product": "fusion",
+      "total": 96.5,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 11,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "所有核心约束均得到完整保留，分点说明易于理解，结构化协作规则也符合原始任务；没有新增助手或替用户决定。主要问题是重复：开头、第一组要点和后续要求多次复述两个助手、并行审阅同一方案、职责、文件边界与最终选择权，第二组要求大部分没有增加信息，精炼度扣4分。仍是面向后续助手的规则编写指令。",
+          "caseId": "nondefault-team",
+          "set": "transfer",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 96,
+          "total": 96,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 12,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "准确保留所有协作约束，结构化说明的输出要求贴合写清楚规则的目标，仍然是在指示未来助手编写规则。经济性扣3分：前面的三条规则已说明职责、并行方式、行为边界和最终选择权，后面的长条要求又将这些内容完整复述，形成不必要的重复。",
+          "caseId": "nondefault-team",
+          "set": "transfer",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 97,
+          "total": 97,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "clear-mini-task",
+      "set": "transfer",
+      "product": "feiwell",
+      "total": 95.5,
+      "criticalIssues": [
+        "新增仅返回改写句、不得解释或添加评论的强制输出限制，原提示未规定这一限制。"
+      ],
+      "orders": [
+        {
+          "id": "C",
+          "fidelity": 27,
+          "clarity": 25,
+          "relevantCompletion": 18,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [
+            "新增仅返回改写句、不得解释或添加评论的强制输出限制，原提示未规定这一限制。"
+          ],
+          "reason": "清楚保留了通俗英语、保持原意和不超过20词的要求，且没有直接完成改写。保真度扣分来自新增强制输出限制以及删除引用句末的句号；后者属于轻微标点变化，不构成关键语义损失。原任务已经充分明确，额外的输出禁令贡献有限，因此相关补充性和经济性小幅扣分。",
+          "caseId": "clear-mini-task",
+          "set": "transfer",
+          "order": 0,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 94,
+          "total": 94,
+          "generationFailed": false
+        },
+        {
+          "id": "C",
+          "fidelity": 29,
+          "clarity": 25,
+          "relevantCompletion": 19,
+          "economy": 14,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "保留了通俗英语、保持原意及不超过20词的核心要求，指令清楚，仍是给未来助手的提示。引用原句遗漏句末句号，未严格保持引用文本，忠实度扣1分；新增仅输出改写句、不得解释或评论的限制，与任务相关但原提示并无此要求，相关完善度扣1分；该附加说明对这个简单任务略显冗余，简洁性扣1分。",
+          "caseId": "clear-mini-task",
+          "set": "transfer",
+          "order": 1,
+          "product": "feiwell",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 97,
+          "total": 97,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "clear-mini-task",
+      "set": "transfer",
+      "product": "chosenxu",
+      "total": 28,
+      "criticalIssues": [
+        "直接完成了句子改写，而非提供改进后的提示词。",
+        "删除了引用原句和不超过20词的显式限制。",
+        "直接完成了句子改写，而不是提供改进后的提示词。",
+        "未保留20词上限及需要改写的完整引用原句。"
+      ],
+      "orders": [
+        {
+          "id": "B",
+          "fidelity": 8,
+          "clarity": 5,
+          "relevantCompletion": 0,
+          "economy": 15,
+          "boundary": 0,
+          "criticalIssues": [
+            "直接完成了句子改写，而非提供改进后的提示词。",
+            "删除了引用原句和不超过20词的显式限制。"
+          ],
+          "reason": "文本简短易读，也大致表达了原句含义，因此经济性不扣分；但它是任务答案，不再指示后续助手进行改写，丢失了原提示的操作要求、引用原句和明确字数上限。作为提示词缺乏可执行指令，也没有提供有效的任务补充。",
+          "caseId": "clear-mini-task",
+          "set": "transfer",
+          "order": 0,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 28,
+          "total": 28,
+          "generationFailed": false
+        },
+        {
+          "id": "B",
+          "fidelity": 5,
+          "clarity": 8,
+          "relevantCompletion": 0,
+          "economy": 15,
+          "boundary": 0,
+          "criticalIssues": [
+            "直接完成了句子改写，而不是提供改进后的提示词。",
+            "未保留20词上限及需要改写的完整引用原句。"
+          ],
+          "reason": "文本简短易懂，并保留了原句的大致含义，因此简洁性不扣分。但它是答案而非提示，遗漏改写指令、通俗英语要求、保持原意要求、20词上限和原始引用文本，忠实度扣25分；无法指导未来助手完成指定任务，清晰度扣17分；没有提供相关的提示完善，相关完善度扣20分；直接执行嵌入任务，边界扣10分。",
+          "caseId": "clear-mini-task",
+          "set": "transfer",
+          "order": 1,
+          "product": "chosenxu",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 28,
+          "total": 28,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "clear-mini-task",
+      "set": "transfer",
+      "product": "fishsb",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原句、通俗英语要求、保持原意要求及不超过20词的限制，仍是交给后续助手执行的提示词。原提示已清晰充分，原样保留无需扣分，也无需增加流程或说明。",
+          "caseId": "clear-mini-task",
+          "set": "transfer",
+          "order": 0,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "A",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留英文改写任务、通俗英语要求、原意保持要求、20词上限及引用原句。原提示已经清楚且自足，直接保留无需额外扩充；没有执行改写任务，无扣分。",
+          "caseId": "clear-mini-task",
+          "set": "transfer",
+          "order": 1,
+          "product": "fishsb",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    },
+    {
+      "caseId": "clear-mini-task",
+      "set": "transfer",
+      "product": "fusion",
+      "total": 100,
+      "criticalIssues": [],
+      "orders": [
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留原句、通俗英语要求、保持原意要求及不超过20词的限制，仍是交给后续助手执行的提示词。原提示已清晰充分，原样保留无需扣分，也无需增加流程或说明。",
+          "caseId": "clear-mini-task",
+          "set": "transfer",
+          "order": 0,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        },
+        {
+          "id": "D",
+          "fidelity": 30,
+          "clarity": 25,
+          "relevantCompletion": 20,
+          "economy": 15,
+          "boundary": 10,
+          "criticalIssues": [],
+          "reason": "完整保留英文改写任务、通俗英语要求、原意保持要求、20词上限及引用原句。原提示已经清楚且自足，直接保留无需额外扩充；没有执行改写任务，无扣分。",
+          "caseId": "clear-mini-task",
+          "set": "transfer",
+          "order": 1,
+          "product": "fusion",
+          "source": "semantic-round-05-judge-retry-5",
+          "rawTotal": 100,
+          "total": 100,
+          "generationFailed": false
+        }
+      ]
+    }
+  ],
+  "round": "semantic-round-05"
+}
