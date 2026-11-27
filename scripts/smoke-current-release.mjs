@@ -9,7 +9,7 @@ import { spawn } from 'node:child_process';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { compareInstalledTree } from './smoke-package.mjs';
 import { parseCandidateOptions } from './smoke-candidate.mjs';
-import { CURRENT_RELEASE, verifyCurrentRelease } from './verify-current-release.mjs';
+import { CURRENT_RELEASE, CURRENT_RELEASE_KIND, verifyCurrentRelease } from './verify-current-release.mjs';
 const sha = value => createHash('sha256').update(value).digest('hex');
 const root = fileURLToPath(new URL('../', import.meta.url));
 async function run(script, args, cwd) {
@@ -24,7 +24,7 @@ export async function smokeCurrentRelease(options, sourceRoot = root) {
   const sourceIntegrity = await verifyCurrentRelease(sourceRoot);
   for (const flag of ['--archive', '--npm-cli']) assert((await lstat(options[flag])).isFile(), flag + ' must be a regular file.');
   const bytes = await readFile(options['--archive']);
-  const installation = await mkdtemp(path.join(tmpdir(), 'prompt-fusion-rc-'));
+  const installation = await mkdtemp(path.join(tmpdir(), 'prompt-fusion-release-'));
   await writeFile(path.join(installation, 'package.json'), '{"private":true}\n', { flag: 'wx' });
   await run(options['--npm-cli'], ['install', '--offline', '--ignore-scripts', '--no-audit', '--no-fund', '--package-lock=false', options['--archive']], installation);
   const installed = path.join(installation, 'node_modules', '@merziller', 'prompt-fusion');
@@ -44,11 +44,11 @@ export async function smokeCurrentRelease(options, sourceRoot = root) {
   assert.equal(undo.status, 'PASS'); assert.equal(undo.hostGuiTested, false);
   assert.equal(sha(await readFile(options['--archive'])), sha(bytes));
   const report = {
-    at: new Date().toISOString(), status: 'PASS', version: CURRENT_RELEASE, releaseKind: 'prerelease', node: process.version, platform: process.platform,
+    at: new Date().toISOString(), status: 'PASS', version: CURRENT_RELEASE, releaseKind: CURRENT_RELEASE_KIND, node: process.version, platform: process.platform,
     archive: { name: path.basename(options['--archive']), bytes: bytes.length, sha256: sha(bytes) },
     sourceIntegrity, installedIntegrity, installation, files, tests, sdk, undo,
-    nativeEvidence: 'Seven actual checks of 0.5.2-dev.0; exact runtime parity except VERSION; RC not reexecuted in the desktop.',
-    realModelQuality: 'NOT_RUN_FOR_RC', nativeHostGui: 'NOT_RUN_FOR_RC',
+    nativeEvidence: 'Seven actual checks of 0.5.2-dev.0; runtime parity with candidate and published 0.5.2-rc.1 except VERSION; stable build not reexecuted in the desktop.',
+    realModelQuality: 'NOT_RUN_FOR_STABLE', nativeHostGui: 'NOT_RUN_FOR_STABLE',
     limitations: ['Narrow-window test interrupted by a desktop renderer crash with unknown cause.', 'Light/dark theme coverage not completed.', 'Protocol and React/Lexical fixtures are not native-vendor compatibility claims.']
   };
   await mkdir(path.join(sourceRoot, 'output'), { recursive: true });

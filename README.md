@@ -2,13 +2,11 @@
 
 **把粗糙想法整理成真正可用的提示词，而不替你执行任务。** 禾杨智绘工作室出品 · Merziller 开发；Apache-2.0；零运行时依赖。DSH 单按钮、标准 Skill、CLI、MCP stdio、MCP Streamable HTTP 与 REST/OpenAPI 共用一个语义增强核心。
 
-> **当前发行版本：0.5.1。** 保留具体目标、不擅增下游格式，修复V0.2.0撤销记录在组件重新挂载／临时状态取消时丢失的问题。当前版本与已测0.5.1-dev运行代码一致，仅版本字面量和发行元数据变化；8个实际宿主工具响应已留存核验。已登录DSH界面端到端仍列为未测，旧版五方分数不挪用为本版成绩。见[发行验证](docs/releases/0.5.1.md)及[历史修复核实报告](docs/FIXES_0.5.1.md)。
+> **当前正式版本：0.5.2。** 从已发布的 0.5.2-rc.1 晋升，18 个运行文件只改变核心版本字面量，没有新增行为。包含中文描述句误判修复、可见失败原因、空草稿停止与编辑后旧结果保护。见[本版范围与验证](docs/releases/0.5.2.md)、[正式发行页面](https://github.com/Merziller/prompt-fusion/releases/tag/v0.5.2)。
 >
-> **历史0.4.0本地基线**在24条题目的第十轮测试中得到固定集99.79、迁移集99.13、总体99.46、最低95及零关键错误；这不是当前候选的分数，也不是普遍质量保证。历史来源、发行事实见[回执](docs/RELEASE.md)。
-
-> **新版：0.5.2-rc.1（预发布，稳定版仍为 0.5.1）。** 修复部分中文描述句误判、增强失败原因不显眼及清空草稿后停止受阻等问题。对应开发候选已完成七项真实 DSH 操作检查；RC 运行代码与候选逐字节一致，仅核心版本字面量变化。窄窗口测试曾遇到原因未定的 Desktop 渲染进程崩溃，主题覆盖尚未完成，因此暂不提升为稳定版。见[本版范围与验证](docs/releases/0.5.2-rc.1.md)、[预发布页面](https://github.com/Merziller/prompt-fusion/releases/tag/v0.5.2-rc.1)。
+> 对应开发候选的七项真实 DSH 操作检查已有记录；本次另做正式包回归与离线安装验证，不冒充正式版本独立 GUI 重测。窄窗口 Desktop 崩溃原因未定、主题覆盖未完成等已知限制继续公开，正式版标签不代表这些限制已经修复。
 >
-> 选择体验 RC：`dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.5.2-rc.1/prompt-fusion-0.5.2-rc.1.tgz`。下方命令继续指向稳定版。市场申请状态单独核实，不把提交等同于收录。
+> [原 RC](https://github.com/Merziller/prompt-fusion/releases/tag/v0.5.2-rc.1)和[0.5.1 历史验证](docs/releases/0.5.1.md)均保留。历史 0.4.0 的 99.46 分不是本版成绩或普遍质量保证。市场申请与收录状态单独核验。
 
 [English](README.en.md) · [通用接入](docs/UNIVERSAL_ACCESS.md) · [平台依据](docs/PLATFORMS.md) · [规格](docs/SPEC.md) · [来源审计](docs/SOURCE_AUDIT.md) · [验证](docs/VERIFICATION.md) · [作者](AUTHORS.md)
 
@@ -33,9 +31,9 @@
 安装已发布的预构建归档（不需要构建脚本或npm账号）：
 
 ```sh
-dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.5.1/prompt-fusion-0.5.1.tgz
+dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.5.2/prompt-fusion-0.5.2.tgz
 # 普通Node项目，也可先下载归档后离线安装
-npm install --offline --ignore-scripts /absolute/path/prompt-fusion-0.5.1.tgz
+npm install --offline --ignore-scripts /absolute/path/prompt-fusion-0.5.2.tgz
 ```
 
 若当前profile此前指向本地开发目录，替换目录可能需要重启DSH；以插件管理器返回的应用状态为准。历史开发链接的EPERM记录保留，不据此宣称所有原位升级路径均已通过。

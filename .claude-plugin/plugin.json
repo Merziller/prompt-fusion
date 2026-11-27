@@ -1,6 +1,6 @@
 {
   "name": "prompt-fusion",
-  "version": "0.5.2-rc.1",
+  "version": "0.5.2",
   "description": "Semantic prompt rewriting with fidelity review; explicit model configuration, no task execution. Produced by 禾杨智绘工作室（绍兴市柯桥区禾杨智绘软件开发工作室）; developed by Merziller (子墨).",
   "author": { "name": "Merziller", "email": "k26789228@gmail.com", "url": "https://github.com/Merziller" },
   "homepage": "https://github.com/Merziller/prompt-fusion",

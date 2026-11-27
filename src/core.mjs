@@ -2,7 +2,7 @@
 import { structuredPrompt, isStructuredPrompt } from './structure.mjs';
 import { rewritePrompt } from './rewrite.mjs';
 import { classifyFailure } from './failures.mjs';
-export const VERSION = '0.5.2-rc.1';
+export const VERSION = '0.5.2';
 export const LIMITS = Object.freeze({ inputBytes: 49152, contextBytes: 8192, outputBytes: 81920, modelBytes: 8192, contexts: 4 });
 export const DOMAINS = Object.freeze(['auto', 'general', 'code', 'design', 'office', 'collaboration', 'research', 'writing']);
 export const MODES = Object.freeze(['base', 'lite', 'standard', 'smart', 'publish']);

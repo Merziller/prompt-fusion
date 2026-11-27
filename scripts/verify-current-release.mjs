@@ -6,10 +6,15 @@ import { createHash } from 'node:crypto';
 import { lstat, readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-export const CURRENT_RELEASE = '0.5.2-rc.1';
+export const CURRENT_RELEASE = '0.5.2';
+export const CURRENT_RELEASE_KIND = 'stable';
 export const CURRENT_MANIFEST = `evals/releases/${CURRENT_RELEASE}/manifest.json`;
-const baselinePath = `evals/releases/${CURRENT_RELEASE}/runtime-baseline.json`;
-const observationsPath = `evals/releases/${CURRENT_RELEASE}/native-observations.json`;
+const rcVersion = '0.5.2-rc.1';
+const rcCommit = '5e42cd78a2265e3de33031384bf7d95994ce47b2';
+const rcManifestPath = `evals/releases/${rcVersion}/manifest.json`;
+const rcManifestSha256 = '508a84ec5d9c8b3f482328dd9b482a4a5e31e88a8b5e013f07140856ff4d5e71';
+const baselinePath = `evals/releases/${rcVersion}/runtime-baseline.json`;
+const observationsPath = `evals/releases/${rcVersion}/native-observations.json`;
 const hash = data => createHash('sha256').update(data).digest('hex');
 const safePath = value => typeof value === 'string' && value.length > 0 && !path.isAbsolute(value) && !/[:\\]/u.test(value) && value.split('/').every(p => p && p !== '.' && p !== '..');
 export async function packageFileInventory(root) {
@@ -38,7 +43,12 @@ export async function verifyCurrentRelease(root, manifestFile = CURRENT_MANIFEST
   const manifest = JSON.parse(await read(manifestFile));
   assert.equal(manifest.schema, 'prompt-fusion-release-integrity-v2');
   assert.equal(manifest.version, CURRENT_RELEASE, 'Unexpected release version');
-  assert.equal(manifest.releaseKind, 'prerelease', 'RC must remain a prerelease');
+  assert.equal(manifest.releaseKind, CURRENT_RELEASE_KIND, 'Stable release kind changed');
+  assert.deepEqual(manifest.promotion, { sourceVersion: rcVersion, sourceCommit: rcCommit, sourceManifest: rcManifestPath, sourceManifestSha256: rcManifestSha256, runtimeChange: 'CORE_VERSION_ONLY' }, 'Stable promotion provenance changed');
+  const rcBytes = await read(rcManifestPath);
+  assert.equal(hash(rcBytes), rcManifestSha256, 'Historical RC manifest changed');
+  const rcManifest = JSON.parse(rcBytes);
+  assert.equal(rcManifest.version, rcVersion); assert.equal(rcManifest.releaseKind, 'prerelease');
   assert.equal(manifest.qualityAcceptance, 'NOT_CLAIMED', 'Unexpected quality claim');
   assert.deepEqual(manifest.excludedFiles, [CURRENT_MANIFEST], 'Only the self-referential manifest is excluded');
   assert(Array.isArray(manifest.files) && manifest.files.length > 0 && manifest.files.length <= 1000, 'Invalid release inventory');
@@ -81,6 +91,12 @@ export async function verifyCurrentRelease(root, manifestFile = CURRENT_MANIFEST
   assert.equal(baseline.schema, 'prompt-fusion-runtime-baseline-v1'); assert.equal(baseline.version, '0.5.2-dev.0');
   const runtime = actual.filter(p => /^(?:src|adapters|bin)\//u.test(p));
   assert.deepEqual(baseline.files.map(p => p.path).sort(), runtime, 'Runtime module inventory changed');
+  assert.deepEqual(rcManifest.files.filter(p => /^(?:src|adapters|bin)\//u.test(p.path)).map(p => p.path).sort(), runtime, 'RC runtime module inventory changed');
+  for (const item of rcManifest.files.filter(p => runtime.includes(p.path))) {
+    let data = await read(item.path);
+    if (item.path === 'src/core.mjs') data = Buffer.from(data.toString().replace(/^export const VERSION = '[^']+';$/m, `export const VERSION = '${rcVersion}';`));
+    assert.equal(hash(data), item.sha256, `Runtime differs from published RC: ${item.path}`);
+  }
   for (const item of baseline.files) {
     assert(safePath(item.path), 'Unsafe baseline path');
     let data = await read(item.path);
@@ -92,7 +108,7 @@ export async function verifyCurrentRelease(root, manifestFile = CURRENT_MANIFEST
   assert.equal(native.scope, 'candidate-native-observations-not-rc-reexecution');
   assert.equal(native.checks.length, 7); assert(native.checks.every(c => c.status === 'PASS'));
   assert.equal(native.narrowWindow, 'INCOMPLETE'); assert.equal(native.themeCoverage, 'NOT_RUN');
-  return { status: 'PASS', version: CURRENT_RELEASE, releaseKind: 'prerelease', files: actual.length, runtimeModules: runtime.length, runtimeParity: 'EXACT_EXCEPT_CORE_VERSION', nativeObservations: 'SEVEN_CANDIDATE_CHECKS; RC_NOT_REEXECUTED', qualityAcceptance: 'NOT_CLAIMED' };
+  return { status: 'PASS', version: CURRENT_RELEASE, releaseKind: CURRENT_RELEASE_KIND, files: actual.length, runtimeModules: runtime.length, runtimeParity: 'EXACT_EXCEPT_CORE_VERSION', promotedFrom: rcVersion, publishedRcRuntimeParity: 'EXACT_EXCEPT_CORE_VERSION', nativeObservations: 'SEVEN_CANDIDATE_CHECKS; STABLE_NOT_REEXECUTED', qualityAcceptance: 'NOT_CLAIMED' };
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
   console.log(JSON.stringify(await verifyCurrentRelease(fileURLToPath(new URL('../', import.meta.url))), null, 2));

@@ -2,7 +2,16 @@
 
 公开仓库：[Merziller/prompt-fusion](https://github.com/Merziller/prompt-fusion)，Apache-2.0，作者Merziller。仓库创建于2026-11-25 19:18:43UTC（2026-11-26 03:18:43Asia/Shanghai）。npm尚未发布，不把包名当成已上架。
 
-## 0.5.2-rc.1 预发布准备与核验入口
+## 0.5.2 正式稳定版晋升
+
+按维护者要求，将已发布的 0.5.2-rc.1 晋升为 **0.5.2**；本次仅面向 GitHub 正式发行，预期设为 Latest，不改动旧 RC 标签和附件。18 个运行文件只改变核心版本字面量，已知限制继续保留。见[稳定版范围与验证](releases/0.5.2.md)。
+
+- [正式发行页面](https://github.com/Merziller/prompt-fusion/releases/tag/v0.5.2)、[固定附件](https://github.com/Merziller/prompt-fusion/releases/download/v0.5.2/prompt-fusion-0.5.2.tgz)和[校验和](https://github.com/Merziller/prompt-fusion/releases/download/v0.5.2/SHA256SUMS.txt)以实际公开下载核验为准；本页冻结于打包阶段，不把预定地址当成上传回执。
+- 当前稳定版通过晋升溯源清单核对原 RC、开发候选与正式运行文件，重新进行源码回归及新归档离线安装检查；原生 GUI 的七项检查仍归属开发候选。
+- 窄窗口 Desktop 渲染进程崩溃原因未定、主题覆盖未完成，未新增整套真实模型质量分数；不因改为稳定版而抹去限制。
+- 此次不改写插件市场申请；市场现状、合并及可安装状态须另行核验。npm 仍未发布。
+
+## 0.5.2-rc.1 预发布准备与核验入口（历史）
 
 本次选择发布 **0.5.2-rc.1**，不覆盖 0.5.1 稳定版。实际变化、七项开发候选现场检查、RC 字节关系及未测项见[本版验证](releases/0.5.2-rc.1.md)。窄窗口测试遇到原因未定的 Desktop 渲染进程崩溃，主题覆盖尚未完成，因此保持预发布身份。
 
