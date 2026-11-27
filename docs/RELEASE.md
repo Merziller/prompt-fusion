@@ -2,7 +2,17 @@
 
 公开仓库：[Merziller/prompt-fusion](https://github.com/Merziller/prompt-fusion)，Apache-2.0，作者Merziller。仓库创建于2026-11-25 19:18:43UTC（2026-11-26 03:18:43Asia/Shanghai）。npm尚未发布，不把包名当成已上架。
 
-## 0.5.1 当前发行
+## 0.5.2-rc.1 预发布准备与核验入口
+
+本次选择发布 **0.5.2-rc.1**，不覆盖 0.5.1 稳定版。实际变化、七项开发候选现场检查、RC 字节关系及未测项见[本版验证](releases/0.5.2-rc.1.md)。窄窗口测试遇到原因未定的 Desktop 渲染进程崩溃，主题覆盖尚未完成，因此保持预发布身份。
+
+- [GitHub 预发布页面](https://github.com/Merziller/prompt-fusion/releases/tag/v0.5.2-rc.1)：以页面上的公开状态、源码标签和附件为准。本文件冻结于打包阶段，不把预定地址视为已经上传。
+- [固定附件地址](https://github.com/Merziller/prompt-fusion/releases/download/v0.5.2-rc.1/prompt-fusion-0.5.2-rc.1.tgz)与[校验和](https://github.com/Merziller/prompt-fusion/releases/download/v0.5.2-rc.1/SHA256SUMS.txt)。发布流程在真实上传后匿名重新下载并核对字节。
+- [源码 CI](https://github.com/Merziller/prompt-fusion/actions)：当前门禁使用 `scripts/verify-current-release.mjs`；历史 0.5.1 的严格清单仍由精确旧版 fixture 测试。
+- [市场申请 #18880](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/18880)：2026-11-27 10:27 Asia/Shanghai 查询时仍 OPEN、未合并，目录主分支中尚无本项目条目。后续是否收录以远端申请为准。
+- 项目免费公开；没有发布 npm 包，按 GitHub 固定标签归档安装。无需提供新的仓库或登录资料，已有仓库推送权限已核实。
+
+## 0.5.1 稳定发行（历史核验记录）
 
 用户已授权推送正式源码、GitHub Release与更新已有DSH目录申请。出品方为禾杨智绘工作室（绍兴市柯桥区禾杨智绘软件开发工作室），开发者Merziller（子墨）；继续使用Apache-2.0和原有公共标识。
 

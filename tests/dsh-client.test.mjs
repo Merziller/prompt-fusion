@@ -56,6 +56,9 @@ async function fixture({ hold = false, chips = [], outcome = 'rewrite' } = {}) {
       if (outcome === 'service') return {ok:false,status:502,json:async()=>({error:{code:'NETWORK_SERVICE_ERROR'}})};
       if (outcome === 'plain-service') return {ok:false,status:502,json:async()=>{throw new SyntaxError('PRIVATE upstream page');}};
       if (outcome === 'network-result') return {ok:true,json:async()=>({original:body.input,enhanced:body.input,engine:'unchanged',failure:{category:'connection',retryable:true,status:502},warnings:[{code:'NETWORK_SERVICE_ERROR'}]})};
+      if (outcome === 'fidelity') return {ok:true,json:async()=>({original:body.input,enhanced:body.input,engine:'unchanged',failure:{category:'fidelity',retryable:false}})};
+      if (outcome === 'route-fidelity') return {ok:false,status:400,json:async()=>({error:{code:'MODEL_FAILED',failure:{category:'fidelity',retryable:false}}})};
+      if (outcome === 'plain-rate') return {ok:false,status:429,json:async()=>({error:{code:'BUSY'}})};
       if (outcome === 'timeout') return {ok:false,status:504,json:async()=>({error:{code:'TIMEOUT'}})};
       if (outcome === 'rate') return {ok:false,status:429,json:async()=>({error:{code:'PROVIDER_RATE_LIMIT'}})};
       const providers = outcome === 'no-model' ? [] : [async({stage,input})=>{if(outcome==='invalid')return '{}';const p=JSON.parse(input);const prompt=outcome==='original'?p.draft:p.layout==='append'?p.draft+'\n明确目标与待确认问题。':'请梳理现有开发任务，明确目标和待确认问题，不指定新技术栈。';return JSON.stringify(stage==='rewrite'?{prompt}:{verdict:'pass',prompt:null,issues:[]});}];
@@ -77,6 +80,7 @@ async function fixture({ hold = false, chips = [], outcome = 'rewrite' } = {}) {
     switchSession(draft) { state = { ...state, draft, draftRev:1 }; actions = { ...actions }; render(); },
     release() { for (const resolve of pending.splice(0)) resolve(); },
     async click(label) { const b = button(label); assert.ok(!b.props.disabled); await b.props.onClick(); },
+    remount() { for (const hook of hooks) hook?.cleanup?.(); hooks.length = 0; render(); },
     dispose() { for (const hook of hooks) hook?.cleanup?.(); }
   };
 }
@@ -123,7 +127,22 @@ test('approved single-button CSS, icon and slot remain byte-identical',async()=>
  assert.equal(hash(source.match(/  const icon = ([\s\S]+?);\n/)[1]),baseline.iconSha256);
  const f=await fixture();try{assert.equal(f.slots[0].name,baseline.slot);assert.equal(f.nodes().filter(n=>n.type==='button').length,baseline.visibleControls);}finally{f.dispose();}
 });
+test('failure is visibly announced without an extra button and clears after manual edits', async () => {
+  const f = await fixture({outcome:'fidelity'});
+  try { await f.click('增强'); const notice=f.nodes().find(n=>n.props.role==='status'); assert.equal(notice.props.className,'pf-notice'); assert.equal(notice.props['aria-live'],'polite'); assert.equal(notice.props.children[0],uiMessages.fidelityRetained); f.edit('更改后的新草稿'); const cleared=f.nodes().find(n=>n.props.role==='status'); assert.equal(cleared.props.className,'pf-sr'); assert.deepEqual(cleared.props.children,['']); }
+  finally {f.dispose();}
+});
+test('stop remains usable after the draft is cleared during a request',async()=>{
+  const f=await fixture({hold:true});
+  try{const done=f.click('增强');f.edit('');assert.equal(f.button('停止').props.disabled,false);await f.click('停止');f.release();await done;assert.equal(f.state.draft,'');assert.equal(f.nodes().find(n=>n.props.role==='status').props.children[0],uiMessages.cancelled);}
+  finally{f.dispose();}
+});
+test('interrupted request on component remount is visible and cannot overwrite the draft',async()=>{
+  const f=await fixture({hold:true});
+  try{const original=f.state.draft,done=f.click('增强');f.remount();assert.equal(f.nodes().find(n=>n.props.role==='status').props.children[0],uiMessages.interrupted);f.release();await done;assert.equal(f.state.draft,original);assert.ok(f.button('增强'));}
+  finally{f.dispose();}
+});
 const uiMessages = JSON.parse(await readFile(new URL('../locale/zh.json', import.meta.url), 'utf8')).ui;
-for (const [outcome, message] of [['no-model','needsModel'],['invalid','retained'],['original','unchanged'],['transport','networkRetained'],['service','networkRetained'],['plain-service','networkRetained'],['network-result','networkRetained'],['host-auth','sessionRetained'],['provider-auth','authRetained'],['timeout','timeoutRetained'],['rate','rateRetained']].map(([outcome,key]) => [outcome,uiMessages[key]])) test('single button distinguishes '+outcome+' without pretending to enhance',async()=>{
+for (const [outcome, message] of [['no-model','needsModel'],['invalid','formatRetained'],['fidelity','fidelityRetained'],['route-fidelity','fidelityRetained'],['plain-rate','rateRetained'],['original','unchanged'],['transport','networkRetained'],['service','networkRetained'],['plain-service','networkRetained'],['network-result','networkRetained'],['host-auth','sessionRetained'],['provider-auth','authRetained'],['timeout','timeoutRetained'],['rate','rateRetained']].map(([outcome,key]) => [outcome,uiMessages[key]])) test('single button distinguishes '+outcome+' without pretending to enhance',async()=>{
  const f=await fixture({outcome});try{const original=f.state.draft;await f.click('增强');assert.equal(f.state.draft,original);assert.equal(f.button('增强').props.title,message);assert.equal(f.nodes().filter(n=>n.type==='button').length,1);assert.equal(f.nodes().filter(n=>['section','select','textarea','input','details'].includes(n.type)).length,0);}finally{f.dispose();}
 });

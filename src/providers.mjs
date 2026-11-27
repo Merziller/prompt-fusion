@@ -34,7 +34,7 @@ export async function collectDshText(stream) {
       const kind = typeof event.reason === 'string' ? event.reason : event.reason?.kind;
       if (['error', 'aborted', 'length', 'max-tokens'].includes(kind)) {
         const failure = typeof event.reason === 'object' ? event.reason?.failure : undefined;
-        const error = new FusionError(kind === 'length' || kind === 'max-tokens' ? 'MODEL_TRUNCATED' : kind === 'aborted' ? 'PROVIDER_ERROR' : (typeof failure?.code === 'string' ? failure.code : 'PROVIDER_ERROR'), 'Model stream did not complete.');
+        const error = new FusionError(kind === 'length' || kind === 'max-tokens' ? 'MODEL_TRUNCATED' : kind === 'aborted' ? 'ABORTED' : (typeof failure?.code === 'string' ? failure.code : 'PROVIDER_ERROR'), 'Model stream did not complete.');
         if (Number.isInteger(failure?.status)) error.status = failure.status;
         throw error;
       }

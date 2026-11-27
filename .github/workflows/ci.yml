@@ -21,5 +21,6 @@ jobs:
       - run: npm run build
       - run: npm test
       - run: npm run check
-      - run: node scripts/verify-distribution.mjs
+      # Historical 0.5.1 integrity remains covered by the frozen-fixture tests.
+      - run: node scripts/verify-current-release.mjs
       - run: npm pack --dry-run

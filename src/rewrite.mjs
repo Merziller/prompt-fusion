@@ -111,6 +111,26 @@ function roleExclusivity(text) {
   return /(?:助手|角色|\bAI\b|\bagents?\b|\bassistants?\b|\breviewers?\b)/iu.test(prose)
     && /(?:一个|另一个|一名|每个|各自|助手|角色).{0,10}(?:专门|只负责|仅负责)|\b(?:exclusively|solely)\s+(?:responsible|review|check|focus)|\bonly\s+(?:responsible for|review|check)\b/iu.test(prose);
 }
+// Conservative lexical exceptions: mask a noun only at a clear nominal boundary,
+// and an adjective only after a descriptive cue. Ambiguous 别 + action stays protected.
+// In particular 别针对 / 别称为 / 别国有化 / 别扭了旋钮 are real prohibitions.
+function maskOrdinaryBieWords(text) {
+  return text.replace(/别(?:扭|致|人|墅|针|国|处|名|称)/gu, (word, index) => {
+    const before = text.slice(0, index), after = text.slice(index + word.length);
+    const adjective = word === '别扭' || word === '别致';
+    const descriptive = /(?:听起来|听上去|听着|看起来|看上去|看着|显得|感觉|很|非常|十分|有点|有些|过于|略显|稍显|稍微|那么|真|挺|格外|特别|比较|颇为|蛮)\s*$/u.test(before)
+      && /^(?:\s*$|[的地]|(?:了|啊|呀|呢|吧|吗|嘛)\s*$)/u.test(after);
+    // 别人 is the ordinary pronoun even before a predicate (别人提交/别人写过).
+    // Keep the previous pronoun exclusion; explicit 禁止/不要/别让 still bind it.
+    const nominal = word === '别人' || /^(?:\s*$|[的和与及、])/u.test(after)
+      || (word === '别墅' && /^[外内前后里]/u.test(after));
+    return (adjective ? descriptive : nominal) ? ' '.repeat(word.length) : word;
+  });
+}
+function normalizeImperativeBie(text) {
+  const masked = maskOrdinaryBieWords(text);
+  return text.replace(/(?<![分区个识差性类特告离辨鉴甄诀送惜永])别/gu, (word, index) => masked[index] === '别' ? '不' : word);
+}
 // High-precision textual guard for explicit prohibitions, not a semantic parser.
 // Mask data spans without losing offsets: a quoted prohibition is not an instruction,
 // while the exact quoted object of a real prohibition still belongs to its clause.
@@ -128,8 +148,17 @@ export function negativeDirectives(text) {
     start += label.length;
     const body = clause.slice(start);
     // Strong imperative markers may follow a subject; retain that subject and scope.
-    if (/(?:不要|不得|禁止|切勿|勿|不许|不能|(?<![分区个识差性类特告离辨鉴甄诀送惜永])别)(?!人)/u.test(body) && !/^(?:我|我们)(?:目前|现在|还)?不能/u.test(body)) language = 'zh';
-    else if (/^(?:(?:也|并|且|都|先|但|本轮|本阶段|这一步|请)\s*)*不(?!(?:是|同|一定|必|容易|确定|清楚|知道|了解))\S/u.test(body)) language = 'zh';
+    // 别 must introduce an action: descriptive words such as 别扭/别致 are not commands.
+    // Bare 不 + a predicate can report discomfort rather than prohibit an action.
+    // Exempt only complete descriptive predicates; explicit 不要/别 and action tails
+    // remain protected (e.g. 不舒服地念台词 is still an instruction).
+    const descriptionAtom = '不(?:太|够|怎么|那么|特别|十分|是很)?(?:好听|耐听|舒服|自然|清晰|流畅|舒适|协调|美观|直观|好看|友好|稳定|满意|合理)';
+    // A complete list of subjective predicates is still feedback, not an action.
+    // Keep action suffixes (e.g. 不舒服地念台词) outside this anchored grammar.
+    const description = new RegExp('^(?:(?:也|并|且|都|但|很|真)\\s*)*' + descriptionAtom + '(?:\\s*(?:也|且|并且|而且|又|、|和|及)\\s*' + descriptionAtom + ')*(?:了|啊|呀|呢|的|吧)?\\s*$', 'u').test(body);
+    const imperativeBody = maskOrdinaryBieWords(body);
+    if (/(?:不要|不得|禁止|切勿|勿|不许|不能|(?<![分区个识差性类特告离辨鉴甄诀送惜永])别)/u.test(imperativeBody) && !/^(?:我|我们)(?:目前|现在|还)?不能/u.test(body)) language = 'zh';
+    else if (!description && /^(?:(?:也|并|且|都|先|但|本轮|本阶段|这一步|请)\s*)*不(?!(?:是|同|一定|必|容易|确定|清楚|知道|了解))\S/u.test(body)) language = 'zh';
     else if (/\b(?:do not|don't|don’t|must not|never)\s+/i.test(body)) language = 'en';
     else {
       // Arabic و can join an imperative to the preceding positive sentence.
@@ -146,7 +175,7 @@ export function negativeDirectives(text) {
     start += prefix?.length ?? 0;
     const directive = raw.slice(decoration + start).trim().replace(/[.。]+$/u, '');
     let normalized = directive.normalize('NFKC').replace(/[\u064B-\u065F\u0670]/g, '').replace(/’/g, "'");
-    if (language === 'zh') normalized = normalized.replace(/不要|不得|切勿|勿|不许|(?<![分区个识差性类特告离辨鉴甄诀送惜永])别(?!人)/gu, '不').replace(/\s+/g, '')
+    if (language === 'zh') normalized = normalizeImperativeBie(normalized).replace(/不要|不得|切勿|勿|不许/gu, '不').replace(/\s+/g, '')
       .replace(/^(?:本阶段|这一步|本轮)不/u, '不先').replace(/^不选择/u, '不选').replace(/^不先选择/u, '不先选');
     else if (language === 'en') normalized = normalized.replace(/\b(?:do not|don't|must not)\s+/gi, 'not ').replace(/\s+/g, ' ').toLowerCase();
     else normalized = normalized.replace(/^ولا(?=\s)/u, 'لا').replace(/\s+/g, ' ');
@@ -209,13 +238,16 @@ export async function rewritePrompt(request, { providers, signal, ErrorType }) {
   const error = (code,message) => new ErrorType(code,message);
   const controller = new AbortController(); const relay = () => controller.abort();
   signal?.addEventListener('abort',relay,{once:true}); if(signal?.aborted)relay();
+  const startedAt = Date.now();
   const timer = setTimeout(relay, request.timeoutMs ?? 60000); const failures = [];
-  let modelCalls = 0, lastFailure;
+  let modelCalls = 0, lastFailure, lastStage = 'not-started';
+  // Diagnostics carry finite categories, counts and timing only, never draft/provider text.
+  const failureAudit = () => ({ modelCalls, lastStage, elapsedMs:Math.max(0,Date.now()-startedAt), categories:[...new Set(failures.map(item=>item.failure?.category).filter(Boolean))] });
   const call = async(provider,system,payload,stage) => {
     if(controller.signal.aborted)throw error(signal?.aborted?'CANCELLED':'TIMEOUT','Rewrite cancelled or timed out.');
     let onAbort;
     const aborted = new Promise((_,reject)=>{onAbort=()=>reject(error(signal?.aborted?'CANCELLED':'TIMEOUT','Rewrite cancelled or timed out.'));controller.signal.addEventListener('abort',onAbort,{once:true});});
-    try { modelCalls++; return await Promise.race([Promise.resolve().then(()=>provider({system,input:JSON.stringify(payload),signal:controller.signal,maxTokens:8192,stage})),aborted]); }
+    try { modelCalls++; lastStage = stage; return await Promise.race([Promise.resolve().then(()=>provider({system,input:JSON.stringify(payload),signal:controller.signal,maxTokens:8192,stage})),aborted]); }
     finally { controller.signal.removeEventListener('abort',onAbort); }
   };
   const callParsed = async (provider, system, payload, stage, review = false, validate) => {
@@ -266,12 +298,16 @@ export async function rewritePrompt(request, { providers, signal, ErrorType }) {
         }
         if(remaining.length)throw error('FIDELITY_FAILED',remaining.slice(0,4).map(x=>x.detail).join('; '));
         return { enhanced:finalPrompt, audit:{stages,modelCalls,route:plan.fastEligible?'fast-escalated':'full-review',presentation:plan.presentation.detail,verdict:review.verdict,verification:verification?.verdict??'not-required',issues:[...review.issues,...(verification?.issues??[])],literalChecks:'pass'},warnings:failures };
-      } catch(e) { lastFailure = classifyFailure(e); failures.push({code:e?.code??'PROVIDER_ERROR',failure:lastFailure}); }
+      } catch(e) {
+        lastFailure = classifyFailure(e);
+        // Provider-defined codes are untrusted strings and may contain private data.
+        const code = ['MODEL_INVALID','MODEL_EMPTY','MODEL_TRUNCATED','MODEL_TOO_LARGE','FIDELITY_FAILED'].includes(e?.code) ? e.code : failureCode(lastFailure) === 'MODEL_FAILED' ? 'PROVIDER_ERROR' : failureCode(lastFailure);
+        failures.push({code,failure:lastFailure});
+      }
     }
-    if(signal?.aborted)throw error('CANCELLED','Enhancement cancelled; original draft retained.');
-    const failure = controller.signal.aborted ? {category:'timeout',retryable:true} : (lastFailure ?? {category:'model',retryable:false});
-    const finalError = error(failureCode(failure), failure.category === 'connection' ? 'The model connection or service failed; original draft retained.' : failure.category === 'timeout' ? 'The model operation timed out; original draft retained.' : 'No validated rewrite was returned; original draft retained.');
-    finalError.failure = failure; finalError.attempts = failures;
+    const failure = signal?.aborted ? {category:'cancelled',retryable:false} : controller.signal.aborted ? {category:'timeout',retryable:true} : (lastFailure ?? {category:'model',retryable:false});
+    const finalError = error(failureCode(failure), failure.category === 'connection' ? 'The model connection or service failed; original draft retained.' : failure.category === 'timeout' ? 'The model operation timed out; original draft retained.' : failure.category === 'cancelled' ? 'Enhancement cancelled; original draft retained.' : 'No validated rewrite was returned; original draft retained.');
+    finalError.failure = failure; finalError.attempts = failures; finalError.audit = failureAudit();
     throw finalError;
   } finally {clearTimeout(timer);signal?.removeEventListener('abort',relay);controller.abort();}
 }

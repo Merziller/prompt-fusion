@@ -1,0 +1,101 @@
+{
+  "schema": "prompt-fusion-runtime-baseline-v1",
+  "version": "0.5.2-dev.0",
+  "candidateArchive": {
+    "name": "merziller-prompt-fusion-0.5.2-dev.0.tgz",
+    "bytes": 4371598,
+    "sha256": "ecb71bf8d485623373bae4dc3c4654433e3b24084c6c673a94486ef2cf43638b"
+  },
+  "files": [
+    {
+      "path": "adapters/dsh/client-source.js",
+      "bytes": 9499,
+      "sha256": "adec06fe41cbdec502aa5ba1436e9660c46f2364e41af9796aa01cff45bdffd4"
+    },
+    {
+      "path": "adapters/dsh/client.js",
+      "bytes": 18921,
+      "sha256": "3b4f230f5a42737e72ae8815daf06cfc78b551524fa12965cb651868eb36900b"
+    },
+    {
+      "path": "adapters/dsh/index.mjs",
+      "bytes": 8597,
+      "sha256": "5a256bc223de9ee6444f0b5a404ea2271890acb01989694748239fffa8b8300d"
+    },
+    {
+      "path": "adapters/dsh/undo-state.mjs",
+      "bytes": 4576,
+      "sha256": "8d979d32ee1010dddc0fe0336f5a9274b2936e002b9606c983c4fb16d241a704"
+    },
+    {
+      "path": "bin/prompt-fusion.mjs",
+      "bytes": 6912,
+      "sha256": "2760306dcc315f5729fba3af3c8d5577f10cdb2bc6b35edabe3ead27f943abf3"
+    },
+    {
+      "path": "src/adaptive.mjs",
+      "bytes": 3299,
+      "sha256": "a5f3f798f842b364d87753c9dd3acc8d64dea7f6843d4946ce646584dfd122f9"
+    },
+    {
+      "path": "src/browser-voice.mjs",
+      "bytes": 4554,
+      "sha256": "32146e92876f2e4db64324b7948ce7cf0d1b5adfd53abc6f523195f2695ba479"
+    },
+    {
+      "path": "src/core.mjs",
+      "bytes": 15310,
+      "sha256": "7fbdbe397e647ac4e8cf9ca4d18800b94cacdd938647da4ee01e08eb64dac0cf"
+    },
+    {
+      "path": "src/failures.mjs",
+      "bytes": 3094,
+      "sha256": "fe6c998af733e76e3ac3535a9fc1537e6b56965efbdd305ad81d3530b44c8578"
+    },
+    {
+      "path": "src/http.mjs",
+      "bytes": 10393,
+      "sha256": "e6513261eb144cd6bc6daaca6e2a219be6fe60b1be19a038b92bc78afad2bb41"
+    },
+    {
+      "path": "src/install.mjs",
+      "bytes": 9913,
+      "sha256": "9b6714861059acf68eaac73993c9e50916b14bd0579171d073609bd99f184da1"
+    },
+    {
+      "path": "src/intent-guards.mjs",
+      "bytes": 4465,
+      "sha256": "e9ca7b55e57d5ac27ff22bd6d2937295dc0a41252c492c2764e8d835ba4bcc25"
+    },
+    {
+      "path": "src/mcp-common.mjs",
+      "bytes": 1385,
+      "sha256": "47b762b189c62c9424766692889bb7574c79f18ee983bdf648804c371257db4a"
+    },
+    {
+      "path": "src/mcp.mjs",
+      "bytes": 3624,
+      "sha256": "c30221eb519b235b46aa0bda5cbbf94fbff639aed416f19fa5e315d3480c7a4b"
+    },
+    {
+      "path": "src/providers.mjs",
+      "bytes": 4097,
+      "sha256": "620fd06eff52d121163da5c18d16d8c17b60d81b684e1b70df9ab0b497f97d9a"
+    },
+    {
+      "path": "src/rewrite.mjs",
+      "bytes": 37806,
+      "sha256": "24cd3f8614789ed2afbb0b7ee191ec91f794d8dbee44720c112034f6fb9a60f1"
+    },
+    {
+      "path": "src/schema.mjs",
+      "bytes": 1898,
+      "sha256": "b22d1df009ff3db480b20e571c0ca5ebcd19587ff2f51adacae4d67fbaf1eb68"
+    },
+    {
+      "path": "src/structure.mjs",
+      "bytes": 4959,
+      "sha256": "81ffdd26de49b249fbb78183c6e01e6542351aeed854dba65410fdcff7db9268"
+    }
+  ]
+}

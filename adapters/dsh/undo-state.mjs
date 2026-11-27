@@ -28,7 +28,10 @@ export function detectDocumentEnd(state) {
 }
 export function reconcileUndoSession(session, state, now = Date.now()) {
   let changed = false;
-  if (state.phase !== 'plain' && (session.request || session.busy)) { cancelUndoRequest(session); changed = true; }
+  // A completed notice belongs to the draft that produced it, not future edits.
+  if (session.observedRev !== undefined && (session.observedRev !== state.draftRev || session.observedDraft !== state.draft) && !session.request && !session.busy && session.message) { session.message = ''; changed = true; }
+  session.observedRev = state.draftRev; session.observedDraft = state.draft;
+  if (state.phase !== 'plain' && (session.request || session.busy)) { cancelUndoRequest(session); session.message = 'interrupted'; changed = true; }
   // A temporary command claim/adjudication is not a sent message. Keep its
   // still-matching backup so cancelling that state can reveal Undo again.
   if (!state.draft || state.phase === 'sending' || state.phase === 'submitting') {

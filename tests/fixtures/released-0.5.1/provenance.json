@@ -1,0 +1,22 @@
+{
+  "schema": "prompt-fusion-released-fixture-v1",
+  "version": "0.5.1",
+  "releaseCommit": "276f801784a66b79f3b229f64a633aaedcafae71",
+  "manifest": {
+    "path": "evals/releases/0.5.1/manifest.json",
+    "bytes": 14700,
+    "sha256": "a31bd78e6292c84313779d2e5e87e3430c4ed76449e856b69526b33089e23a37"
+  },
+  "inventoryFiles": 87,
+  "archiveEntries": 88,
+  "payload": {
+    "path": "payload.json.gz",
+    "encoding": "gzip-json-base64",
+    "bytes": 232039,
+    "sha256": "e0f84e266ac6d43a9303545f6ed036b4f23d7d4230dae91fadf1e7e46163e361",
+    "uncompressedBytes": 639004,
+    "uncompressedSha256": "d6392c569966c41dc031db5357814fdd338cb8a45a15f906f28ce0f7f08b580e"
+  },
+  "extraction": "Local git show --no-textconv <releaseCommit>:<path>; spawn stdout chunks concatenated as Buffers; all 87 manifest lengths and SHA-256 hashes checked before archiving.",
+  "scope": "Immutable 0.5.1 release identity and tamper tests only. Does not validate current bugfix source, fresh product quality, or authenticated GUI acceptance."
+}

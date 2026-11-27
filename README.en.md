@@ -6,6 +6,10 @@
 >
 > The historical local 0.4.0 baseline scored 99.79/99.13 on its 24 fixed/transfer cases, with a 99.46 overall mean, a 95 minimum and no critical errors. Those are not this candidate's scores or a universal guarantee. Historical publication facts remain in the [release receipts](docs/RELEASE.md).
 
+> **New version: 0.5.2-rc.1 (prerelease; 0.5.1 remains stable).** Addresses several Chinese descriptive-phrase false positives, hard-to-see failure feedback, and stopping after clearing the draft. Its development candidate passed seven actual DSH interaction checks; RC runtime files match that candidate exactly except for the core version literal. A narrow-window test encountered a Desktop renderer crash of undetermined cause, and theme coverage remains incomplete, so this is not promoted to stable. See the [scope and verification](docs/releases/0.5.2-rc.1.md) and [prerelease page](https://github.com/Merziller/prompt-fusion/releases/tag/v0.5.2-rc.1).
+>
+> Opt in to the RC: `dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.5.2-rc.1/prompt-fusion-0.5.2-rc.1.tgz`. The commands below still select stable. Marketplace submission and acceptance are separate statuses.
+
 [中文](README.md) · [Universal access](docs/UNIVERSAL_ACCESS.md) · [Platform evidence](docs/PLATFORMS.md) · [Specification](docs/SPEC.md) · [Verification](docs/VERIFICATION.md) · [Sources and licenses](THIRD_PARTY_NOTICES.md)
 
 ## What changed

@@ -2,9 +2,12 @@
 // Copyright 2026 Merziller. SPDX-License-Identifier: Apache-2.0
 window.__ModuleLoader__.load({ id: '@merziller/prompt-fusion', factory(require) {
   const React = require('react'), h = React.createElement;
-  const dictionary = {"zh":{"enhance":"增强","undo":"撤销增强","cancel":"停止","hint":"自动匹配简洁程度；简单请求只做可校验的轻量编辑，复杂请求改写并复核原意和约束。失败保留原文，不发送消息。模型服务可能计费。","busyHint":"正在生成，点击停止会保留原稿。增强已加入草稿后，同一按钮会显示“撤销增强”。","applying":"正在应用","applyingHint":"正在等待编辑器确认本次修改，确认后显示“撤销增强”。","applyUnconfirmed":"未收到编辑器确认，本次撤销记录已结束。请核对当前草稿后重试。","projectionUnavailable":"当前草稿含有未公开坐标的引用或不完整的引用信息，本次未修改。可在普通文字草稿中增强后再添加引用。","undoHint":"已增强，点击撤销本次修改。消息尚未发送。","cancelled":"已停止增强，草稿保留。","stale":"草稿已变化，已保留你的新编辑。再次点击可增强当前草稿。","unchanged":"复核后保持原文；当前内容无需调整。","needsModel":"请先在宿主设置中选择可用模型；当前草稿原样保留。","retained":"本次改写未通过或未完成，当前草稿原样保留。","networkRetained":"模型连接或服务异常，当前草稿原样保留。请检查网络、代理及服务状态后重试；这不代表内容校验失败。","timeoutRetained":"模型响应超时，当前草稿原样保留。可稍后重试。","authRetained":"模型服务的认证、权限或余额异常，当前草稿原样保留。请检查服务配置。","rateRetained":"模型服务请求频率受限，当前草稿原样保留。请稍后重试。","sessionRetained":"当前会话连接或访问校验未通过，草稿原样保留。请检查宿主会话状态；这不是模型余额判断。","applied":"已完成适合当前草稿的增强与检查。点击同一按钮可撤销。","restored":"已恢复增强前的原文。","failed":"增强未完成，原文保留。"},"en":{"enhance":"Enhance","undo":"Undo enhancement","cancel":"Stop","hint":"Match detail to the draft. Simple requests get a verified light edit; complex requests are rewritten and reviewed for intent and constraints. Failure retains the original. Does not send. Model charges may apply.","busyHint":"Generating. Stop keeps the original; after application this same button becomes Undo enhancement.","applying":"Applying","applyingHint":"Waiting for the editor to confirm this change; Undo enhancement follows.","applyUnconfirmed":"The editor did not confirm this change. Its pending undo record expired; check the current draft before retrying.","projectionUnavailable":"The draft contains an opaque quote or incomplete reference coordinates. No edit was made. Enhance plain text before adding this reference.","undoHint":"Enhanced. Click to restore the original draft. Nothing was sent.","cancelled":"Stopped; draft retained.","stale":"Draft changed; your new edits were retained. Click again to enhance the current draft.","unchanged":"Review accepted the original wording; no change was needed.","needsModel":"Select an available model in the host settings. Your original draft was retained.","retained":"The rewrite did not finish or pass validation. Your original draft was retained.","networkRetained":"The model connection or service failed. Your draft was retained. Check the network, proxy and provider before retrying; this is not a content-validation failure.","timeoutRetained":"The model response timed out. Your draft was retained; try again later.","authRetained":"The model provider reported an authentication, access or balance issue. Your draft was retained; check the provider settings.","rateRetained":"The model provider rate-limited this request. Your draft was retained; try again later.","sessionRetained":"The host session connection or access check did not pass. Your draft was retained. Check the host session; this does not indicate a model balance issue.","applied":"The draft was enhanced and checked. Click the same button to undo.","restored":"Original draft restored.","failed":"Enhancement did not complete; original retained."}};
+  const dictionary = {"zh":{"enhance":"增强","undo":"撤销增强","cancel":"停止","hint":"自动匹配简洁程度；简单请求只做可校验的轻量编辑，复杂请求改写并复核原意和约束。失败保留原文，不发送消息。模型服务可能计费。","busyHint":"正在生成，点击停止会保留原稿。增强已加入草稿后，同一按钮会显示“撤销增强”。","applying":"正在应用","applyingHint":"正在等待编辑器确认本次修改，确认后显示“撤销增强”。","applyUnconfirmed":"未收到编辑器确认，本次撤销记录已结束。请核对当前草稿后重试。","projectionUnavailable":"当前草稿含有未公开坐标的引用或不完整的引用信息，本次未修改。可在普通文字草稿中增强后再添加引用。","undoHint":"已增强，点击撤销本次修改。消息尚未发送。","cancelled":"已停止增强，草稿保留。","stale":"草稿已变化，已保留你的新编辑。再次点击可增强当前草稿。","unchanged":"复核后保持原文；当前内容无需调整。","needsModel":"请先在宿主设置中选择可用模型；当前草稿原样保留。","retained":"本次改写未通过或未完成，当前草稿原样保留。","fidelityRetained":"改写未通过原意与约束检查，已保留原文。可调整措辞后重试；消息未发送。","formatRetained":"模型返回格式异常，已保留原文。可重试或切换模型；消息未发送。","interrupted":"界面切换中断了增强，原稿保留。返回后可重新增强。","networkRetained":"模型连接或服务异常，当前草稿原样保留。请检查网络、代理及服务状态后重试；这不代表内容校验失败。","timeoutRetained":"模型响应超时，当前草稿原样保留。可稍后重试。","authRetained":"模型服务的认证、权限或余额异常，当前草稿原样保留。请检查服务配置。","rateRetained":"模型服务请求频率受限，当前草稿原样保留。请稍后重试。","sessionRetained":"当前会话连接或访问校验未通过，草稿原样保留。请检查宿主会话状态；这不是模型余额判断。","applied":"已完成适合当前草稿的增强与检查。点击同一按钮可撤销。","restored":"已恢复增强前的原文。","failed":"增强未完成，原文保留。"},"en":{"enhance":"Enhance","undo":"Undo enhancement","cancel":"Stop","hint":"Match detail to the draft. Simple requests get a verified light edit; complex requests are rewritten and reviewed for intent and constraints. Failure retains the original. Does not send. Model charges may apply.","busyHint":"Generating. Stop keeps the original; after application this same button becomes Undo enhancement.","applying":"Applying","applyingHint":"Waiting for the editor to confirm this change; Undo enhancement follows.","applyUnconfirmed":"The editor did not confirm this change. Its pending undo record expired; check the current draft before retrying.","projectionUnavailable":"The draft contains an opaque quote or incomplete reference coordinates. No edit was made. Enhance plain text before adding this reference.","undoHint":"Enhanced. Click to restore the original draft. Nothing was sent.","cancelled":"Stopped; draft retained.","stale":"Draft changed; your new edits were retained. Click again to enhance the current draft.","unchanged":"Review accepted the original wording; no change was needed.","needsModel":"Select an available model in the host settings. Your original draft was retained.","retained":"The rewrite did not finish or pass validation. Your original draft was retained.","fidelityRetained":"The rewrite did not pass intent and constraint checks. Original retained. Adjust the wording and retry; nothing was sent.","formatRetained":"The model returned an invalid format. Original retained. Retry or switch models; nothing was sent.","interrupted":"A view change interrupted enhancement. Original retained. Return to enhance again.","networkRetained":"The model connection or service failed. Your draft was retained. Check the network, proxy and provider before retrying; this is not a content-validation failure.","timeoutRetained":"The model response timed out. Your draft was retained; try again later.","authRetained":"The model provider reported an authentication, access or balance issue. Your draft was retained; check the provider settings.","rateRetained":"The model provider rate-limited this request. Your draft was retained; try again later.","sessionRetained":"The host session connection or access check did not pass. Your draft was retained. Check the host session; this does not indicate a model balance issue.","applied":"The draft was enhanced and checked. Click the same button to undo.","restored":"Original draft restored.","failed":"Enhancement did not complete; original retained."}};
   const css = '.pf-action{display:inline-flex;align-items:center;position:relative;font:inherit}.pf-action button{display:inline-flex;align-items:center;gap:5px;height:28px;padding:0 8px;border:0;border-radius:7px;background:transparent;color:var(--dsw-alias-fg-secondary,inherit);font:inherit;font-size:12px;white-space:nowrap;cursor:pointer;transition:background .15s,color .15s}.pf-action button:hover{background:var(--dsw-alias-bg-secondary,rgba(127,127,127,.1));color:var(--dsw-alias-fg-primary,inherit)}.pf-action button:disabled{opacity:.35;cursor:default}.pf-action button:focus-visible{outline:2px solid var(--dsw-alias-brand-primary,currentColor);outline-offset:2px}.pf-action svg{flex:none}.pf-action [aria-busy=true] svg{animation:pf-spin 1.6s linear infinite}.pf-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@keyframes pf-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.pf-action [aria-busy=true] svg{animation:none}}';
   const icon = () => h('svg', { width:15, height:15, viewBox:'0 0 20 20', fill:'none', stroke:'currentColor', strokeWidth:1.5, 'aria-hidden':true }, h('path', { d:'m10 2 1.9 5.8L18 10l-6.1 2.2L10 18l-1.9-5.8L2 10l6.1-2.2L10 2zM16 1v4M14 3h4' }));
+  const feedbackCss = '.pf-notice{position:absolute;right:0;bottom:calc(100% + 8px);width:max-content;max-width:min(340px,calc(100vw - 48px));box-sizing:border-box;padding:9px 12px;border:1px solid var(--dsw-alias-border-primary,currentColor);border-radius:9px;background:var(--dsw-alias-bg-primary,Canvas);color:var(--dsw-alias-fg-primary,CanvasText);box-shadow:0 3px 14px rgba(0,0,0,.12);font-size:12px;line-height:1.5;white-space:normal;z-index:10}';
+  const failureMessage = (value, fallback = 'retained') => ({configuration:'needsModel',cancelled:'cancelled',timeout:'timeoutRetained',connection:'networkRetained',authentication:'authRetained','rate-limit':'rateRetained',format:'formatRetained',fidelity:'fidelityRetained'})[value?.category] || fallback;
+  const visibleFeedback = key => ['cancelled','unchanged','needsModel','retained','networkRetained','timeoutRetained','authRetained','rateRetained','sessionRetained','formatRetained','fidelityRetained','failed','stale','projectionUnavailable','applyUnconfirmed','interrupted'].includes(key);
   // Copyright 2026 Merziller. SPDX-License-Identifier: Apache-2.0
 // Session-owned, memory-only transaction state. No DOM/private editor access.
 const undoSessions = new WeakMap();
@@ -35,7 +38,10 @@ function detectDocumentEnd(state) {
 }
 function reconcileUndoSession(session, state, now = Date.now()) {
   let changed = false;
-  if (state.phase !== 'plain' && (session.request || session.busy)) { cancelUndoRequest(session); changed = true; }
+  // A completed notice belongs to the draft that produced it, not future edits.
+  if (session.observedRev !== undefined && (session.observedRev !== state.draftRev || session.observedDraft !== state.draft) && !session.request && !session.busy && session.message) { session.message = ''; changed = true; }
+  session.observedRev = state.draftRev; session.observedDraft = state.draft;
+  if (state.phase !== 'plain' && (session.request || session.busy)) { cancelUndoRequest(session); session.message = 'interrupted'; changed = true; }
   // A temporary command claim/adjudication is not a sent message. Keep its
   // still-matching backup so cancelling that state can reveal Undo again.
   if (!state.draft || state.phase === 'sending' || state.phase === 'submitting') {
@@ -77,7 +83,7 @@ function undoMatches(session, state) {
     React.useEffect(() => {
       const update = () => redraw(value => value + 1); session.listeners.add(update);
       reconcileUndoSession(session, live.current); update();
-      return () => { session.listeners.delete(update); if (session.request) { cancelUndoRequest(session); publish(); } };
+      return () => { session.listeners.delete(update); if (session.request) { cancelUndoRequest(session); session.message = 'interrupted'; publish(); } };
     }, [session]);
     React.useEffect(() => { if (reconcileUndoSession(session, state)) publish(); }, [session, state.phase, state.draft, state.draftRev]);
     const pendingBackup = session.backup?.pending ? session.backup : null;
@@ -90,6 +96,7 @@ function undoMatches(session, state) {
     }, [session, pendingBackup]);
     const run = async () => {
       const current = live.current;
+      if (session.request || session.busy) { cancelUndoRequest(session); setMessage('cancelled'); return; }
       if (current.phase !== 'plain' || !current.draft.trim()) return;
       reconcileUndoSession(session, current);
       if (undoMatches(session, current)) {
@@ -101,7 +108,6 @@ function undoMatches(session, state) {
         else { session.backup = backup; setMessage('stale'); }
         return;
       }
-      if (session.request || session.busy) { cancelUndoRequest(session); setMessage('cancelled'); return; }
       const before = current.draft, revision = current.draftRev;
       // Atomic native reference chips retain their exact positions: append only.
       const appendOnly = Array.isArray(current.occurrences) && current.occurrences.length > 0;
@@ -116,11 +122,11 @@ function undoMatches(session, state) {
         let result;
         try { result = await response.json(); }
         catch { const error = new Error('INVALID_RESPONSE'); error.code = 'INVALID_RESPONSE'; error.status = response.status; throw error; }
-        if (!response.ok) { const error = new Error('REQUEST_FAILED'); error.code = typeof result?.error?.code === 'string' ? result.error.code : 'REQUEST_FAILED'; error.status = response.status; throw error; }
+        if (!response.ok) { const error = new Error('REQUEST_FAILED'); error.code = typeof result?.error?.code === 'string' ? result.error.code : 'REQUEST_FAILED'; error.failure = result?.error?.failure; error.status = response.status; throw error; }
         if (id !== session.generation) return;
         if (live.current.phase !== 'plain' || live.current.draft !== before || live.current.draftRev !== revision) { setMessage('stale'); return; }
         if (typeof result.enhanced !== 'string' || !result.enhanced.trim() || result.original !== before || (appendOnly && !result.enhanced.startsWith(before))) throw new Error('INVALID_RESULT');
-        if (result.enhanced === before) { setMessage(result.engine === 'unchanged' ? (result.failure?.category === 'connection' || result.warnings?.some(w => w.code === 'NETWORK_SERVICE_ERROR') ? 'networkRetained' : result.failure?.category === 'timeout' ? 'timeoutRetained' : result.failure?.category === 'authentication' ? 'authRetained' : result.failure?.category === 'rate-limit' ? 'rateRetained' : result.warnings?.some(w => w.code === 'MODEL_REQUIRED' || w.code === 'NO_MODEL') ? 'needsModel' : 'retained') : 'unchanged'); return; }
+        if (result.enhanced === before) { setMessage(result.engine === 'unchanged' ? failureMessage(result.failure, result.warnings?.some(w => w.code === 'MODEL_REQUIRED' || w.code === 'NO_MODEL') ? 'needsModel' : result.warnings?.some(w => w.code === 'NETWORK_SERVICE_ERROR') ? 'networkRetained' : 'retained') : 'unchanged'); return; }
         const staged = stageUndo(session, current, result.enhanced, appendOnly);
         if (!staged) { setMessage('projectionUnavailable'); return; }
         // Register the transaction before a synchronous editor update can re-render us.
@@ -129,7 +135,7 @@ function undoMatches(session, state) {
         reconcileUndoSession(session, live.current);
         setMessage('applied');
       } catch (error) {
-        if (id === session.generation) { const code = error?.code; const key = error?.name === 'AbortError' ? 'cancelled' : code === 'PROVIDER_AUTH' ? 'authRetained' : code === 'PROVIDER_RATE_LIMIT' ? 'rateRetained' : code === 'TIMEOUT' || error?.status === 504 || error?.status === 408 ? 'timeoutRetained' : error?.status === 401 || error?.status === 403 ? 'sessionRetained' : code === 'NETWORK_SERVICE_ERROR' || error?.name === 'TypeError' || error?.status >= 500 ? 'networkRetained' : 'failed'; setMessage(key); }
+        if (id === session.generation) { const code = error?.code; const key = error.failure ? failureMessage(error.failure, 'failed') : error?.name === 'AbortError' ? 'cancelled' : code === 'PROVIDER_AUTH' ? 'authRetained' : code === 'PROVIDER_RATE_LIMIT' || error?.status === 429 ? 'rateRetained' : code === 'TIMEOUT' || error?.status === 504 || error?.status === 408 ? 'timeoutRetained' : error?.status === 401 || error?.status === 403 ? 'sessionRetained' : code === 'MODEL_REQUIRED' || code === 'NO_MODEL' ? 'needsModel' : code === 'NETWORK_SERVICE_ERROR' || error?.name === 'TypeError' || error?.status >= 500 ? 'networkRetained' : 'failed'; setMessage(key); }
       } finally {
         if (id === session.generation) { session.request = null; session.busy = false; publish(); }
       }
@@ -140,9 +146,9 @@ function undoMatches(session, state) {
     const message = session.message ? t(session.message) : '';
     const label = undoable ? t('undo') : busy ? t('cancel') : applying ? t('applying') : t('enhance');
     const title = undoable ? t('undoHint') : busy ? t('busyHint') : applying ? t('applyingHint') : message || t('hint');
-    return h('span', { className:'pf-action' }, h('style', null, css),
-      h('button', { type:'button', title, 'aria-label':label, 'aria-busy':busy, disabled:state.phase !== 'plain' || !state.draft.trim() || applying, onMouseDown:event => event.preventDefault(), onClick:run }, icon(), label),
-      h('span', { className:'pf-sr', role:'status', 'aria-live':'polite' }, message));
+    return h('span', { className:'pf-action' }, h('style', null, css + feedbackCss),
+      h('button', { type:'button', title, 'aria-label':label, 'aria-busy':busy, disabled:!busy && (state.phase !== 'plain' || !state.draft.trim() || applying), onMouseDown:event => event.preventDefault(), onClick:run }, icon(), label),
+      h('span', { className:visibleFeedback(session.message) ? 'pf-notice' : 'pf-sr', role:'status', 'aria-live':'polite', 'aria-atomic':true }, message));
   }
   return { inject:['slots','locale'], apply(ctx) {
     ctx.effect(() => ctx.locale.register('promptFusion', dictionary), 'prompt-fusion-locales');

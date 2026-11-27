@@ -1,7 +1,8 @@
 // Copyright 2026 Merziller. SPDX-License-Identifier: Apache-2.0
 import { structuredPrompt, isStructuredPrompt } from './structure.mjs';
 import { rewritePrompt } from './rewrite.mjs';
-export const VERSION = '0.5.1';
+import { classifyFailure } from './failures.mjs';
+export const VERSION = '0.5.2-rc.1';
 export const LIMITS = Object.freeze({ inputBytes: 49152, contextBytes: 8192, outputBytes: 81920, modelBytes: 8192, contexts: 4 });
 export const DOMAINS = Object.freeze(['auto', 'general', 'code', 'design', 'office', 'collaboration', 'research', 'writing']);
 export const MODES = Object.freeze(['base', 'lite', 'standard', 'smart', 'publish']);
@@ -102,8 +103,9 @@ export async function enhance(request, { providers = [], signal } = {}) {
       result = await rewritePrompt(r, { providers, signal, ErrorType: FusionError });
     } catch (e) {
       if (e.code === 'CANCELLED' || r.fallback === false) throw e;
-      warnings.push({ code: e.code ?? 'PROVIDER_ERROR', ...(e.failure ? {failure:e.failure} : {}) }, { code: 'ORIGINAL_RETAINED' });
-      return { version: VERSION, original: r.input, enhanced: r.input, domain, mode: r.mode, intensity: r.intensity, language: detectedLanguage, engine: 'unchanged', ruleIds: [], warnings, ...(e.failure ? {failure:e.failure} : {}), layout: r.layout, changes: { originalPreserved: true, originalPrefixPreserved: true, reorganized: false, appendedCharacters: 0 }, ...(r.voice ? { voiceSuggestion: cleanTranscript(r.input, r.dictionary), voiceApplied: false } : {}) };
+      const failure = classifyFailure(e);
+      warnings.push({ code: e.code ?? 'PROVIDER_ERROR', failure }, { code: 'ORIGINAL_RETAINED' });
+      return { version: VERSION, original: r.input, enhanced: r.input, domain, mode: r.mode, intensity: r.intensity, language: detectedLanguage, engine: 'unchanged', ruleIds: [], warnings, failure, ...(e.audit ? {audit:e.audit} : {}), layout: r.layout, changes: { originalPreserved: true, originalPrefixPreserved: true, reorganized: false, appendedCharacters: 0 }, ...(r.voice ? { voiceSuggestion: cleanTranscript(r.input, r.dictionary), voiceApplied: false } : {}) };
     }
     const enhanced = result.enhanced;
     return { version: VERSION, original: r.input, enhanced, domain: r.domain, mode: r.mode, intensity: r.intensity, language: detectedLanguage, engine: 'model-rewrite', ruleIds: [], warnings: [...warnings,...result.warnings], layout: r.layout, audit: result.audit,

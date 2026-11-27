@@ -6,6 +6,10 @@
 >
 > **历史0.4.0本地基线**在24条题目的第十轮测试中得到固定集99.79、迁移集99.13、总体99.46、最低95及零关键错误；这不是当前候选的分数，也不是普遍质量保证。历史来源、发行事实见[回执](docs/RELEASE.md)。
 
+> **新版：0.5.2-rc.1（预发布，稳定版仍为 0.5.1）。** 修复部分中文描述句误判、增强失败原因不显眼及清空草稿后停止受阻等问题。对应开发候选已完成七项真实 DSH 操作检查；RC 运行代码与候选逐字节一致，仅核心版本字面量变化。窄窗口测试曾遇到原因未定的 Desktop 渲染进程崩溃，主题覆盖尚未完成，因此暂不提升为稳定版。见[本版范围与验证](docs/releases/0.5.2-rc.1.md)、[预发布页面](https://github.com/Merziller/prompt-fusion/releases/tag/v0.5.2-rc.1)。
+>
+> 选择体验 RC：`dsh plugin --profile desktop add https://github.com/Merziller/prompt-fusion/releases/download/v0.5.2-rc.1/prompt-fusion-0.5.2-rc.1.tgz`。下方命令继续指向稳定版。市场申请状态单独核实，不把提交等同于收录。
+
 [English](README.en.md) · [通用接入](docs/UNIVERSAL_ACCESS.md) · [平台依据](docs/PLATFORMS.md) · [规格](docs/SPEC.md) · [来源审计](docs/SOURCE_AUDIT.md) · [验证](docs/VERIFICATION.md) · [作者](AUTHORS.md)
 
 ## 与旧版的区别

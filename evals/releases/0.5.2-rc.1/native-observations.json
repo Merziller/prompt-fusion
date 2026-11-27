@@ -1,0 +1,68 @@
+{
+  "schema": "prompt-fusion-native-projection-v1",
+  "scope": "candidate-native-observations-not-rc-reexecution",
+  "observedVersion": "0.5.2-dev.0",
+  "at": "2026-11-26T20:23:03.631Z",
+  "sourceEvidenceSha256": "0e80f23cc32577ec014d1dd8f37f7e8ce133e947673d2cf8395fbe2a441521e4",
+  "checks": [
+    {
+      "id": "enhance-button",
+      "status": "PASS",
+      "originalCharacters": 85,
+      "enhancedCharacters": 157,
+      "observedCompletionMs": 10229,
+      "buttonAfter": "撤销增强",
+      "authority": "actual UI Automation and native editor"
+    },
+    {
+      "id": "undo",
+      "status": "PASS",
+      "restoredExact": true
+    },
+    {
+      "id": "stop",
+      "status": "PASS",
+      "clickedAtMs": 1192,
+      "observedBusy": true,
+      "draftRetainedExact": true
+    },
+    {
+      "id": "empty-draft-stop",
+      "status": "PASS",
+      "stopEnabled": true,
+      "draftRetainedExact": true,
+      "noticeObserved": true
+    },
+    {
+      "id": "notice-clears-on-edit",
+      "status": "PASS",
+      "remainingNotices": 0
+    },
+    {
+      "id": "manual-edit-during-enhancement",
+      "status": "PASS",
+      "manualDraftRetainedExact": true,
+      "settledMs": 6184,
+      "staleNoticeObserved": true
+    },
+    {
+      "id": "host-recovery-and-draft-restoration",
+      "status": "PASS",
+      "repeatedRestart": false,
+      "restoredExact": true
+    }
+  ],
+  "narrowWindow": "INCOMPLETE",
+  "themeCoverage": "NOT_RUN",
+  "incident": {
+    "observed": "Desktop renderer exited: crashed",
+    "causality": "UNKNOWN: coincident operations and console messages do not establish the cause"
+  },
+  "limits": [
+    "Narrow-window notice layout not passed; test interrupted by renderer crash.",
+    "Light/dark theme coverage not completed.",
+    "No deliberate provider network/auth/fidelity failure was injected in the native UI; those category contracts have automated tests.",
+    "A few actual model/UI observations are not a model-quality benchmark or proof of all-input reliability."
+  ],
+  "noPromptSentByTests": true
+}

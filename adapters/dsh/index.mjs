@@ -1,11 +1,12 @@
 // Copyright 2026 Merziller. SPDX-License-Identifier: Apache-2.0
 import { enhance, FusionError, validateRequest } from '../../src/core.mjs';
 import { collectDshText } from '../../src/providers.mjs';
+import { classifyFailure } from '../../src/failures.mjs';
 import { inputSchema, toolDefinition } from '../../src/schema.mjs';
 export const name = '@merziller/prompt-fusion';
 export const inject = ['commands', 'connection'];
 const ROOT = '/api/merziller/prompt-fusion';
-const errorResult = (e) => ({ error: { code: e instanceof FusionError ? e.code : 'INTERNAL_ERROR', message: e instanceof FusionError ? e.message : 'Operation failed; original draft retained.' } });
+const errorResult = (e) => ({ error: { code: e instanceof FusionError ? e.code : 'INTERNAL_ERROR', message: e instanceof FusionError ? e.message : 'Operation failed; original draft retained.', ...(e?.failure ? {failure:classifyFailure(e)} : {}), ...(e?.audit ? {audit:e.audit} : {}) } });
 export function validateWave(base64) {
   if (typeof base64 !== 'string' || base64.length > 5120060 || base64.length % 4 || !/^[A-Za-z0-9+/]*={0,2}$/.test(base64)) throw new FusionError('INVALID_AUDIO', 'Provide a bounded base64 PCM WAV recording.');
   const audio = Buffer.from(base64, 'base64'); const ascii = (a,b) => audio.toString('ascii',a,b);

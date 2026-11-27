@@ -1,25 +1,26 @@
-## Update Merziller/prompt-fusion to 0.5.1
+## Update Merziller/prompt-fusion to 0.5.2-rc.1 (prerelease)
 
-One catalog entry only: `data/plugins/Merziller__prompt-fusion.yml`, category `ui`. Public project: https://github.com/Merziller/prompt-fusion . Product name remains **Prompt Fusion** (Chinese short name: 禾杨灵词). Produced by 禾杨智绘工作室（绍兴市柯桥区禾杨智绘软件开发工作室）, developed by Merziller (子墨).
+This submission changes only `data/plugins/Merziller__prompt-fusion.yml`, category `ui`. Public repository: https://github.com/Merziller/prompt-fusion . Product: Prompt Fusion / 禾杨灵词. Produced by 禾杨智绘工作室（绍兴市柯桥区禾杨智绘软件开发工作室）, developed by Merziller (子墨).
 
 Copyright 2026 绍兴市柯桥区禾杨智绘软件开发工作室 (禾杨智绘) & Merziller (子墨)
 
-Apache-2.0, zero runtime dependencies, prebuilt pinned release: https://github.com/Merziller/prompt-fusion/releases/download/v0.5.1/prompt-fusion-0.5.1.tgz . Exact package/client identity `@merziller/prompt-fusion`, a `dsh.bundle` patch, localized metadata, original icon and `dsh-plugin` topic are retained.
+Apache-2.0; no runtime dependencies or install hooks; real `dsh.bundle` declaration; localized metadata; original icon; `dsh-plugin` topic. Pinned prebuilt archive: https://github.com/Merziller/prompt-fusion/releases/download/v0.5.2-rc.1/prompt-fusion-0.5.2-rc.1.tgz . **This is an opt-in RC, not a stable release. 0.5.1 remains available as stable.**
 
-### What changed
+### Actual changes
 
-Semantic prompt rewriting with fidelity review and conditional verification, a conservative one-call surface-edit path, explicit network/timeout/provider errors, and the Undo transaction fix. It protects explicit goals and avoids adding unrequested output-format restrictions. DSH has the same single Enhance / Stop / Undo enhancement button; there is no extra brand prefix, settings panel or recording button and no auto-send.
+- Fix several Chinese descriptive-phrase/ordinary-word false positives while retaining real prohibition checks.
+- Show visible, bounded failure reasons rather than only stopping the spinner.
+- Allow Stop after the draft is cleared; clear stale notices after editing; retain Undo and revision-checked draft updates.
+- Preserve the single Enhance / Stop / Undo button and shared CLI, Skills, MCP and REST core. No automatic task execution or sending. Explicit model configuration outside DSH; model services may charge.
 
-CLI, portable Skills, MCP stdio/stateless Streamable HTTP and REST/OpenAPI share the core. Outside DSH, model access requires explicit `--model` and user-provided environment variables. No host login is borrowed. Project code is free; selected model providers may charge.
+### Evidence and limitations
 
-### Verification and honest boundaries
+The development candidate passed seven actual DSH interaction checks, and RC runtime bytes match it except for the core version literal. RC archive installation, full tests and integrity verification are separate from those candidate observations. The six official MCP SDK combinations and React/Lexical fixture are not a claim that all native vendors were tested. See https://github.com/Merziller/prompt-fusion/blob/main/docs/releases/0.5.2-rc.1.md .
 
-`npm run build`, `npm test`, `npm run check` and `node scripts/verify-distribution.mjs` validate the release. A fresh offline archive install repeats the source checks and tests; independent MCP SDK and React 18.2 / Lexical 0.49 fixtures exercise transports and Undo. Retained actual host-tool results are distinct from an authenticated GUI test, which remains NOT_RUN. See `docs/releases/0.5.1.md` and `docs/RELEASE.md` for exact final receipts and CI links.
+A narrow-window test encountered a Desktop renderer crash of unknown cause; theme coverage is incomplete. Hence the prerelease label. No new model-quality benchmark or universal success guarantee is claimed. Historical failures and the original 0.5.1 fixture remain preserved.
 
-Earlier four-/five-way evaluation outputs, errors, input and source snapshots remain as historical evidence. Their headline scores are **not** attributed to 0.5.1. Native vendor applications and historical Windows development-link replacement limitations remain disclosed. No universal quality or compatibility guarantee is claimed.
+feiwell, ChosenXu and Fishsb are credited upstream sources, not invented contributors. Their copyright/license/NOTICE files and the distinction between independent runtime implementation and evaluation prompt reuse remain intact.
 
-Upstream feiwell, ChosenXu and Fishsb are acknowledged sources, not invented contributors. Their license and NOTICE texts are preserved. Runtime implementation and separately attributed evaluation prompt reuse are distinguished.
-
-Repository creation: 2026-11-25 19:18:43 UTC; the one-day condition is met after 2026-11-26 19:18:43 UTC. This request does not edit generated READMEs or other entries. Submission, maintainer merge and actual client catalog synchronization are separate statuses.
+The repository is more than one day old. Only this project's entry is changed; generated READMEs and other entries are untouched. Submission, maintainer acceptance and downstream storefront synchronization are separate outcomes.
 
 [![](https://img.shields.io/badge/powered_by-dsh-4D6BFE?style=flat-square&logo=deepseek&logoColor=white)](https://github.com/deepseek-ai/deepseek-harness)

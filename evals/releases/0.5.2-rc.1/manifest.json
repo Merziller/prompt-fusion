@@ -1,0 +1,1469 @@
+{
+  "schema": "prompt-fusion-release-integrity-v2",
+  "version": "0.5.2-rc.1",
+  "releaseKind": "prerelease",
+  "qualityAcceptance": "NOT_CLAIMED",
+  "excludedFiles": [
+    "evals/releases/0.5.2-rc.1/manifest.json"
+  ],
+  "runtimeBaseline": "evals/releases/0.5.2-rc.1/runtime-baseline.json",
+  "nativeObservations": "evals/releases/0.5.2-rc.1/native-observations.json",
+  "thirdPartyNoticesSha256": "6b6f5524a67a30e362637802fcd8b2cc53898a9d0957e16ae95c14a228be6251",
+  "files": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "bytes": 624,
+      "sha256": "f4365737fcb19e6aecdd6c0520d21d310cf45f2402395c7923de41106a45eea4"
+    },
+    {
+      "path": ".mcp.json",
+      "bytes": 119,
+      "sha256": "263cff28730df5b197612a2eee3aaa65708285afe7650aaa4bc5fc4d92fb3ab6"
+    },
+    {
+      "path": "AUTHORS.md",
+      "bytes": 1655,
+      "sha256": "dd47bd56104be013e5d008d32cdcfd68f8d83491865279833ff43d356ebe0f8e"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 7417,
+      "sha256": "cfefa77f7de7665b3e03edbc2bbd4c85b5ef452192eedf688b024c19b771549a"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11462,
+      "sha256": "a416fbb88af9f47b2ee49b93a14756bf17246e38095c3c0b362c1ab87db52308"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 987,
+      "sha256": "9b24bbe81da6c140ad5b8935229d9eb20808706ce4969a88041ca1330384d50c"
+    },
+    {
+      "path": "README.en.md",
+      "bytes": 11095,
+      "sha256": "3928cd79492e2a1d1a817e8cd66cc08cb84531249885515fbc353b8a2b8668c8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 11491,
+      "sha256": "65e5a14d5d595aa9fce17ef220a822b6c7c4847d9c8f6698b41486e1dfc0b0cf"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2758,
+      "sha256": "6b6f5524a67a30e362637802fcd8b2cc53898a9d0957e16ae95c14a228be6251"
+    },
+    {
+      "path": "adapters/dsh/client-source.js",
+      "bytes": 9499,
+      "sha256": "adec06fe41cbdec502aa5ba1436e9660c46f2364e41af9796aa01cff45bdffd4"
+    },
+    {
+      "path": "adapters/dsh/client.js",
+      "bytes": 18921,
+      "sha256": "3b4f230f5a42737e72ae8815daf06cfc78b551524fa12965cb651868eb36900b"
+    },
+    {
+      "path": "adapters/dsh/index.mjs",
+      "bytes": 8597,
+      "sha256": "5a256bc223de9ee6444f0b5a404ea2271890acb01989694748239fffa8b8300d"
+    },
+    {
+      "path": "adapters/dsh/undo-state.mjs",
+      "bytes": 4576,
+      "sha256": "8d979d32ee1010dddc0fe0336f5a9274b2936e002b9606c983c4fb16d241a704"
+    },
+    {
+      "path": "assets/icon.svg",
+      "bytes": 412,
+      "sha256": "2a205594f2f139c47f3bf3aeaf6eb3c4482c41839293af1dca1450b8eefc4c1b"
+    },
+    {
+      "path": "bin/prompt-fusion.mjs",
+      "bytes": 6912,
+      "sha256": "2760306dcc315f5729fba3af3c8d5577f10cdb2bc6b35edabe3ead27f943abf3"
+    },
+    {
+      "path": "cordis.patch.yml",
+      "bytes": 100,
+      "sha256": "a3c663ce9d2211a41d78ce062c73c5b6cfeb25d6d68861bb9657290e8bc169a6"
+    },
+    {
+      "path": "docs/ADAPTIVE_CANDIDATE.md",
+      "bytes": 4842,
+      "sha256": "731e85d20acc2e33a54ef20b4780294ebb250bd101f8dba20bdfdf205e327454"
+    },
+    {
+      "path": "docs/FIXES_0.5.1.md",
+      "bytes": 8624,
+      "sha256": "0aadefdd61e8ff1e444750d9692b96705fbd626ba488b77796507ded457bd971"
+    },
+    {
+      "path": "docs/FIXES_0.5.2-dev.0.md",
+      "bytes": 6196,
+      "sha256": "172358dc584ae4e1f17f6963cdceb7cde57ce33065a69b1d5a14aaa0690d26b3"
+    },
+    {
+      "path": "docs/PLATFORMS.md",
+      "bytes": 8753,
+      "sha256": "7c76d981778bfd1ea75eb6e123da0c1a5f4a1cd2d328b672f794672eb84c4d7b"
+    },
+    {
+      "path": "docs/QUALITY_AUDIT.md",
+      "bytes": 4829,
+      "sha256": "8baa5d88a4124095e557288bc72613eca3e201dda95da8523a0f1d09283ea2d7"
+    },
+    {
+      "path": "docs/RELEASE.md",
+      "bytes": 9859,
+      "sha256": "afaaecb6d807d587cac3139a08094750636a74184cd22ff2ceb873efd4215c3d"
+    },
+    {
+      "path": "docs/RELEASE_NOTES.md",
+      "bytes": 2656,
+      "sha256": "59cf9e7a99310e93f987a60f4a3ad75ca4f0807fbe0641b17f3bb8b779249768"
+    },
+    {
+      "path": "docs/SOURCE_AUDIT.md",
+      "bytes": 6786,
+      "sha256": "2f869b9ccff081cece5d0facf13f5fe1a096ca1f9bf232757948bd22d506c94f"
+    },
+    {
+      "path": "docs/SPEC.md",
+      "bytes": 5945,
+      "sha256": "ce61ba1711952a8ffb63d834c4b57bb43d6cef4adf581399bd034395120ffe32"
+    },
+    {
+      "path": "docs/UNIVERSAL_ACCESS.md",
+      "bytes": 7138,
+      "sha256": "95314e6125865dfae6bda142388d2570f97d2a375458a6ec0391027aeb538cd7"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "bytes": 9034,
+      "sha256": "e4340e5c66c8c4d496ab52e696e7d3a6047cfa629636a61a5ba2deae32b503b4"
+    },
+    {
+      "path": "docs/WECHAT_UPDATE_0.5.2-rc.1.md",
+      "bytes": 875,
+      "sha256": "b0e3166cca1e9a6d256fd49c1ad722733e691626d626747bc53d5fa0640b8594"
+    },
+    {
+      "path": "docs/dsh-team/DELIVERY.md",
+      "bytes": 6799,
+      "sha256": "8b555c43b37fe584bb696d3041fc825f3bae956e8d707f2d3315e193954991cb"
+    },
+    {
+      "path": "docs/evaluation/OPTIMIZATION_PROTOCOL.md",
+      "bytes": 4143,
+      "sha256": "bbd57559e59364aafac29628e2663fcc38f33fe363b323db483cdab11e80ae51"
+    },
+    {
+      "path": "docs/evaluation/RESULTS.md",
+      "bytes": 2293,
+      "sha256": "ac6ef503b187cef69bee044bbd93c42490a76073c7f6dd03c34e6d346b8a90b6"
+    },
+    {
+      "path": "docs/evaluation/WORKBUDDY_INTEGRATION_PROTOCOL.md",
+      "bytes": 4088,
+      "sha256": "75fb98ce5801d931f5f6dc3717a8896ec5cdd98229666b253ab6e9398cda36c2"
+    },
+    {
+      "path": "docs/fixes/sdk-0.5.1-dev.json",
+      "bytes": 1675,
+      "sha256": "3fa71c40b8bb03490c7b3739f01f45556f8d299ff4332faca81cee2ff5824fac"
+    },
+    {
+      "path": "docs/fixes/test-results-0.5.1-dev.json",
+      "bytes": 320,
+      "sha256": "c14e7587fcc17d21070f64612ed9232dd81de2be335e8abae8bb3a1f581b40db"
+    },
+    {
+      "path": "docs/fixes/undo-react-lexical-verification.json",
+      "bytes": 1712,
+      "sha256": "31c9a2b85c9e357a968ec0ef2cee32231c3a750b647a71a6e89bae5ea871eb32"
+    },
+    {
+      "path": "docs/marketplace/Merziller__prompt-fusion.yml",
+      "bytes": 530,
+      "sha256": "65f02f01d2c9c30e4b9f30be677a5451044de6830d3f298db3b9bfc76c45e0f4"
+    },
+    {
+      "path": "docs/marketplace/PR_BODY.md",
+      "bytes": 2753,
+      "sha256": "4d3c9686a90eac2f145279b7989173e54c5f561827d8f8654437aeac99ccabc3"
+    },
+    {
+      "path": "docs/quality-scores.json",
+      "bytes": 15597,
+      "sha256": "6e40db274240e568c07a99fb1f1c13098d4b2712455b46fddac576cf6257c861"
+    },
+    {
+      "path": "docs/releases/0.5.1-publication.json",
+      "bytes": 5723,
+      "sha256": "1ba102a2dddec5d8debbd1395b48413103f0f3710321f4a4f12e53789f4b1ecc"
+    },
+    {
+      "path": "docs/releases/0.5.1-undo-verification.json",
+      "bytes": 1712,
+      "sha256": "1afed3c3913bb3c1163bb48b976e35ef7de464e120d24e60805baae5df3e718c"
+    },
+    {
+      "path": "docs/releases/0.5.1.md",
+      "bytes": 3980,
+      "sha256": "5c9b89fa046e6243cd792397ee30392fddcf50e7189a0cdb6a46a97e4bf22d55"
+    },
+    {
+      "path": "docs/releases/0.5.2-rc.1.md",
+      "bytes": 4339,
+      "sha256": "28d64cddbcaeabbebafda82934145fa9d711b8b4b0933a08323ab170ea3798d8"
+    },
+    {
+      "path": "docs/sdk-semantic-verification-0.4.0.json",
+      "bytes": 1651,
+      "sha256": "4e4467a83ee88f6115aeb94da2c5dc999accb7fe541ccab644de300863744c34"
+    },
+    {
+      "path": "docs/sdk-semantic-verification.json",
+      "bytes": 1651,
+      "sha256": "525d2492b598641abd31d72d2e5cc40f1dd727568124023b1fd3ce8c606cd0bf"
+    },
+    {
+      "path": "docs/sdk-verification.json",
+      "bytes": 756,
+      "sha256": "27284ba7d382ed2064eadcf98ea352248cc36f645ed974a3e7da52ec61851eba"
+    },
+    {
+      "path": "docs/test-results-0.3.1.json",
+      "bytes": 320,
+      "sha256": "807f248213a0b055797b469d50b81d4088829e0c4f1f422646dc4c4c7ec60914"
+    },
+    {
+      "path": "docs/test-results-0.4.0.json",
+      "bytes": 320,
+      "sha256": "de6ba15a984cc7835dc9b74e8550a48d55095cb3980d66ba12b9d6ad2d98b4bf"
+    },
+    {
+      "path": "docs/test-results.json",
+      "bytes": 320,
+      "sha256": "8040b1baf552a90828f0dbe1ba3825bf29b939ed2f15229bfc79f8fa1b375fe9"
+    },
+    {
+      "path": "evals/fixes/0.5.1-dev/manifest.json",
+      "bytes": 9811,
+      "sha256": "c446c0e904ab47ba38fec02dec96c2d964652d5b0c34266b259fb9b6aa20f45e"
+    },
+    {
+      "path": "evals/fixes/0.5.1-dev/studio-attribution-manifest.json",
+      "bytes": 10929,
+      "sha256": "47b4b818fd6112ec9c5ad0cbcf5f66cce8ff7ed991aca5299e23111ab5d0a4d4"
+    },
+    {
+      "path": "evals/releases/0.5.1/host-observations.json",
+      "bytes": 7484,
+      "sha256": "bb24567673b3ecff75030eb12cdc3eb89b30d4ee6b7a87e6ac7cf9c8261b6c80"
+    },
+    {
+      "path": "evals/releases/0.5.1/manifest.json",
+      "bytes": 14700,
+      "sha256": "a31bd78e6292c84313779d2e5e87e3430c4ed76449e856b69526b33089e23a37"
+    },
+    {
+      "path": "evals/releases/0.5.2-rc.1/native-observations.json",
+      "bytes": 2049,
+      "sha256": "15a10baf05d8f6132a20218d025209944cf91d213d23fcf438c5181d0aafdbf5"
+    },
+    {
+      "path": "evals/releases/0.5.2-rc.1/runtime-baseline.json",
+      "bytes": 3044,
+      "sha256": "faf6cf30468b5e14d7880a2f788b7193167033da1a336f3c9b9eb68907587313"
+    },
+    {
+      "path": "evals/semantic-rounds/README.md",
+      "bytes": 4462,
+      "sha256": "42350f8a1a72f59790a3a119fede2ad6a79036abdabfe04f849c147f31761c08"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/calls.jsonl",
+      "bytes": 1220428,
+      "sha256": "9f22676a942a221368e6b38cd3a53878dfe2d197ac69bf18f1a88ca0b796dda5"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/evaluation.json",
+      "bytes": 863544,
+      "sha256": "85597f67b1c5400376f2d4e4c67e0e98d1b6843755780e63ba78d4ee1fdad2d3"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/generation-request.json",
+      "bytes": 499277,
+      "sha256": "af4a5fe096ca79cd24520d9518261c7bfd507feb7dd2fa4c6cf8a01b58b0e738"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/integrity.json",
+      "bytes": 2529,
+      "sha256": "31e4b917f13abd23574fecc5fdc63c81f07b049458f8990ca0770e3d6a07111d"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/runtime-manifest.json",
+      "bytes": 626,
+      "sha256": "fc9ebb5cf6a9d4a88a9845318707ad2628dea0a5d5459ce71554b4118086e9ae"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/runtime/browser-voice.mjs",
+      "bytes": 4554,
+      "sha256": "32146e92876f2e4db64324b7948ce7cf0d1b5adfd53abc6f523195f2695ba479"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/runtime/core.mjs",
+      "bytes": 18288,
+      "sha256": "3bea7f2f24c242c7058db68250d89a35e4ddb4bdc48c96407b371802d241f23d"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/runtime/http.mjs",
+      "bytes": 10275,
+      "sha256": "d2ec5fadec9307b288fd3dfb7de774d119696a239494cf3a49195afdc616e315"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/runtime/install.mjs",
+      "bytes": 8656,
+      "sha256": "5cf754ce5aa18d04ba218befd814268fa80a59bbeac02c9cd9508bafca7f194d"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/runtime/mcp-common.mjs",
+      "bytes": 1193,
+      "sha256": "3cdf3abb7eb39a9200c6b09f2b04fbd20e08e272e0fcfad52aa99da8e698211e"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/runtime/mcp.mjs",
+      "bytes": 3624,
+      "sha256": "c30221eb519b235b46aa0bda5cbbf94fbff639aed416f19fa5e315d3480c7a4b"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/runtime/providers.mjs",
+      "bytes": 3674,
+      "sha256": "56ac08ec420458f9b7e051d808ed613d0841374cd8f006dfff8c785f954a3389"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/runtime/rewrite.mjs",
+      "bytes": 11657,
+      "sha256": "86b76b0405b60ce37de6be668d355d11141f0833d13f6ca6cae68d35eb804570"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/runtime/schema.mjs",
+      "bytes": 1671,
+      "sha256": "164318dd8a6eef4fd589ea27ae8e357f596cc201118729504f4c6d46d2815881"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/runtime/structure.mjs",
+      "bytes": 4959,
+      "sha256": "81ffdd26de49b249fbb78183c6e01e6542351aeed854dba65410fdcff7db9268"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-01/scores.json",
+      "bytes": 218388,
+      "sha256": "d4d384ce8d00ba7ad185e03589ffa5a4618bd1dd974ec4ef1a24d84a54613d37"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/calls.jsonl",
+      "bytes": 1151926,
+      "sha256": "7e2da966b32ec3f95f9313f2f559a8b5cfb9eb97305d1533a2d667bac31b4783"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/evaluation.json",
+      "bytes": 745401,
+      "sha256": "39e9c9c9949b305ccb8f484d6be57421ee0ce5953b231b6dc573862908dad637"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/generation-request.json",
+      "bytes": 499277,
+      "sha256": "edee2e17bac5e9b8ea53428874f17708b32211a3cc8f88d12ecfafce18626975"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/integrity.json",
+      "bytes": 2529,
+      "sha256": "6083f26fd541373bee671986131b5b355c8d819730ec1a4b7604aa9187ba5afb"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/runtime-manifest.json",
+      "bytes": 626,
+      "sha256": "a3c96bbf6649cd7cd1856d4b30b01ebd1ddfd9557d26b3038af1969b6912dd87"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/runtime/browser-voice.mjs",
+      "bytes": 4554,
+      "sha256": "32146e92876f2e4db64324b7948ce7cf0d1b5adfd53abc6f523195f2695ba479"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/runtime/core.mjs",
+      "bytes": 15062,
+      "sha256": "b082374fe15ed78b38c0035c7c8449a1a36383c4024c618171ee7859192e83a0"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/runtime/http.mjs",
+      "bytes": 10275,
+      "sha256": "d2ec5fadec9307b288fd3dfb7de774d119696a239494cf3a49195afdc616e315"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/runtime/install.mjs",
+      "bytes": 8945,
+      "sha256": "f0fc58befda445b2afdb9348de7979f50c80598f0f43f53ff6e681bc38c524c7"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/runtime/mcp-common.mjs",
+      "bytes": 1193,
+      "sha256": "3cdf3abb7eb39a9200c6b09f2b04fbd20e08e272e0fcfad52aa99da8e698211e"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/runtime/mcp.mjs",
+      "bytes": 3624,
+      "sha256": "c30221eb519b235b46aa0bda5cbbf94fbff639aed416f19fa5e315d3480c7a4b"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/runtime/providers.mjs",
+      "bytes": 3674,
+      "sha256": "56ac08ec420458f9b7e051d808ed613d0841374cd8f006dfff8c785f954a3389"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/runtime/rewrite.mjs",
+      "bytes": 13962,
+      "sha256": "cb23049c8e1dec032b202f6301e13dd74cb175b0c085ffabb52d2005c808178d"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/runtime/schema.mjs",
+      "bytes": 1671,
+      "sha256": "164318dd8a6eef4fd589ea27ae8e357f596cc201118729504f4c6d46d2815881"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/runtime/structure.mjs",
+      "bytes": 4959,
+      "sha256": "81ffdd26de49b249fbb78183c6e01e6542351aeed854dba65410fdcff7db9268"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-02/scores.json",
+      "bytes": 207808,
+      "sha256": "93ec778f199cf19b7bdabbb244352ea10c7802d71f63b170054ab33ac20ba7ed"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/calls.jsonl",
+      "bytes": 1171530,
+      "sha256": "0fa804c40091a71217adcd0904cd52742a8f525554ff4cae0aa8117e5797a5a7"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/evaluation.json",
+      "bytes": 750877,
+      "sha256": "1c55fccaf0d2149e0c149b2c0e4e8dfb2557cdd2555d8f48653db773b61737ee"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/generation-request.json",
+      "bytes": 499277,
+      "sha256": "109010b2d2b7e999def4e2e6061d438a373fd370f9ce3cd4aef06e1c34abc2f2"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/integrity.json",
+      "bytes": 2529,
+      "sha256": "523dffba9a2f7c8f6e904a45304e1c73789c728bb682ac128e59feffb2595d42"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/runtime-manifest.json",
+      "bytes": 626,
+      "sha256": "a010fea1aa6695ec3b373b6b238b1ddf997e6b1167da448b84ec98bfd25ef551"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/runtime/browser-voice.mjs",
+      "bytes": 4554,
+      "sha256": "32146e92876f2e4db64324b7948ce7cf0d1b5adfd53abc6f523195f2695ba479"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/runtime/core.mjs",
+      "bytes": 15161,
+      "sha256": "60af180cf8899e041df10ecdb78a97b73df6c5503d3f45e9d7f4acf167a33809"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/runtime/http.mjs",
+      "bytes": 10393,
+      "sha256": "e6513261eb144cd6bc6daaca6e2a219be6fe60b1be19a038b92bc78afad2bb41"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/runtime/install.mjs",
+      "bytes": 9373,
+      "sha256": "fa2fe087223f890faa9bdd478a8e7db61a34ffdb056c9b78ac751f369271543d"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/runtime/mcp-common.mjs",
+      "bytes": 1385,
+      "sha256": "47b762b189c62c9424766692889bb7574c79f18ee983bdf648804c371257db4a"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/runtime/mcp.mjs",
+      "bytes": 3624,
+      "sha256": "c30221eb519b235b46aa0bda5cbbf94fbff639aed416f19fa5e315d3480c7a4b"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/runtime/providers.mjs",
+      "bytes": 3674,
+      "sha256": "56ac08ec420458f9b7e051d808ed613d0841374cd8f006dfff8c785f954a3389"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/runtime/rewrite.mjs",
+      "bytes": 15916,
+      "sha256": "02ceb96da3305e94fae0b58cac221b60c47ca7c3b9eb30297298a71661e734d0"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/runtime/schema.mjs",
+      "bytes": 1898,
+      "sha256": "b22d1df009ff3db480b20e571c0ca5ebcd19587ff2f51adacae4d67fbaf1eb68"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/runtime/structure.mjs",
+      "bytes": 4959,
+      "sha256": "81ffdd26de49b249fbb78183c6e01e6542351aeed854dba65410fdcff7db9268"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-03/scores.json",
+      "bytes": 207909,
+      "sha256": "c2e2ffca41796b35671640a6d2a4beb338b1b6327009b777233aff81969bb2da"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/calls.jsonl",
+      "bytes": 1110885,
+      "sha256": "cc277e3cde6eb34c52cd537fd4ba9ccc41cdc13b7bd06ea8b42edffd86e71951"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/evaluation.json",
+      "bytes": 694639,
+      "sha256": "ffd8dad41a7bc61bb09060d83ecf3d3e268ccb99a3c069f71c76571d0fa529e8"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/generation-request.json",
+      "bytes": 499277,
+      "sha256": "52e3394eac569c6be31eb827fa671c78b57c8b3ade14762946d12d36d28490e7"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/integrity.json",
+      "bytes": 2529,
+      "sha256": "d695e932bf8313d0ade2c95a7eebe8983833017235168ae81d32a4f21bad5e2d"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/runtime-manifest.json",
+      "bytes": 626,
+      "sha256": "8a9c9cf7b9d3deeaad189c3df3a4c01741294905355ce19bae78a1102f1e16d4"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/runtime/browser-voice.mjs",
+      "bytes": 4554,
+      "sha256": "32146e92876f2e4db64324b7948ce7cf0d1b5adfd53abc6f523195f2695ba479"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/runtime/core.mjs",
+      "bytes": 15161,
+      "sha256": "60af180cf8899e041df10ecdb78a97b73df6c5503d3f45e9d7f4acf167a33809"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/runtime/http.mjs",
+      "bytes": 10393,
+      "sha256": "e6513261eb144cd6bc6daaca6e2a219be6fe60b1be19a038b92bc78afad2bb41"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/runtime/install.mjs",
+      "bytes": 9373,
+      "sha256": "fa2fe087223f890faa9bdd478a8e7db61a34ffdb056c9b78ac751f369271543d"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/runtime/mcp-common.mjs",
+      "bytes": 1385,
+      "sha256": "47b762b189c62c9424766692889bb7574c79f18ee983bdf648804c371257db4a"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/runtime/mcp.mjs",
+      "bytes": 3624,
+      "sha256": "c30221eb519b235b46aa0bda5cbbf94fbff639aed416f19fa5e315d3480c7a4b"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/runtime/providers.mjs",
+      "bytes": 3674,
+      "sha256": "56ac08ec420458f9b7e051d808ed613d0841374cd8f006dfff8c785f954a3389"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/runtime/rewrite.mjs",
+      "bytes": 18659,
+      "sha256": "acca91602fef633a1d393508f97e111c0685452dc5571f197eaa19376df7d5bd"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/runtime/schema.mjs",
+      "bytes": 1898,
+      "sha256": "b22d1df009ff3db480b20e571c0ca5ebcd19587ff2f51adacae4d67fbaf1eb68"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/runtime/structure.mjs",
+      "bytes": 4959,
+      "sha256": "81ffdd26de49b249fbb78183c6e01e6542351aeed854dba65410fdcff7db9268"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-04/scores.json",
+      "bytes": 239378,
+      "sha256": "363759b3ec81dc6177f0a27fd41d590ae05e6fde92e757f3dca5d55d1ab9b40a"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/calls.jsonl",
+      "bytes": 1844844,
+      "sha256": "351b34ba85437990e23c463e42b4918a9e4782d562400ab60910828de0094b27"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/evaluation.json",
+      "bytes": 1363092,
+      "sha256": "0a2cf4478bea72ec747d4b5a48df7e84dd3ee647561c4c67edaf5c9bc2f78443"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/generation-request.json",
+      "bytes": 499277,
+      "sha256": "72a2ba0cdf1ab90203912f430a4d6d92e2a867708891970c20999953f16a0ad2"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/integrity.json",
+      "bytes": 2530,
+      "sha256": "aa216f2cc86172735956271f3d3007d4b5c357503433a8298acfdeb468b0da22"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/runtime-manifest.json",
+      "bytes": 626,
+      "sha256": "31a8fe111f0214290c30f9f7285f8e3a8e6a215c51f96b53f23c4bd501d53e45"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/runtime/browser-voice.mjs",
+      "bytes": 4554,
+      "sha256": "32146e92876f2e4db64324b7948ce7cf0d1b5adfd53abc6f523195f2695ba479"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/runtime/core.mjs",
+      "bytes": 15161,
+      "sha256": "60af180cf8899e041df10ecdb78a97b73df6c5503d3f45e9d7f4acf167a33809"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/runtime/http.mjs",
+      "bytes": 10393,
+      "sha256": "e6513261eb144cd6bc6daaca6e2a219be6fe60b1be19a038b92bc78afad2bb41"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/runtime/install.mjs",
+      "bytes": 9373,
+      "sha256": "fa2fe087223f890faa9bdd478a8e7db61a34ffdb056c9b78ac751f369271543d"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/runtime/mcp-common.mjs",
+      "bytes": 1385,
+      "sha256": "47b762b189c62c9424766692889bb7574c79f18ee983bdf648804c371257db4a"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/runtime/mcp.mjs",
+      "bytes": 3624,
+      "sha256": "c30221eb519b235b46aa0bda5cbbf94fbff639aed416f19fa5e315d3480c7a4b"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/runtime/providers.mjs",
+      "bytes": 3674,
+      "sha256": "56ac08ec420458f9b7e051d808ed613d0841374cd8f006dfff8c785f954a3389"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/runtime/rewrite.mjs",
+      "bytes": 20619,
+      "sha256": "54b3c5bf9ef7f8b6e585d45b7fe46f587263988acfeb4e220700fcac276b3570"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/runtime/schema.mjs",
+      "bytes": 1898,
+      "sha256": "b22d1df009ff3db480b20e571c0ca5ebcd19587ff2f51adacae4d67fbaf1eb68"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/runtime/structure.mjs",
+      "bytes": 4959,
+      "sha256": "81ffdd26de49b249fbb78183c6e01e6542351aeed854dba65410fdcff7db9268"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-05/scores.json",
+      "bytes": 227245,
+      "sha256": "dc2325ed0ac0d612a9c75361195af7eb5c83894399056265e60bdad3512e1d90"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/calls.jsonl",
+      "bytes": 1211584,
+      "sha256": "325613be258f2ee6980c2b94ac38cf639dd38728688797e7af3c88843c5ffdc5"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/evaluation.json",
+      "bytes": 749841,
+      "sha256": "5b75fc07364e813becbb0d14f35050929c0b732e9c489cefad32afa5632fcccb"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/generation-request.json",
+      "bytes": 499277,
+      "sha256": "40fcf8e79a5989e9bb69b23ae4bfd33c8f720f1752530e49fee9a846891e823b"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/integrity.json",
+      "bytes": 2529,
+      "sha256": "ecd49b797d206298271ed9e2d93af8d9499e6e360972bf3e52f8d28a4e95aa51"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/runtime-manifest.json",
+      "bytes": 626,
+      "sha256": "ad6fe9227d2037f462524cdeebd6966fa97ca58a1a481a071aa15e2366b5c403"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/runtime/browser-voice.mjs",
+      "bytes": 4554,
+      "sha256": "32146e92876f2e4db64324b7948ce7cf0d1b5adfd53abc6f523195f2695ba479"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/runtime/core.mjs",
+      "bytes": 15161,
+      "sha256": "60af180cf8899e041df10ecdb78a97b73df6c5503d3f45e9d7f4acf167a33809"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/runtime/http.mjs",
+      "bytes": 10393,
+      "sha256": "e6513261eb144cd6bc6daaca6e2a219be6fe60b1be19a038b92bc78afad2bb41"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/runtime/install.mjs",
+      "bytes": 9373,
+      "sha256": "fa2fe087223f890faa9bdd478a8e7db61a34ffdb056c9b78ac751f369271543d"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/runtime/mcp-common.mjs",
+      "bytes": 1385,
+      "sha256": "47b762b189c62c9424766692889bb7574c79f18ee983bdf648804c371257db4a"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/runtime/mcp.mjs",
+      "bytes": 3624,
+      "sha256": "c30221eb519b235b46aa0bda5cbbf94fbff639aed416f19fa5e315d3480c7a4b"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/runtime/providers.mjs",
+      "bytes": 3674,
+      "sha256": "56ac08ec420458f9b7e051d808ed613d0841374cd8f006dfff8c785f954a3389"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/runtime/rewrite.mjs",
+      "bytes": 23338,
+      "sha256": "953ad3102e4a62a2bad52d5641974de52c4b19181e9417dcf616b5d98e9172ff"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/runtime/schema.mjs",
+      "bytes": 1898,
+      "sha256": "b22d1df009ff3db480b20e571c0ca5ebcd19587ff2f51adacae4d67fbaf1eb68"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/runtime/structure.mjs",
+      "bytes": 4959,
+      "sha256": "81ffdd26de49b249fbb78183c6e01e6542351aeed854dba65410fdcff7db9268"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-06/scores.json",
+      "bytes": 211336,
+      "sha256": "fb329812aec91cd03aa27c6583f5f4e320a9d3c24a02983292f492ef9cccbebd"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/calls.jsonl",
+      "bytes": 1325604,
+      "sha256": "edb05aaed25cefa80bbf5eb43a9e52ac0c4187c53442a4b5e50a6b6ce8cc24a4"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/evaluation.json",
+      "bytes": 741961,
+      "sha256": "7202683c0aff831d85d90a0249389199a77400f0db80ba876366aaa2ae41bdf6"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/generation-request.json",
+      "bytes": 499277,
+      "sha256": "9dc5b746063e0a7f044e23c8eb94322c3fd894e43dd6ab435fbfc6f00f7f8a36"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/integrity.json",
+      "bytes": 2529,
+      "sha256": "aa60ebac934f1bcfc8248fe84af2fde7b7de058f8668665f445e8b3f609d7662"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/runtime-manifest.json",
+      "bytes": 626,
+      "sha256": "619a490b1d82f872d1269f485f922084339471e023b05635e34bcc428e8a1b59"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/runtime/browser-voice.mjs",
+      "bytes": 4554,
+      "sha256": "32146e92876f2e4db64324b7948ce7cf0d1b5adfd53abc6f523195f2695ba479"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/runtime/core.mjs",
+      "bytes": 15161,
+      "sha256": "60af180cf8899e041df10ecdb78a97b73df6c5503d3f45e9d7f4acf167a33809"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/runtime/http.mjs",
+      "bytes": 10393,
+      "sha256": "e6513261eb144cd6bc6daaca6e2a219be6fe60b1be19a038b92bc78afad2bb41"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/runtime/install.mjs",
+      "bytes": 9373,
+      "sha256": "fa2fe087223f890faa9bdd478a8e7db61a34ffdb056c9b78ac751f369271543d"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/runtime/mcp-common.mjs",
+      "bytes": 1385,
+      "sha256": "47b762b189c62c9424766692889bb7574c79f18ee983bdf648804c371257db4a"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/runtime/mcp.mjs",
+      "bytes": 3624,
+      "sha256": "c30221eb519b235b46aa0bda5cbbf94fbff639aed416f19fa5e315d3480c7a4b"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/runtime/providers.mjs",
+      "bytes": 3674,
+      "sha256": "56ac08ec420458f9b7e051d808ed613d0841374cd8f006dfff8c785f954a3389"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/runtime/rewrite.mjs",
+      "bytes": 27247,
+      "sha256": "94a1e43f3d27db8a1f833c9e0b4591ac7bfacc7530033e45f9cefb9bd32c8e46"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/runtime/schema.mjs",
+      "bytes": 1898,
+      "sha256": "b22d1df009ff3db480b20e571c0ca5ebcd19587ff2f51adacae4d67fbaf1eb68"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/runtime/structure.mjs",
+      "bytes": 4959,
+      "sha256": "81ffdd26de49b249fbb78183c6e01e6542351aeed854dba65410fdcff7db9268"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-07/scores.json",
+      "bytes": 208865,
+      "sha256": "e0266cbb79ece1c73ae391f741b114e2ce676a6fcc1cdc809593f26c5ab10d3b"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/calls.jsonl",
+      "bytes": 1298055,
+      "sha256": "eb0cac56682efa5c2ff6832fde7ed32e52957dd7bf7aa7227397374ffd93bd2e"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/evaluation.json",
+      "bytes": 751034,
+      "sha256": "ad8a74da3b92a994c8068289de89c3530d1dffee5613f1fb268437b2ebf5bad6"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/generation-request.json",
+      "bytes": 499277,
+      "sha256": "922f9a44962a096599db750681f3009f963bcf679ae53a8e480a075e2874684f"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/integrity.json",
+      "bytes": 2529,
+      "sha256": "5f4541dcb36201047a4e5da4a20d37d4d7174eda0ae956b0f9dff35438dd28d0"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/runtime-manifest.json",
+      "bytes": 626,
+      "sha256": "72828ebbc9cc551f74dc3942b70ccc400b1f56eefe062dec33ce1a416c9a91ce"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/runtime/browser-voice.mjs",
+      "bytes": 4554,
+      "sha256": "32146e92876f2e4db64324b7948ce7cf0d1b5adfd53abc6f523195f2695ba479"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/runtime/core.mjs",
+      "bytes": 15161,
+      "sha256": "60af180cf8899e041df10ecdb78a97b73df6c5503d3f45e9d7f4acf167a33809"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/runtime/http.mjs",
+      "bytes": 10393,
+      "sha256": "e6513261eb144cd6bc6daaca6e2a219be6fe60b1be19a038b92bc78afad2bb41"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/runtime/install.mjs",
+      "bytes": 9373,
+      "sha256": "fa2fe087223f890faa9bdd478a8e7db61a34ffdb056c9b78ac751f369271543d"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/runtime/mcp-common.mjs",
+      "bytes": 1385,
+      "sha256": "47b762b189c62c9424766692889bb7574c79f18ee983bdf648804c371257db4a"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/runtime/mcp.mjs",
+      "bytes": 3624,
+      "sha256": "c30221eb519b235b46aa0bda5cbbf94fbff639aed416f19fa5e315d3480c7a4b"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/runtime/providers.mjs",
+      "bytes": 3674,
+      "sha256": "56ac08ec420458f9b7e051d808ed613d0841374cd8f006dfff8c785f954a3389"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/runtime/rewrite.mjs",
+      "bytes": 28336,
+      "sha256": "b24f6ad4f950f1227e075cb5ed241b38587e1f3b2d35dc689ad1bea6c80f5ba3"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/runtime/schema.mjs",
+      "bytes": 1898,
+      "sha256": "b22d1df009ff3db480b20e571c0ca5ebcd19587ff2f51adacae4d67fbaf1eb68"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/runtime/structure.mjs",
+      "bytes": 4959,
+      "sha256": "81ffdd26de49b249fbb78183c6e01e6542351aeed854dba65410fdcff7db9268"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-08/scores.json",
+      "bytes": 207726,
+      "sha256": "c4f554ca37db61e3a1b0881eabaaa3f0b41ca1002953c89d4daf354e57b8cb52"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/calls.jsonl",
+      "bytes": 1276196,
+      "sha256": "851a5e620cfb7e990caf2df8c0dbd74c9d14c62c672040800f9a0324d9fa9dda"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/evaluation.json",
+      "bytes": 737992,
+      "sha256": "59ec3eb7b1ec2e60ae93be416807cfb807ee7638b50fb9cf8df4d456d8fb7765"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/generation-request.json",
+      "bytes": 499277,
+      "sha256": "9c91deff0b5f200ea0ebce9f2019ce11c147afe0979a83e6345012854f12ecee"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/integrity.json",
+      "bytes": 2529,
+      "sha256": "aec5381fe7edd732a0b342c2ca8ed1b3c87b39f444ba9c77e9f45c5fbe9bd923"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/runtime-manifest.json",
+      "bytes": 626,
+      "sha256": "4623775f030758c81f0feac4679178f4b406445db9c33fe98836c775280f52c2"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/runtime/browser-voice.mjs",
+      "bytes": 4554,
+      "sha256": "32146e92876f2e4db64324b7948ce7cf0d1b5adfd53abc6f523195f2695ba479"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/runtime/core.mjs",
+      "bytes": 15161,
+      "sha256": "60af180cf8899e041df10ecdb78a97b73df6c5503d3f45e9d7f4acf167a33809"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/runtime/http.mjs",
+      "bytes": 10393,
+      "sha256": "e6513261eb144cd6bc6daaca6e2a219be6fe60b1be19a038b92bc78afad2bb41"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/runtime/install.mjs",
+      "bytes": 9373,
+      "sha256": "fa2fe087223f890faa9bdd478a8e7db61a34ffdb056c9b78ac751f369271543d"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/runtime/mcp-common.mjs",
+      "bytes": 1385,
+      "sha256": "47b762b189c62c9424766692889bb7574c79f18ee983bdf648804c371257db4a"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/runtime/mcp.mjs",
+      "bytes": 3624,
+      "sha256": "c30221eb519b235b46aa0bda5cbbf94fbff639aed416f19fa5e315d3480c7a4b"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/runtime/providers.mjs",
+      "bytes": 3674,
+      "sha256": "56ac08ec420458f9b7e051d808ed613d0841374cd8f006dfff8c785f954a3389"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/runtime/rewrite.mjs",
+      "bytes": 32036,
+      "sha256": "79d21f06cb5ccb4c06a29bed14db72a6e4a4db1d77122788a70ca6decb425b15"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/runtime/schema.mjs",
+      "bytes": 1898,
+      "sha256": "b22d1df009ff3db480b20e571c0ca5ebcd19587ff2f51adacae4d67fbaf1eb68"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/runtime/structure.mjs",
+      "bytes": 4959,
+      "sha256": "81ffdd26de49b249fbb78183c6e01e6542351aeed854dba65410fdcff7db9268"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-09/scores.json",
+      "bytes": 204843,
+      "sha256": "4cb6730fd6bb8092f158bbd0cea7fb3761e91d660e469f62748a589ec14fce56"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/calls.jsonl",
+      "bytes": 1264817,
+      "sha256": "20e04c9970815701f9dc4f4e7bd22b1bf73a6d7e830cdff760cf0ea86ef2cca6"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/evaluation.json",
+      "bytes": 751215,
+      "sha256": "37d9c5e5bcd2e33ac2e25e602ce5be4b7d945f46553354a8d522be21f939ea85"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/generation-request.json",
+      "bytes": 499277,
+      "sha256": "a4b605162b123f31b9ef93149db359760b071b1589fb285321e4cf5375c1a80a"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/integrity.json",
+      "bytes": 2529,
+      "sha256": "8317da5f2c46b0f75128fbbb413e853b80474a2ad5f3759cc3273309b3964a3d"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/runtime-manifest.json",
+      "bytes": 626,
+      "sha256": "4506cedd2e89a99bd56ba573fee47f2b9d35ad0242f4cc95bae2aba97068ab53"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/runtime/browser-voice.mjs",
+      "bytes": 4554,
+      "sha256": "32146e92876f2e4db64324b7948ce7cf0d1b5adfd53abc6f523195f2695ba479"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/runtime/core.mjs",
+      "bytes": 15161,
+      "sha256": "60af180cf8899e041df10ecdb78a97b73df6c5503d3f45e9d7f4acf167a33809"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/runtime/http.mjs",
+      "bytes": 10393,
+      "sha256": "e6513261eb144cd6bc6daaca6e2a219be6fe60b1be19a038b92bc78afad2bb41"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/runtime/install.mjs",
+      "bytes": 9373,
+      "sha256": "fa2fe087223f890faa9bdd478a8e7db61a34ffdb056c9b78ac751f369271543d"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/runtime/mcp-common.mjs",
+      "bytes": 1385,
+      "sha256": "47b762b189c62c9424766692889bb7574c79f18ee983bdf648804c371257db4a"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/runtime/mcp.mjs",
+      "bytes": 3624,
+      "sha256": "c30221eb519b235b46aa0bda5cbbf94fbff639aed416f19fa5e315d3480c7a4b"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/runtime/providers.mjs",
+      "bytes": 3674,
+      "sha256": "56ac08ec420458f9b7e051d808ed613d0841374cd8f006dfff8c785f954a3389"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/runtime/rewrite.mjs",
+      "bytes": 32658,
+      "sha256": "788936c0e04d878ec9dde142bc08474b7c52dd2edfac106590662d3ba22d999f"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/runtime/schema.mjs",
+      "bytes": 1898,
+      "sha256": "b22d1df009ff3db480b20e571c0ca5ebcd19587ff2f51adacae4d67fbaf1eb68"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/runtime/structure.mjs",
+      "bytes": 4959,
+      "sha256": "81ffdd26de49b249fbb78183c6e01e6542351aeed854dba65410fdcff7db9268"
+    },
+    {
+      "path": "evals/semantic-rounds/semantic-round-10/scores.json",
+      "bytes": 202571,
+      "sha256": "51e278005b2bd66ab78231dd6ed23dc9e495ebf8919f7f53ea58def4e9d6c0c5"
+    },
+    {
+      "path": "evals/semantic-transfer.json",
+      "bytes": 4160,
+      "sha256": "26754048191e4fc6a849ab49b76b52b57658bed0de60573c644c3afd9468b91a"
+    },
+    {
+      "path": "evals/ui-contract.json",
+      "bytes": 387,
+      "sha256": "72249db8ee71d96800509e10c04a10854dfc612b65cd28ed1749afdf532dd017"
+    },
+    {
+      "path": "evals/ui-history/manifest.json",
+      "bytes": 367,
+      "sha256": "05179a73d24f9d3523afd9d3a841d54c79da932380b1a8a59afcd73f41958c85"
+    },
+    {
+      "path": "evals/ui-history/v0.2.0-client-source.js",
+      "bytes": 6292,
+      "sha256": "db489aaa6391f1edba5077737b221d2833af965e24e86dcbf9553d64754df85a"
+    },
+    {
+      "path": "locale/en.json",
+      "bytes": 2966,
+      "sha256": "5315037cec2ec8fa6a38cb591470c5011d4608531d23d2eafdb1577a1bffbc87"
+    },
+    {
+      "path": "locale/zh.json",
+      "bytes": 2777,
+      "sha256": "627ab973904b0867faedc940940c5e11db2aa761710c9e212f356dcc6fa7304d"
+    },
+    {
+      "path": "package.json",
+      "bytes": 2256,
+      "sha256": "d5fccb49adc18b660612e0771f9b0c7b3605a1a2a26e42b67d9b619bf473c1f6"
+    },
+    {
+      "path": "scripts/build-client.mjs",
+      "bytes": 969,
+      "sha256": "277cf683322b93820b987c006875ca1ff92f96cf480a6581ac382e60c2481365"
+    },
+    {
+      "path": "scripts/check.mjs",
+      "bytes": 3248,
+      "sha256": "f2bc91f725d8fa9e8df1a6972fda9866c36330949d664cf4a20e125b8b0a22e1"
+    },
+    {
+      "path": "scripts/evaluation-report.mjs",
+      "bytes": 5414,
+      "sha256": "de93487d1d5699e4a88d50521d7c9966b1be5cc450c5eceaa6a7dee7d9ac9cb3"
+    },
+    {
+      "path": "scripts/score-evaluation.mjs",
+      "bytes": 10277,
+      "sha256": "7a9a327166f463fd604b3787e42e052aa49f786731d8e6a3ccdb554f34f12755"
+    },
+    {
+      "path": "scripts/sdk-smoke.mjs",
+      "bytes": 6053,
+      "sha256": "83879c94c8b99fc312fc468c7dd21c48013a934af9ea3ce26eca09d5966396c9"
+    },
+    {
+      "path": "scripts/smoke-candidate.mjs",
+      "bytes": 6392,
+      "sha256": "7b166ab4b5dd78984d4e62a8e94433b289604d60bffd4533feec07918ce40853"
+    },
+    {
+      "path": "scripts/smoke-current-release.mjs",
+      "bytes": 5069,
+      "sha256": "584475c75c08b55ca2e812bb105264186ca39fddff4fbece1a7c14fc52d5c948"
+    },
+    {
+      "path": "scripts/smoke-distribution.mjs",
+      "bytes": 5222,
+      "sha256": "b5929cc95997f6642bc503e0e9b776df5f11e422b0f3be8dac1a704dba8f3b36"
+    },
+    {
+      "path": "scripts/smoke-package.mjs",
+      "bytes": 6629,
+      "sha256": "d431aa93c29e19297cc4a3b13412eb83221ba83e3133796b35bea2857522adb1"
+    },
+    {
+      "path": "scripts/test-report.mjs",
+      "bytes": 1251,
+      "sha256": "92bf6a0a839241091e4dcc51749af9fd8d28cd89457ebd4d20a28e3b32513cc0"
+    },
+    {
+      "path": "scripts/undo-react-lexical-smoke.mjs",
+      "bytes": 9528,
+      "sha256": "8d2ab7d64089311a94c84999d61aefacc6f71df3ee7fc79eda04afa926bcfd4d"
+    },
+    {
+      "path": "scripts/verify-current-release.mjs",
+      "bytes": 7554,
+      "sha256": "0874e3febd0e4d00a23c03364b4f0fc5687ddc2efa7d67b3e455c317b1c2a4c5"
+    },
+    {
+      "path": "scripts/verify-distribution.mjs",
+      "bytes": 7728,
+      "sha256": "5c653326f6d655481de2a900468ad7bcb6ed9bb68c90f18effe03519a0fb06f8"
+    },
+    {
+      "path": "scripts/verify-fix-candidate.mjs",
+      "bytes": 4328,
+      "sha256": "e4d7551adef02fc80341e63ee433bd1807fe009cce24380d90abb0cc8e012d0b"
+    },
+    {
+      "path": "scripts/verify-release.mjs",
+      "bytes": 4399,
+      "sha256": "21d615301ea37056cc45e8a81d196168ee87b579e910dc3e4f6a51356b84afa0"
+    },
+    {
+      "path": "skills/prompt-fusion/SKILL.md",
+      "bytes": 3875,
+      "sha256": "36bc68171e757d11774acfb399be82bb6c8c504a453c18328325b612d140f0c4"
+    },
+    {
+      "path": "skills/prompt-fusion/scripts/enhance.mjs",
+      "bytes": 1336,
+      "sha256": "77eae61545bac0249a01a9d707b4497bbd259bab6945fd14d6f5663b7bee721c"
+    },
+    {
+      "path": "src/adaptive.mjs",
+      "bytes": 3299,
+      "sha256": "a5f3f798f842b364d87753c9dd3acc8d64dea7f6843d4946ce646584dfd122f9"
+    },
+    {
+      "path": "src/browser-voice.mjs",
+      "bytes": 4554,
+      "sha256": "32146e92876f2e4db64324b7948ce7cf0d1b5adfd53abc6f523195f2695ba479"
+    },
+    {
+      "path": "src/core.mjs",
+      "bytes": 15309,
+      "sha256": "151da9ed4a00f3cab15ac53f03a3499afe76c0b7d0ef743a22d966e6ef64a027"
+    },
+    {
+      "path": "src/failures.mjs",
+      "bytes": 3094,
+      "sha256": "fe6c998af733e76e3ac3535a9fc1537e6b56965efbdd305ad81d3530b44c8578"
+    },
+    {
+      "path": "src/http.mjs",
+      "bytes": 10393,
+      "sha256": "e6513261eb144cd6bc6daaca6e2a219be6fe60b1be19a038b92bc78afad2bb41"
+    },
+    {
+      "path": "src/install.mjs",
+      "bytes": 9913,
+      "sha256": "9b6714861059acf68eaac73993c9e50916b14bd0579171d073609bd99f184da1"
+    },
+    {
+      "path": "src/intent-guards.mjs",
+      "bytes": 4465,
+      "sha256": "e9ca7b55e57d5ac27ff22bd6d2937295dc0a41252c492c2764e8d835ba4bcc25"
+    },
+    {
+      "path": "src/mcp-common.mjs",
+      "bytes": 1385,
+      "sha256": "47b762b189c62c9424766692889bb7574c79f18ee983bdf648804c371257db4a"
+    },
+    {
+      "path": "src/mcp.mjs",
+      "bytes": 3624,
+      "sha256": "c30221eb519b235b46aa0bda5cbbf94fbff639aed416f19fa5e315d3480c7a4b"
+    },
+    {
+      "path": "src/providers.mjs",
+      "bytes": 4097,
+      "sha256": "620fd06eff52d121163da5c18d16d8c17b60d81b684e1b70df9ab0b497f97d9a"
+    },
+    {
+      "path": "src/rewrite.mjs",
+      "bytes": 37806,
+      "sha256": "24cd3f8614789ed2afbb0b7ee191ec91f794d8dbee44720c112034f6fb9a60f1"
+    },
+    {
+      "path": "src/schema.mjs",
+      "bytes": 1898,
+      "sha256": "b22d1df009ff3db480b20e571c0ca5ebcd19587ff2f51adacae4d67fbaf1eb68"
+    },
+    {
+      "path": "src/structure.mjs",
+      "bytes": 4959,
+      "sha256": "81ffdd26de49b249fbb78183c6e01e6542351aeed854dba65410fdcff7db9268"
+    },
+    {
+      "path": "tests/adapters.test.mjs",
+      "bytes": 3960,
+      "sha256": "23789a5490c3620f3ae31602c67eb75ee22f7b1862dd4c9e7ce9ab6b26aca8ee"
+    },
+    {
+      "path": "tests/adaptive.test.mjs",
+      "bytes": 6688,
+      "sha256": "c5d611c38b55040582b3d211bfe5bf27ee4f61024365b4a302ae414d6939623b"
+    },
+    {
+      "path": "tests/branding.test.mjs",
+      "bytes": 4157,
+      "sha256": "b771cceb91e72907249df1a5b5e158ea2c71350fd4f52bda7b8bfba1e949b544"
+    },
+    {
+      "path": "tests/candidate-smoke.test.mjs",
+      "bytes": 2560,
+      "sha256": "ac4bb35e1e49ed5e092847a84b98e12f48facf065b3e3aeaf184af4b49b17740"
+    },
+    {
+      "path": "tests/constraint-scope.test.mjs",
+      "bytes": 6056,
+      "sha256": "2998ae6acb41bb8e4b35f10964b40dcc6afb1c9c24447d40b1ccfd2ee76e43f1"
+    },
+    {
+      "path": "tests/core.test.mjs",
+      "bytes": 9163,
+      "sha256": "97aaac4f76d190239299bccabb2df61df72c332346b0f708807091552b87ef00"
+    },
+    {
+      "path": "tests/current-release.test.mjs",
+      "bytes": 4806,
+      "sha256": "54ef32997712ab45b7fd2695fd22b001e87ad12a50e0e2e6fd88184d9b2ed0a0"
+    },
+    {
+      "path": "tests/distribution-smoke.test.mjs",
+      "bytes": 987,
+      "sha256": "b4897241814baa75a526ed397f5bdb2e9db69cff931dd532549638f5d7e3f627"
+    },
+    {
+      "path": "tests/dsh-client.test.mjs",
+      "bytes": 12824,
+      "sha256": "b66f11418f9c505adfe818698dcb03eaebf523aca2d29380a20a974a8963ad24"
+    },
+    {
+      "path": "tests/dsh-host.test.mjs",
+      "bytes": 3772,
+      "sha256": "1bc986e95b1a64f760b92b98a886155a50e8fbd10413cfd08f61a99d4adb18a2"
+    },
+    {
+      "path": "tests/epistemic.test.mjs",
+      "bytes": 2571,
+      "sha256": "4ffbb5223a118797f23c5db5c7f72eda3803f358bcfd899ed1d68c3a799d9c1f"
+    },
+    {
+      "path": "tests/evaluation-integrity.test.mjs",
+      "bytes": 4624,
+      "sha256": "123e4060c21fcca7d8f97621bccc7a6d97bc5fa9102873f1615d37d1b2b1cea0"
+    },
+    {
+      "path": "tests/evaluation-report.test.mjs",
+      "bytes": 3034,
+      "sha256": "04e35647568818d0c6d70af8f7cc9244dd102a48297497fc54fbfdaeac5ab89e"
+    },
+    {
+      "path": "tests/evaluation.test.mjs",
+      "bytes": 5386,
+      "sha256": "b6af412d14c458007e2b46e47419402c5261b34ebc94e8b4f03d9c9e54fc9b60"
+    },
+    {
+      "path": "tests/failure-diagnostics.test.mjs",
+      "bytes": 3947,
+      "sha256": "a327077dce058d35772393f02336b3ac068e5e66a1b18412b6481603d0fe3163"
+    },
+    {
+      "path": "tests/feedback-negatives-regression.test.mjs",
+      "bytes": 4939,
+      "sha256": "7fdf35d5074a0d1fabc7a3a0c70527f5f69c2d4e5d6caf3d283993307d1f9479"
+    },
+    {
+      "path": "tests/feedback-negatives.test.mjs",
+      "bytes": 2201,
+      "sha256": "74ed29d03559047dbd024f475236e026cd48b67f76580b873cc64c48322f4f3d"
+    },
+    {
+      "path": "tests/fix-candidate.test.mjs",
+      "bytes": 8146,
+      "sha256": "b2f5ce32726574549e1a521044b3e641763ad4490aa1203e3cee46a1461b52a3"
+    },
+    {
+      "path": "tests/fixtures/released-0.5.1/payload.json.gz",
+      "bytes": 232039,
+      "sha256": "e0f84e266ac6d43a9303545f6ed036b4f23d7d4230dae91fadf1e7e46163e361"
+    },
+    {
+      "path": "tests/fixtures/released-0.5.1/provenance.json",
+      "bytes": 1026,
+      "sha256": "59ae4191680d1be9bcf4f9493357fca5fbfbb894713444372763e34542aec168"
+    },
+    {
+      "path": "tests/intent-guards.test.mjs",
+      "bytes": 4861,
+      "sha256": "15338992e31ae5c466d60dc148cd3bd7fc989c635840b10dddfef7e2cd6894ba"
+    },
+    {
+      "path": "tests/mcp.test.mjs",
+      "bytes": 4165,
+      "sha256": "96d3bdba520b93ee48c5ac48f3cc6c2da7536ca2ea35587ffd0da79907974ee8"
+    },
+    {
+      "path": "tests/negative-clauses.test.mjs",
+      "bytes": 5587,
+      "sha256": "a26e0e61507f7692cbcdadf9d729e2c1cfbaf55dfcef5b93cd1b685bd083abcb"
+    },
+    {
+      "path": "tests/package-smoke.test.mjs",
+      "bytes": 3810,
+      "sha256": "c347b9a5083275b62e9e5de725457444c398b90461e27781891818ba647b2eec"
+    },
+    {
+      "path": "tests/providers-voice.test.mjs",
+      "bytes": 6227,
+      "sha256": "9cadeebfc5ef779ca31c4ff0f8e45dbb9b710d0801948434693181ad1bbdd911"
+    },
+    {
+      "path": "tests/release-flow.test.mjs",
+      "bytes": 5713,
+      "sha256": "cb7f9aaab248eb1768ddf5c690f0317d98a1f59ae35e12ed38d6a73c85cd0fcc"
+    },
+    {
+      "path": "tests/release-gate.test.mjs",
+      "bytes": 2907,
+      "sha256": "d4dd2f168e50a78d6f10aacc4795fdce815db5104c155a8b3cf02ecbf18887f0"
+    },
+    {
+      "path": "tests/rewrite.test.mjs",
+      "bytes": 11047,
+      "sha256": "694d86824319aaff02a253d2ed91c73379258e96a62f7a17d5b68c4203cf2ccc"
+    },
+    {
+      "path": "tests/schedule.test.mjs",
+      "bytes": 3330,
+      "sha256": "38eefc516bf50f83284a614db481123fee7a96b517ba37ddb0dc5c85fb013de3"
+    },
+    {
+      "path": "tests/semantic-integration.test.mjs",
+      "bytes": 8863,
+      "sha256": "934f01c553c0f8202522d9be500fb8b633d2ee308f7ad8e13f31e8b1fd16dfa9"
+    },
+    {
+      "path": "tests/structure.test.mjs",
+      "bytes": 2708,
+      "sha256": "4d17e7f5f89fde0af8fb417a3bfaeb487d3c8e136977d346cc89904adfdbdb9f"
+    },
+    {
+      "path": "tests/undo-expiry.test.mjs",
+      "bytes": 1100,
+      "sha256": "92ac45f6fa4d2693d33a6cd6f67b99e24d01c9c0ca41dfcb663f172d08ff1535"
+    },
+    {
+      "path": "tests/undo-state.test.mjs",
+      "bytes": 4357,
+      "sha256": "8cfac000c710612ea6deeb9c146a37f113bcd86ddf939365bcd1dce55752142d"
+    },
+    {
+      "path": "tests/universal-cli.test.mjs",
+      "bytes": 4076,
+      "sha256": "6b676c426fbc94e7ba66edbb40cd88d2da1e033360dba08907070df545d0e8c6"
+    },
+    {
+      "path": "tests/universal.test.mjs",
+      "bytes": 13069,
+      "sha256": "66f20d91092370e52d546a553e3050a5970edf4a0ebcfca1cf623ee134cd5b5e"
+    },
+    {
+      "path": "third-party/licenses/ChosenXu-MIT.txt",
+      "bytes": 1224,
+      "sha256": "e8e1b9ea876a86bc3863d8dfa813343d524ede4a2208640b66ec53febf6f9da4"
+    },
+    {
+      "path": "third-party/licenses/Fishsb-Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "third-party/licenses/Fishsb-NOTICE.txt",
+      "bytes": 48,
+      "sha256": "b780a6cd641597b8becc3378dce9f3dd8d2e491bde9892cb78db26709092cec7"
+    },
+    {
+      "path": "third-party/licenses/feiwell-MIT.txt",
+      "bytes": 1085,
+      "sha256": "c76fe2f1589728e2475a3f9b28b5aee635b63561c860f06c037dbd1d687de91f"
+    }
+  ]
+}
